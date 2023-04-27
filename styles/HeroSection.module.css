@@ -1,0 +1,18 @@
+.mainhero {
+  background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centerhero {
+  text-align: center;
+}
+.colrgreen {
+  color: #42b00f;
+  text-align: center;
+}
