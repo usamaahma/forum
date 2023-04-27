@@ -66,6 +66,11 @@
   color: #000000;
   font-weight: 600;
 }
+.clr12 {
+  color: #a1a1a1;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
 @media (max-width: 1440px) {
   .boxflex {
     display: flex;
