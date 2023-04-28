@@ -1,0 +1,75 @@
+.boxflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 51rem;
+}
+.imgsize {
+  width: 25rem;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.inputdiv {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.input {
+  /* width: 30rem; */
+  margin-left: 1rem;
+  border: none !important;
+}
+.cameradiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.post {
+  border: solid 1px #42b00f;
+  color: #42b00f;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.2rem;
+}
+.postdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+@media (max-width: 1440px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 44rem;
+  }
+  .imgsize {
+    width: 21rem;
+  }
+}
+@media (max-width: 1024px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24rem;
+  }
+  .imgsize {
+    width: 16rem;
+  }
+}
+@media (max-width: 768px) {
+  .boxflex {
+    display: none !important;
+  }
+  .imgsize {
+    display: none !important;
+  }
+}

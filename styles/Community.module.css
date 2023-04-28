@@ -1,0 +1,61 @@
+.flexdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.centerico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 60%;
+}
+.centerico1 {
+  display: flex;
+  justify-content: space-between;
+}
+.textleft {
+  margin-left: 0.5rem;
+}
+.textclr {
+  color: #42b00f solid 1px !important;
+  margin-top: 0.2rem;
+}
+.annetext {
+  color: #151515;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.amtext {
+  color: #a1a1a1;
+  font-weight: 500;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+.amtext1 {
+  color: #a1a1a1;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.centerico1 {
+  display: flex;
+  justify-content: space-between;
+}
+.rowflex {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+.box {
+  border: #42b00f solid 1px;
+  font-size: 0.7rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  color: #42b00f;
+  margin-top: -1.6rem;
+  border-radius: 0.2rem;
+}

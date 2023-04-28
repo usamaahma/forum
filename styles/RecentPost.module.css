@@ -1,0 +1,48 @@
+.flexdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.centerico {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 60%;
+}
+.centerico1 {
+  display: flex;
+  justify-content: space-between;
+}
+.textleft {
+  margin-left: 0.5rem;
+}
+.textclr {
+  color: #42b00f !important;
+  margin-top: 0.2rem;
+}
+.textish {
+  color: #151515;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.hour {
+  color: #7e8284;
+  font-size: 0.6rem;
+  font-weight: 600;
+  margin-top: -1rem;
+}
+.para {
+  color: #a1a1a1;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.paraone {
+  color: #2d9cdb !important;
+  font-weight: 400;
+}
+.line {
+  border: #e8e8e8 solid 1px;
+}
