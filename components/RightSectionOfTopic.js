@@ -1,18 +1,52 @@
 import React from "react";
-import Styles from "../styles/RightSection.module.css";
+import Styles from "../styles/RightSectionOfTopic.module.css";
 import Image from "next/image";
 import Bottle from "../public/images/Rectangle 45.png";
 import Shoes from "../public/images/Rectangle 46 (1).png";
 import Profile from "../public/images/Ellipse 9.png";
 import Camera from "../public/images/Camera.png";
 import File from "../public/images/File_dock_add.png";
-import Arrowdown from "../public/images/Mask group (2).png";
-import dataOne from "../dataOne.json";
 import { Input, Select } from "antd";
-import Post from "./post";
 
+const data = [
+  {
+    name: "Jobs",
+    subname: "Job related post..",
+    nameOne: "56",
+    nametwo: "Istiaq Firoz",
+    subnametwo: "1 Year, 5 Month ago",
+  },
+  {
+    name: "Jobs",
+    subname: "Job related post..",
+    nameOne: "56",
+    nametwo: "Istiaq Firoz",
+    subnametwo: "1 Year, 5 Month ago",
+  },
+  {
+    name: "Jobs",
+    subname: "Job related post..",
+    nameOne: "56",
+    nametwo: "Istiaq Firoz",
+    subnametwo: "1 Year, 5 Month ago",
+  },
+  {
+    name: "Jobs",
+    subname: "Job related post..",
+    nameOne: "56",
+    nametwo: "Istiaq Firoz",
+    subnametwo: "1 Year, 5 Month ago",
+  },
+  {
+    name: "Jobs",
+    subname: "Job related post..",
+    nameOne: "56",
+    nametwo: "Istiaq Firoz",
+    subnametwo: "1 Year, 5 Month ago",
+  },
+];
 const { Option } = Select;
-function RightSection() {
+function RightSectionOfTopic() {
   function handleChange(value) {
     console.log(`selected ${value}`);
   }
@@ -55,18 +89,27 @@ function RightSection() {
         </div>
       </div>
       <div className={Styles.postdiv}>
-        <p className={Styles.clr}> All Post</p>
-        <div>
-          <Image src={Arrowdown} />
-        </div>
+        <p className={Styles.clr}>Topic</p>
+        <div>Post</div>
+        <div>Latest Post</div>
       </div>
-      {dataOne.map(() => (
-        <div>
-          <Post />
+      {data.map((user) => (
+        <div className={Styles.postdiv}>
+          <div>
+            <p className={Styles.clr}>{user.name}</p>
+            <p className={Styles.clr12}>{user.subname}</p>
+          </div>
+          <div>
+            <p className={Styles.clr}>{user.nameOne}</p>
+          </div>
+          <div>
+            <p className={Styles.clr}>{user.nametwo}</p>
+            <p className={Styles.clr12}>{user.subnametwo}</p>
+          </div>
         </div>
       ))}
     </div>
   );
 }
 
-export default RightSection;
+export default RightSectionOfTopic;

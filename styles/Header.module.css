@@ -1,0 +1,86 @@
+
+.menudiv{
+    display: flex;
+    gap: 3rem !important;
+}
+.menudiv1{
+    display: flex;
+    gap: .5rem !important;
+    justify-content: center;
+    align-items: center;
+}
+.commons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menudiv3{
+    display: flex;
+    gap: 1rem !important;
+}
+.menudiv4{
+    display: flex;
+    justify-content: center !important;
+    gap: 1.5rem !important;
+    margin-top: 1.5rem;
+}
+.notificationss{
+    margin-top: .5rem;
+}
+.menudiv5{
+    display: grid;
+}
+.iconsss{
+    margin-top: -1rem;
+}
+.iconsss5{
+    margin-left: 1.5rem;
+}
+.headerr{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons{
+    gap: 0rem!important;
+}
+.googlepic{
+    width: 10rem;
+    height: 3rem;
+}
+
+.dropdown{
+    border-top-right-radius:0rem !important;
+    border-bottom-right-radius:0rem !important;
+    border-color: rgb(66,176,15) !important;
+
+}
+.inputradius{
+    border-top-left-radius:0rem !important;
+    border-bottom-left-radius:0rem !important;
+    border-color: rgb(66,176,15) !important;
+}
+.Headerthree{
+    margin-top: 1rem;
+}
+.gapheaderthreenav{
+    display: flex;
+    gap: 1rem;
+}
+.buttonthree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    font-size: medium;
+    color: white;
+    border: none;
+    background-color:  rgb(66,176,15) !important;
+}
+
+  
+
+@media only screen and (max-width: 425px) {
+    .remove{
+        display: none!important;
+    }   
+  }

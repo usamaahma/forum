@@ -2,7 +2,7 @@ import React from "react";
 import Styles from "../styles/LeftSection.module.css";
 import Image from "next/image";
 import Facebook from "../public/images/Icon (1).png";
-import Twitter from "../public/images/Icon.png";
+import Twitter from "../public/images/twitter.png";
 import Instgram from "../public/images/Group 131.png";
 import Linkdin from "../public/images/Group 132.png";
 import Trade from "../public/images/Icon (2).png";
