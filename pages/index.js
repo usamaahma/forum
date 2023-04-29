@@ -9,9 +9,9 @@ import LandingPage from "./landingPage";
 export default function Home() {
   return (
     <>
-      <MainHeader />
-      <LandingPage/>
-      <Footer/>
+      {/* <MainHeader /> */}
+      <LandingPage />
+      {/* <Footer /> */}
     </>
   );
 }

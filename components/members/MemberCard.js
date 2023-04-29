@@ -5,7 +5,7 @@ import Profile from "../../public/images/Ellipse 247.png";
 import { Card, Tag } from "antd";
 import Image from "next/image";
 import Facebook from "../../public/images/Icon (1).png";
-import Twitter from "../../public/images/Icon.png";
+import Twitter from "../../public/images/twitter.png";
 import Instgram from "../../public/images/Group 131.png";
 import Linkdin from "../../public/images/Group 132.png";
 import Loc from "../../public/images/Locatin (1).png";

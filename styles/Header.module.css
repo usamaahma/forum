@@ -1,152 +1,146 @@
+.menudiv {
+  display: flex;
+  gap: 3rem !important;
+}
+.menudiv1 {
+  display: flex;
+  gap: 0.5rem !important;
+  justify-content: center;
+  align-items: center;
+}
+.commons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menudiv3 {
+  display: flex;
+  gap: 1rem !important;
+}
+.menudiv4 {
+  display: flex;
+  justify-content: center !important;
+  gap: 1.5rem !important;
+  margin-top: 1.5rem;
+}
+.notificationss {
+  margin-top: 0.5rem;
+}
+.menudiv5 {
+  display: grid;
+}
+.iconsss {
+  margin-top: -1rem;
+}
+.iconsss5 {
+  margin-left: 1.5rem;
+}
+.headerr {
+  display: flex;
+  justify-content: space-between;
+}
+.buttons {
+  gap: 0rem !important;
+}
+.googlepic {
+  width: 10rem;
+  height: 3rem;
+}
 
-.menudiv{
-    display: flex;
-    gap: 3rem !important;
+.dropdown {
+  border-top-right-radius: 0rem !important;
+  border-bottom-right-radius: 0rem !important;
 }
-.menudiv1{
-    display: flex;
-    gap: .5rem !important;
-    justify-content: center;
-    align-items: center;
+.inputradius {
+  border-top-left-radius: 0rem !important;
+  border-bottom-left-radius: 0rem !important;
+  border-color: rgb(66, 176, 15) !important;
 }
-.commons{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Headerthree {
+  margin-top: 1rem;
 }
-.menudiv3{
-    display: flex;
-    gap: 1rem !important;
+.gapheaderthreenav {
+  display: flex;
+  gap: 1rem;
 }
-.menudiv4{
-    display: flex;
-    justify-content: center !important;
-    gap: 1.5rem !important;
-    margin-top: 1.5rem;
+.buttonthree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: medium;
+  color: white;
+  border: none;
+  background-color: rgb(66, 176, 15) !important;
 }
-.notificationss{
-    margin-top: .5rem;
+.rowssscolmnss {
+  display: flex;
+  justify-content: left;
+  margin-top: 2rem;
 }
-.menudiv5{
-    display: grid;
+.rowssscolmnsss {
+  display: grid;
+  justify-content: left;
+  margin-top: 2rem;
 }
-.iconsss{
-    margin-top: -1rem;
+.colflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-.iconsss5{
-    margin-left: 1.5rem;
+.checkbx {
+  margin-top: 1rem;
 }
-.headerr{
-    display: flex;
-    justify-content: space-between;
+.checkbx1 {
+  margin-top: 0.5rem;
 }
-.buttons{
-    gap: 0rem!important;
+.mrgin {
+  margin-left: 0.5rem;
 }
-.googlepic{
-    width: 10rem;
-    height: 3rem;
+.remove2 {
+  display: flex !important;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
 }
-
-.dropdown{
-    border-top-right-radius:0rem !important;
-    border-bottom-right-radius:0rem !important;
-
-}
-.inputradius{
-    border-top-left-radius:0rem !important;
-    border-bottom-left-radius:0rem !important;
-    border-color: rgb(66,176,15) !important;
-}
-.Headerthree{
-    margin-top: 1rem;
-}
-.gapheaderthreenav{
-    display: flex;
-    gap: 1rem;
-}
-.buttonthree{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    font-size: medium;
-    color: white;
-    border: none;
-    background-color:  rgb(66,176,15) !important;
-}
-.rowssscolmnss{
-    display: flex;
-    justify-content: left;
-    margin-top: 2rem;
-}
-.rowssscolmnsss{
-    display: grid;
-    justify-content: left;
-    margin-top: 2rem;
-}
-.colflex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
- }
-  .checkbx{
-    margin-top: 1rem;
-  }
-  .checkbx1{
-    margin-top: .5rem;
-  }
-  .mrgin{
-    margin-left: .5rem;
-  }
-  .remove2{
-    display: flex!important;
-gap: 5rem;
-justify-content: center;
-align-items: center;
-}   
-
 
 @media only screen and (max-width: 425px) {
-    .remove{
-        display: none!important;
-    }   
-    .googlepic{
-        width: 5rem;
-        height: 2rem;
-        margin-right: 3rem;
-    }
+  .remove {
+    display: none !important;
   }
-  @media only screen and (width: 320px) {
-    .remove{
-        display: none!important;
-    }   
-    .googlepic{
-        width: 3rem;
-        height: 2rem;
-        margin-right: .5rem;
-    }
+  .googlepic {
+    width: 5rem;
+    height: 2rem;
+    margin-right: 3rem;
   }
-  @media only screen and (max-width: 768px) {
-    .remove1{
-        display: none!important;
-    }   
-   
-   
+}
+@media only screen and (width: 320px) {
+  .remove {
+    display: none !important;
   }
+  .googlepic {
+    width: 3rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .remove1 {
+    display: none !important;
+  }
+}
 
-  @media only screen and (width: 768px) {
-    .googlepic{
-        width: 5rem;
-        height: 2rem;
-        margin-right: 25rem;
-    }
-   
+@media only screen and (width: 768px) {
+  .googlepic {
+    width: 5rem;
+    height: 2rem;
+    margin-right: 25rem;
   }
+}
 
-  @media only screen and (min-width: 769px) {
-    .remove2{
-        display: none!important;
-    }   
+@media only screen and (min-width: 769px) {
+  .remove2 {
+    display: none !important;
   }
+}
