@@ -60,6 +60,10 @@
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
 }
+.rowdiv:hover {
+  background-color: #42b00f;
+  color: white !important;
+}
 .rowdiv2 {
   display: flex;
   justify-content: space-between;
