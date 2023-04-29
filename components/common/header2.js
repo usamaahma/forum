@@ -1,7 +1,6 @@
 import React from "react";
 import Styles from "../../styles/Header.module.css";
-
-import { Button, Layout, Menu, theme } from "antd";
+import { Button, Layout, Menu,  } from "antd";
 const { Header } = Layout;
 const items1 = [
   "Home",
@@ -21,7 +20,7 @@ const items1 = [
 
 function Header3() {
   return (
-    <div className={Styles.Headerthree}>
+    <div className={ `${Styles.Headerthree} ${Styles.remove1}`} style={{marginBottom:"2rem"}}>
       {" "}
       <Header
         style={{
@@ -34,6 +33,7 @@ function Header3() {
         <div>
           {" "}
           <Menu
+          bordered="false"
             className={Styles.gapheaderthreenav}
             style={{
               backgroundColor: "#151515",

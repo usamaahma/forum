@@ -7,7 +7,7 @@ import RightSection from "@/components/RightSection";
 function LandingPage() {
   return (
     <div>
-      <div className={Styles.mainland}>
+      <div className={Styles.mainland} style={{marginTop:"1rem"}}>
         <Row justify="center">
           <Col lg={6}>
             <div className={Styles.centercol}>

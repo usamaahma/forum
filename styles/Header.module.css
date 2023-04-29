@@ -51,7 +51,6 @@
 .dropdown{
     border-top-right-radius:0rem !important;
     border-bottom-right-radius:0rem !important;
-    border-color: rgb(66,176,15) !important;
 
 }
 .inputradius{
@@ -76,11 +75,78 @@
     border: none;
     background-color:  rgb(66,176,15) !important;
 }
+.rowssscolmnss{
+    display: flex;
+    justify-content: left;
+    margin-top: 2rem;
+}
+.rowssscolmnsss{
+    display: grid;
+    justify-content: left;
+    margin-top: 2rem;
+}
+.colflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+ }
+  .checkbx{
+    margin-top: 1rem;
+  }
+  .checkbx1{
+    margin-top: .5rem;
+  }
+  .mrgin{
+    margin-left: .5rem;
+  }
+  .remove2{
+    display: flex!important;
+gap: 5rem;
+justify-content: center;
+align-items: center;
+}   
 
-  
 
 @media only screen and (max-width: 425px) {
     .remove{
+        display: none!important;
+    }   
+    .googlepic{
+        width: 5rem;
+        height: 2rem;
+        margin-right: 3rem;
+    }
+  }
+  @media only screen and (width: 320px) {
+    .remove{
+        display: none!important;
+    }   
+    .googlepic{
+        width: 3rem;
+        height: 2rem;
+        margin-right: .5rem;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .remove1{
+        display: none!important;
+    }   
+   
+   
+  }
+
+  @media only screen and (width: 768px) {
+    .googlepic{
+        width: 5rem;
+        height: 2rem;
+        margin-right: 25rem;
+    }
+   
+  }
+
+  @media only screen and (min-width: 769px) {
+    .remove2{
         display: none!important;
     }   
   }

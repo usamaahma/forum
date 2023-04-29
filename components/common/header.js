@@ -22,7 +22,7 @@ function Header1() {
       {" "}
       <Layout>
         <Header style={{ backgroundColor: "white" }} className={Styles.headerr}>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
             <div className={Styles.menudiv}>
               <div className={Styles.menudiv1}>
                 {" "}
@@ -34,7 +34,7 @@ function Header1() {
               </div>
             </div>
           </Menu>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
             <div className={Styles.menudiv3}>
               <div className={Styles.buttons}>
                 <button

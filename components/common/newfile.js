@@ -1,148 +1,88 @@
-import React, { useState } from "react";
+import React,{ useState } from "react";
 import Styles from "../../styles/Header.module.css";
-import {
-  Layout,
-  Menu,
-  Input,
-  Button,
-  Select,
-  Modal,
-  Row,
-  Col,
-  Checkbox,
-  Space,
-  Dropdown,
-} from "antd";
+import { Input, Button,Drawer,Row,Col,Checkbox,Dropdown,Space  } from "antd";
 import { SearchOutlined, UserOutlined, DownOutlined } from "@ant-design/icons";
 
+
 const handleMenuClick = (e) => {
-  message.info("Click on menu item.");
-  console.log("click", e);
-};
-const { Header } = Layout;
-const { Search } = Input;
-const onSearch = (value) => console.log(value);
-const onChange = (e) => {
-  console.log(`checked = ${e.target.checked}`);
-};
+    message.info("Click on menu item.");
+    console.log("click", e);
+  };
 const items = [
-  {
-    label: "1st menu item",
-    key: "1",
-    icon: <UserOutlined />,
-  },
-  {
-    label: "2nd menu item",
-    key: "2",
-    icon: <UserOutlined />,
-  },
-  {
-    label: "3rd menu item",
-    key: "3",
-    icon: <UserOutlined />,
-    danger: true,
-  },
-  {
-    label: "4rd menu item",
-    key: "4",
-    icon: <UserOutlined />,
-    danger: true,
-    disabled: true,
-  },
-];
+    {
+      label: "1st menu item",
+      key: "1",
+      icon: <UserOutlined />,
+    },
+    {
+      label: "2nd menu item",
+      key: "2",
+      icon: <UserOutlined />,
+    },
+    {
+      label: "3rd menu item",
+      key: "3",
+      icon: <UserOutlined />,
+      danger: true,
+    },
+    {
+      label: "4rd menu item",
+      key: "4",
+      icon: <UserOutlined />,
+      danger: true,
+      disabled: true,
+    },
+  ];
 const menuProps = {
-  items,
-  onClick: handleMenuClick,
-};
-function Header2() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
+    items,
+    onClick: handleMenuClick,
   };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-  const dropdownRender = () => [];
+  
 
-  const [selectedLang, setSelectedLang] = useState("english");
-  const handleLangChange = (lang) => {
-    setSelectedLang(lang);
-  };
+export default function Newfile() {
 
-  const buttonStyle = {
-    backgroundColor: "#FFFFFF",
-    color: selectedLang === "english" ? "#42B00F" : "#000000",
-    border: "none",
-    padding: "10px 20px",
-    borderRadius: "5px",
-    marginRight: "10px",
-  };
-
+    const onChange = (e) => {
+        console.log(`checked = ${e.target.checked}`);
+      };
+    const [open, setOpen] = useState(false);
+    const showDrawer = () => {
+      setOpen(true);
+    };
+    const onClose = () => {
+      setOpen(false);
+    };
+  const { Search } = Input;
+  const onSearch = (value) => console.log(value);
   return (
-    <div>
-      {" "}
-      <Layout>
-        <Header style={{ backgroundColor: "white" }} className={Styles.headerr}>
-          <Menu theme="light" mode="horizontal" className={Styles.commons} bordered="false">
-            <img className={Styles.googlepic} src="../images/google.png" />
-           
-            <div className={`${Styles.buttons} ${Styles.remove2}` }   >
-                <button
-                  style={
-                    selectedLang === "english"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("english")}
-                >
-                  English
-                </button>
-                <button
-                  style={
-                    selectedLang === "hindi"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("hindi")}
-                >
-                  বাংলা
-                </button>
-                <img style={{width:"1rem",height:"1rem"}} src="../images/Notification.png"></img>
-              </div>
-          </Menu>
-          <br/>
-          <Menu
-            theme="light"
-            mode="horizontal"
-            className={`${Styles.commons} ${Styles.remove1}`}
+    <div
+      theme="light"
+      mode="horizontal"
+      className={`${Styles.buttons} ${Styles.remove2}`}
+    >
+      <Search
+        style={{
+          width: 280,
+          borderRadius: "4px 0 0 4px",
+          borderLeft: "none",
+        }}
+        placeholder="Search........."
+        onSearch={onSearch}
+        enterButton={
+          <Button
+            style={{
+              backgroundColor: "#42B00F",
+              border: "1px solid #42B00F",
+            }}
           >
-            <Select
-              dropdownRender={dropdownRender}
-              defaultValue="filter"
-              onClick={showModal}
-            />
-            <Modal
-              open={isModalOpen}
-              onOk={handleOk}
-              onCancel={handleCancel}
-              width={800}
-            >
-              <Row className={Styles.rowssscolmnss}>
+            <SearchOutlined style={{ color: "white" }} />
+          </Button>
+        }
+      ></Search>
+      <Drawer  placement="right" onClose={onClose} open={open}>
+      <Row className={Styles.rowssscolmnsss}>
                 <Col span={12}>
                   <div
                     className={Styles.colflex}
-                    style={{ marginLeft: "-15rem" }}
                   >
                     <img
                       style={{ width: " 1rem", height: "1rem" }}
@@ -210,7 +150,8 @@ function Header2() {
                   {" "}
                   <div
                     className={Styles.colflex}
-                    style={{ marginLeft: "-4rem" }}
+                    style={{ marginTop: "2rem",marginBottom:"1rem" }}
+
                   >
                     {" "}
                     <img
@@ -256,7 +197,7 @@ function Header2() {
                   <Col>
                     <div
                       className={Styles.colflex}
-                      style={{ marginLeft: "-8rem" }}
+                      style={{ marginTop: "2rem",marginBottom:"1rem" }}
                     >
                       {" "}
                       <img
@@ -298,63 +239,11 @@ function Header2() {
                   </Col>
                 </Col>
               </Row>
-            </Modal>
-            <Search
-              style={{
-                width: 280,
-                borderRadius: "4px 0 0 4px",
-                borderLeft: "none",
-              }}
-              placeholder="Search........."
-              onSearch={onSearch}
-              enterButton={
-                <Button
-                  style={{
-                    backgroundColor: "#42B00F",
-                    border: "1px solid #42B00F",
-                  }}
-                >
-                  <SearchOutlined style={{ color: "white" }} />
-                </Button>
-              }
-            ></Search>
-          </Menu>
-          
-          <Menu
-            theme="light"
-            mode="horizontal"
-            className={`${Styles.commons} ${Styles.remove1}`}
-            bordered="false"
-          >
-            <div className={Styles.menudiv4}>
-              <div className={Styles.menudiv5}>
-                {" "}
-                <img src="../images/Heart.png" className={Styles.iconsss5} />
-                <p className={Styles.iconsss}>Which Lists</p>
-              </div>
-              <div className={Styles.menudiv5}>
-                {" "}
-                <img src="../images/Cart.png" />
-                <p className={Styles.iconsss}> Cart</p>
-              </div>
-              <div className={Styles.menudiv5}>
-                {" "}
-                <img src="../images/User.png" />
-                <p className={Styles.iconsss}>Sign In</p>
-              </div>
-              <div className={Styles.menudiv5}>
-                {" "}
-                <img
-                  className={Styles.notificationss}
-                  src="../images/Notification.png"
-                />
-              </div>
-            </div>
-          </Menu>
-        </Header>
-      </Layout>
+      </Drawer>
+      <button onClick={showDrawer} style={{backgroundColor:"transparent",borderColor:"transparent", overflow: "hidden" }}>
+      <img style={{ marginLeft: "1rem" }} src="../images/Fitler.png" ></img>
+      </button>
+      
     </div>
   );
 }
-
-export default Header2;
