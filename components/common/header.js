@@ -26,11 +26,11 @@ function Header1() {
             <div className={Styles.menudiv}>
               <div className={Styles.menudiv1}>
                 {" "}
-                <img src="../images/phone.png" /> 123-456-789
+                <img src="../images/phone.png" alt="abc" /> 123-456-789
               </div>
               <div className={Styles.menudiv1}>
                 {" "}
-                <img src="../images/Email.png" /> bon@gmail.com
+                <img src="../images/Email.png" alt="abc"  /> bon@gmail.com
               </div>
             </div>
           </Menu>
