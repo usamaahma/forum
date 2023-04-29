@@ -5,7 +5,7 @@ import Profile from "../../public/images/Ellipse 247.png";
 import { Card, Tag } from "antd";
 import Image from "next/image";
 import Facebook from "../../public/images/Icon (1).png";
-import Twitter from "../../public/images/Icon.png";
+import Twitter from "../../public/images/twitter.png";
 import Instgram from "../../public/images/Group 131.png";
 import Linkdin from "../../public/images/Group 132.png";
 import Loc from "../../public/images/Locatin (1).png";
@@ -30,15 +30,15 @@ function MemberCard() {
             <p className={Styles.diptext}>Diploma In Accounting</p>
             <p className={Styles.user}>@username</p>
             <div className={Styles.flexboxloc}>
-              <Image src={Loc} />
+              <Image src={Loc} alt="abc"/>
               <p className={Styles.diptext}>@NY, USA</p>
             </div>
             <div className={Styles.betweendiv}>
               <div className={Styles.flexboxloc1}>
-                <Image src={PLus} /> <p className={Styles.foltext}> Follow</p>
+                <Image src={PLus} alt="abc"/> <p className={Styles.foltext}> Follow</p>
               </div>
               <div className={Styles.flexboxloc1}>
-                <Image src={Mail} />
+                <Image src={Mail} alt="abc"/>
                 <p className={Styles.foltext}>Email</p>
               </div>
             </div>
@@ -54,13 +54,13 @@ function MemberCard() {
           <div>
             <div className={Styles.flexrow}>
               <div className={Styles.circle}>
-                <Image src={Twitter} />
+                <Image src={Twitter} alt="abc"/>
               </div>
               <div className={Styles.circle}>
-                <Image src={Facebook} />
+                <Image src={Facebook} alt="abc" />
               </div>
-              <Image src={Instgram} />
-              <Image src={Linkdin} />
+              <Image src={Instgram} alt="abc"/>
+              <Image src={Linkdin} alt="abc"/>
             </div>
           </div>
         </Card>

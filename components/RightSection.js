@@ -19,8 +19,8 @@ function RightSection() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} />
-        <Image className={Styles.imgsize} src={Shoes} />
+        <Image className={Styles.imgsize} src={Bottle} alt="abc"/>
+        <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>
@@ -38,7 +38,7 @@ function RightSection() {
         </div>
         <hr className={Styles.line} />
         <div className={Styles.inputdiv}>
-          <Image src={Profile} />
+          <Image src={Profile} alt="abc"/>
           <Input
             placeholder="Share What’s on your mind....."
             className={Styles.input}
@@ -46,8 +46,8 @@ function RightSection() {
         </div>
         <div className={Styles.cameradiv}>
           <div>
-            <Image src={Camera} />
-            <Image src={File} />
+            <Image src={Camera} alt="abc" />
+            <Image src={File} alt="abc"/>
           </div>
           <div className={Styles.post}>
             <p>Post</p>
@@ -57,11 +57,11 @@ function RightSection() {
       <div className={Styles.postdiv}>
         <p className={Styles.clr}> All Post</p>
         <div>
-          <Image src={Arrowdown} />
+          <Image src={Arrowdown} alt="abc"/>
         </div>
       </div>
-      {dataOne.map(() => (
-        <div>
+      {dataOne.map((index) => (
+        <div  key={index}>
           <Post />
         </div>
       ))}

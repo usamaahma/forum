@@ -12,7 +12,7 @@ function Post() {
     <div className={Styles.bigpostbox}>
       <div className={Styles.postbox}>
         <div className={Styles.subpostbox}>
-          <Image src={Profile} />
+          <Image src={Profile}  alt="abc"/>
           <div className={Styles.divleft}>
             <p className={Styles.istext}>Istiaq Firoz</p>
             <p className={Styles.hour}>2 Hours ago </p>
@@ -24,7 +24,7 @@ function Post() {
           </div>
         </div>
         <div>
-          <Image src={Dot} />
+          <Image src={Dot}  alt="abc"/>
         </div>
       </div>
       <hr className={Styles.line} />
@@ -33,13 +33,13 @@ function Post() {
           I can help you for Tax Preperation. If you need help please contact me
           912-320-2020
         </p>
-        <Image src={Note} className={Styles.imgsize} />
+        <Image src={Note} className={Styles.imgsize} alt="abc"/>
         <div className={Styles.centerico}>
           <div className={Styles.centerico1}>
-            <Image src={Link} /> <p className={Styles.textleft}>25</p>
+            <Image src={Link}  alt="abc"/> <p className={Styles.textleft}>25</p>
           </div>
           <div className={Styles.centerico1}>
-            <Image src={Comment} /> <p className={Styles.textleft}>30</p>
+            <Image src={Comment} alt="abc"/> <p className={Styles.textleft}>30</p>
           </div>
         </div>
       </div>
@@ -49,6 +49,7 @@ function Post() {
           <Image
             style={{ width: "2rem", height: "2rem", marginTop: "-2rem" }}
             src={Profile}
+            alt="abc"
           />
           <div className={Styles.divleft}>
             <p className={Styles.fitext}>Istiaq Firoz</p>
@@ -58,7 +59,7 @@ function Post() {
           </div>
         </div>
         <div>
-          <Image src={Dot} />
+          <Image src={Dot} alt="abc" />
         </div>
       </div>
     </div>

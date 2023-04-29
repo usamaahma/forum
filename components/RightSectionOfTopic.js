@@ -53,8 +53,8 @@ function RightSectionOfTopic() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} />
-        <Image className={Styles.imgsize} src={Shoes} />
+        <Image className={Styles.imgsize} src={Bottle} alt="abc" />
+        <Image className={Styles.imgsize} src={Shoes} alt="abc"/>
       </div>
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>
@@ -72,7 +72,7 @@ function RightSectionOfTopic() {
         </div>
         <hr className={Styles.line} />
         <div className={Styles.inputdiv}>
-          <Image src={Profile} />
+          <Image src={Profile} alt="abc"/>
           <Input
             placeholder="Share What’s on your mind....."
             className={Styles.input}
@@ -80,8 +80,8 @@ function RightSectionOfTopic() {
         </div>
         <div className={Styles.cameradiv}>
           <div>
-            <Image src={Camera} />
-            <Image src={File} />
+            <Image src={Camera} alt="abc"/>
+            <Image src={File} alt="abc"/>
           </div>
           <div className={Styles.post}>
             <p>Post</p>
@@ -93,8 +93,8 @@ function RightSectionOfTopic() {
         <div>Post</div>
         <div>Latest Post</div>
       </div>
-      {data.map((user) => (
-        <div className={Styles.postdiv}>
+      {data.map((user,index) => (
+        <div className={Styles.postdiv}  key={index}>
           <div>
             <p className={Styles.clr}>{user.name}</p>
             <p className={Styles.clr12}>{user.subname}</p>

@@ -18,17 +18,17 @@ function LeftSectionOfMembers() {
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Trade} />,
+      icon: <Image src={Trade}  alt="abc"/>,
     },
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Comment} />,
+      icon: <Image src={Comment}   alt="abc"/>,
     },
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Profile} />,
+      icon: <Image src={Profile}   alt="abc"/>,
     },
   ];
   return (
@@ -45,13 +45,13 @@ function LeftSectionOfMembers() {
         <p className={Styles.textcenter}>Connect With</p>
         <div className={Styles.flexrow}>
           <div className={Styles.circle}>
-            <Image src={Twitter} />
+            <Image src={Twitter}   alt="abc"/>
           </div>
           <div className={Styles.circle}>
-            <Image src={Facebook} />
+            <Image src={Facebook}   alt="abc"/>
           </div>
-          <Image src={Instgram} />
-          <Image src={Linkdin} />
+          <Image src={Instgram}   alt="abc"/>
+          <Image src={Linkdin}   alt="abc"/>
         </div>
         <p className={Styles.nottext}>
           Not Account? <a className={Styles.nottextone}>Sign Up</a>
@@ -60,8 +60,8 @@ function LeftSectionOfMembers() {
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Forum Statics</p>
         <hr />
-        {data.map((user) => (
-          <div className={Styles.rowdiv}>
+        {data.map((user, index) => (
+          <div className={Styles.rowdiv} key={index}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}> {user.icon} </div>
               <div className={Styles.marginleft}>
@@ -70,7 +70,7 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right} />
+              <Image src={Right}  alt="abc"/>
             </div>
           </div>
         ))}
@@ -79,8 +79,8 @@ function LeftSectionOfMembers() {
         <p className={Styles.jointext}>Recent Post</p>
         <hr />
 
-        {dataOne.map(() => (
-          <div>
+        {dataOne.map((index) => (
+          <div key={index}>
             <RecentPost />
           </div>
         ))}
@@ -89,8 +89,8 @@ function LeftSectionOfMembers() {
         <p className={Styles.jointext}>Recent Blog</p>
         <hr />
       </div>
-      {dataOne.map(() => (
-        <div>
+      {dataOne.map((index) => (
+        <div key={index}>
           <RecentBlog />
         </div>
       ))}
