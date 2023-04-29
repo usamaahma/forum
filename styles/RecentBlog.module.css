@@ -1,6 +1,6 @@
 .flexdiv {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -10,11 +10,14 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
-  width: 50%;
 }
-.centerico1 {
+.centerico12 {
   display: flex;
   justify-content: space-between;
+  width: 45%;
+}
+.centerico123 {
+  display: flex;
 }
 .textleft {
   margin-left: 0.5rem;
@@ -25,14 +28,18 @@
 }
 .textish {
   color: #151515;
-  font-size: 1rem;
+  font-size: 0.7rem;
   font-weight: 600;
+  margin-top: 0.5rem;
+}
+.boxleft {
+  margin-left: 1rem;
 }
 .hour {
   color: #7e8284;
   font-size: 0.6rem;
   font-weight: 600;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
 }
 .para {
   color: #a1a1a1;

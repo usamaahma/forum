@@ -1,0 +1,125 @@
+.boxflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 51rem;
+}
+.imgsize {
+  width: 25rem;
+}
+.skydiv {
+  background-color: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.skying {
+  width: 100%;
+}
+.flexrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.circle {
+  background-color: #f1f1f1;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facdiv {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.topimg {
+  margin-top: -7rem;
+  width: 6rem;
+  height: 6rem;
+}
+.linkdivbox {
+  margin-left: 2rem;
+}
+.betweendiv {
+  display: flex;
+  justify-content: space-between;
+  width: 11rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.betweendiv22 {
+  display: flex;
+  justify-content: space-between;
+  width: 11rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.atext {
+  color: #c4c4c4 !important;
+}
+.foltext {
+  color: #42b00f;
+  margin-left: 0.5rem;
+}
+.flexboxloc1 {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  padding-left: 0.6rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+}
+.flexend {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 1440px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 44rem;
+  }
+  .imgsize {
+    width: 21rem;
+  }
+}
+@media (max-width: 1404px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40rem;
+  }
+  .imgsize {
+    width: 19.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24rem;
+  }
+  .imgsize {
+    width: 16rem;
+  }
+}
+@media (max-width: 768px) {
+  .boxflex {
+    display: none !important;
+  }
+  .imgsize {
+    display: none !important;
+  }
+}
