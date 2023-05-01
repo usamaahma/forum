@@ -9,7 +9,7 @@ import Twitter from "../../public/images/twitter.png";
 import Instgram from "../../public/images/Group 131.png";
 import Linkdin from "../../public/images/Group 132.png";
 import Loc from "../../public/images/Locatin (1).png";
-import PLus from "../../public/images/Plus.png";
+import PLus from "../../public/images/Plus1.png";
 import Mail from "../../public/images/Email.png";
 const { Meta } = Card;
 function MemberCard() {
@@ -30,15 +30,16 @@ function MemberCard() {
             <p className={Styles.diptext}>Diploma In Accounting</p>
             <p className={Styles.user}>@username</p>
             <div className={Styles.flexboxloc}>
-              <Image src={Loc} alt="abc"/>
+              <Image src={Loc} alt="abc" />
               <p className={Styles.diptext}>@NY, USA</p>
             </div>
             <div className={Styles.betweendiv}>
               <div className={Styles.flexboxloc1}>
-                <Image src={PLus} alt="abc"/> <p className={Styles.foltext}> Follow</p>
+                <Image src={PLus} alt="abc" />{" "}
+                <p className={Styles.foltext}> Follow</p>
               </div>
               <div className={Styles.flexboxloc1}>
-                <Image src={Mail} alt="abc"/>
+                <Image src={Mail} alt="abc" />
                 <p className={Styles.foltext}>Email</p>
               </div>
             </div>
@@ -54,13 +55,13 @@ function MemberCard() {
           <div>
             <div className={Styles.flexrow}>
               <div className={Styles.circle}>
-                <Image src={Twitter} alt="abc"/>
+                <Image src={Twitter} alt="abc" />
               </div>
               <div className={Styles.circle}>
                 <Image src={Facebook} alt="abc" />
               </div>
-              <Image src={Instgram} alt="abc"/>
-              <Image src={Linkdin} alt="abc"/>
+              <Image src={Instgram} alt="abc" />
+              <Image src={Linkdin} alt="abc" />
             </div>
           </div>
         </Card>

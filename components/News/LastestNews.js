@@ -1,18 +1,16 @@
 import React from "react";
 import Styles from "../../styles/RecentBlog.module.css";
 import Image from "next/image";
-import Boy from "../../public/images/Rectangle 4579.png";
-import Link from "../../public/images/Like.png";
-import Comment from "../../public/images/Comment (1).png";
+import Boy from "../../public/images/bus.png";
 import { Tag } from "antd";
-function RecentBlog() {
+function LastestNews() {
   return (
     <div className={Styles.mainpostdiv}>
       <div className={Styles.flexdiv}>
         <Image src={Boy} alt="abc" />
         <div className={Styles.boxleft}>
           <Tag color="#DEF5D3" className={Styles.textclr}>
-            Food
+            News
           </Tag>
           <p className={Styles.textish}>
             Interview Question:
@@ -28,18 +26,9 @@ function RecentBlog() {
       <hr className={Styles.line} />
       <div className={Styles.centerico}>
         <p className={Styles.hour}>22 Jan, 2023</p>
-        <div className={Styles.centerico12}>
-          <div className={Styles.centerico123}>
-            <Image src={Link} alt="abc" /> <p className={Styles.textleft}>25</p>
-          </div>
-          <div className={Styles.centerico123}>
-            <Image src={Comment} alt="abc" />{" "}
-            <p className={Styles.textleft}>30</p>
-          </div>
-        </div>
       </div>
     </div>
   );
 }
 
-export default RecentBlog;
+export default LastestNews;

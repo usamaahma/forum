@@ -6,12 +6,14 @@ import MembersPageTwo from "./memberPageTwo";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import LandingPage from "./landingPage";
+import NewsPage from "./NewsPage";
 export default function Home() {
   return (
     <>
       {/* <MainHeader /> */}
-      <LandingPage />
+      {/* <LandingPage /> */}
       {/* <Footer /> */}
+      <NewsPage />
     </>
   );
 }
