@@ -9,6 +9,7 @@ import dataOne from "../../dataOne.json";
 import RecentBlog from "../members/RecentBlog";
 import Link from "next/link";
 import LastestNews from "./LastestNews";
+import NewsEvent from "./NewsEvent";
 
 function NewsLeftSection() {
   return (
@@ -56,6 +57,17 @@ function NewsLeftSection() {
           <RecentBlog />
         </div>
       ))}
+      <div>
+        <div className={Styles.boxdiv}>
+          <p className={Styles.jointext}>Events</p>
+          <hr />
+        </div>
+        {dataOne.map((index) => (
+          <div key={index}>
+            <NewsEvent />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

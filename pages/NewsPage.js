@@ -5,6 +5,7 @@ import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import NewsHeroSection from "@/components/News/NewsHeroSection";
 import NewsLeftSection from "@/components/News/NewLeftSection";
+import NewsRightSection from "@/components/News/NewsRightSection";
 
 function NewsPage() {
   return (
@@ -12,15 +13,15 @@ function NewsPage() {
       <MainHeader />
       <NewsHeroSection />
       <div className={Styles.mainland11}>
-        <Row justify="center">
+        <Row justify="space-evenly">
           <Col lg={6}>
             <div className={Styles.centercol}>
               <NewsLeftSection />
             </div>
           </Col>
-          <Col lg={10}>
+          <Col lg={12}>
             <div className={Styles.centercol}>
-              {/* <RightSectionOfTopic /> */}
+              <NewsRightSection />
             </div>
           </Col>
         </Row>
