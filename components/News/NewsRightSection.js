@@ -3,16 +3,9 @@ import Styles from "../../styles/NewsRightSection.module.css";
 import Image from "next/image";
 import Bottle from "../../public/images/Rectangle 45.png";
 import Shoes from "../../public/images/Rectangle 46 (1).png";
-// import Rectangle from "../../public/images/Rectangle 4636.png";
-// import Profile from "../public/images/Ellipse 9.png";
-// import Camera from "../public/images/Camera.png";
-// import File from "../public/images/File_dock_add.png";
-// import Arrowdown from "../public/images/Mask group (2).png";
-// import dataOne from "../dataOne.json";
 import { Input, Select } from "antd";
 import FeaturedNews from "./FeaturedNews";
-// import Post from "./post";
-
+import Green from "../../public/images/Rectangle 4636.png";
 const { Option } = Select;
 function NewsRightSection() {
   function handleChange(value) {
@@ -24,19 +17,28 @@ function NewsRightSection() {
         <Image className={Styles.imgsize} src={Bottle} alt="abc" />
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
-      {/* <div>
-        <Image src={Rectangle} alt="abc" />
-      </div> */}
+      <div className={Styles.boxgreen}>
+        <div className={Styles.greenbox}>
+          <p> Breaking News</p>
+        </div>
+        <div>
+          <p className={Styles.parh}>
+            Lorem Ipsum is simply dummy text of the printing and types Lorem
+            Ipsum is simply dummy text of the printing
+          </p>
+        </div>
+      </div>
       <div>
-        <p>Featured News</p>
-        <hr />
+        <p style={{ color: "#151515", fontWeight: "600" }}>Featured News</p>
+        <hr
+          style={{
+            border: "solid 1px #D9D9D9",
+            marginTop: ".5rem",
+            marginBottom: ".5rem",
+          }}
+        />
         <FeaturedNews />
       </div>
-      {/* {dataOne.map((index) => (
-        <div key={index}>
-          <Post />
-        </div>
-      ))} */}
     </div>
   );
 }

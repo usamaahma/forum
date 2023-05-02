@@ -1,10 +1,12 @@
 import React from "react";
 import Styles from "../../styles/FeaturedNews.module.css";
 import Business from "../../public/images/Rectangle 4640.png";
-import { Col, Row } from "antd";
+import { Col, Collapse, Row } from "antd";
 import Image from "next/image";
 import FeaturedPost from "./FeaturedPost";
 import dataOne from "../../dataOne.json";
+import dataTwo from "../../dataTwo.json";
+import CommunityNews from "./CommunityNews";
 function FeaturedNews() {
   return (
     <div>
@@ -41,11 +43,55 @@ function FeaturedNews() {
           </Col>
           <Col lg={8}>
             <div className={Styles.centercol1}>
-              {dataOne.map(() => (
-                <FeaturedPost />
-              ))}
+              <Row justify="center">
+                {dataOne.map(() => (
+                  <Col>
+                    <FeaturedPost />
+                  </Col>
+                ))}
+              </Row>
             </div>
           </Col>
+        </Row>
+      </div>
+      <div>
+        <p style={{ color: "#151515", fontWeight: "600" }}>Community News</p>
+        <hr
+          style={{
+            border: "solid 1px #D9D9D9",
+            marginTop: ".5rem",
+            marginBottom: ".5rem",
+          }}
+        />
+        {dataOne.map(() => (
+          <CommunityNews />
+        ))}
+      </div>
+      <div>
+        <p style={{ color: "#151515", fontWeight: "600" }}>Other News</p>
+        <hr
+          style={{
+            border: "solid 1px #D9D9D9",
+            marginTop: ".5rem",
+            marginBottom: ".5rem",
+          }}
+        />
+        <div className={Styles.btnflex}>
+          <button className={Styles.btn}>Politics</button>
+          <button className={Styles.btn}>Business</button>
+          <button className={Styles.btn}>Entertainment</button>
+          <button className={Styles.btn}>Bangladesh</button>
+          <button className={Styles.btn}>World</button>
+          <button className={Styles.btn}>Game</button>
+        </div>
+        <Row justify="space-evenly">
+          {dataTwo.map(() => (
+            <Col>
+              <div className={Styles.centercol1}>
+                <FeaturedPost />
+              </div>
+            </Col>
+          ))}
         </Row>
       </div>
     </div>

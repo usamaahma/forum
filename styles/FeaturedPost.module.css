@@ -2,7 +2,6 @@
   background: #ffffff;
   box-shadow: 0px 4.0693px 27.1286px rgba(0, 0, 0, 0.05);
   border-radius: 0.5rem;
-
   margin-bottom: 0.5rem;
 }
 .padding {
@@ -35,4 +34,9 @@
 }
 .img {
   width: 16rem;
+}
+@media (max-width: 1024px) {
+  .img {
+    width: 14rem;
+  }
 }

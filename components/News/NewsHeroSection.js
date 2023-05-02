@@ -1,5 +1,6 @@
 import React from "react";
 import Styles from "../../styles/HeroSection.module.css";
+
 function NewsHeroSection() {
   return (
     <div className={Styles.mainhero}>
