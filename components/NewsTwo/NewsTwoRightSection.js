@@ -33,7 +33,7 @@ function NewsTwoRightSection() {
           </p>
         </div>
       </div>
-      <div>
+      <div className={Styles.paddiv}>
         <button className={Styles.btnnew}>News</button>
         <p className={Styles.howtext}>
           How to write a title with an optimal width for SEO

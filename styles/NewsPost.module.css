@@ -76,91 +76,50 @@
   margin-bottom: 2rem;
 }
 
-/* @media (max-width: 1024px) {
-  .imgstyle {
-    width: 91%;
-  }
-  .flexbtndiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 90%;
-  }
-  .boxpadding {
-    padding: 0.5rem;
-    background: #ffffff;
-    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
-    border-radius: 0px 0px 7.44565px 7.44565px;
-    margin-top: -0.5rem;
-    width: 20rem;
-  }
-  .intertext {
-    color: #151515;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
+.btnflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  border: #ffffff solid 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.2rem;
+  color: #444444;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 425px) {
   .lookingtext {
     color: #a1a1a1;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 450;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
-} */
-/* @media (max-width: 768px) {
-  .imgstyle {
-    width: 100%;
+  .mblview {
+    padding: 1rem;
   }
-  .flexbtndiv {
+  .imgdivflex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    width: 100%;
+    width: 40%;
+    margin-bottom: 0rem;
   }
-  .boxpadding {
-    padding: 0.5rem;
-    background: #ffffff;
-    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
-    border-radius: 0px 0px 7.44565px 7.44565px;
-    margin-top: -0.5rem;
-    width: 100%;
-  }
-  .intertext {
+  .share {
     color: #151515;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0em;
+    margin-bottom: 0rem;
+    padding: 1rem;
   }
-  .lookingtext {
-    color: #a1a1a1;
-    font-size: 0.85rem;
-    font-weight: 450;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-} */
-/* @media (max-width: 425px) {
-  .btnflex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  .btn {
-    border: #ffffff solid 1px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    border-radius: 0.2rem;
-    color: #444444;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-} */
+}

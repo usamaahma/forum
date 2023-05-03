@@ -1,0 +1,129 @@
+.mainboxdivv22 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+}
+.boxflex11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 13rem;
+  padding-right: 13rem;
+  margin-top: 2rem;
+}
+.imgsize11 {
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.protext {
+  margin-top: 2rem;
+  color: #000000;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.protext1 {
+  margin-top: 1rem;
+  color: #42b00f;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.protext2 {
+  margin-top: 1.8rem;
+  color: #d60101;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+.protext3 {
+  margin-top: 1.8rem;
+  color: #d60101;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+.divpos {
+  position: absolute;
+  margin-left: 16rem;
+  left: 0;
+}
+.divpos1 {
+  position: absolute;
+  margin-right: 33rem;
+  right: 0;
+}
+@media (max-width: 1440px) {
+  .divpos {
+    position: absolute;
+    margin-left: 19rem;
+    left: 0;
+  }
+  .divpos1 {
+    position: absolute;
+    margin-right: 36rem;
+    right: 0;
+  }
+}
+@media (max-width: 1400px) {
+  .divpos {
+    position: absolute;
+    margin-left: 16rem;
+    left: 0;
+  }
+  .divpos1 {
+    position: absolute;
+    margin-right: 33rem;
+    right: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .divpos {
+    position: absolute;
+    margin-left: 6rem;
+    left: 0;
+  }
+  .divpos1 {
+    position: absolute;
+    margin-right: 22.5rem;
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .divpos {
+    position: absolute;
+    margin-left: 2rem;
+    left: 0;
+  }
+  .divpos1 {
+    position: absolute;
+    margin-right: 15rem;
+    right: 0;
+  }
+}
+@media (max-width: 425px) {
+  .boxflex11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .imgsize11 {
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .divpos1 {
+    position: absolute;
+    margin-right: 3rem;
+    right: 0;
+  }
+}
+@media (max-width: 325px) {
+  .divpos1 {
+    position: absolute;
+    margin-right: 1rem;
+    right: 0;
+  }
+}

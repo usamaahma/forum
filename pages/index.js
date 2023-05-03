@@ -8,13 +8,15 @@ import HeroSection from "@/components/HeroSection";
 // import LandingPage from "./landingPage";
 // import NewsPage from "./NewsPage";
 import NewsPageTwo from "./NewsPageTwo";
+import BlogPage from "./BlogPage";
 export default function Home() {
   return (
     <>
       {/* <MainHeader /> */}
       {/* <LandingPage /> */}
       {/* <Footer /> */}
-      <NewsPageTwo />
+      {/* <NewsPageTwo /> */}
+      <BlogPage />
     </>
   );
 }

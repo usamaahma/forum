@@ -30,7 +30,7 @@ function NewsPost() {
           </p>
         </div>
       </div>
-      <div>
+      <div className={Styles.mblview}>
         <p className={Styles.share}>Share This Event</p>
         <div className={Styles.imgdivflex}>
           <Image src={Tiww} />
@@ -48,7 +48,7 @@ function NewsPost() {
             marginBottom: ".5rem",
           }}
         />
-        <p>Comment:</p>
+        <p className={Styles.share}>Comment:</p>
         {/* <Form.Item> */}
         <TextArea
           style={{
@@ -62,7 +62,7 @@ function NewsPost() {
         {/* </Form.Item> */}
       </div>
       <div>
-        <p style={{ color: "#151515", fontWeight: "600" }}>Similar News </p>
+        <p className={Styles.share}>Similar News </p>
         <hr
           style={{
             border: "solid 1px #D9D9D9",
