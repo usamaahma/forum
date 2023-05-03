@@ -15,13 +15,13 @@ function BlogPage() {
       <BlogHeroSection />
       <BlogImageSection />
       <div className={Styles.mainland11}>
-        <Row justify="space-evenly" className={Styles.mbree}>
-          <Col lg={10}>
+        <Row justify="center" className={Styles.mbree}>
+          <Col lg={6}>
             <div className={Styles.centercol}>
               <BlogLeftSection />
             </div>
           </Col>
-          <Col lg={10}>
+          <Col lg={12}>
             <div className={Styles.centercol}>
               <BlogRightSection />
             </div>
