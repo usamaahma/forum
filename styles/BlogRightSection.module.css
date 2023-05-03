@@ -27,3 +27,36 @@
   color: #42b00f;
   margin-top: 0.5rem;
 }
+.flexsise {
+  display: flex;
+  align-items: center;
+}
+.maindivside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  /* margin-bottom: 2rem; */
+  /* width: 90%; */
+}
+.text {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+.text1 {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+}
+.cardsize {
+  width: 20rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1024px) {
+  /* .cardsize {
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  } */
+}
