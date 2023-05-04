@@ -5,11 +5,13 @@ import HeroSection from "@/components/HeroSection";
 import MembersPageTwo from "./memberPageTwo";
 import EventsPage from "./events";
 import HeroSectionEvents from "@/components/eventpage/HeroSectionevents";
+import Eventform from "@/components/eventpage/eventform";
+import BlogForm from "@/components/Blog/BlogForm";
 export default function Home() {
   return (
     <>
       <HeroSectionEvents />
-      <EventsPage />
+      <Eventform />
     </>
   );
 }

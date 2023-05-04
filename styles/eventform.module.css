@@ -1,0 +1,119 @@
+.colgap {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.inputgap {
+  margin-top: 0.5rem;
+  width: 20rem;
+}
+.inputgaptext {
+  margin-top: 0.5rem;
+  width: 41rem;
+}
+.inputgapp {
+  margin-top: 0.5rem;
+  width: 41rem;
+}
+.inputgapss {
+  margin-top: 0.5rem;
+  width: 9.5rem;
+}
+.colgapppssss {
+  width: 41rem;
+  margin-bottom: 5rem;
+}
+.divssss {
+  display: grid;
+}
+.divsssss {
+  display: flex;
+  gap: 1rem;
+}
+.ticket {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.ticketss {
+  margin-top: 1.5rem;
+  width: 52rem;
+  display: flex;
+  justify-content: center;
+}
+.ticketspot {
+  display: flex;
+  align-items: center;
+  gap: 28rem;
+  margin-top: 1.5rem;
+}
+.Dropdowns {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+}
+.Dropdownss {
+  display: flex;
+  align-items: center;
+  gap: 12rem;
+}
+.Dropdownsss {
+  display: flex;
+  align-items: center;
+  gap: 13.5rem;
+}
+.dragger {
+  margin-top: 1.5rem;
+  width: 35rem;
+}
+.buttonsantd {
+  margin-top: 5rem;
+  width: 5rem !important;
+  background-color: #42b00f !important;
+  border: #42b00f;
+  color: white;
+}
+.buttonsantd:hover {
+  color: white !important;
+}
+.draggercenter {
+  display: flex;
+  justify-content: center;
+}
+.buttondrag {
+  background-color: none !important;
+  border-color: transparent !important;
+}
+.buttondrag:hover {
+  border: none !important;
+}
+@media only screen and (max-width: 425px) {
+  .colgap {
+    display: grid;
+    justify-content: center !important;
+  }
+  .ticketss {
+    margin-top: 1.5rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+  }
+  .ticket {
+    margin-left: -3rem;
+  }
+  .ticketspot {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 1.5rem;
+  }
+  .inputgapp {
+    margin-top: 0.5rem;
+    width: 15rem;
+  }
+  .colgapppssss {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    margin-bottom: 5rem;
+  }
+}
