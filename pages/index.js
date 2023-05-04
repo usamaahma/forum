@@ -7,7 +7,7 @@
 // import HeroSectionEvents from "@/components/eventpage/HeroSectionevents";
 // import BlogPage from "./BlogPage";
 import NewsPage from "./NewsPage";
-import BlogTwoPage from "./BlogTwoPage";
+// import BlogTwoPage from "./BlogTwoPage";
 // import EventsTwoPage from "./EventsTwoPage";
 export default function Home() {
   return (
@@ -15,8 +15,8 @@ export default function Home() {
       {/* <HeroSectionEvents />
       <EventsPage /> */}
       {/* <EventsTwoPage /> */}
-      <BlogTwoPage />
-      {/* <NewsPage /> */}
+      {/* <BlogTwoPage /> */}
+      <NewsPage />
     </>
   );
 }

@@ -7,6 +7,7 @@ import FeaturedPost from "./FeaturedPost";
 import dataOne from "../../dataOne.json";
 import dataTwo from "../../dataTwo.json";
 import CommunityNews from "./CommunityNews";
+import NewsCarousel from "./NewsCarouel";
 function FeaturedNews() {
   return (
     <div>
@@ -94,6 +95,9 @@ function FeaturedNews() {
           ))}
         </Row>
       </div>
+      {/* <div>
+        <NewsCarousel />
+      </div> */}
     </div>
   );
 }

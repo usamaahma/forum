@@ -10,7 +10,7 @@ import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
-import BlogCarousel from "./BlogCarousel";
+// import BlogCarousel from "./BlogCarousel";
 const { TextArea } = Input;
 function BlogTwoPost() {
   return (
@@ -72,18 +72,15 @@ function BlogTwoPost() {
             marginBottom: ".5rem",
           }}
         />
-        {/* <Row>
+        <Row justify="space-evenly">
           {dataOne.map(() => (
-            <Col lg={8}>
+            <Col>
               <div className={Styles.centercol1}>
-                <BlogCarousel />
+                <BlogCard />
               </div>
             </Col>
           ))}
-        </Row> */}
-        {/* <div>
-          <BlogCarousel />
-        </div> */}
+        </Row>
       </div>
     </div>
   );
