@@ -3,26 +3,27 @@ import Styles from "../styles/Topic.module.css";
 import { Row, Col } from "antd";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
-import NewsHeroSection from "@/components/News/NewsHeroSection";
-import NewsLeftSection from "@/components/News/NewLeftSection";
-// import NewsRightSection from "@/components/News/NewsRightSection";
-import NewsTwoRightSection from "@/components/NewsTwo/NewsTwoRightSection";
+import BlogLeftSection from "@/components/Blog/BlogLeftSection";
+import BlogRightSection from "@/components/Blog/BlogRightSection";
+import BlogHeroSection from "@/components/Blog/BlogHeroSection";
+import BlogImageSection from "@/components/Blog/BlogImageSection";
 
-function NewsPageTwo() {
+function BlogPage() {
   return (
     <div>
       <MainHeader />
-      <NewsHeroSection />
+      <BlogHeroSection />
+      <BlogImageSection />
       <div className={Styles.mainland11}>
-        <Row justify="space-evenly" className={Styles.mbree}>
+        <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
-              <NewsLeftSection />
+              <BlogLeftSection />
             </div>
           </Col>
-          <Col lg={10}>
+          <Col lg={12}>
             <div className={Styles.centercol}>
-              <NewsTwoRightSection />
+              <BlogRightSection />
             </div>
           </Col>
         </Row>
@@ -32,4 +33,4 @@ function NewsPageTwo() {
   );
 }
 
-export default NewsPageTwo;
+export default BlogPage;

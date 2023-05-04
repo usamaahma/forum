@@ -6,3 +6,8 @@
 .mainland11 {
   padding: 20px 0px;
 }
+@media (max-width: 425px) {
+  .mbree {
+    flex-direction: column-reverse;
+  }
+}

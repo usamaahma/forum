@@ -1,16 +1,17 @@
 import React from "react";
 import Styles from "../../styles/NewsPost.module.css";
-import Business from "../../public/images/Rectangle 4640.png";
+import Business from "../../public/images/Image.png";
 import { Col, Row, Input, Form } from "antd";
 import Image from "next/image";
 import FeaturedPost from "../News/FeaturedPost";
-import dataTwo from "../../dataTwo.json";
+import dataOne from "../../dataOne.json";
 import Tiww from "../../public/images/Group 134.png";
 import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
+import BlogCard from "../Blog/BlogCard";
 const { TextArea } = Input;
-function NewsPost() {
+function BlogTwoPost() {
   return (
     <div>
       <div>
@@ -49,20 +50,20 @@ function NewsPost() {
           }}
         />
         <p className={Styles.share}>Comment:</p>
-        {/* <Form.Item> */}
+
         <TextArea
           style={{
             border: "solid 1px #D9D9D9",
             marginTop: ".5rem",
-            marginBottom: ".5rem",
+            marginBottom: "1rem",
             borderRadius: ".2rem",
           }}
           rows={9}
         />
-        {/* </Form.Item> */}
+        <button className={Styles.btncommt}>Post Comment</button>
       </div>
       <div>
-        <p className={Styles.share}>Similar News </p>
+        <p className={Styles.share}>Similar Blog</p>
         <hr
           style={{
             border: "solid 1px #D9D9D9",
@@ -71,10 +72,10 @@ function NewsPost() {
           }}
         />
         <Row justify="space-evenly">
-          {dataTwo.map(() => (
+          {dataOne.map(() => (
             <Col>
               <div className={Styles.centercol1}>
-                <FeaturedPost />
+                <BlogCard />
               </div>
             </Col>
           ))}
@@ -84,4 +85,4 @@ function NewsPost() {
   );
 }
 
-export default NewsPost;
+export default BlogTwoPost;

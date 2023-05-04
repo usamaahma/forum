@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/NewsTwoRightSection.module.css";
+import Styles from "../../styles/BlogTwoRightSection.module.css";
 import Image from "next/image";
 import Bottle from "../../public/images/Rectangle 45.png";
 import Shoes from "../../public/images/Rectangle 46 (1).png";
@@ -8,11 +8,10 @@ import Forward from "../../public/images/Frame 44375.png";
 import Comments from "../../public/images/Frame 44373 (1).png";
 import Ellipse from "../../public/images/Ellipse 207.png";
 import { Input, Select } from "antd";
-import FeaturedNews from "../News/FeaturedNews";
-import Green from "../../public/images/Rectangle 4636.png";
-import NewsPost from "./NewsPost";
+
+import BlogTwoPost from "./BlogTwoPost";
 const { Option } = Select;
-function NewsTwoRightSection() {
+function BlogTwoRightSection() {
   function handleChange(value) {
     console.log(`selected ${value}`);
   }
@@ -22,17 +21,7 @@ function NewsTwoRightSection() {
         <Image className={Styles.imgsize} src={Bottle} alt="abc" />
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
-      <div className={Styles.boxgreen}>
-        <div className={Styles.greenbox}>
-          <p> Breaking News</p>
-        </div>
-        <div>
-          <p className={Styles.parh}>
-            Lorem Ipsum is simply dummy text of the printing and types Lorem
-            Ipsum is simply dummy text of the printing
-          </p>
-        </div>
-      </div>
+
       <div className={Styles.paddiv}>
         <button className={Styles.btnnew}>News</button>
         <p className={Styles.howtext}>
@@ -59,10 +48,10 @@ function NewsTwoRightSection() {
         </div>
       </div>
       <div>
-        <NewsPost />
+        <BlogTwoPost />
       </div>
     </div>
   );
 }
 
-export default NewsTwoRightSection;
+export default BlogTwoRightSection;

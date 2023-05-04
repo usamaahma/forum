@@ -37,6 +37,54 @@
   margin-right: 1rem;
   color: #444444;
 }
+.frst {
+  margin-bottom: 5rem;
+  margin-top: 0.6rem;
+  color: #7e8284;
+  font-size: 0.6rem;
+}
+.pehlikarahi {
+  width: 10rem;
+}
+.coltwo {
+  margin-left: 1rem;
+}
+.greenimg {
+  position: absolute;
+}
+.eventsss{
+  font-size: 1rem ;
+  font-weight: 500;
+}
+.datess {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+}
+.datess55 {
+  font-size: 0.8rem;
+  color: #7e8284;
+  margin-bottom: 0.5rem;
+}
+.nameonee {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.liness {
+  background-color: #e8e8e8;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: auto;
+  height: 0.01rem;
+}
+.marginb {
+  margin-bottom: 0.5rem;
+}
+.datess5 {
+  font-size: 1rem;
+  color: #7e8284;
+}
 .centercol {
   display: flex;
   justify-content: center;

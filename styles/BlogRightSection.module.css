@@ -1,0 +1,62 @@
+.textsmall {
+  color: #a1a1a1;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.inttext {
+  color: #151515;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.prtext {
+  color: #737373;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.morebtn {
+  background-color: #def5d3;
+  border: #def5d3 solid 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+  color: #42b00f;
+  margin-top: 0.5rem;
+}
+.flexsise {
+  display: flex;
+  align-items: center;
+}
+.maindivside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  /* margin-bottom: 2rem; */
+  /* width: 90%; */
+}
+.text {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+}
+.text1 {
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  margin-top: 0.2rem;
+}
+.cardsize {
+  width: 20rem;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 1024px) {
+  /* .cardsize {
+    width: 15rem;
+    margin-bottom: 0.5rem;
+  } */
+}
