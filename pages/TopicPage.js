@@ -3,11 +3,16 @@ import Styles from "../styles/Topic.module.css";
 import { Row, Col } from "antd";
 import LeftSection from "@/components/LeftSection";
 import RightSectionOfTopic from "@/components/RightSectionOfTopic";
+import MainHeader from "@/components/common/mainHeader";
+import Footer from "@/components/common/footer";
+import HeroSection from "@/components/HeroSection";
 
 function TopicPage() {
   return (
     <div>
-      <div className={Styles.mainland}>
+      <MainHeader />
+      <HeroSection />
+      <div className={Styles.mainland11}>
         <Row justify="center">
           <Col lg={6}>
             <div className={Styles.centercol}>
@@ -21,6 +26,7 @@ function TopicPage() {
           </Col>
         </Row>
       </div>
+      <Footer />
     </div>
   );
 }

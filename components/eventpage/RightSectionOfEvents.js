@@ -3,7 +3,6 @@ import Styles from "../../styles/RightSectionOfMember.module.css";
 import Image from "next/image";
 import Bottle from "../../public/images/Rectangle 45.png";
 import Shoes from "../../public/images/Rectangle 46 (1).png";
-import Union from "../../public/images/Union.png";
 import card from "../../card.json";
 import { Select, Row, Col } from "antd";
 
@@ -21,24 +20,28 @@ function RightSectionOfEvents() {
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>
           <div className={Styles.selectdiv}>
-            <Image src={Union} />
-            <p className={Styles.clr}>
-              <a className={Styles.clr1}>100</a> All Member
-            </p>
+            <p className={Styles.clr}>Top Events</p>
           </div>
           <div className={Styles.selectdiv}>
             <p className={Styles.filter}>Filter :</p>
             <Select
-              defaultValue="Topic"
+              defaultValue="Last Active"
               style={{ width: 120 }}
               onChange={handleChange}
             >
-              <Option value="Topic">Topic</Option>
-              <Option value="lucy">Lucy</Option>
+              <Option value="Topic">Last Active</Option>
+              <Option value="lucy">Last Active</Option>
             </Select>
           </div>
         </div>
       </div>
+      <Row>
+        {card.map((index) => (
+          <Col key={index}>
+            <div className={Styles.centercol}>abc</div>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }

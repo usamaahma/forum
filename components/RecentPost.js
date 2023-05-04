@@ -9,7 +9,7 @@ function RecentPost() {
   return (
     <div>
       <div className={Styles.flexdiv}>
-        <Image src={Boy} />
+        <Image src={Boy} alt="abc"/>
         <div>
           <p className={Styles.textish}>Istiaq Firoz</p>
           <Tag color="#DEF5D3" className={Styles.textclr}>
@@ -28,10 +28,10 @@ function RecentPost() {
       <hr className={Styles.line} />
       <div className={Styles.centerico}>
         <div className={Styles.centerico1}>
-          <Image src={Link} /> <p className={Styles.textleft}>25</p>
+          <Image src={Link} alt="abc"/> <p className={Styles.textleft}>25</p>
         </div>
         <div className={Styles.centerico1}>
-          <Image src={Comment} /> <p className={Styles.textleft}>30</p>
+          <Image src={Comment} alt="abc"/> <p className={Styles.textleft}>30</p>
         </div>
       </div>
     </div>

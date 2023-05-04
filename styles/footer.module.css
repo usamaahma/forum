@@ -1,0 +1,86 @@
+.container {
+  background-color: #151515;
+}
+
+.rowcol {
+  display: flex;
+  justify-content: space-evenly;
+
+  color: white;
+}
+.firstcol {
+  display: grid;
+  margin-top: 3rem;
+}
+.googleimg {
+  width: 8rem;
+}
+.scdnfirstcol {
+  color: #c1c1c1;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.trddiv {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+.guide {
+  margin-top: 3rem;
+  color: #42b00f;
+}
+.para {
+  margin-top: 1.5rem;
+  color: #c1c1c1;
+}
+.para1 {
+    margin-top: .5rem;
+    color: #c1c1c1;
+  }
+  .bottom{
+    color: #A1A1A1;
+    padding: 1rem;
+  }
+  .lastrow{
+    background-color: #2D2C2C;
+    display: flex;
+    justify-content: space-evenly;
+  }
+ .lstttdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+ }
+ 
+ .imggg{
+    margin-top: 1rem;
+    width: 20rem;
+ }
+ .downloadap{
+    display: none;
+ }
+ .newimg{
+    width: 2.5rem;
+    height: 2rem;
+ }
+
+
+ @media only screen and (max-width: 425px) {
+
+.downloadap{
+    display: flex;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    background-color: #42b00f;
+    border: none;
+    color: white;
+    border-radius: 0.2rem;
+ }
+ .downloadapp{
+    display: none;
+ }
+ }
+
+
+

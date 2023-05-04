@@ -1,0 +1,135 @@
+.boxflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 51rem;
+}
+.imgsize {
+  width: 25rem;
+}
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.inputdiv {
+  display: flex;
+  padding: 1rem;
+}
+.input {
+  /* width: 30rem; */
+  margin-left: 1rem;
+  border: none !important;
+}
+.cameradiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fcfcfc;
+}
+.post {
+  border: solid 1px #42b00f;
+  color: #42b00f;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.2rem;
+}
+.postdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.line {
+  border: solid 1px #e8e8e8;
+}
+.flexbigbox {
+  background-color: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+.clr {
+  color: #444444;
+  font-weight: 500;
+}
+.clr1 {
+  color: #000000;
+  font-weight: 600;
+}
+.boxgreen {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.greenbox {
+  background: #42b00f;
+  width: 10rem;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-radius: 0px 50px 50px 0px;
+}
+.parh {
+  font-size: 0.8rem;
+  color: #151515;
+  font-weight: 500;
+}
+@media (max-width: 1440px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 44rem; */
+  }
+  .imgsize {
+    /* width: 21rem; */
+  }
+}
+@media (max-width: 1404px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 40rem; */
+  }
+  .imgsize {
+    /* width: 19.5rem; */
+  }
+}
+@media (max-width: 1024px) {
+  .boxflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24rem;
+  }
+  .imgsize {
+    width: 16rem;
+  }
+}
+@media (max-width: 768px) {
+  .boxflex {
+    display: none !important;
+  }
+  .imgsize {
+    display: none !important;
+  }
+}

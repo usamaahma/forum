@@ -12,6 +12,7 @@ import Right from "../../public/images/Right-arrow.png";
 import RecentPost from "../RecentPost";
 import dataOne from "../../dataOne.json";
 import RecentBlog from "./RecentBlog";
+import LastestNews from "../News/LastestNews";
 
 function LeftSectionOfEvents() {
   const data = [
@@ -60,18 +61,9 @@ function LeftSectionOfEvents() {
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Latest News</p>
         <hr />
-        {data.map((user) => (
-          <div className={Styles.rowdiv}>
-            <div className={Styles.rowdiv2}>
-              <div className={Styles.circle2}> {user.icon} </div>
-              <div className={Styles.marginleft}>
-                <p>{user.name}</p>
-                <p>{user.subname}</p>
-              </div>
-            </div>
-            <div>
-              <Image src={Right} />
-            </div>
+        {dataOne.map((index) => (
+          <div key={index}>
+            <LastestNews />
           </div>
         ))}
       </div>

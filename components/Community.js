@@ -9,16 +9,16 @@ function Community() {
     <div>
       <div className={Styles.flexdiv}>
         <div>
-          <Image src={Boy} />
+          <Image src={Boy}  alt="abc"/>
         </div>
         <div>
           <p className={Styles.annetext}>Anne Mark</p>
           <div className={Styles.rowflex}>
-            <Image src={Bag} />
+            <Image src={Bag}  alt="abc"/>
             <p className={Styles.amtext}>Accountant</p>
           </div>
           <div className={Styles.rowflex}>
-            <Image src={Locatin} />
+            <Image src={Locatin}  alt="abc"/>
             <p className={Styles.amtext}>Location Here</p>
           </div>
         </div>

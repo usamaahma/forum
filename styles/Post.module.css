@@ -37,6 +37,12 @@
   margin-top: 0.5rem;
   width: 15%;
 }
+.centerico1 {
+  display: flex;
+}
+.textleft {
+  margin-left: 0.5rem;
+}
 .istext {
   color: #151515;
   font-size: 1rem;

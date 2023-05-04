@@ -1,0 +1,42 @@
+.boxsmall {
+  background: #ffffff;
+  box-shadow: 0px 4.0693px 27.1286px rgba(0, 0, 0, 0.05);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.padding {
+  padding: 0.8rem;
+}
+.boxflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.btn {
+  background-color: #def5d3;
+  color: #42b00f;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  border: #def5d3 solid 1px;
+  border-radius: 0.2rem;
+}
+.smalltext {
+  color: #a1a1a1;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.textin {
+  color: #151515;
+  font-weight: 500;
+}
+.img {
+  width: 16rem;
+}
+@media (max-width: 1024px) {
+  .img {
+    width: 14rem;
+  }
+}

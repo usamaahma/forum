@@ -22,19 +22,19 @@ function Header1() {
       {" "}
       <Layout>
         <Header style={{ backgroundColor: "white" }} className={Styles.headerr}>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
             <div className={Styles.menudiv}>
               <div className={Styles.menudiv1}>
                 {" "}
-                <img src="../images/phone.png" /> 123-456-789
+                <img src="../images/Phone.png" alt="abc" /> 123-456-789
               </div>
               <div className={Styles.menudiv1}>
                 {" "}
-                <img src="../images/Email.png" /> bon@gmail.com
+                <img src="../images/Email.png" alt="abc"  /> bon@gmail.com
               </div>
             </div>
           </Menu>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]}>
+          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
             <div className={Styles.menudiv3}>
               <div className={Styles.buttons}>
                 <button

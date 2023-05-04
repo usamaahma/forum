@@ -16,13 +16,13 @@ function RightSectionOfMember() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} />
-        <Image className={Styles.imgsize} src={Shoes} />
+        <Image className={Styles.imgsize} src={Bottle} alt="abc"/>
+        <Image className={Styles.imgsize} src={Shoes} alt="abc"/>
       </div>
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>
           <div className={Styles.selectdiv}>
-            <Image src={Union} />
+            <Image src={Union} alt="abc" />
             <p className={Styles.clr}>
               <a className={Styles.clr1}>100</a> All Member
             </p>
@@ -41,9 +41,9 @@ function RightSectionOfMember() {
         </div>
       </div>
       <Row justify="space-evenly">
-        {card.map(() => (
-          <Col>
-            <div className={Styles.centercol}>
+        {card.map((index) => (
+          <Col  key={index}>
+            <div className={Styles.centercol} >
               <MemberCard />
             </div>
           </Col>

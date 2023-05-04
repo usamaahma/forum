@@ -10,7 +10,7 @@ import Twitter from "../../public/images/twitter.png";
 import Instgram from "../../public/images/insta.png";
 import Linkdin from "../../public/images/linkdin.png";
 import dataOne from "../../dataOne.json";
-import PLus from "../../public/images/Plus.png";
+import PLus from "../../public/images/Plus1.png";
 import Mail from "../../public/images/Email.png";
 import { Select, Row, Col, Tabs } from "antd";
 import Post from "../post";
@@ -29,26 +29,26 @@ function MemberTwoRightSection() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} />
-        <Image className={Styles.imgsize} src={Shoes} />
+        <Image className={Styles.imgsize} src={Bottle} alt="abc" />
+        <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.skydiv}>
         <div>
-          <Image src={Sky} className={Styles.skying} />
+          <Image src={Sky} className={Styles.skying} alt="abc" />
         </div>
         <div className={Styles.facdiv}>
-          <Image src={Profile22} className={Styles.topimg} />
+          <Image src={Profile22} className={Styles.topimg} alt="abc" />
           <div className={Styles.linkdivbox}>
             <p>Istiaq Firoz</p>
             <div className={Styles.flexrow}>
               <div className={Styles.circle}>
-                <Image src={Twitter} />
+                <Image src={Twitter} alt="abc" />
               </div>
               <div className={Styles.circle}>
-                <Image src={Facebook} />
+                <Image src={Facebook} alt="abc" />
               </div>
-              <Image src={Instgram} />
-              <Image src={Linkdin} />
+              <Image src={Instgram} alt="abc" />
+              <Image src={Linkdin} alt="abc" />
             </div>
             <div className={Styles.betweendiv}>
               <p>
@@ -63,10 +63,11 @@ function MemberTwoRightSection() {
         <div className={Styles.flexend}>
           <div className={Styles.betweendiv22}>
             <div className={Styles.flexboxloc1}>
-              <Image src={PLus} /> <p className={Styles.foltext}> Follow</p>
+              <Image src={PLus} alt="abc" />{" "}
+              <p className={Styles.foltext}> Follow</p>
             </div>
             <div className={Styles.flexboxloc1}>
-              <Image src={Mail} />
+              <Image src={Mail} alt="abc" />
               <p className={Styles.foltext}>Email</p>
             </div>
           </div>
@@ -78,8 +79,8 @@ function MemberTwoRightSection() {
         style={{ padding: "1rem" }}
       >
         <TabPane tab="Post" key="1">
-          {dataOne.map(() => (
-            <div>
+          {dataOne.map((index) => (
+            <div key={index}>
               <Post />
             </div>
           ))}
