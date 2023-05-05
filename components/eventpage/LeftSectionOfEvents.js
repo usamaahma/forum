@@ -71,8 +71,8 @@ function LeftSectionOfEvents() {
         <p className={Styles.jointext}>Recent Post</p>
         <hr />
 
-        {dataOne.map(() => (
-          <div>
+        {dataOne.map((index) => (
+          <div key={index}>
             <RecentPost />
           </div>
         ))}

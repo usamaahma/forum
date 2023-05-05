@@ -48,7 +48,7 @@ function LeftSectionOfMembers() {
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Trade} />{" "}
+                <Image src={Trade} alt="abc"/>{" "}
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>32</p>
@@ -64,7 +64,7 @@ function LeftSectionOfMembers() {
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Comment} />
+                <Image src={Comment} alt="abc"/>
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>100</p>
@@ -72,7 +72,7 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right} />
+              <Image src={Right} alt="abc"/>
             </div>
           </div>
         </Link>
@@ -80,7 +80,7 @@ function LeftSectionOfMembers() {
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Profile} />
+                <Image src={Profile} alt="abc"/>
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>200</p>
@@ -88,7 +88,7 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right} />
+              <Image src={Right} alt="abc"/>
             </div>
           </div>
         </Link>
