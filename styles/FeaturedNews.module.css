@@ -83,6 +83,10 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+.cardivvv {
+  width: 37rem;
+  margin-top: 1rem;
+}
 @media (max-width: 1024px) {
   .imgstyle {
     width: 91%;
@@ -148,6 +152,10 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+  .cardivvv {
+    width: 40rem;
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 425px) {
   .btnflex {
@@ -169,5 +177,9 @@
     color: #444444;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+  }
+  .cardivvv {
+    width: 26rem;
+    margin-top: 1rem;
   }
 }

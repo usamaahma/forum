@@ -1,13 +1,18 @@
 import React from "react";
 import Styles from "../styles/MembersPage.module.css";
 import { Row, Col } from "antd";
-
 import RightSectionOfEvents from "@/components/eventpage/RightSectionOfEvents";
 import LeftSectionOfEvents from "@/components/eventpage/LeftSectionOfEvents";
+import MainHeader from "@/components/common/mainHeader";
+import Footer from "@/components/common/footer";
+import EventsHeroSection from "@/components/eventpage/EventsHeroSection";
 
 function EventsPage() {
   return (
     <div>
+      <MainHeader />
+      <EventsHeroSection />
+      <br />
       <div className={Styles.mainland}>
         <Row justify="center">
           <Col lg={6}>
@@ -22,6 +27,7 @@ function EventsPage() {
           </Col>
         </Row>
       </div>
+      <Footer />
     </div>
   );
 }

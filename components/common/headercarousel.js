@@ -3,6 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Styles from "../../styles/Header.module.css";
 import { Button } from "antd";
+import Link from "next/link";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -55,29 +56,41 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>News</Button>
+    <Link href="/NewsPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        News
+      </Button>
+    </Link>
   </div>,
   <div
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Event
-    </Button>
+    <Link href="/events">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Event
+      </Button>
+    </Link>
   </div>,
   <div
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Forum
-    </Button>
+    <Link href="/landingPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Forum
+      </Button>
+    </Link>
   </div>,
   <div
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>Blog</Button>
+    <Link href="/BlogPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Blog
+      </Button>
+    </Link>
   </div>,
 ];
 const responsive = {

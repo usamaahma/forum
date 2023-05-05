@@ -30,7 +30,9 @@ function Header3() {
           backgroundColor: "#151515",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: "space-evenly",
+          width: "100%",
+          height: "auto",
         }}
       >
         <div>
@@ -43,9 +45,154 @@ function Header3() {
                 color: "white",
               }}
               mode="horizontal"
-              defaultSelectedKeys={["2"]}
-              items={items1}
-            />
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Home</p>
+            </Menu>
+          </Link>
+        </div>
+        <div>
+          <Menu
+            bordered="false"
+            className={Styles.gapheaderthreenav}
+            style={{
+              backgroundColor: "#151515",
+              color: "white",
+            }}
+            mode="horizontal"
+            // defaultSelectedKeys={["2"]}
+            // items={items1}
+          >
+            <p>Deshi Shop</p>
+          </Menu>
+        </div>
+        <div>
+          <Menu
+            bordered="false"
+            className={Styles.gapheaderthreenav}
+            style={{
+              backgroundColor: "#151515",
+              color: "white",
+            }}
+            mode="horizontal"
+            // defaultSelectedKeys={["2"]}
+            // items={items1}
+          >
+            <p>Deshi Service</p>
+          </Menu>
+        </div>
+        <div>
+          <Menu
+            bordered="false"
+            className={Styles.gapheaderthreenav}
+            style={{
+              backgroundColor: "#151515",
+              color: "white",
+            }}
+            mode="horizontal"
+            // defaultSelectedKeys={["2"]}
+            // items={items1}
+          >
+            <p>Buy & Sell</p>
+          </Menu>
+        </div>
+        <div>
+          <Menu
+            bordered="false"
+            className={Styles.gapheaderthreenav}
+            style={{
+              backgroundColor: "#151515",
+              color: "white",
+            }}
+            mode="horizontal"
+            // defaultSelectedKeys={["2"]}
+            // items={items1}
+          >
+            <p>Rental</p>
+          </Menu>
+        </div>
+        <div>
+          <Menu
+            bordered="false"
+            className={Styles.gapheaderthreenav}
+            style={{
+              backgroundColor: "#151515",
+              color: "white",
+            }}
+            mode="horizontal"
+            // defaultSelectedKeys={["2"]}
+            // items={items1}
+          >
+            <p>Job</p>
+          </Menu>
+        </div>
+        <div>
+          <Link href="/NewsPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>News</p>
+            </Menu>
+          </Link>
+        </div>
+        <div>
+          <Link href="/events">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Event</p>
+            </Menu>
+          </Link>
+        </div>
+        <div>
+          <Link href="/landingPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Forum</p>
+            </Menu>
+          </Link>
+        </div>
+        <div>
+          <Link href="/BlogPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Blog</p>
+            </Menu>
           </Link>
         </div>
         <div>

@@ -10,6 +10,7 @@ import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
+import Link from "next/link";
 // import BlogCarousel from "./BlogCarousel";
 const { TextArea } = Input;
 function BlogTwoPost() {
@@ -61,7 +62,9 @@ function BlogTwoPost() {
           }}
           rows={9}
         />
-        <button className={Styles.btncommt}>Post Comment</button>
+        <Link href="/BlogFormPage">
+          <button className={Styles.btncommt}>Post Comment</button>
+        </Link>
       </div>
       <div>
         <p className={Styles.share}>Similar Blog</p>

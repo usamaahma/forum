@@ -131,22 +131,18 @@
     width: 24rem;
   }
 }
-@media (width: 1024px) {
+/* @media (width: 1024px) {
   .Carousel {
     margin-top: 1rem;
     width: 24rem;
   }
-}
+} */
 @media (max-width: 768px) {
   .boxflex {
     display: none !important;
   }
   .imgsize {
     display: none !important;
-  }
-  .Carousel {
-    margin-top: 1rem;
-    width: 37rem;
   }
 }
 @media (max-width: 425px) {
