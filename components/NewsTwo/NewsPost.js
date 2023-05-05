@@ -72,8 +72,8 @@ function NewsPost() {
         />
         <Row justify="space-evenly">
           {dataTwo.map((index) => (
-            <Col>
-              <div className={Styles.centercol1} key={index}>
+            <Col  key={index}>
+              <div className={Styles.centercol1}>
                 <FeaturedPost />
               </div>
             </Col>
