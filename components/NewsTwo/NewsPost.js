@@ -33,10 +33,10 @@ function NewsPost() {
       <div className={Styles.mblview}>
         <p className={Styles.share}>Share This Event</p>
         <div className={Styles.imgdivflex}>
-          <Image src={Tiww} />
-          <Image src={Fb} />
-          <Image src={Ins} />
-          <Image src={Lin} />
+          <Image src={Tiww} alt="abc" />
+          <Image src={Fb} alt="abc" />
+          <Image src={Ins} alt="abc" />
+          <Image src={Lin} alt="abc" />
         </div>
       </div>
       <div>

@@ -30,7 +30,7 @@ function EventRightSection() {
       </div>
       <div className={Styles.mainimgelldiv}>
         <div className={Styles.elldiv}>
-          <Image src={Ellipse} />
+          <Image src={Ellipse} alt="abc"/>
           <div className={Styles.textdiv}>
             <p style={{ color: "#444444", fontWeight: "500" }}>Author Name</p>
             <p
@@ -41,9 +41,9 @@ function EventRightSection() {
           </div>
         </div>
         <div className={Styles.commdiv}>
-          <Image className={Styles.smllbox} src={Heart} />
-          <Image className={Styles.smllbox} src={Forward} />
-          <Image className={Styles.smllbox} src={Comments} />
+          <Image className={Styles.smllbox} src={Heart} alt="abc"/>
+          <Image className={Styles.smllbox} src={Forward} alt="abc"/>
+          <Image className={Styles.smllbox} src={Comments} alt="abc"/>
           <p>50k</p>
         </div>
       </div>

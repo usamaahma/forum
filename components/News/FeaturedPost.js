@@ -6,7 +6,7 @@ function FeaturedPost() {
   return (
     <div>
       <div className={Styles.boxsmall}>
-        <Image className={Styles.img} src={Imag} alt="" />
+        <Image className={Styles.img} src={Imag} alt="abc" />
         <div className={Styles.padding}>
           <div className={Styles.boxflex}>
             <button className={Styles.btn}>Business </button>
