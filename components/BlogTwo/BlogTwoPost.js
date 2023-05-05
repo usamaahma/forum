@@ -78,8 +78,8 @@ function BlogTwoPost() {
           }}
         />
         <Row justify="space-evenly">
-          {dataOne.map(() => (
-            <Col>
+          {dataOne.map((index) => (
+            <Col key={index}>
               <div className={Styles.centercol1}>
                 <BlogCard />
               </div>
