@@ -1,28 +1,27 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+
 import { Layout, Menu } from "antd";
 const { Header } = Layout;
 
 function Header1() {
-  const [selectedLang, setSelectedLang] = useState("english");
-  const handleLangChange = (lang) => {
-    setSelectedLang(lang);
+  const [isBangla, setIsBangla] = useState(false);
+
+  const handleClick = () => {
+    setIsBangla(!isBangla);
   };
 
-  const buttonStyle = {
-    backgroundColor: "#FFFFFF",
-    color: selectedLang === "english" ? "#42B00F" : "#000000",
-    border: "none",
-    padding: "10px 20px",
-    borderRadius: "5px",
-    marginRight: "10px",
-  };
   return (
     <div className={Styles.remove}>
       {" "}
       <Layout>
         <Header style={{ backgroundColor: "white" }} className={Styles.headerr}>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
+          <Menu
+            theme="light"
+            mode="horizontal"
+            defaultSelectedKeys={["2"]}
+            bordered="false"
+          >
             <div className={Styles.menudiv}>
               <div className={Styles.menudiv1}>
                 {" "}
@@ -30,41 +29,59 @@ function Header1() {
               </div>
               <div className={Styles.menudiv1}>
                 {" "}
-                <img src="../images/Email.png" alt="abc"  /> bon@gmail.com
+                <img src="../images/Email.png" alt="abc" /> bon@gmail.com
               </div>
             </div>
           </Menu>
-          <Menu theme="light" mode="horizontal" defaultSelectedKeys={["2"]} bordered="false">
+          <Menu
+            theme="light"
+            mode="horizontal"
+            defaultSelectedKeys={["2"]}
+            bordered="false"
+          >
             <div className={Styles.menudiv3}>
-              <div className={Styles.buttons}>
-                <button
-                  style={
-                    selectedLang === "english"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("english")}
+              <div
+                onClick={handleClick}
+                style={{
+                  marginTop:"1rem",
+                  display: "inline-flex",
+                  width: "70px",
+                  height: "30px",
+                  borderRadius: "3px",
+                  overflow: "hidden",
+                  backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    height: "100%",
+                    borderRadius: "3px",
+                    backgroundColor: isBangla ? "#FFFFFF" : "#42B00F",
+                    color: isBangla ? "black" : "white",
+                    transition: "background-color 0.3s ease, color 0.3s ease",
+                  }}
                 >
-                  English
-                </button>
-                <button
-                  style={
-                    selectedLang === "hindi"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("hindi")}
+                  Eng
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    height: "100%",
+                    borderRadius: "3px",
+                    backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                    color: isBangla ? "white" : "black",
+                    transition: "background-color 0.3s ease, color 0.3s ease",
+                  }}
                 >
                   বাংলা
-                </button>
+                </div>
               </div>
               <div>
                 {" "}

@@ -67,18 +67,10 @@ function Header2() {
   };
   const dropdownRender = () => [];
 
-  const [selectedLang, setSelectedLang] = useState("english");
-  const handleLangChange = (lang) => {
-    setSelectedLang(lang);
-  };
+  const [isBangla, setIsBangla] = useState(false);
 
-  const buttonStyle = {
-    backgroundColor: "#FFFFFF",
-    color: selectedLang === "english" ? "#42B00F" : "#000000",
-    border: "none",
-    padding: "10px 20px",
-    borderRadius: "5px",
-    marginRight: "10px",
+  const handleClick = () => {
+    setIsBangla(!isBangla);
   };
 
   return (
@@ -86,42 +78,70 @@ function Header2() {
       {" "}
       <Layout>
         <Header style={{ backgroundColor: "white" }} className={Styles.headerr}>
-          <Menu theme="light" mode="horizontal" className={Styles.commons} bordered="false">
+          <Menu
+            theme="light"
+            mode="horizontal"
+            className={Styles.commons}
+            bordered="false"
+          >
             <img className={Styles.googlepic} src="../images/google.png" />
-           
-            <div className={`${Styles.buttons} ${Styles.remove2}` }   >
-                <button
-                  style={
-                    selectedLang === "english"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("english")}
+            <div className={`${Styles.buttons} ${Styles.remove2}`}>
+              <div
+                onClick={handleClick}
+                style={{
+                  marginTop: "1rem",
+                  display: "inline-flex",
+                  width: "70px",
+                  height: "30px",
+                  borderRadius: "3px",
+                  overflow: "hidden",
+                  backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                }}
+              >
+                <div
+                  className={Styles.buttonchange}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    height: "100%",
+                    borderRadius: "3px",
+                    backgroundColor: isBangla ? "#FFFFFF" : "#42B00F",
+                    color: isBangla ? "black" : "white",
+                    transition: "background-color 0.3s ease, color 0.3s ease",
+                  }}
                 >
-                  English
-                </button>
-                <button
-                  style={
-                    selectedLang === "hindi"
-                      ? {
-                          ...buttonStyle,
-                          backgroundColor: "#42B00F",
-                          color: "#FFFFFF",
-                        }
-                      : buttonStyle
-                  }
-                  onClick={() => handleLangChange("hindi")}
+                  Eng
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    height: "100%",
+                    borderRadius: "3px",
+                    backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                    color: isBangla ? "white" : "black",
+                    transition: "background-color 0.3s ease, color 0.3s ease",
+                  }}
                 >
                   বাংলা
-                </button>
-                <img style={{width:"1rem",height:"1rem"}} src="../images/Notification.png"></img>
+                </div>
               </div>
+              <img
+                style={{
+                  width: "1rem",
+                  height: "1rem",
+                  marginLeft: "1rem",
+                  marginTop: "1rem",
+                }}
+                src="../images/Notification.png"
+              ></img>
+            </div>
           </Menu>
-          <br/>
+          <br />
           <Menu
             theme="light"
             mode="horizontal"
@@ -148,7 +168,7 @@ function Header2() {
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Categories.png"
                     ></img>{" "}
-                    <p style={{color:"#42B00F"}}>By Category</p>
+                    <p style={{ color: "#42B00F" }}>By Category</p>
                   </div>
                   <Row>
                     <Col
@@ -217,7 +237,7 @@ function Header2() {
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Group.png"
                     ></img>{" "}
-                    <p style={{color:"#42B00F"}}>Sub Category</p>
+                    <p style={{ color: "#42B00F" }}>Sub Category</p>
                   </div>
                   <Row>
                     {" "}
@@ -263,7 +283,7 @@ function Header2() {
                         style={{ width: " 1rem", height: "1rem" }}
                         src="../images/Locatin.png"
                       ></img>{" "}
-                      <p style={{color:"#42B00F"}}>Location</p>
+                      <p style={{ color: "#42B00F" }}>Location</p>
                     </div>
                     <Row
                       style={{
@@ -319,7 +339,7 @@ function Header2() {
               }
             ></Search>
           </Menu>
-          
+
           <Menu
             theme="light"
             mode="horizontal"
