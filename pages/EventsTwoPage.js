@@ -3,37 +3,32 @@ import Styles from "../styles/Topic.module.css";
 import { Row, Col } from "antd";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
-import BlogHeroSection from "@/components/Blog/BlogHeroSection";
-import BlogImageSection from "@/components/Blog/BlogImageSection";
-import BlogTwoLeftSection from "@/components/BlogTwo/BlogTwoLeftSection";
-import BlogTwoRightSection from "@/components/BlogTwo/BlogTwoRightSection";
-import BlogCarousel from "@/components/BlogTwo/BlogCarousel";
+import EventLeftSection from "@/components/eventPageTwo/EventLeftSection";
+import EventRightSection from "@/components/eventPageTwo/EventRightSection";
+import EventHeroSection from "@/components/eventPageTwo/EventHeroSection";
 
-function BlogTwoPage() {
+function EventsTwoPage() {
   return (
     <div>
       <MainHeader />
-      <BlogHeroSection />
+      <EventHeroSection />
       <div className={Styles.mainland11}>
         <Row justify="space-evenly" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
-              <BlogTwoLeftSection />
+              <EventLeftSection />
             </div>
           </Col>
           <Col lg={12}>
             <div className={Styles.centercol}>
-              <BlogTwoRightSection />
+              <EventRightSection />
             </div>
           </Col>
         </Row>
-      </div>
-      <div>
-        <BlogCarousel />
       </div>
       <Footer />
     </div>
   );
 }
 
-export default BlogTwoPage;
+export default EventsTwoPage;

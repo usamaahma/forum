@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+// import HeroSection from "@/components/HeroSection";
 // import LandingPage from "./landingPage";
 // import TopicPage from "./TopicPage";
 // import MembersPage from "./membersPage";
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <HeroSectionEvents />
-      <Eventform />
+      <EventsPage />
     </>
   );
 }
