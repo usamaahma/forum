@@ -79,12 +79,6 @@ function BlogTwoPost() {
           }}
         />
 
-              <div className={Styles.centercol1}>
-                <BlogCard />
-              </div>
-            </Col>
-          ))}
-        </Row> */}
         <div className={Styles.Carousel1}>
           <BlogCarousel />
         </div>
