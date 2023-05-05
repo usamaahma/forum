@@ -65,7 +65,7 @@ function RightSectionOfEvents() {
         {data.map((user, index) => (
           <Col key={index}>
             <div className={Styles.postdiv} key={index}>
-              <Row justify="start">
+              <Row justify="start" className={Styles.rowresponsive}>
                 <Col>
                   <img
                     src="../images/pehlikarahi.png"
@@ -115,7 +115,7 @@ function RightSectionOfEvents() {
             ></img>
           </div>
         </div>
-        <div style={{ width: "35rem" }}>
+        <div className={Styles.Carousel}>
           <Carousel />
         </div>
       </div>

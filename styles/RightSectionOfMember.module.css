@@ -52,8 +52,8 @@
 .greenimg {
   position: absolute;
 }
-.eventsss{
-  font-size: 1rem ;
+.eventsss {
+  font-size: 1rem;
   font-weight: 500;
 }
 .datess {
@@ -90,6 +90,10 @@
   justify-content: center;
   align-items: center;
 }
+.Carousel {
+  margin-top: 1rem;
+  width: 37rem;
+}
 @media (max-width: 1440px) {
   .boxflex {
     display: flex;
@@ -122,6 +126,16 @@
   .imgsize {
     width: 16rem;
   }
+  .Carousel {
+    margin-top: 1rem;
+    width: 24rem;
+  }
+}
+@media (width: 1024px) {
+  .Carousel {
+    margin-top: 1rem;
+    width: 24rem;
+  }
 }
 @media (max-width: 768px) {
   .boxflex {
@@ -129,5 +143,39 @@
   }
   .imgsize {
     display: none !important;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 37rem;
+  }
+}
+@media (max-width: 425px) {
+  .frst {
+    margin-bottom: 5rem;
+    margin-top: 0.6rem;
+    color: #7e8284;
+    font-size: 0.4rem;
+  }
+
+  .coltwo {
+    margin-left: 0.5rem;
+  }
+  .boxflex {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 15rem !important;
+  }
+  .flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 24rem;
   }
 }

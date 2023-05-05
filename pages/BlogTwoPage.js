@@ -7,7 +7,6 @@ import BlogHeroSection from "@/components/Blog/BlogHeroSection";
 import BlogImageSection from "@/components/Blog/BlogImageSection";
 import BlogTwoLeftSection from "@/components/BlogTwo/BlogTwoLeftSection";
 import BlogTwoRightSection from "@/components/BlogTwo/BlogTwoRightSection";
-import BlogCarousel from "@/components/BlogTwo/BlogCarousel";
 
 function BlogTwoPage() {
   return (
@@ -28,9 +27,7 @@ function BlogTwoPage() {
           </Col>
         </Row>
       </div>
-      <div>
-        <BlogCarousel />
-      </div>
+
       <Footer />
     </div>
   );

@@ -1,8 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import RecentBlog from "./RecentBlog";
-import Cardeventcar from "./cardeventcar";
+import FeaturedPost from "./FeaturedPost";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -11,19 +10,19 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Cardeventcar />
+    <FeaturedPost />
   </div>,
   <div
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Cardeventcar />
+    <FeaturedPost />
   </div>,
   <div
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Cardeventcar />
+    <FeaturedPost />
   </div>,
 ];
 const responsive = {
@@ -37,7 +36,7 @@ const responsive = {
     items: 3,
   },
 };
-function Carousel() {
+function NewsCarousel() {
   return (
     <div>
       {" "}
@@ -55,4 +54,4 @@ function Carousel() {
   );
 }
 
-export default Carousel;
+export default NewsCarousel;
