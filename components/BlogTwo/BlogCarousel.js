@@ -14,30 +14,35 @@ const handleDragStart = (e) => e.preventDefault();
 
 const items = [
   <div
+    key={1}
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "center" }}
   >
     <BlogCard />
   </div>,
   <div
+    key={2}
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "center" }}
   >
     <BlogCard />
   </div>,
   <div
+    key={3}
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "center" }}
   >
     <BlogCard />
   </div>,
   <div
+    key={4}
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "center" }}
   >
     <BlogCard />
   </div>,
 ];
+
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },

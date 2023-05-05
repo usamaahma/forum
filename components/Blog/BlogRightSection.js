@@ -14,8 +14,8 @@ function BlogRightSection() {
   return (
     <div>
       <Row justify="space-evenly">
-        {card.map(() => (
-          <Col>
+        {card.map((index) => (
+          <Col key={index}>
             <BlogCard />
           </Col>
         ))}

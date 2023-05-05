@@ -9,12 +9,14 @@ const handleDragStart = (e) => e.preventDefault();
 
 const items = [
   <div
+    key="home"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
     <Button style={{ color: "black", borderColor: "transparent" }}>Home</Button>
   </div>,
   <div
+    key="deshi-shop"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -23,6 +25,7 @@ const items = [
     </Button>
   </div>,
   <div
+    key="deshi-service"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -31,6 +34,7 @@ const items = [
     </Button>
   </div>,
   <div
+    key="buy-sell"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -39,6 +43,7 @@ const items = [
     </Button>
   </div>,
   <div
+    key="rental"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -47,12 +52,14 @@ const items = [
     </Button>
   </div>,
   <div
+    key="job"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
     <Button style={{ color: "black", borderColor: "transparent" }}>Job</Button>
   </div>,
   <div
+    key="news"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -63,6 +70,7 @@ const items = [
     </Link>
   </div>,
   <div
+    key="event"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -73,6 +81,7 @@ const items = [
     </Link>
   </div>,
   <div
+    key="forum"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -83,6 +92,7 @@ const items = [
     </Link>
   </div>,
   <div
+    key="blog"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
@@ -93,6 +103,7 @@ const items = [
     </Link>
   </div>,
 ];
+
 const responsive = {
   320: {
     items: 3,
