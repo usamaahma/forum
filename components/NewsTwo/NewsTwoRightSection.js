@@ -11,6 +11,8 @@ import { Input, Select } from "antd";
 import FeaturedNews from "../News/FeaturedNews";
 import Green from "../../public/images/Rectangle 4636.png";
 import NewsPost from "./NewsPost";
+import Group from "../../public/images/Group 48095692.png";
+
 const { Option } = Select;
 function NewsTwoRightSection() {
   function handleChange(value) {
@@ -23,9 +25,10 @@ function NewsTwoRightSection() {
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.boxgreen}>
-        <div className={Styles.greenbox}>
+        {/* <div className={Styles.greenbox}>
           <p> Breaking News</p>
-        </div>
+        </div> */}
+        <Image style={{ width: "10rem", height: "5rem" }} src={Group} alt="" />
         <div>
           <p className={Styles.parh}>
             Lorem Ipsum is simply dummy text of the printing and types Lorem

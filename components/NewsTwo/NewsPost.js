@@ -3,12 +3,12 @@ import Styles from "../../styles/NewsPost.module.css";
 import Business from "../../public/images/Rectangle 4640.png";
 import { Col, Row, Input, Form } from "antd";
 import Image from "next/image";
-import FeaturedPost from "../News/FeaturedPost";
-import dataTwo from "../../dataTwo.json";
 import Tiww from "../../public/images/Group 134.png";
 import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
+import Link from "next/link";
+import NewsCarousel from "../News/NewsCarouel";
 const { TextArea } = Input;
 function NewsPost() {
   return (
@@ -16,11 +16,18 @@ function NewsPost() {
       <div>
         <Image className={Styles.imgstyle} src={Business} alt="abc" />
         <div className={Styles.boxpadding}>
-        <p className={Styles.lookingtext}>
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, <br />
-  <br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
-</p>
-
+          <p className={Styles.lookingtext}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s, Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry&apos;s standard dummy text ever since the 1500s, <br />
+            <br /> Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry&apos;s
+            standard dummy text ever since the 1500s, Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry&apos;s standard dummy text ever since the 1500s,
+          </p>
         </div>
       </div>
       <div className={Styles.mblview}>
@@ -63,15 +70,11 @@ function NewsPost() {
             marginBottom: ".5rem",
           }}
         />
-        <Row justify="space-evenly">
-          {dataTwo.map((index) => (
-            <Col  key={index}>
-              <div className={Styles.centercol1}>
-                <FeaturedPost />
-              </div>
-            </Col>
-          ))}
-        </Row>
+        <div className={Styles.Carousel1}>
+          <Link href="/NewsPageTwo">
+            <NewsCarousel />
+          </Link>
+        </div>
       </div>
     </div>
   );

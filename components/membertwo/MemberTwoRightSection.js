@@ -32,43 +32,45 @@ function MemberTwoRightSection() {
         <Image className={Styles.imgsize} src={Bottle} alt="abc" />
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
-      <div className={Styles.skydiv}>
-        <div>
-          <Image src={Sky} className={Styles.skying} alt="abc" />
-        </div>
-        <div className={Styles.facdiv}>
-          <Image src={Profile22} className={Styles.topimg} alt="abc" />
-          <div className={Styles.linkdivbox}>
-            <p>Istiaq Firoz</p>
-            <div className={Styles.flexrow}>
-              <div className={Styles.circle}>
-                <Image src={Twitter} alt="abc" />
+      <div className={Styles.divpaddinng}>
+        <div className={Styles.skydiv}>
+          <div>
+            <Image src={Sky} className={Styles.skying} alt="abc" />
+          </div>
+          <div className={Styles.facdiv}>
+            <Image src={Profile22} className={Styles.topimg} alt="abc" />
+            <div className={Styles.linkdivbox}>
+              <p>Istiaq Firoz</p>
+              <div className={Styles.flexrow}>
+                <div className={Styles.circle}>
+                  <Image src={Twitter} alt="abc" />
+                </div>
+                <div className={Styles.circle}>
+                  <Image src={Facebook} alt="abc" />
+                </div>
+                <Image src={Instgram} alt="abc" />
+                <Image src={Linkdin} alt="abc" />
               </div>
-              <div className={Styles.circle}>
-                <Image src={Facebook} alt="abc" />
+              <div className={Styles.betweendiv}>
+                <p>
+                  5 <a className={Styles.atext}>Follower</a>
+                </p>
+                <p>
+                  14 <a className={Styles.atext}>Following</a>
+                </p>
               </div>
-              <Image src={Instgram} alt="abc" />
-              <Image src={Linkdin} alt="abc" />
-            </div>
-            <div className={Styles.betweendiv}>
-              <p>
-                5 <a className={Styles.atext}>Follower</a>
-              </p>
-              <p>
-                14 <a className={Styles.atext}>Following</a>
-              </p>
             </div>
           </div>
-        </div>
-        <div className={Styles.flexend}>
-          <div className={Styles.betweendiv22}>
-            <div className={Styles.flexboxloc1}>
-              <Image src={PLus} alt="abc" />{" "}
-              <p className={Styles.foltext}> Follow</p>
-            </div>
-            <div className={Styles.flexboxloc1}>
-              <Image src={Mail} alt="abc" />
-              <p className={Styles.foltext}>Email</p>
+          <div className={Styles.flexend}>
+            <div className={Styles.betweendiv22}>
+              <div className={Styles.flexboxloc1}>
+                <Image src={PLus} alt="abc" />
+                <p className={Styles.foltext}> Follow</p>
+              </div>
+              <div className={Styles.flexboxloc1}>
+                <Image src={Mail} alt="abc" />
+                <p className={Styles.foltext}>Email</p>
+              </div>
             </div>
           </div>
         </div>

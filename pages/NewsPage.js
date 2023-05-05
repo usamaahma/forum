@@ -13,7 +13,7 @@ function NewsPage() {
       <MainHeader />
       <NewsHeroSection />
       <div className={Styles.mainland11}>
-        <Row justify="space-evenly">
+        <Row justify="space-evenly" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
               <NewsLeftSection />

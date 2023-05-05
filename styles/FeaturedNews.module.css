@@ -63,11 +63,12 @@
 }
 .btn {
   border: #ffffff solid 1px;
-  padding-left: 1rem;
+  width: 8rem;
+  padding: 0.8rem; /* padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border-radius: 0.2rem;
+  padding-bottom: 0.5rem; */
+  border-radius: 0.3rem;
   color: #444444;
 }
 .btn:hover {
@@ -77,11 +78,12 @@
 }
 .btnflex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 42rem;
+  /* width: 70%;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; */
 }
 .cardivvv {
   width: 37rem;
@@ -159,13 +161,15 @@
 }
 @media (max-width: 425px) {
   .btnflex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+    width: 20rem;
+    /* width: 70%;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem; */
+  }
+  .centerrrr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .btn {
     border: #ffffff solid 1px;

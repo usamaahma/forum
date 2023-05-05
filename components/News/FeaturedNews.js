@@ -8,6 +8,67 @@ import dataOne from "../../dataOne.json";
 import dataTwo from "../../dataTwo.json";
 import CommunityNews from "./CommunityNews";
 import NewsCarousel from "./NewsCarouel";
+import Link from "next/link";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+
+const handleDragStart = (e) => e.preventDefault();
+
+const items = [
+  <div
+    key={1}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>Politics</button>
+  </div>,
+  <div
+    key={2}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>Business</button>
+  </div>,
+  <div
+    key={3}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>Entertainment</button>
+  </div>,
+  <div
+    key={4}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>Bangladesh</button>
+  </div>,
+  <div
+    key={5}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>World</button>
+  </div>,
+  <div
+    key={6}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <button className={Styles.btn}>Game</button>
+  </div>,
+];
+const responsive = {
+  0: {
+    items: 2,
+  },
+  558: {
+    items: 4,
+  },
+  1024: {
+    items: 4,
+  },
+};
 function FeaturedNews() {
   return (
     <div>
@@ -65,7 +126,6 @@ function FeaturedNews() {
           }}
         />
         {dataOne.map((index) => (
-
           <CommunityNews key={index} />
         ))}
       </div>
@@ -78,26 +138,26 @@ function FeaturedNews() {
             marginBottom: ".5rem",
           }}
         />
-        <div className={Styles.btnflex}>
-          <button className={Styles.btn}>Politics</button>
-          <button className={Styles.btn}>Business</button>
-          <button className={Styles.btn}>Entertainment</button>
-          <button className={Styles.btn}>Bangladesh</button>
-          <button className={Styles.btn}>World</button>
-          <button className={Styles.btn}>Game</button>
+        <div className={Styles.centerrrr}>
+          <div className={Styles.btnflex}>
+            <AliceCarousel
+              mouseTracking
+              items={items}
+              responsive={responsive}
+              disableDotsControls
+              disableButtonsControls
+              autoPlay
+              autoPlayInterval={2000}
+              disableAutoPlayOnAction={false}
+              infinite
+            />
+          </div>
         </div>
-        {/* <Row justify="space-evenly">
-          {dataTwo.map(() => (
-            <Col>
-              <div className={Styles.centercol1}>
-                <FeaturedPost />
-              </div>
-            </Col>
-          ))}
-        </Row> */}
       </div>
       <div className={Styles.cardivvv}>
-        <NewsCarousel />
+        <Link href="/NewsPageTwo">
+          <NewsCarousel />
+        </Link>
       </div>
     </div>
   );

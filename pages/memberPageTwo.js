@@ -4,14 +4,14 @@ import { Row, Col } from "antd";
 import LeftSectionOfMembers from "@/components/members/LeftSectionOfMember";
 import MemberTwoRightSection from "@/components/membertwo/MemberTwoRightSection";
 import MainHeader from "@/components/common/mainHeader";
-import HeroSection from "@/components/HeroSection";
 import Footer from "@/components/common/footer";
+import MemberHeroSection from "@/components/members/MemberHeroSection";
 
 function MembersPageTwo() {
   return (
     <div>
       <MainHeader />
-      <HeroSection />
+      <MemberHeroSection />
       <div style={{ padding: "20px 0px" }}>
         <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>

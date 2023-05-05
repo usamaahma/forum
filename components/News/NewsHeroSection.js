@@ -6,7 +6,7 @@ function NewsHeroSection() {
     <div className={Styles.mainhero}>
       <div>
         <h1 className={Styles.centerhero}>News</h1>
-        <p className={Styles.colrgreen}>Home / Network / Forum</p>
+        <p className={Styles.colrgreen}>Home / Network / News</p>
       </div>
     </div>
   );

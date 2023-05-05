@@ -16,76 +16,70 @@ const { TextArea } = Input;
 function EventTwoPost() {
   return (
     <div>
-      <div>
-        <Image className={Styles.imgstyle} src={Business} alt="abc" />
-        <div className={Styles.boxpadding}>
-          <p className={Styles.lookingtext}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            textever since the 1500s, Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy textever since the 1500s, <br />
-            <br /> Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry&apos;s
-            standard dummy textever since the 1500s, Lorem Ipsum is simply dummy
-            text of the printing and typesetting industry. Lorem Ipsum has been
-            the industry&apos;s standard dummy textever since the 1500s,
-          </p>
+      <div className={Styles.css}>
+        <div>
+          <Image className={Styles.imgstyle} src={Business} alt="abc" />
+          <div className={Styles.boxpadding}>
+            <p className={Styles.lookingtext}>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry&apos;s standard dummy
+              textever since the 1500s, Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry. Lorem Ipsum has been the
+              industry&apos;s standard dummy textever since the 1500s, <br />
+              <br /> Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry&apos;s
+              standard dummy textever since the 1500s, Lorem Ipsum is simply
+              dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry&apos;s standard dummy textever since the
+              1500s,
+            </p>
+          </div>
         </div>
-      </div>
-      <div className={Styles.mblview}>
-        <p className={Styles.share}>Share This Event</p>
-        <div className={Styles.imgdivflex}>
-          <Image src={Tiww} alt="abc" />
-          <Image src={Fb} alt="abc" />
-          <Image src={Ins} alt="abc" />
-          <Image src={Lin} alt="abc" />
+        <div className={Styles.mblview}>
+          <p className={Styles.share}>Share This Event</p>
+          <div className={Styles.imgdivflex}>
+            <Image src={Tiww} alt="abc" />
+            <Image src={Fb} alt="abc" />
+            <Image src={Ins} alt="abc" />
+            <Image src={Lin} alt="abc" />
+          </div>
         </div>
-      </div>
-      <div>
-        <p className={Styles.share}>Leave a Comment </p>
-        <hr
-          style={{
-            border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: ".5rem",
-          }}
-        />
-        <p className={Styles.share}>Comment:</p>
+        <div>
+          <p className={Styles.share}>Leave a Comment </p>
+          <hr
+            style={{
+              border: "solid 1px #D9D9D9",
+              marginTop: ".5rem",
+              marginBottom: ".5rem",
+            }}
+          />
+          <p className={Styles.share}>Comment:</p>
 
-        <TextArea
-          style={{
-            border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: "1rem",
-            borderRadius: ".2rem",
-          }}
-          rows={9}
-        />
-        <Link href="/EventsPageForm">
-          <button className={Styles.btncommt}>Post Comment</button>
-        </Link>
-      </div>
-      <div>
-        <p className={Styles.share}>Similar Events</p>
-        <hr
-          style={{
-            border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: ".5rem",
-          }}
-        />
-        {/* <Row justify="space-evenly">
-          {dataOne.map(() => (
-            <Col>
-              <div className={Styles.centercol1}>
-                <BlogCard />
-              </div>
-            </Col>
-          ))}
-        </Row> */}
-        <div className={Styles.Carousel}>
-          <Carousel />
+          <TextArea
+            style={{
+              border: "solid 1px #D9D9D9",
+              marginTop: ".5rem",
+              marginBottom: "1rem",
+              borderRadius: ".2rem",
+            }}
+            rows={9}
+          />
+          <Link href="/EventsPageForm">
+            <button className={Styles.btncommt}>Post Comment</button>
+          </Link>
+        </div>
+        <div>
+          <p className={Styles.share}>Similar Events</p>
+          <hr
+            style={{
+              border: "solid 1px #D9D9D9",
+              marginTop: ".5rem",
+              marginBottom: ".5rem",
+            }}
+          />
+          <div className={Styles.Carousel}>
+            <Carousel />
+          </div>
         </div>
       </div>
     </div>

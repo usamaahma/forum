@@ -128,7 +128,11 @@
   }
   .Carousel1 {
     margin-top: 1rem;
-    width: 45rem;
+    width: 44rem;
+  }
+  .css {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (max-width: 425px) {
@@ -164,5 +168,33 @@
   .Carousel1 {
     margin-top: 1rem;
     width: 22rem;
+  }
+}
+@media (max-width: 375px) {
+  .css {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 21rem;
+  }
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 20rem;
+  }
+}
+@media (max-width: 320px) {
+  .css {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 19rem;
+  }
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 20rem;
   }
 }

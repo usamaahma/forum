@@ -95,7 +95,7 @@ function RightSectionOfEvents() {
 
               <div>
                 <p className={Styles.frst}>
-                  {user.subnametwo}{" "}
+                  {user.subnametwo}
                   <span style={{ color: "rgb(45,156,219)" }}>Read More..</span>
                 </p>
               </div>

@@ -203,4 +203,11 @@
     width: 60%;
     margin-bottom: 1rem;
   }
+  .howtext {
+    font-size: 1.2rem;
+    color: #444444;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 }
