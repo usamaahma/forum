@@ -2,13 +2,6 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import BlogCard from "../Blog/BlogCard";
-import Styles from "../../styles/BlogRightSection.module.css";
-import Image from "next/image";
-import Rectangle from "../../public/images/Rectangle 75.png";
-import Like from "../../public/images/Like1.png";
-import Share from "../../public/images/Share1.png";
-import Comment from "../../public/images/Comment1.png";
-import SmallBlogCard from "./SmallBlogCard";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -55,9 +48,11 @@ function BlogCarousel() {
         mouseTracking
         items={items}
         responsive={responsive}
-        controlsStrategy="alternate"
         disableDotsControls
+        disableButtonsControls
         autoPlay
+        autoPlayInterval={2000}
+        disableAutoPlayOnAction={false}
       />
     </div>
   );
