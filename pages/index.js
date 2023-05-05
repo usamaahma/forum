@@ -7,11 +7,11 @@ import EventsPage from "./events";
 import HeroSectionEvents from "@/components/eventpage/HeroSectionevents";
 import Eventform from "@/components/eventpage/eventform";
 import BlogForm from "@/components/Blog/BlogForm";
+import MainHeader from "@/components/common/mainHeader";
 export default function Home() {
   return (
     <>
-      <HeroSectionEvents />
-      <EventsPage />
+      <MainHeader />
     </>
   );
 }
