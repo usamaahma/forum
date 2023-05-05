@@ -85,7 +85,7 @@ function FeaturedNews() {
           <button className={Styles.btn}>World</button>
           <button className={Styles.btn}>Game</button>
         </div>
-        <Row justify="space-evenly">
+        {/* <Row justify="space-evenly">
           {dataTwo.map(() => (
             <Col>
               <div className={Styles.centercol1}>
@@ -93,11 +93,11 @@ function FeaturedNews() {
               </div>
             </Col>
           ))}
-        </Row>
+        </Row> */}
       </div>
-      {/* <div>
+      <div className={Styles.cardivvv}>
         <NewsCarousel />
-      </div> */}
+      </div>
     </div>
   );
 }

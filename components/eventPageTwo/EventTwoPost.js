@@ -10,6 +10,8 @@ import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
+import Carousel from "../eventpage/carousel";
+import Link from "next/link";
 const { TextArea } = Input;
 function EventTwoPost() {
   return (
@@ -60,7 +62,9 @@ function EventTwoPost() {
           }}
           rows={9}
         />
-        <button className={Styles.btncommt}>Post Comment</button>
+        <Link href="/EventsPageForm">
+          <button className={Styles.btncommt}>Post Comment</button>
+        </Link>
       </div>
       <div>
         <p className={Styles.share}>Similar Events</p>
@@ -71,7 +75,7 @@ function EventTwoPost() {
             marginBottom: ".5rem",
           }}
         />
-        <Row justify="space-evenly">
+        {/* <Row justify="space-evenly">
           {dataOne.map(() => (
             <Col>
               <div className={Styles.centercol1}>
@@ -79,7 +83,10 @@ function EventTwoPost() {
               </div>
             </Col>
           ))}
-        </Row>
+        </Row> */}
+        <div className={Styles.Carousel}>
+          <Carousel />
+        </div>
       </div>
     </div>
   );

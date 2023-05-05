@@ -8,19 +8,41 @@ const handleDragStart = (e) => e.preventDefault();
 const items = [
   <div
     onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
+    style={{
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    }}
   >
     <FeaturedPost />
   </div>,
   <div
     onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
+    style={{
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    }}
   >
     <FeaturedPost />
   </div>,
   <div
     onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
+    style={{
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    }}
+  >
+    <FeaturedPost />
+  </div>,
+  <div
+    onDragStart={handleDragStart}
+    style={{
+      display: "flex",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    }}
   >
     <FeaturedPost />
   </div>,
@@ -28,6 +50,9 @@ const items = [
 const responsive = {
   0: {
     items: 1,
+  },
+  558: {
+    items: 2,
   },
   1024: {
     items: 2,

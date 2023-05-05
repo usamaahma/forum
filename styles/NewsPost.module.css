@@ -107,6 +107,17 @@
   color: white;
   margin-bottom: 2rem;
 }
+.Carousel {
+  margin-top: 1rem;
+  width: 37rem;
+}
+
+@media (max-width: 768px) {
+  .Carousel {
+    width: 40rem;
+    margin-top: 1rem;
+  }
+}
 @media (max-width: 425px) {
   .lookingtext {
     color: #a1a1a1;
@@ -132,5 +143,9 @@
     margin-top: 0em;
     margin-bottom: 0rem;
     padding: 1rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 24rem;
   }
 }
