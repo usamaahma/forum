@@ -31,27 +31,27 @@ function BlogImageSection() {
       </div>
       <div className={Styles.bigboxser}>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={Development} />
+          <Image className={Styles.imgicon} src={Development}  alt="abc"/>
           <p className={Styles.lifetext}>USA Life</p>
         </div>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={Design} />
+          <Image className={Styles.imgicon} src={Design} alt="abc"/>
           <p className={Styles.lifetext}>Jobs</p>
         </div>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={Marketing} />
+          <Image className={Styles.imgicon} src={Marketing} alt="abc"/>
           <p className={Styles.lifetext}>Business</p>
         </div>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={MaskGroup} />
+          <Image className={Styles.imgicon} src={MaskGroup} alt="abc"/>
           <p className={Styles.lifetext}>Life Style</p>
         </div>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={Marketing} />
+          <Image className={Styles.imgicon} src={Marketing} alt="abc"/>
           <p className={Styles.lifetext}>Govt Facilities</p>
         </div>
         <div className={Styles.boxserv}>
-          <Image className={Styles.imgicon} src={Search} />
+          <Image className={Styles.imgicon} src={Search} alt="abc"/>
           <p className={Styles.lifetext}>Immigration</p>
         </div>
       </div>

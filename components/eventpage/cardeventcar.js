@@ -25,6 +25,7 @@ function Cardeventcar() {
                 width: 250,
               }}
               cover={<img alt="example" src="../images/bengali.png" />}
+              key={index}
             >
               <div style={{ float: "right", display: "flex", gap: ".5rem" }}>
                 <img alt="abc" src="../images/Star 2.png"></img>

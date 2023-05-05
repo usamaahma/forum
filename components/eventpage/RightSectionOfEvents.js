@@ -40,8 +40,8 @@ function RightSectionOfEvents() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} />
-        <Image className={Styles.imgsize} src={Shoes} />
+        <Image className={Styles.imgsize} src={Bottle} alt="abc" />
+        <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>

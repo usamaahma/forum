@@ -22,25 +22,27 @@ function BlogTwoPost() {
         <div className={Styles.boxpadding}>
           <p className={Styles.lookingtext}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy
-            textever since the 1500s, Lorem Ipsum is simply dummy text of the
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s, Lorem Ipsum is simply dummy text of the
             printing and typesetting industry. Lorem Ipsum has been the
-            industry'sstandard dummy textever since the 1500s, <br />
-            <br /> Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard
-            dummy textever since the 1500s, Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the
-            industry'sstandard dummy textever since the 1500s,
+            industry&apos;s standard dummy text ever since the 1500s,
+            <br />
+            <br />
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s, Lorem Ipsum is simply dummy text of the
+            printing and typesetting industry. Lorem Ipsum has been the
+            industry&apos;s standard dummy text ever since the 1500s,
           </p>
         </div>
       </div>
       <div className={Styles.mblview}>
         <p className={Styles.share}>Share This Event</p>
         <div className={Styles.imgdivflex}>
-          <Image src={Tiww} />
-          <Image src={Fb} />
-          <Image src={Ins} />
-          <Image src={Lin} />
+          <Image src={Tiww} alt="abc" />
+          <Image src={Fb} alt="abc" />
+          <Image src={Ins} alt="abc" />
+          <Image src={Lin} alt="abc" />
         </div>
       </div>
       <div>
@@ -76,9 +78,7 @@ function BlogTwoPost() {
             marginBottom: ".5rem",
           }}
         />
-        {/* <Row justify="space-evenly">
-          {dataOne.map(() => (
-            <Col>
+
               <div className={Styles.centercol1}>
                 <BlogCard />
               </div>

@@ -14,7 +14,7 @@ function SmallBlogCard() {
       <Card
         hoverable
         className={Styles.cardsize}
-        cover={<Image className={Styles.imgg} src={Rectangle} />}
+        cover={<Image className={Styles.imgg} src={Rectangle} alt="abc"/>}
       >
         <div>
           <p className={Styles.textsmall}>Culture - 2 Hours ago </p>
@@ -35,17 +35,17 @@ function SmallBlogCard() {
         <div className={Styles.maindivside}>
           <div className={Styles.flexsise}>
             <div className={Styles.flexsise}>
-              <Image src={Like} />
+              <Image src={Like} alt="abc"/>
               <p className={Styles.text}>25 Like</p>
             </div>
             <div className={Styles.flexsise}>
-              <Image src={Comment} />
+              <Image src={Comment} alt="abc"/>
               <p className={Styles.text}>30 Comment</p>
             </div>
           </div>
           <div>
             <div className={Styles.flexsise}>
-              <Image src={Share} />
+              <Image src={Share} alt="abc"/>
               <p className={Styles.text1}>23 Share</p>
             </div>
           </div>

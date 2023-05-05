@@ -31,14 +31,14 @@ function EventLeftSection() {
       <div className={Styles.boxcal}>
         <div className={Styles.divcale}>
           <p className={Styles.textgreen}>Start Date</p>
-          <Image src={Calendertick} />
+          <Image src={Calendertick} alt="abc"/>
           <p className={Styles.text22}>
             14 <a className={Styles.text33}>APR, 2023</a>
           </p>
         </div>
         <div className={Styles.divcale}>
           <p className={Styles.textgreen}>End Date</p>
-          <Image src={Calendercross} />
+          <Image src={Calendercross} alt="abc"/>
           <p className={Styles.text22}>
             23 <a className={Styles.text33}>Dec, 2023</a>
           </p>
@@ -51,7 +51,7 @@ function EventLeftSection() {
       <div className={Styles.greybox}>
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Notification} />
+            <Image src={Notification} alt="abc"/>
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Status</p>
@@ -61,7 +61,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Location} />
+            <Image src={Location} alt="abc"/>
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Venue</p>
@@ -71,7 +71,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Phone} />
+            <Image src={Phone} alt="abc"/>
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Phone</p>
@@ -81,7 +81,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Email} />
+            <Image src={Email} alt="abc"/>
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Email</p>

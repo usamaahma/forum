@@ -84,7 +84,7 @@ function Header2() {
             className={Styles.commons}
             bordered="false"
           >
-            <img className={Styles.googlepic} src="../images/google.png" />
+            <img className={Styles.googlepic} src="../images/google.png" alt="abc"/>
             <div className={`${Styles.buttons} ${Styles.remove2}`}>
               <div
                 onClick={handleClick}
@@ -138,7 +138,7 @@ function Header2() {
                   marginTop: "1rem",
                 }}
                 src="../images/Notification.png"
-              ></img>
+                alt="abc" ></img>
             </div>
           </Menu>
           <br />
@@ -166,7 +166,7 @@ function Header2() {
                   >
                     <img
                       style={{ width: " 1rem", height: "1rem" }}
-                      src="../images/Categories.png"
+                      src="../images/Categories.png" alt="abc"
                     ></img>{" "}
                     <p style={{ color: "#42B00F" }}>By Category</p>
                   </div>
@@ -236,6 +236,7 @@ function Header2() {
                     <img
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Group.png"
+                      alt="abc"
                     ></img>{" "}
                     <p style={{ color: "#42B00F" }}>Sub Category</p>
                   </div>
@@ -280,6 +281,7 @@ function Header2() {
                     >
                       {" "}
                       <img
+                      alt="abc"
                         style={{ width: " 1rem", height: "1rem" }}
                         src="../images/Locatin.png"
                       ></img>{" "}
@@ -349,17 +351,17 @@ function Header2() {
             <div className={Styles.menudiv4}>
               <div className={Styles.menudiv5}>
                 {" "}
-                <img src="../images/Heart.png" className={Styles.iconsss5} />
+                <img src="../images/Heart.png" className={Styles.iconsss5} alt="abc"/>
                 <p className={Styles.iconsss}>Which Lists</p>
               </div>
               <div className={Styles.menudiv5}>
                 {" "}
-                <img src="../images/Cart.png" />
+                <img src="../images/Cart.png" alt="abc"/>
                 <p className={Styles.iconsss}> Cart</p>
               </div>
               <div className={Styles.menudiv5}>
                 {" "}
-                <img src="../images/User.png" />
+                <img src="../images/User.png" alt="abc"/>
                 <p className={Styles.iconsss}>Sign In</p>
               </div>
               <div className={Styles.menudiv5}>
@@ -367,6 +369,7 @@ function Header2() {
                 <img
                   className={Styles.notificationss}
                   src="../images/Notification.png"
+                  alt="abc"
                 />
               </div>
             </div>

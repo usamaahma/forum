@@ -85,19 +85,19 @@ function Header1() {
               </div>
               <div>
                 {" "}
-                <img src="../images/twitter.png" />
+                <img src="../images/twitter.png" alt="abc"/>
               </div>
               <div>
                 {" "}
-                <img src="../images/faceb.png" />
+                <img src="../images/faceb.png" alt="abc"/>
               </div>
               <div>
                 {" "}
-                <img src="../images/insta.png" />
+                <img src="../images/insta.png" alt="abc"/>
               </div>
               <div>
                 {" "}
-                <img src="../images/linkdin.png" />
+                <img src="../images/linkdin.png" alt="abc"/>
               </div>
             </div>
           </Menu>
