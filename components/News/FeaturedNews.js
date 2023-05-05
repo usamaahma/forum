@@ -45,8 +45,8 @@ function FeaturedNews() {
           <Col lg={8}>
             <div className={Styles.centercol1}>
               <Row justify="center">
-                {dataOne.map(() => (
-                  <Col>
+                {dataOne.map((index) => (
+                  <Col key={index}>
                     <FeaturedPost />
                   </Col>
                 ))}
@@ -64,8 +64,9 @@ function FeaturedNews() {
             marginBottom: ".5rem",
           }}
         />
-        {dataOne.map(() => (
-          <CommunityNews />
+        {dataOne.map((index) => (
+
+          <CommunityNews key={index} />
         ))}
       </div>
       <div>

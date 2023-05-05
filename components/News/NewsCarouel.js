@@ -7,6 +7,7 @@ const handleDragStart = (e) => e.preventDefault();
 
 const items = [
   <div
+    key={0}
     onDragStart={handleDragStart}
     style={{
       display: "flex",
@@ -17,6 +18,7 @@ const items = [
     <FeaturedPost />
   </div>,
   <div
+    key={1}
     onDragStart={handleDragStart}
     style={{
       display: "flex",
@@ -27,6 +29,7 @@ const items = [
     <FeaturedPost />
   </div>,
   <div
+    key={2}
     onDragStart={handleDragStart}
     style={{
       display: "flex",
@@ -37,6 +40,7 @@ const items = [
     <FeaturedPost />
   </div>,
   <div
+    key={3}
     onDragStart={handleDragStart}
     style={{
       display: "flex",

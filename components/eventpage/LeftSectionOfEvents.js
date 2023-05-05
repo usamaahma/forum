@@ -19,17 +19,17 @@ function LeftSectionOfEvents() {
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Trade} />,
+      icon: <Image src={Trade} alt="abc" />,
     },
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Comment} />,
+      icon: <Image src={Comment} alt="abc" />,
     },
     {
       name: "32",
       subname: "Topic",
-      icon: <Image src={Profile} />,
+      icon: <Image src={Profile} alt="abc" />,
     },
   ];
   return (
@@ -46,13 +46,13 @@ function LeftSectionOfEvents() {
         <p className={Styles.textcenter}>Connect With</p>
         <div className={Styles.flexrow}>
           <div className={Styles.circle}>
-            <Image src={Twitter} />
+            <Image src={Twitter} alt="abc" />
           </div>
           <div className={Styles.circle}>
-            <Image src={Facebook} />
+            <Image src={Facebook} alt="abc" />
           </div>
-          <Image src={Instgram} />
-          <Image src={Linkdin} />
+          <Image src={Instgram} alt="abc" />
+          <Image src={Linkdin} alt="abc" />
         </div>
         <p className={Styles.nottext}>
           Not Account? <a className={Styles.nottextone}>Sign Up</a>
