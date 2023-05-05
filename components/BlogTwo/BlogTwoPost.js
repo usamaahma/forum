@@ -11,6 +11,7 @@ import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
 import Link from "next/link";
+import BlogCarousel from "./BlogCarousel";
 // import BlogCarousel from "./BlogCarousel";
 const { TextArea } = Input;
 function BlogTwoPost() {
@@ -75,7 +76,7 @@ function BlogTwoPost() {
             marginBottom: ".5rem",
           }}
         />
-        <Row justify="space-evenly">
+        {/* <Row justify="space-evenly">
           {dataOne.map(() => (
             <Col>
               <div className={Styles.centercol1}>
@@ -83,7 +84,10 @@ function BlogTwoPost() {
               </div>
             </Col>
           ))}
-        </Row>
+        </Row> */}
+        <div className={Styles.Carousel1}>
+          <BlogCarousel />
+        </div>
       </div>
     </div>
   );

@@ -111,11 +111,24 @@
   margin-top: 1rem;
   width: 37rem;
 }
-
+.Carousel1 {
+  margin-top: 1rem;
+  width: 45rem;
+}
+@media (max-width: 1024px) {
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 40rem;
+  }
+}
 @media (max-width: 768px) {
   .Carousel {
     width: 40rem;
     margin-top: 1rem;
+  }
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 45rem;
   }
 }
 @media (max-width: 425px) {
@@ -147,5 +160,9 @@
   .Carousel {
     margin-top: 1rem;
     width: 24rem;
+  }
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 22rem;
   }
 }
