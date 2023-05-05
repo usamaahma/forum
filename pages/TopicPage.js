@@ -13,7 +13,7 @@ function TopicPage() {
       <MainHeader />
       <HeroSection />
       <div className={Styles.mainland11}>
-        <Row justify="center">
+        <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
               <LeftSection />

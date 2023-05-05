@@ -13,7 +13,7 @@ function MembersPage() {
       <MainHeader />
       <HeroSection />
       <div style={{ padding: "20px 0px" }}>
-        <Row justify="center">
+        <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
               <LeftSectionOfMembers />

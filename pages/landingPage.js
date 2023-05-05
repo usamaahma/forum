@@ -16,7 +16,7 @@ function LandingPage() {
         // className={Styles.mainland}
         style={{ marginTop: "1rem", padding: "20px 0px" }}
       >
-        <Row justify="center">
+        <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
               <LeftSection />

@@ -14,7 +14,7 @@ function EventsPage() {
       <EventsHeroSection />
       <br />
       <div className={Styles.mainland}>
-        <Row justify="center">
+        <Row justify="center" className={Styles.mbree}>
           <Col lg={6}>
             <div className={Styles.centercol}>
               <LeftSectionOfEvents />
