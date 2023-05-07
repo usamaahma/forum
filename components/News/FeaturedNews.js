@@ -118,11 +118,17 @@ function FeaturedNews() {
       </div>
       <div>
         <p style={{ color: "#151515", fontWeight: "600" }}>Community News</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr
           style={{
             border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: ".5rem",
           }}
         />
         {dataOne.map((index) => (
@@ -131,14 +137,26 @@ function FeaturedNews() {
       </div>
       <div>
         <p style={{ color: "#151515", fontWeight: "600" }}>Other News</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr
           style={{
             border: "solid 1px #D9D9D9",
+          }}
+        />
+        <div
+          className={Styles.centerrrr}
+          style={{
             marginTop: ".5rem",
             marginBottom: ".5rem",
           }}
-        />
-        <div className={Styles.centerrrr}>
+        >
           <div className={Styles.btnflex}>
             <AliceCarousel
               mouseTracking

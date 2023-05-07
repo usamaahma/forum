@@ -14,6 +14,14 @@ function BlogTwoLeftSection() {
     <div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Join The Community</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
@@ -31,10 +39,6 @@ function BlogTwoLeftSection() {
         <p className={Styles.nottext}>
           Not Account? <a className={Styles.nottextone}>Sign Up</a>
         </p>
-      </div>
-      <div className={Styles.boxdiv}>
-        <p className={Styles.jointext}>Recent Blog</p>
-        <hr style={{ border: "1px solid #E8E8E8" }} />
       </div>
       <div className={Styles.greybox}>
         <div className={Styles.greysmll}>
@@ -57,6 +61,18 @@ function BlogTwoLeftSection() {
           <p>USA Life</p>
         </div>
       </div>
+      <div className={Styles.boxdiv}>
+        <p className={Styles.jointext}>Recent Blog</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+      </div>
       {dataOne.map((index) => (
         <div key={index}>
           <RecentBlog />
@@ -65,6 +81,14 @@ function BlogTwoLeftSection() {
       <div>
         <div className={Styles.boxdiv}>
           <p className={Styles.jointext}>Events</p>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
           <hr style={{ border: "1px solid #E8E8E8" }} />
         </div>
         {dataOne.map((index) => (

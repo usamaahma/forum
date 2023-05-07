@@ -16,6 +16,14 @@ function NewsLeftSection() {
     <div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Join The Community</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
@@ -41,6 +49,14 @@ function NewsLeftSection() {
 
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Latest News</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         {dataOne.map((index) => (
           <div key={index}>
@@ -50,6 +66,14 @@ function NewsLeftSection() {
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Recent Blog</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
       </div>
       {dataOne.map((index) => (
@@ -60,6 +84,14 @@ function NewsLeftSection() {
       <div>
         <div className={Styles.boxdiv}>
           <p className={Styles.jointext}>Events</p>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
           <hr />
         </div>
         {dataOne.map((index) => (

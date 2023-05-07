@@ -70,11 +70,17 @@ function EventTwoPost() {
         </div>
         <div>
           <p className={Styles.share}>Similar Events</p>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
           <hr
             style={{
               border: "solid 1px #D9D9D9",
-              marginTop: ".5rem",
-              marginBottom: ".5rem",
             }}
           />
           <div className={Styles.Carousel}>

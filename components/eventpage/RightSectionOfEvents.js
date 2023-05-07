@@ -105,14 +105,15 @@ function RightSectionOfEvents() {
       <div style={{ padding: "1rem" }}>
         <div>
           <p className={Styles.eventsss}>Others Events</p>
-          <div className={Styles.liness}>
-            {" "}
-            <img
-              className={Styles.greenimg}
-              src="../images/greenline.png"
-              alt="abc"
-            ></img>
-          </div>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
+          <hr />
         </div>
         <div className={Styles.Carousel}>
           <Carousel />

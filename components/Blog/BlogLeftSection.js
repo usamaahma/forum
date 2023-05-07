@@ -14,6 +14,14 @@ function BlogLeftSection() {
     <div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Join The Community</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
@@ -34,6 +42,14 @@ function BlogLeftSection() {
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Recent Blog</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
       </div>
       {dataOne.map((index) => (
@@ -44,6 +60,14 @@ function BlogLeftSection() {
       <div>
         <div className={Styles.boxdiv}>
           <p className={Styles.jointext}>Events</p>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
           <hr />
         </div>
         {dataOne.map((index) => (

@@ -19,6 +19,14 @@ function LeftSectionOfMembers() {
     <div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Join The Community</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
@@ -29,13 +37,13 @@ function LeftSectionOfMembers() {
         <p className={Styles.textcenter}>Connect With</p>
         <div className={Styles.flexrow}>
           <div className={Styles.circle}>
-            <Image src={Twitter}   alt="abc"/>
+            <Image src={Twitter} alt="abc" />
           </div>
           <div className={Styles.circle}>
-            <Image src={Facebook}   alt="abc"/>
+            <Image src={Facebook} alt="abc" />
           </div>
-          <Image src={Instgram}   alt="abc"/>
-          <Image src={Linkdin}   alt="abc"/>
+          <Image src={Instgram} alt="abc" />
+          <Image src={Linkdin} alt="abc" />
         </div>
         <p className={Styles.nottext}>
           Not Account? <a className={Styles.nottextone}>Sign Up</a>
@@ -43,12 +51,20 @@ function LeftSectionOfMembers() {
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Forum Statics</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <Link href="/TopicPage">
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Trade} alt="abc"/>{" "}
+                <Image src={Trade} alt="abc" />{" "}
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>32</p>
@@ -56,7 +72,7 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right}  alt="abc"/>
+              <Image src={Right} alt="abc" />
             </div>
           </div>
         </Link>
@@ -64,7 +80,7 @@ function LeftSectionOfMembers() {
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Comment} alt="abc"/>
+                <Image src={Comment} alt="abc" />
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>100</p>
@@ -72,7 +88,7 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right} alt="abc"/>
+              <Image src={Right} alt="abc" />
             </div>
           </div>
         </Link>
@@ -80,7 +96,7 @@ function LeftSectionOfMembers() {
           <div className={Styles.rowdiv}>
             <div className={Styles.rowdiv2}>
               <div className={Styles.circle2}>
-                <Image src={Profile} alt="abc"/>
+                <Image src={Profile} alt="abc" />
               </div>
               <div className={Styles.marginleft}>
                 <p style={{ color: "#000000" }}>200</p>
@@ -88,13 +104,21 @@ function LeftSectionOfMembers() {
               </div>
             </div>
             <div>
-              <Image src={Right} alt="abc"/>
+              <Image src={Right} alt="abc" />
             </div>
           </div>
         </Link>
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Recent Post</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
 
         {dataOne.map((index) => (
@@ -105,6 +129,14 @@ function LeftSectionOfMembers() {
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Recent Blog</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
       </div>
       {dataOne.map((index) => (

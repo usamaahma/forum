@@ -19,26 +19,32 @@ function EventLeftSection() {
   return (
     <div>
       <div>
-        <p>Event Schedule</p>
+        <p className={Styles.jointext}>Event Schedule</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr
           style={{
             border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: ".5rem",
           }}
         />
       </div>
       <div className={Styles.boxcal}>
         <div className={Styles.divcale}>
           <p className={Styles.textgreen}>Start Date</p>
-          <Image src={Calendertick} alt="abc"/>
+          <Image src={Calendertick} alt="abc" />
           <p className={Styles.text22}>
             14 <a className={Styles.text33}>APR, 2023</a>
           </p>
         </div>
         <div className={Styles.divcale}>
           <p className={Styles.textgreen}>End Date</p>
-          <Image src={Calendercross} alt="abc"/>
+          <Image src={Calendercross} alt="abc" />
           <p className={Styles.text22}>
             23 <a className={Styles.text33}>Dec, 2023</a>
           </p>
@@ -46,12 +52,20 @@ function EventLeftSection() {
       </div>
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Event Info</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
       </div>
       <div className={Styles.greybox}>
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Notification} alt="abc"/>
+            <Image src={Notification} alt="abc" />
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Status</p>
@@ -61,7 +75,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Location} alt="abc"/>
+            <Image src={Location} alt="abc" />
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Venue</p>
@@ -71,7 +85,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Phone} alt="abc"/>
+            <Image src={Phone} alt="abc" />
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Phone</p>
@@ -81,7 +95,7 @@ function EventLeftSection() {
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.greysmll}>
           <div>
-            <Image src={Email} alt="abc"/>
+            <Image src={Email} alt="abc" />
           </div>
           <div className={Styles.leftdiv}>
             <p className={Styles.bigtext}>Email</p>
@@ -92,6 +106,14 @@ function EventLeftSection() {
       <br />
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Join The Community</p>
+        <div
+          style={{
+            backgroundColor: "#42b00f",
+            borderWidth: 1,
+            width: "7rem",
+            border: "#42b00f 1px solid",
+          }}
+        ></div>
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
@@ -119,6 +141,14 @@ function EventLeftSection() {
       <div>
         <div className={Styles.boxdiv}>
           <p className={Styles.jointext}>Events</p>
+          <div
+            style={{
+              backgroundColor: "#42b00f",
+              borderWidth: 1,
+              width: "7rem",
+              border: "#42b00f 1px solid",
+            }}
+          ></div>
           <hr style={{ border: "1px solid #E8E8E8" }} />
         </div>
         {dataOne.map((index) => (
