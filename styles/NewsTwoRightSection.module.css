@@ -2,10 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 51rem;
+  width: 100%;
 }
 .imgsize {
-  width: 25rem;
+  width: 100%;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .flexbox {
   display: flex;
@@ -139,10 +141,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 44rem; */
+    width: 44rem;
   }
   .imgsize {
-    /* width: 21rem; */
+    width: 22rem;
   }
 }
 @media (max-width: 1404px) {
@@ -150,10 +152,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 40rem; */
+    width: 40rem;
   }
   .imgsize {
-    /* width: 19.5rem; */
+    width: 22rem;
   }
 }
 @media (max-width: 1024px) {

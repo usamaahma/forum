@@ -18,28 +18,32 @@ function NewsRightSection() {
         <Image className={Styles.imgsize} src={Bottle} alt="abc" />
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
-      <div className={Styles.boxgreen}>
-        {/* <div className={Styles.greenbox}>
-          <p> Breaking News</p>
-        </div> */}
-        <Image style={{ width: "10rem", height: "5rem" }} src={Group} alt="" />
-        <div>
-          <p className={Styles.parh}>
-            Lorem Ipsum is simply dummy text of the printing and types Lorem
-            Ipsum is simply dummy text of the printing
-          </p>
+      <div className={Styles.feadiv}>
+        <div className={Styles.boxgreen}>
+          <Image
+            style={{ width: "10rem", height: "5rem" }}
+            src={Group}
+            alt=""
+          />
+          <div>
+            <p className={Styles.parh}>
+              Lorem Ipsum is simply dummy text of the printing and types Lorem
+              Ipsum is simply dummy text of the printing
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <p style={{ color: "#151515", fontWeight: "600" }}>Featured News</p>
-        <hr
-          style={{
-            border: "solid 1px #D9D9D9",
-            marginTop: ".5rem",
-            marginBottom: ".5rem",
-          }}
-        />
-        <FeaturedNews />
+        <div>
+          <p style={{ color: "#151515", fontWeight: "600" }}>Featured News</p>
+          <hr
+            style={{
+              border: "solid 1px #D9D9D9",
+              marginTop: ".5rem",
+              marginBottom: ".5rem",
+            }}
+          />
+
+          <FeaturedNews />
+        </div>
       </div>
     </div>
   );

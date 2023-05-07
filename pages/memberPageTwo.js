@@ -14,13 +14,13 @@ function MembersPageTwo() {
       <MemberHeroSection />
       <div style={{ padding: "20px 0px" }}>
         <Row justify="center" className={Styles.mbree}>
-          <Col lg={6}>
+          <Col>
             <div className={Styles.centercol}>
               <LeftSectionOfMembers />
             </div>
           </Col>
-          <Col lg={10}>
-            <div className={Styles.centercol}>
+          <Col>
+            <div className={Styles.centercol12}>
               <MemberTwoRightSection />
             </div>
           </Col>

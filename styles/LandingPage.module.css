@@ -1,9 +1,32 @@
 .centercol {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
-@media (max-width: 425px) {
+.centercol12 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: 1rem;
+}
+
+/* @media (max-width: 1300px) {
+  .centercol12 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 5rem;
+  }
+}
+@media (max-width: 1233px) {
+  .centercol12 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 5rem;
+  }
+} */
+@media (max-width: 768px) {
   .mbree {
     flex-direction: column-reverse;
   }

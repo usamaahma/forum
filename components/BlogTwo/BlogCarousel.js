@@ -40,6 +40,7 @@ const responsive = {
   0: { items: 1 },
   568: { items: 2 },
   1024: { items: 2 },
+  2560: { items: 3 },
 };
 function BlogCarousel() {
   return (

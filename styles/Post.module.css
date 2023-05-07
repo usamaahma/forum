@@ -27,7 +27,7 @@
   border: solid 1px #e8e8e8;
 }
 .imgsize {
-  width: 100%;
+  width: 45rem;
   margin-top: 2.5rem;
 }
 .centerico {
@@ -66,4 +66,16 @@
   color: #000000;
   font-weight: 500;
   margin-top: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .imgsize {
+    width: 34rem;
+    margin-top: 2.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .imgsize {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
 }

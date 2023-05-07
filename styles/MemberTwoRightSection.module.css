@@ -5,7 +5,9 @@
   width: 51rem;
 }
 .imgsize {
-  width: 25rem;
+  width: 30rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .skydiv {
   background-color: #ffffff;
@@ -91,7 +93,10 @@
     width: 44rem;
   }
   .imgsize {
-    width: 21rem;
+    width: 28rem;
+  }
+  .skying {
+    width: 100%;
   }
 }
 @media (max-width: 1404px) {
@@ -102,7 +107,7 @@
     width: 40rem;
   }
   .imgsize {
-    width: 19.5rem;
+    width: 28rem;
   }
 }
 @media (max-width: 1024px) {
@@ -113,7 +118,10 @@
     width: 24rem;
   }
   .imgsize {
-    width: 16rem;
+    width: 18.4rem;
+  }
+  .skying {
+    width: 38rem;
   }
 }
 @media (max-width: 768px) {
@@ -130,7 +138,10 @@
     margin-bottom: 2rem;
   }
   .divpaddinng {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .skying {
+    width: 100%;
   }
 }

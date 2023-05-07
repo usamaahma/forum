@@ -6,6 +6,8 @@
 }
 .imgsize {
   width: 25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .flexbox {
   display: flex;
@@ -74,7 +76,7 @@
     width: 44rem;
   }
   .imgsize {
-    width: 21rem;
+    width: 23rem;
   }
 }
 @media (max-width: 1404px) {
@@ -96,7 +98,7 @@
     width: 24rem;
   }
   .imgsize {
-    width: 16rem;
+    width: 17rem;
   }
 }
 @media (max-width: 768px) {

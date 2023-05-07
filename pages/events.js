@@ -15,13 +15,13 @@ function EventsPage() {
       <br />
       <div className={Styles.mainland}>
         <Row justify="center" className={Styles.mbree}>
-          <Col lg={6}>
+          <Col>
             <div className={Styles.centercol}>
               <LeftSectionOfEvents />
             </div>
           </Col>
           <Col lg={12}>
-            <div className={Styles.centercol}>
+            <div className={Styles.centercol12}>
               <RightSectionOfEvents />
             </div>
           </Col>

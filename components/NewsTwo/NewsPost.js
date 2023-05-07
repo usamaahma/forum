@@ -49,7 +49,7 @@ function NewsPost() {
           }}
         />
         <p className={Styles.share}>Comment:</p>
-        {/* <Form.Item> */}
+
         <TextArea
           style={{
             border: "solid 1px #D9D9D9",
@@ -59,7 +59,6 @@ function NewsPost() {
           }}
           rows={9}
         />
-        {/* </Form.Item> */}
       </div>
       <div>
         <p className={Styles.share}>Similar News </p>

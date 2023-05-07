@@ -73,11 +73,11 @@ function FeaturedNews() {
   return (
     <div>
       <div>
-        <Row justify="space-evenly">
-          <Col lg={16}>
+        <Row justify="center">
+          <Col lg={12} xxl={12}>
             <div className={Styles.centercol}>
               <div>
-                <Image className={Styles.imgstyle} src={Business} alt="abc" />
+                <Image className={Styles.imgstyle22} src={Business} alt="abc" />
                 <div className={Styles.boxpadding}>
                   <div className={Styles.flexbtndiv}>
                     <div>
@@ -103,11 +103,11 @@ function FeaturedNews() {
               </div>
             </div>
           </Col>
-          <Col lg={8}>
+          <Col lg={10}>
             <div className={Styles.centercol1}>
               <Row justify="center">
                 {dataOne.map((index) => (
-                  <Col key={index}>
+                  <Col key={index} xxl={12}>
                     <FeaturedPost />
                   </Col>
                 ))}

@@ -16,13 +16,13 @@ function BlogPage() {
       <BlogImageSection />
       <div className={Styles.mainland11}>
         <Row justify="center" className={Styles.mbree}>
-          <Col lg={6}>
+          <Col>
             <div className={Styles.centercol}>
               <BlogLeftSection />
             </div>
           </Col>
           <Col lg={12}>
-            <div className={Styles.centercol}>
+            <div className={Styles.centercol1}>
               <BlogRightSection />
             </div>
           </Col>

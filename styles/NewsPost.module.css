@@ -60,6 +60,7 @@
   box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 7.44565px 7.44565px;
   margin-top: -0.5rem;
+  width: 100%;
 }
 .share {
   color: #151515;
@@ -113,12 +114,35 @@
 }
 .Carousel1 {
   margin-top: 1rem;
-  width: 45rem;
+  width: 80rem;
+}
+@media (max-width: 1440px) {
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 45rem;
+  }
+}
+@media (max-width: 1406px) {
+  .Carousel1 {
+    margin-top: 1rem;
+    width: 38rem;
+  }
 }
 @media (max-width: 1024px) {
   .Carousel1 {
     margin-top: 1rem;
-    width: 40rem;
+    width: 32rem;
+  }
+  .imgstyle {
+    width: 35rem;
+  }
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
+    width: 35rem;
   }
 }
 @media (max-width: 768px) {
@@ -128,9 +152,24 @@
   }
   .Carousel1 {
     margin-top: 1rem;
-    width: 44rem;
+    width: 42rem;
   }
   .css {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .imgstyle {
+    width: 100%;
+  }
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
+    width: 100%;
+  }
+  .divvpad {
     padding-left: 1rem;
     padding-right: 1rem;
   }

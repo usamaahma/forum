@@ -92,14 +92,13 @@ function RightSectionOfEvents() {
                   </div>
                 </Col>
               </Row>
-
               <div>
                 <p className={Styles.frst}>
                   {user.subnametwo}
                   <span style={{ color: "rgb(45,156,219)" }}>Read More..</span>
                 </p>
               </div>
-            </div>{" "}
+            </div>
           </Col>
         ))}
       </Row>

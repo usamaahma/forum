@@ -17,13 +17,13 @@ function LandingPage() {
         style={{ marginTop: "1rem", padding: "20px 0px" }}
       >
         <Row justify="center" className={Styles.mbree}>
-          <Col lg={6}>
+          <Col>
             <div className={Styles.centercol}>
               <LeftSection />
             </div>
           </Col>
-          <Col lg={10}>
-            <div className={Styles.centercol}>
+          <Col>
+            <div className={Styles.centercol12}>
               <RightSection />
             </div>
           </Col>

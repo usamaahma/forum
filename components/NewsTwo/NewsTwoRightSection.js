@@ -25,9 +25,6 @@ function NewsTwoRightSection() {
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.boxgreen}>
-        {/* <div className={Styles.greenbox}>
-          <p> Breaking News</p>
-        </div> */}
         <Image style={{ width: "10rem", height: "5rem" }} src={Group} alt="" />
         <div>
           <p className={Styles.parh}>
@@ -61,7 +58,7 @@ function NewsTwoRightSection() {
           <p>50k</p>
         </div>
       </div>
-      <div>
+      <div style={{ padding: ".5rem" }}>
         <NewsPost />
       </div>
     </div>

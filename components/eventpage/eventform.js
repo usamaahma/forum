@@ -138,7 +138,7 @@ function Eventform() {
                     </div>
                   </Space>
                 </Button>
-              </Dropdown>{" "}
+              </Dropdown>
             </div>
           </Col>
           <Col>

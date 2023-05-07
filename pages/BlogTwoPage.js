@@ -14,14 +14,14 @@ function BlogTwoPage() {
       <MainHeader />
       <BlogHeroSection />
       <div className={Styles.mainland11}>
-        <Row justify="space-evenly" className={Styles.mbree}>
-          <Col lg={6}>
+        <Row justify="center" className={Styles.mbree}>
+          <Col>
             <div className={Styles.centercol}>
               <BlogTwoLeftSection />
             </div>
           </Col>
-          <Col lg={12}>
-            <div className={Styles.centercol}>
+          <Col lg={14}>
+            <div className={Styles.centercol12}>
               <BlogTwoRightSection />
             </div>
           </Col>

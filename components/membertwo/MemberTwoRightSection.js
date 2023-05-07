@@ -74,23 +74,24 @@ function MemberTwoRightSection() {
             </div>
           </div>
         </div>
+
+        <Tabs
+          defaultActiveKey="1"
+          onChange={callback}
+          style={{ padding: "1rem" }}
+        >
+          <TabPane tab="Post" key="1">
+            {dataOne.map((index) => (
+              <div key={index}>
+                <Post />
+              </div>
+            ))}
+          </TabPane>
+          <TabPane tab="Profile" key="2">
+            <Profile />
+          </TabPane>
+        </Tabs>
       </div>
-      <Tabs
-        defaultActiveKey="1"
-        onChange={callback}
-        style={{ padding: "1rem" }}
-      >
-        <TabPane tab="Post" key="1">
-          {dataOne.map((index) => (
-            <div key={index}>
-              <Post />
-            </div>
-          ))}
-        </TabPane>
-        <TabPane tab="Profile" key="2">
-          <Profile />
-        </TabPane>
-      </Tabs>
     </div>
   );
 }

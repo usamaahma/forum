@@ -7,6 +7,7 @@ import Union from "../../public/images/Union.png";
 import card from "../../card.json";
 import { Select, Row, Col } from "antd";
 import MemberCard from "./MemberCard";
+import { Container } from "react-bootstrap";
 
 const { Option } = Select;
 function RightSectionOfMember() {
@@ -16,8 +17,8 @@ function RightSectionOfMember() {
   return (
     <div>
       <div className={Styles.boxflex}>
-        <Image className={Styles.imgsize} src={Bottle} alt="abc"/>
-        <Image className={Styles.imgsize} src={Shoes} alt="abc"/>
+        <Image className={Styles.imgsize} src={Bottle} alt="abc" />
+        <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.flexbigbox}>
         <div className={Styles.flexbox}>
@@ -42,8 +43,8 @@ function RightSectionOfMember() {
       </div>
       <Row justify="space-evenly">
         {card.map((index) => (
-          <Col  key={index}>
-            <div className={Styles.centercol} >
+          <Col key={index}>
+            <div className={Styles.centercol}>
               <MemberCard />
             </div>
           </Col>

@@ -3,8 +3,6 @@ import Styles from "../../styles/NewsPost.module.css";
 import Business from "../../public/images/Image.png";
 import { Col, Row, Input, Form } from "antd";
 import Image from "next/image";
-import FeaturedPost from "../News/FeaturedPost";
-import dataOne from "../../dataOne.json";
 import Tiww from "../../public/images/Group 134.png";
 import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
@@ -12,11 +10,10 @@ import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
 import Link from "next/link";
 import BlogCarousel from "./BlogCarousel";
-// import BlogCarousel from "./BlogCarousel";
 const { TextArea } = Input;
 function BlogTwoPost() {
   return (
-    <div>
+    <div className={Styles.divvpad}>
       <div>
         <Image className={Styles.imgstyle} src={Business} alt="abc" />
         <div className={Styles.boxpadding}>
@@ -78,7 +75,6 @@ function BlogTwoPost() {
             marginBottom: ".5rem",
           }}
         />
-
         <div className={Styles.Carousel1}>
           <BlogCarousel />
         </div>
