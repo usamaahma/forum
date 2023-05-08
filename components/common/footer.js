@@ -37,26 +37,34 @@ function Footer() {
               <br /> or immigrants in the USA
             </div>
             <div className={Styles.trddiv}>
-              <img
-                className={Styles.imge}
-                src="../images/twitter1.png"
-                alt="abc"
-              ></img>
-              <img
-                className={Styles.imge}
-                src="../images/facebgroup.png"
-                alt="abc"
-              ></img>
-              <img
-                className={Styles.imge}
-                src="../images/instagroup.png"
-                alt="abc"
-              ></img>
-              <img
-                className={Styles.imge}
-                src="../images/linkdingroup.png"
-                alt="abc"
-              ></img>
+              <div className={Styles.fourimgess}>
+                <img
+                  className={Styles.newimg}
+                  src="../images/first.png"
+                  alt="abc"
+                ></img>
+              </div>
+              <div className={Styles.fourimgess}>
+                <img
+                  className={Styles.newimg}
+                  src="../images/second.png"
+                  alt="abc"
+                ></img>
+              </div>{" "}
+              <div className={Styles.fourimgess}>
+                <img
+                  className={Styles.newimg}
+                  src="../images/third.png"
+                  alt="abc"
+                ></img>
+              </div>{" "}
+              <div className={Styles.fourimgess}>
+                <img
+                  className={Styles.newimg}
+                  src="../images/fourth.png"
+                  alt="abc"
+                ></img>
+              </div>
             </div>
           </Col>
           <Col>
@@ -129,8 +137,10 @@ function Footer() {
         <Row className={Styles.lastrow}>
           <Col>
             {" "}
-            <p className={Styles.bottom}> © All Copyright Bongodeshi 2022.
-</p>{" "}
+            <p className={Styles.bottom}>
+              {" "}
+              © All Copyright Bongodeshi 2022.
+            </p>{" "}
           </Col>
           <Col></Col>
           <Col></Col>
@@ -158,6 +168,24 @@ function Footer() {
               alt="abc"
             ></img>
           </Col>
+        </Row>
+        <Row className={Styles.navigfooter}>
+          <Col className={Styles.gapppp}>
+            <img alt="abc" src="../images/Home.png" />
+            <img alt="abc" src="../images/shop.png" />
+          </Col>
+          <Col className={Styles.gapppp}>
+            <img alt="abc" src="../images/Group (1).png" />
+            <img alt="abc" src="../images/Cart.png" />
+          </Col>
+          <div className={Styles.plusbutton}>
+            {" "}
+            <img
+              className={Styles.plusimggg}
+              alt="abc"
+              src="../images/Plus.png"
+            />
+          </div>
         </Row>
       </Container>
     </div>

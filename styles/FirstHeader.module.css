@@ -49,6 +49,15 @@
   display: none;
 }
 @media only screen and (max-width: 768px) {
+  .Navbarrrse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 65rem;
+    padding: 1rem !important;
+    margin-bottom: -3rem;
+  }
   .cntainer {
     display: flex;
     gap: 7rem;
@@ -56,6 +65,7 @@
     align-items: center;
   }
 }
+
 @media only screen and (max-width: 425px) {
   .cntainer {
     display: flex;
@@ -91,5 +101,12 @@
   }
   .logoos {
     display: none;
+  }
+}
+@media only screen and (width: 320px) {
+  .bongoos {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
   }
 }
