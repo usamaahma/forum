@@ -75,10 +75,20 @@ function NewsPost() {
             border: "solid 1px #D9D9D9",
           }}
         />
-        <div className={Styles.Carousel1}>
-          <Link href="/NewsPageTwo">
-            <NewsCarousel />
-          </Link>
+        <div
+          className={Styles.centerrrr}
+          style={{
+            marginTop: ".5rem",
+            marginBottom: ".5rem",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div className={Styles.Carousel1}>
+            <Link href="/NewsPageTwo">
+              <NewsCarousel />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

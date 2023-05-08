@@ -81,8 +81,17 @@ function BlogTwoPost() {
             border: "solid 1px #D9D9D9",
           }}
         />
-        <div className={Styles.Carousel1}>
-          <BlogCarousel />
+        <div
+          style={{
+            marginTop: ".5rem",
+            marginBottom: ".5rem",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          <div className={Styles.Carousel1}>
+            <BlogCarousel />
+          </div>
         </div>
       </div>
     </div>

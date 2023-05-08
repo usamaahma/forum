@@ -9,7 +9,7 @@
   align-items: center;
   margin-left: 1rem;
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
   .mbree {
     flex-direction: column-reverse;
   }

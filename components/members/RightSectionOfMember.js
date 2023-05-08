@@ -91,7 +91,9 @@ function RightSectionOfMember() {
         {card.map((index) => (
           <Col key={index}>
             <div className={Styles.centercol}>
-              <MemberCard />
+              <Link href="/memberPageTwo">
+                <MemberCard />
+              </Link>
             </div>
           </Col>
         ))}

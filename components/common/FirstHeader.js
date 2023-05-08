@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Styles from "../../styles/FirstHeader.module.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 function FirstHeader() {
   const [isBangla, setIsBangla] = useState(false);
@@ -12,7 +13,7 @@ function FirstHeader() {
 
   return (
     <div>
-      <Navbar  variant="light" className={Styles.Navbarrrse}>
+      <Navbar variant="light" className={Styles.Navbarrrse}>
         <Container>
           <div className={Styles.twobrand}>
             <div className={Styles.bongoos}>

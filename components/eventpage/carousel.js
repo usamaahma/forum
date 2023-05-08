@@ -6,13 +6,39 @@ import Cardeventcar from "./cardeventcar";
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <div key={1} onDragStart={handleDragStart} style={{ display: "flex", justifyContent: "space-evenly" }}>
+  <div
+    key={1}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
     <Cardeventcar />
   </div>,
-  <div key={2} onDragStart={handleDragStart} style={{ display: "flex", justifyContent: "space-evenly" }}>
+  <div
+    key={2}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
     <Cardeventcar />
   </div>,
-  <div key={3} onDragStart={handleDragStart} style={{ display: "flex", justifyContent: "space-evenly" }}>
+  <div
+    key={3}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <Cardeventcar />
+  </div>,
+  <div
+    key={4}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
+    <Cardeventcar />
+  </div>,
+  <div
+    key={5}
+    onDragStart={handleDragStart}
+    style={{ display: "flex", justifyContent: "space-evenly" }}
+  >
     <Cardeventcar />
   </div>,
 ];
@@ -25,6 +51,12 @@ const responsive = {
   },
   1024: {
     items: 2,
+  },
+  1440: {
+    items: 3,
+  },
+  2560: {
+    items: 4,
   },
 };
 function Carousel() {

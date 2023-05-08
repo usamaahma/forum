@@ -110,7 +110,7 @@
 }
 .Carousel {
   margin-top: 1rem;
-  width: 37rem;
+  width: 80rem;
 }
 .Carousel1 {
   margin-top: 1rem;
@@ -119,7 +119,11 @@
 @media (max-width: 1440px) {
   .Carousel1 {
     margin-top: 1rem;
-    width: 45rem;
+    width: 50rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 50rem;
   }
 }
 @media (max-width: 1406px) {
@@ -127,11 +131,19 @@
     margin-top: 1rem;
     width: 42rem;
   }
+  .Carousel {
+    margin-top: 1rem;
+    width: 48rem;
+  }
 }
 @media (max-width: 1024px) {
   .Carousel1 {
     margin-top: 1rem;
     width: 32rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 35rem;
   }
   .imgstyle {
     width: 35rem;

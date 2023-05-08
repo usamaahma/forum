@@ -27,7 +27,6 @@ function BlogTwoPage() {
           </Col>
         </Row>
       </div>
-
       <Footer />
     </div>
   );
