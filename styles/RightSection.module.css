@@ -68,6 +68,29 @@
   color: #000000;
   font-weight: 600;
 }
+.threebtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.btngree {
+  background-color: #f9f9f9;
+  border: #f9f9f9 solid 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  color: #444444;
+}
+.btngree:hover {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  color: white;
+}
 @media (max-width: 1440px) {
   .boxflex {
     display: flex;

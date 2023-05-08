@@ -10,6 +10,7 @@ import Arrowdown from "../public/images/Mask group (2).png";
 import dataOne from "../dataOne.json";
 import { Input, Select } from "antd";
 import Post from "./post";
+import Link from "next/link";
 
 const { Option } = Select;
 function RightSection() {
@@ -53,6 +54,17 @@ function RightSection() {
             <p>Post</p>
           </div>
         </div>
+      </div>
+      <div className={Styles.threebtn}>
+        <Link href="/landingPage">
+          <button className={Styles.btngree}>Post</button>
+        </Link>
+        <Link href="/TopicPage">
+          <button className={Styles.btngree}>Topic</button>
+        </Link>
+        <Link href="/membersPage">
+          <button className={Styles.btngree}>Member</button>
+        </Link>
       </div>
       <div className={Styles.postdiv}>
         <p className={Styles.clr}> All Post</p>
