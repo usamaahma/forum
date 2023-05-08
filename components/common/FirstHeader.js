@@ -20,7 +20,7 @@ function FirstHeader() {
             </div>
             <Navbar.Brand>
               <div className={Styles.displayflex}>
-                <img src="../images/phone.png" alt="abc" />
+                <img src="../images/Phone.png" alt="abc" />
                 <p className={Styles.number}>123-345-678</p>
               </div>
             </Navbar.Brand>
