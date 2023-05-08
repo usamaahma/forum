@@ -1,0 +1,76 @@
+.Navbarrrse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.gapbuttons {
+  display: flex;
+  gap: 3rem;
+}
+.logoos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.langbutton {
+  display: inline-flex;
+  height: 30px;
+  border-radius: 3px;
+  width: 10rem;
+  border: 0.5px solid #d9d9d9;
+}
+.displayflex {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.8rem;
+}
+.number {
+  font-size: 0.8rem;
+  margin-top: 0.8rem;
+}
+.twobrand {
+  display: flex;
+  gap: 2rem;
+}
+.bongoos {
+  display: none;
+}
+.not {
+  display: none;
+}
+@media only screen and (max-width: 425px) {
+  .langbutton {
+    margin-top: 0.2rem;
+    display: inline-flex;
+    height: 30px;
+    border-radius: 3px;
+    width: 4.5rem;
+    border: 0.5px solid #d9d9d9;
+    margin-top: 1.5rem;
+  }
+  .bongoos {
+    display: flex;
+    width: 5rem;
+    height: 3rem;
+  }
+  .not {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8rem;
+    width: 1.5rem;
+    margin-left: -1rem;
+    height: 1.5rem;
+  }
+  .displayflex {
+    display: none;
+  }
+  .logoos {
+    display: none;
+  }
+}

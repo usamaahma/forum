@@ -3,36 +3,21 @@ import Styles from "../../styles/Header.module.css";
 import { Button, Layout, Menu } from "antd";
 import Link from "next/link";
 const { Header } = Layout;
-const items1 = [
-  "Home",
-  "Deshi Shop",
-  "Deshi Service",
-  "Buy & Sell",
-  "Rental",
-  "Job",
-  "News",
-  "Event",
-  "Forum",
-  "Blog",
-].map((key) => ({
-  key,
-  label: ` ${key}`,
-}));
 
 function Header3() {
   return (
     <div
       className={`${Styles.Headerthree} ${Styles.remove1}`}
-      style={{ marginBottom: "2rem" }}
+      style={{ marginBottom: "2rem", height: "3rem" }}
     >
       <Header
         style={{
           backgroundColor: "#151515",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-evenly",
+          justifyContent: "center",
           width: "100%",
-          height: "auto",
+          height: "3rem",
         }}
       >
         <div>
@@ -43,6 +28,8 @@ function Header3() {
               style={{
                 backgroundColor: "#151515",
                 color: "white",
+                height: "2rem",
+                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -59,6 +46,8 @@ function Header3() {
             style={{
               backgroundColor: "#151515",
               color: "white",
+              height: "2rem",
+              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -74,6 +63,8 @@ function Header3() {
             style={{
               backgroundColor: "#151515",
               color: "white",
+              height: "2rem",
+              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -89,6 +80,8 @@ function Header3() {
             style={{
               backgroundColor: "#151515",
               color: "white",
+              height: "2rem",
+              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -104,6 +97,8 @@ function Header3() {
             style={{
               backgroundColor: "#151515",
               color: "white",
+              height: "2rem",
+              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -119,6 +114,8 @@ function Header3() {
             style={{
               backgroundColor: "#151515",
               color: "white",
+              height: "2rem",
+              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -135,6 +132,8 @@ function Header3() {
               style={{
                 backgroundColor: "#151515",
                 color: "white",
+                height: "2rem",
+                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -152,6 +151,8 @@ function Header3() {
               style={{
                 backgroundColor: "#151515",
                 color: "white",
+                height: "2rem",
+                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -169,6 +170,8 @@ function Header3() {
               style={{
                 backgroundColor: "#151515",
                 color: "white",
+                height: "2rem",
+                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -186,6 +189,8 @@ function Header3() {
               style={{
                 backgroundColor: "#151515",
                 color: "white",
+                height: "2rem",
+                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -197,7 +202,7 @@ function Header3() {
         </div>
         <div>
           <Button className={Styles.buttonthree}>
-            <img src="../images/Plus.png" alt="abc"/>
+            <img src="../images/Plus.png" alt="abc" />
             Post
           </Button>
         </div>

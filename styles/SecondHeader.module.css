@@ -1,0 +1,25 @@
+.Navbarrrsee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.dropdownss {
+  background-color: white !important;
+}
+/* Method 1 */
+.mb-3 {
+  border-color: #42b00f !important;
+}
+
+/* Method 2 */
+.mb-3 > .form-control {
+  border-color: #42b00f !important;
+}
+
+/* Method 3 */
+.mb-3 {
+  border: 1px solid #42b00f !important;
+}
