@@ -29,9 +29,7 @@ function LeftSection() {
         <hr />
         <p className={Styles.textcenter}>Join with Us</p>
         <div className={Styles.btncenter}>
-          <button className={Styles.btnlog}>
-            <p>Login</p>
-          </button>
+          <button className={Styles.btnlog}>Login</button>
         </div>
         <p className={Styles.textcenter}>Connect With</p>
         <div className={Styles.flexrow}>

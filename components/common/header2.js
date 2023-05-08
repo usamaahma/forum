@@ -21,7 +21,7 @@ function Header3() {
         }}
       >
         <div>
-          <Link href="/">
+          <Link href="/landingPage">
             <Menu
               bordered="false"
               className={Styles.gapheaderthreenav}

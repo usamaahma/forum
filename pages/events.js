@@ -20,7 +20,7 @@ function EventsPage() {
               <LeftSectionOfEvents />
             </div>
           </Col>
-          <Col lg={12}>
+          <Col lg={14}>
             <div className={Styles.centercol12}>
               <RightSectionOfEvents />
             </div>

@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 97%;
+  width: 100%;
 }
 .imgsize {
-  width: 36rem;
+  width: 100%;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -108,10 +108,7 @@
   justify-content: center;
   align-items: center;
 }
-.Carousel {
-  margin-top: 1rem;
-  width: 37rem;
-}
+
 .threebtn {
   display: flex;
   justify-content: space-between;
@@ -155,15 +152,19 @@
   border-radius: 5px;
   padding: 1rem;
 }
+.Carousel {
+  margin-top: 1rem;
+  width: 80rem;
+}
 @media (max-width: 1440px) {
   .boxflex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 44rem;
+    /* width: 44rem; */
   }
   .imgsize {
-    width: 21rem;
+    width: 25rem;
   }
   .flexbigbox {
     background-color: #ffffff;
@@ -171,16 +172,24 @@
     border-radius: 5px;
     width: 98%;
   }
+  .Carousel {
+    margin-top: 1rem;
+    width: 50rem;
+  }
 }
-@media (max-width: 1404px) {
+@media (max-width: 1406px) {
   .boxflex {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40rem;
+    /* width: 40rem; */
   }
   .imgsize {
-    width: 19.5rem;
+    width: 23rem;
+  }
+  .Carousel {
+    margin-top: 1rem;
+    width: 45rem;
   }
 }
 @media (max-width: 1024px) {
@@ -188,22 +197,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 24rem;
+    /* width: 100%; */
   }
   .imgsize {
-    width: 14.5rem;
+    width: 18rem;
   }
-  .Carousel {
-    margin-top: 1rem;
-    width: 25rem;
-  }
-}
-@media (width: 1024px) {
   .Carousel {
     margin-top: 1rem;
     width: 32rem;
   }
+  .flexbigbox {
+    background-color: #ffffff;
+    box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 0.5rem;
+  }
 }
+
 @media (max-width: 768px) {
   .boxflex {
     display: none !important;
@@ -214,6 +225,13 @@
   .Carousel {
     margin-top: 1rem;
     width: 36rem;
+  }
+  .flexbigbox {
+    background-color: #ffffff;
+    box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 0rem;
   }
 }
 @media (max-width: 425px) {

@@ -19,7 +19,7 @@ function NewsPageTwo() {
               <NewsLeftSection />
             </div>
           </Col>
-          <Col lg={13}>
+          <Col lg={14}>
             <div className={Styles.centercol12}>
               <NewsTwoRightSection />
             </div>

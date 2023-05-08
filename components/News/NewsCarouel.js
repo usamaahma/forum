@@ -61,8 +61,11 @@ const responsive = {
   1024: {
     items: 2,
   },
-  2560: {
+  1440: {
     items: 3,
+  },
+  2560: {
+    items: 4,
   },
 };
 function NewsCarousel() {

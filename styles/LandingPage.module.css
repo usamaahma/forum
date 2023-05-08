@@ -10,24 +10,14 @@
   margin-left: 1rem;
 }
 
-/* @media (max-width: 1300px) {
-  .centercol12 {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-left: 5rem;
-  }
-}
-@media (max-width: 1233px) {
-  .centercol12 {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-left: 5rem;
-  }
-} */
 @media (max-width: 768px) {
   .mbree {
     flex-direction: column-reverse;
+  }
+  .centercol12 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 0rem;
   }
 }

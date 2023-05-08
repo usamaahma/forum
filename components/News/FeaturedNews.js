@@ -68,13 +68,19 @@ const responsive = {
   1024: {
     items: 4,
   },
+  1440: {
+    items: 4,
+  },
+  2560: {
+    items: 5,
+  },
 };
 function FeaturedNews() {
   return (
     <div>
       <div>
         <Row justify="center">
-          <Col lg={12} xxl={12}>
+          <Col lg={12}>
             <div className={Styles.centercol}>
               <div>
                 <Image className={Styles.imgstyle22} src={Business} alt="abc" />
@@ -104,15 +110,11 @@ function FeaturedNews() {
             </div>
           </Col>
           <Col lg={10}>
-            <div className={Styles.centercol1}>
-              <Row justify="center">
-                {dataOne.map((index) => (
-                  <Col key={index} xxl={12}>
-                    <FeaturedPost />
-                  </Col>
-                ))}
-              </Row>
-            </div>
+            {dataOne.map((index) => (
+              <div className={Styles.centercol1}>
+                <FeaturedPost />
+              </div>
+            ))}
           </Col>
         </Row>
       </div>
@@ -155,6 +157,8 @@ function FeaturedNews() {
           style={{
             marginTop: ".5rem",
             marginBottom: ".5rem",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
           <div className={Styles.btnflex}>
@@ -172,10 +176,20 @@ function FeaturedNews() {
           </div>
         </div>
       </div>
-      <div className={Styles.cardivvv}>
-        <Link href="/NewsPageTwo">
-          <NewsCarousel />
-        </Link>
+      <div
+        className={Styles.centerrrr}
+        style={{
+          marginTop: ".5rem",
+          marginBottom: ".5rem",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div className={Styles.cardivvv}>
+          <Link href="/NewsPageTwo">
+            <NewsCarousel />
+          </Link>
+        </div>
       </div>
     </div>
   );

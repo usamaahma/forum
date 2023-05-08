@@ -83,8 +83,18 @@ function EventTwoPost() {
               border: "solid 1px #D9D9D9",
             }}
           />
-          <div className={Styles.Carousel}>
-            <Carousel />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: ".5rem",
+              marginBottom: ".5rem",
+            }}
+          >
+            <div className={Styles.Carousel}>
+              <Carousel />
+            </div>
           </div>
         </div>
       </div>
