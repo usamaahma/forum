@@ -7,6 +7,7 @@ import Profile from "../public/images/Ellipse 9.png";
 import Camera from "../public/images/Camera.png";
 import File from "../public/images/File_dock_add.png";
 import { Input, Select } from "antd";
+import Link from "next/link";
 
 const data = [
   {
@@ -87,6 +88,17 @@ function RightSectionOfTopic() {
             <p>Post</p>
           </div>
         </div>
+      </div>
+      <div className={Styles.threebtn}>
+        <Link href="/landingPage">
+          <button className={Styles.btngree}>Post</button>
+        </Link>
+        <Link href="/TopicPage">
+          <button className={Styles.btngree}>Topic</button>
+        </Link>
+        <Link href="/membersPage">
+          <button className={Styles.btngree}>Member</button>
+        </Link>
       </div>
       <div className={Styles.postdiv}>
         <p className={Styles.clr}>Topic</p>

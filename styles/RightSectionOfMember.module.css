@@ -9,6 +9,22 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+.inputdiv {
+  display: flex;
+  padding: 1rem;
+}
+.input {
+  /* width: 30rem; */
+  margin-left: 1rem;
+  border: none !important;
+}
+.cameradiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fcfcfc;
+}
 .flexbox {
   display: flex;
   justify-content: space-between;
@@ -95,6 +111,49 @@
 .Carousel {
   margin-top: 1rem;
   width: 37rem;
+}
+.threebtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.btngree {
+  background-color: #f9f9f9;
+  border: #f9f9f9 solid 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  color: #444444;
+}
+.btngree:hover {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  color: white;
+}
+.post {
+  border: solid 1px #42b00f;
+  color: #42b00f;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.2rem;
+}
+.postdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
 }
 @media (max-width: 1440px) {
   .boxflex {
