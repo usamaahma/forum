@@ -111,7 +111,7 @@ function FeaturedNews() {
           </Col>
           <Col lg={10}>
             {dataOne.map((index) => (
-              <div className={Styles.centercol1}>
+              <div key={index} className={Styles.centercol1}>
                 <FeaturedPost />
               </div>
             ))}

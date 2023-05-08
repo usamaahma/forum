@@ -9,7 +9,7 @@ function RecentBlog() {
   return (
     <div>
       <div className={Styles.flexdiv}>
-        <Image src={Boy} />
+        <Image src={Boy} alt="abc" />
         <div className={Styles.boxleft}>
           <Tag color="#DEF5D3" className={Styles.textclr}>
             Food
@@ -30,10 +30,11 @@ function RecentBlog() {
         <p className={Styles.hour}>22 Jan, 2023</p>
         <div className={Styles.centerico12}>
           <div className={Styles.centerico123}>
-            <Image src={Link} /> <p className={Styles.textleft}>25</p>
+            <Image src={Link} alt="abc" /> <p className={Styles.textleft}>25</p>
           </div>
           <div className={Styles.centerico123}>
-            <Image src={Comment} /> <p className={Styles.textleft}>30</p>
+            <Image src={Comment} alt="abc" />{" "}
+            <p className={Styles.textleft}>30</p>
           </div>
         </div>
       </div>
