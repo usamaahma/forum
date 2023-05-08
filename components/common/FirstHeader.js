@@ -12,8 +12,8 @@ function FirstHeader() {
 
   return (
     <div>
-      <Navbar  variant="light" className={Styles.Navbarrrse}>
-        <Container>
+      <Navbar variant="light" className={Styles.Navbarrrse}>
+        <Container className={Styles.cntainer}>
           <div className={Styles.twobrand}>
             <div className={Styles.bongoos}>
               <img src="../images/bongodesh.png" alt="abc" />
@@ -74,7 +74,7 @@ function FirstHeader() {
               </div>
             </div>{" "}
             <div className={Styles.not}>
-              <img src="../images/notification.png" alt="abc" />
+              <img src="../images/Notification.png" alt="aabc" />
             </div>
             <div className={Styles.logoos}>
               <div>

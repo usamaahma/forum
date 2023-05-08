@@ -29,7 +29,6 @@ function Header3() {
                 backgroundColor: "#151515",
                 color: "white",
                 height: "2rem",
-                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -47,7 +46,6 @@ function Header3() {
               backgroundColor: "#151515",
               color: "white",
               height: "2rem",
-              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -64,7 +62,6 @@ function Header3() {
               backgroundColor: "#151515",
               color: "white",
               height: "2rem",
-              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -81,7 +78,6 @@ function Header3() {
               backgroundColor: "#151515",
               color: "white",
               height: "2rem",
-              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -98,7 +94,6 @@ function Header3() {
               backgroundColor: "#151515",
               color: "white",
               height: "2rem",
-              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -115,7 +110,6 @@ function Header3() {
               backgroundColor: "#151515",
               color: "white",
               height: "2rem",
-              marginTop: "1rem",
             }}
             mode="horizontal"
             // defaultSelectedKeys={["2"]}
@@ -133,7 +127,6 @@ function Header3() {
                 backgroundColor: "#151515",
                 color: "white",
                 height: "2rem",
-                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -152,7 +145,6 @@ function Header3() {
                 backgroundColor: "#151515",
                 color: "white",
                 height: "2rem",
-                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -171,7 +163,6 @@ function Header3() {
                 backgroundColor: "#151515",
                 color: "white",
                 height: "2rem",
-                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}
@@ -190,7 +181,6 @@ function Header3() {
                 backgroundColor: "#151515",
                 color: "white",
                 height: "2rem",
-                marginTop: "1rem",
               }}
               mode="horizontal"
               // defaultSelectedKeys={["2"]}

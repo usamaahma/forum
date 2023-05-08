@@ -87,6 +87,7 @@ function Header2() {
         <Menu
           theme="light"
           mode="horizontal"
+          style={{marginTop:"1rem"}}
           className={`${Styles.commons} ${Styles.remove1}`}
         >
           <Select
