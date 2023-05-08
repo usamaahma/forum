@@ -38,32 +38,16 @@ function Footer() {
             </div>
             <div className={Styles.trddiv}>
               <div className={Styles.fourimgess}>
-                <img
-                  className={Styles.newimg}
-                  src="../images/first.png"
-                  alt="abc"
-                ></img>
+                <img src="../images/first.png" alt="abc"></img>
               </div>
               <div className={Styles.fourimgess}>
-                <img
-                  className={Styles.newimg}
-                  src="../images/second.png"
-                  alt="abc"
-                ></img>
+                <img src="../images/second.png" alt="abc"></img>
               </div>{" "}
               <div className={Styles.fourimgess}>
-                <img
-                  className={Styles.newimg}
-                  src="../images/third.png"
-                  alt="abc"
-                ></img>
+                <img src="../images/third.png" alt="abc"></img>
               </div>{" "}
               <div className={Styles.fourimgess}>
-                <img
-                  className={Styles.newimg}
-                  src="../images/fourth.png"
-                  alt="abc"
-                ></img>
+                <img src="../images/fourth.png" alt="abc"></img>
               </div>
             </div>
           </Col>

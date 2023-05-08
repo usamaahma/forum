@@ -21,7 +21,6 @@
 .rowcol {
   display: flex;
   justify-content: space-evenly;
-
   color: white;
 }
 
@@ -79,6 +78,10 @@
 .imggg {
   margin-top: 1rem;
   width: 20rem;
+}
+.newimg {
+  width: 2.5rem;
+  height: 2rem;
 }
 .downloadap {
   display: none;
