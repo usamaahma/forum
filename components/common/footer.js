@@ -26,20 +26,37 @@ function Footer() {
               {" "}
               <img
                 className={Styles.googleimg}
-                src="../images/google.png"
+                src="../images/image 10.png"
                 alt="abc"
               />
             </div>
             <div className={Styles.scdnfirstcol}>
-              Bo is the biggest online platform lorm
-              <br /> ipsm dkfhkdfsh lkdfhslkdfhskl dfhklf
-              <br /> dskldfhsklhdfskldfhkldfhskldfsh
+              Bongodeshi is the biggest online platform
+              <br /> for Bengali Community especially
+              <br /> for those who are living as expatriates
+              <br /> or immigrants in the USA
             </div>
             <div className={Styles.trddiv}>
-              <img src="../images/twitter1.png" alt="abc"></img>
-              <img src="../images/facebgroup.png" alt="abc"></img>
-              <img src="../images/instagroup.png" alt="abc"></img>
-              <img src="../images/linkdingroup.png" alt="abc"></img>
+              <img
+                className={Styles.imge}
+                src="../images/twitter1.png"
+                alt="abc"
+              ></img>
+              <img
+                className={Styles.imge}
+                src="../images/facebgroup.png"
+                alt="abc"
+              ></img>
+              <img
+                className={Styles.imge}
+                src="../images/instagroup.png"
+                alt="abc"
+              ></img>
+              <img
+                className={Styles.imge}
+                src="../images/linkdingroup.png"
+                alt="abc"
+              ></img>
             </div>
           </Col>
           <Col>
@@ -112,7 +129,8 @@ function Footer() {
         <Row className={Styles.lastrow}>
           <Col>
             {" "}
-            <p className={Styles.bottom}> © All Copyright Bon 2025.</p>{" "}
+            <p className={Styles.bottom}> © All Copyright Bongodeshi 2022.
+</p>{" "}
           </Col>
           <Col></Col>
           <Col></Col>

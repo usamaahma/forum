@@ -7,6 +7,8 @@
 
   color: white;
 }
+.imge:hover {
+}
 .firstcol {
   display: grid;
   margin-top: 3rem;
@@ -39,7 +41,7 @@
 .bottom {
   color: #a1a1a1;
   padding: 0.5rem;
-  align-items: center;
+margin-top: .5rem;  align-items: center;
 }
 .lastrow {
   background-color: #2d2c2c;
