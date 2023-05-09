@@ -24,22 +24,22 @@ function Cardeventcar() {
               style={{
                 width: 250,
               }}
-              cover={<img alt="example" src="../images/bengali.png" />}
+              cover={<Image alt="example" src="../images/bengali.png" />}
               key={index}
             >
               <div style={{ float: "right", display: "flex", gap: ".5rem" }}>
-                <img alt="abc" src="../images/Star 2.png"></img>
-                <img alt="abc" src="../images/Share.png"></img>
+                <Image alt="abc" src="../images/Star 2.png"></Image>
+                <Image alt="abc" src="../images/Share.png"></Image>
               </div>
               <br />
               <div>
                 <Row style={{ display: "flex" }} justify={"space-evenly"}>
                   <Col style={{ display: "grid", alignItems: "center" }}>
-                    <img
+                    <Image
                       style={{ width: "1.5rem" }}
                       alt="abc"
                       src="../images/Calendar 2.png"
-                    ></img>
+                    ></Image>
                     <p style={{ fontWeight: "bold", fontSize: ".6rem" }}>14</p>
                     <p style={{ color: "#A1A1A1", fontSize: ".6rem" }}>APR</p>
                   </Col>
@@ -51,11 +51,11 @@ function Cardeventcar() {
                       Pohela Boisakh
                     </p>
                     <div style={{ display: "flex" }}>
-                      <img
+                      <Image
                         alt="abc"
                         src="../images/Locatin (1).png"
                         style={{ width: "1rem", height: "1rem" }}
-                      ></img>
+                      ></Image>
                       <p style={{ fontSize: ".6rem" }}>
                         Hilton Hotel, Jacksion Heights
                         <br /> NY 10473

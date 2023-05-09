@@ -152,7 +152,7 @@ function Eventform() {
           {" "}
           <p>Ticket Spot</p>
           <Button>
-            <img src="../images/Labelled.png" alt="abc" />
+            <Image src="../images/Labelled.png" alt="abc" />
           </Button>
         </Row>
         <Row justify="center">
@@ -200,7 +200,7 @@ function Eventform() {
             270 x 158 recommended
           </p>
           <Button className={Styles.buttondrag}>
-            <img src="../images/Small outline btn.png" alt="abc"></img>
+            <Image src="../images/Small outline btn.png" alt="abc"></Image>
           </Button>
         </Dragger>
       </div>

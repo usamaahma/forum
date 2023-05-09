@@ -245,7 +245,7 @@ export default function Newfile() {
               </Row>
       </Drawer>
       <button onClick={showDrawer} style={{backgroundColor:"transparent",borderColor:"transparent", overflow: "hidden" }}>
-      <img style={{ marginLeft: "1rem" }} src="../images/Fitler.png" ></img>
+      <Image style={{ marginLeft: "1rem" }} src="../images/Fitler.png" alt="abc"></Image>
       </button>
       
     </div>
