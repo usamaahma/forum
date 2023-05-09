@@ -60,7 +60,7 @@ function LeftSectionOfEvents() {
           <div className={Styles.circle}>
             <Image src={Facebook} alt="abc" />
           </div>
-          <Image src={Instgram} alt="abc" />
+          <img src="../images/insta.png" alt="abc" />
           <Image src={Linkdin} alt="abc" />
         </div>
         <p className={Styles.nottext}>

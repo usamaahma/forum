@@ -67,7 +67,6 @@ function Carousel() {
         items={items}
         responsive={responsive}
         disableDotsControls
-        disableButtonsControls
         autoPlay
         autoPlayInterval={2000}
         disableAutoPlayOnAction={false}
