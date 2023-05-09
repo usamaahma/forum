@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 98%;
 }
 
 .imgsize {
@@ -181,9 +181,11 @@
 
 .Carousel {
   margin-top: 1rem;
-  width: 80rem;
+  width: 60rem;
 }
-
+.eventbox {
+  width: 60rem;
+}
 @media (max-width: 2200px) {
   .Carousel {
     margin-top: 1rem;
@@ -214,6 +216,9 @@
     margin-top: 1rem;
     width: 50rem;
   }
+  .eventbox {
+    width: 51rem;
+  }
 }
 
 @media (max-width: 1406px) {
@@ -225,12 +230,15 @@
   }
 
   .imgsize {
-    width: 23rem;
+    width: 24rem;
   }
 
   .Carousel {
     margin-top: 1rem;
     width: 45rem;
+  }
+  .eventbox {
+    width: 50rem;
   }
 }
 
@@ -243,7 +251,7 @@
   }
 
   .imgsize {
-    width: 18rem;
+    width: 19rem;
   }
 
   .Carousel {
@@ -255,8 +263,11 @@
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
-    width: 100%;
+    width: 98%;
     margin-left: 0.5rem;
+  }
+  .eventbox {
+    width: 40rem;
   }
 }
 
@@ -280,6 +291,9 @@
     border-radius: 5px;
     width: 100%;
     margin-left: 0rem;
+  }
+  .eventbox {
+    width: 100%;
   }
 }
 

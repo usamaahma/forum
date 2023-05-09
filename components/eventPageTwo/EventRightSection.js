@@ -21,7 +21,6 @@ function EventRightSection() {
         <Image className={Styles.imgsize} src={Bottle} alt="abc" />
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
-
       <div className={Styles.paddiv}>
         <button className={Styles.btnnew}>News</button>
         <p className={Styles.howtext}>

@@ -56,7 +56,7 @@ const responsive = {
     items: 3,
   },
   2560: {
-    items: 4,
+    items: 3,
   },
 };
 function Carousel() {
