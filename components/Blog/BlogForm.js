@@ -3,7 +3,6 @@ import { Row, Col, Input, DatePicker } from "antd";
 import Styles from "../../styles/eventform.module.css";
 import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Space, message, Upload } from "antd";
-import Image from 'next/image';
 
 
 const { TextArea } = Input;
@@ -152,7 +151,7 @@ function BlogForm() {
             270 x 158 recommended
           </p>
           <Button className={Styles.buttondrag}>
-            <Image  src="../images/Small outline btn.png" alt="abc"></Image >
+            <img  src="../images/Small outline btn.png" alt="abc"></img >
           </Button>
         </Dragger>
       </div>

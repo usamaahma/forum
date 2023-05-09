@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Styles from "../../styles/FirstHeader.module.css";
-import Image from 'next/image';
 
 
 function FirstHeader() {
@@ -18,17 +17,17 @@ function FirstHeader() {
         <Container className={Styles.cntainer}>
           <div className={Styles.twobrand}>
             <div className={Styles.bongoos}>
-              <Image  src="../images/bongodesh.png" alt="abc" />
+              <img  src="../images/bongodesh.png" alt="abc" />
             </div>
             <Navbar.Brand>
               <div className={Styles.displayflex}>
-                <Image  src="../images/Phone.png" alt="abc" />
+                <img  src="../images/Phone.png" alt="abc" />
                 <p className={Styles.number}>123-345-678</p>
               </div>
             </Navbar.Brand>
             <Navbar.Brand>
               <div className={Styles.displayflex}>
-                <Image  src="../images/emailnav.png" alt="abc" />
+                <img  src="../images/emailnav.png" alt="abc" />
                 <p className={Styles.number}>bongodeshi@gmail.com</p>
               </div>
             </Navbar.Brand>
@@ -76,24 +75,24 @@ function FirstHeader() {
               </div>
             </div>{" "}
             <div className={Styles.not}>
-              <Image  src="../images/Notification.png" alt="aabc" />
+              <img  src="../images/Notification.png" alt="aabc" />
             </div>
             <div className={Styles.logoos}>
               <div>
                 {" "}
-                <Image  src="../images/twitter.png" alt="abc" />
+                <img  src="../images/twitter.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <Image  src="../images/faceb.png" alt="abc" />
+                <img  src="../images/faceb.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <Image  src="../images/insta.png" alt="abc" />
+                <img  src="../images/insta.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <Image  src="../images/linkdin.png" alt="abc" />
+                <img  src="../images/linkdin.png" alt="abc" />
               </div>
             </div>
           </Nav>

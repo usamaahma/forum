@@ -3,8 +3,6 @@ import { Row, Col, Input, DatePicker } from "antd";
 import Styles from "../../styles/eventform.module.css";
 import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Space, message, Upload } from "antd";
-import Image from 'next/image';
-
 
 const handleMenuClick = (e) => {
   message.info("Click on menu item.");
@@ -154,7 +152,7 @@ function Eventform() {
           {" "}
           <p>Ticket Spot</p>
           <Button>
-            <Image src="../images/Labelled.png" alt="abc" />
+            <img src="../images/Labelled.png" alt="abc" />
           </Button>
         </Row>
         <Row justify="center">
@@ -202,7 +200,7 @@ function Eventform() {
             270 x 158 recommended
           </p>
           <Button className={Styles.buttondrag}>
-            <Image src="../images/Small outline btn.png" alt="abc"></Image>
+            <img src="../images/Small outline btn.png" alt="abc"></img>
           </Button>
         </Dragger>
       </div>

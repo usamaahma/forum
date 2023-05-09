@@ -3,7 +3,6 @@ import Styles from "../../styles/Header.module.css";
 import { Button, Layout, Menu } from "antd";
 import Link from "next/link";
 const { Header } = Layout;
-import Image from 'next/image';
 
 
 function Header3() {
@@ -194,7 +193,7 @@ function Header3() {
         </div>
         <div>
           <Button className={Styles.buttonthree}>
-            <Image  src="../images/Plus.png" alt="abc" />
+            <img  src="../images/Plus.png" alt="abc" />
             Post
           </Button>
         </div>

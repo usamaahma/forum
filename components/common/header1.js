@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
-import Image from 'next/image';
 
 import {
   Layout,
@@ -79,7 +78,7 @@ function Header2() {
           className={Styles.commons}
           bordered="false"
         >
-          <Image 
+          <img 
             className={Styles.googlepic}
             src="../images/bongodesh.png"
             alt="abc"
@@ -109,11 +108,11 @@ function Header2() {
                   className={Styles.colflex}
                   style={{ marginLeft: "-15rem" }}
                 >
-                  <Image 
+                  <img 
                     style={{ width: " 1rem", height: "1rem" }}
                     src="../images/Categories.png"
                     alt="abc"
-                  ></Image >{" "}
+                  ></img >{" "}
                   <p style={{ color: "#42B00F" }}>By Category</p>
                 </div>
                 <Row>
@@ -176,11 +175,11 @@ function Header2() {
                 {" "}
                 <div className={Styles.colflex} style={{ marginLeft: "-4rem" }}>
                   {" "}
-                  <Image 
+                  <img 
                     style={{ width: " 1rem", height: "1rem" }}
                     src="../images/Group.png"
                     alt="abc"
-                  ></Image >{" "}
+                  ></img >{" "}
                   <p style={{ color: "#42B00F" }}>Sub Category</p>
                 </div>
                 <Row>
@@ -223,11 +222,11 @@ function Header2() {
                     style={{ marginLeft: "-8rem" }}
                   >
                     {" "}
-                    <Image 
+                    <img 
                       alt="abc"
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Locatin.png"
-                    ></Image >{" "}
+                    ></img >{" "}
                     <p style={{ color: "#42B00F" }}>Location</p>
                   </div>
                   <Row
@@ -293,11 +292,11 @@ function Header2() {
         >
           <div className={Styles.menudiv4}>
             <div className={Styles.imgpp}>
-              <Image  alt="abc" src="../images/Cart.png" />
+              <img  alt="abc" src="../images/Cart.png" />
               <p className={Styles.txttttst}>Cart</p>
             </div>
             <div className={Styles.imgpp}>
-              <Image 
+              <img 
                 className={Styles.ico}
                 alt="abc"
                 src="../images/Group (1).png"
@@ -305,7 +304,7 @@ function Header2() {
               <p className={Styles.txttttst}>My Account</p>
             </div>{" "}
             <div className={Styles.imgpp}>
-              <Image  alt="abc" src="../images/Notification.png" />
+              <img  alt="abc" src="../images/Notification.png" />
             </div>
           </div>
         </Menu>
