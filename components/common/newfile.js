@@ -66,8 +66,8 @@ export default function Newfile() {
       className={`${Styles.buttons} ${Styles.remove2}`}
     >
       <Search
+      className={Styles.widthsearc}
         style={{
-          width: 280,
           borderRadius: "4px 0 0 4px",
           borderLeft: "none",
         }}
