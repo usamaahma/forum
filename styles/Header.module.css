@@ -43,18 +43,16 @@
 
 .headerr {
   display: flex;
-  gap: 4rem;
+  gap: 3.5rem;
   align-items: center;
   margin: 0 auto;
-  max-width: 60rem;
+  max-width: 56rem;
 }
 .imgpp {
   background-color: transparent !important;
   height: 5rem;
 }
-.buttons {
-  gap: 0rem !important;
-}
+
 .googlepic {
   width: 10rem;
   height: 3rem;
@@ -78,7 +76,7 @@
   text-decoration: black !important;
   justify-content: center;
   font-size: 0.8rem;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .gapheaderthreenav:hover {
@@ -90,7 +88,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: medium;
-  margin-left: 3rem;
+  margin-left: 3.6rem;
   color: white;
   border: none;
   background-color: rgb(66, 176, 15) !important;
@@ -131,24 +129,40 @@
 .showheader {
   display: none;
 }
+@media only screen and (min-width: 1440px) {
+  .gapheaderthreenav {
+    display: flex;
+    align-items: center;
+    text-decoration: black !important;
+    justify-content: center;
+    font-size: 0.8rem;
+    gap: 1.56rem;
+  }
+  .headerr {
+    display: flex;
+    gap: 7.5rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 70rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .headerr {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 57rem;
+  }
+}
 
-@media only screen and (max-width: 425px) {
-  .remove {
-    display: none !important;
-  }
-  .googlepic {
-    display: none;
-  }
-}
-@media only screen and (width: 320px) {
-  .remove {
-    display: none !important;
-  }
-  .googlepic {
-    display: none;
-  }
-}
 @media only screen and (max-width: 768px) {
+  .buttons {
+    gap: 8rem !important;
+  }
+  .widthsearc {
+    width: 25rem;
+  }
   .remove1 {
     display: none !important;
   }
@@ -220,5 +234,33 @@
 @media only screen and (min-width: 769px) {
   .remove2 {
     display: none !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .buttons {
+    gap: 0.8rem !important;
+  }
+  .widthsearc {
+    width: 19rem;
+  }
+  .remove {
+    display: none !important;
+  }
+  .googlepic {
+    display: none;
+  }
+}
+@media only screen and (width: 320px) {
+  .remove {
+    display: none !important;
+  }
+  .googlepic {
+    display: none;
+  }
+  .widthsearc {
+    width: 16rem;
+  }
+  .buttons {
+    gap: 0.5rem !important;
   }
 }
