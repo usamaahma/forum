@@ -84,10 +84,12 @@ export default function Newfile() {
                   <div
                     className={Styles.colflex}
                   >
-                    <img
+                    <Image 
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Categories.png"
-                    ></img>{" "}
+                      alt="abc"
+
+                    ></Image >{" "}
                     <p style={{color:"#42B00F"}}>By Category</p>
                   </div>
                   <Row>
@@ -154,10 +156,11 @@ export default function Newfile() {
 
                   >
                     {" "}
-                    <img
+                    <Image 
                       style={{ width: " 1rem", height: "1rem" }}
                       src="../images/Group.png"
-                    ></img>{" "}
+                      alt="abc"
+                    ></Image >{" "}
                     <p style={{color:"#42B00F"}}>Sub Category</p>
                   </div>
                   <Row>
@@ -200,10 +203,11 @@ export default function Newfile() {
                       style={{ marginTop: "2rem",marginBottom:"1rem" }}
                     >
                       {" "}
-                      <img
+                      <Image
                         style={{ width: " 1rem", height: "1rem" }}
                         src="../images/Locatin.png"
-                      ></img>{" "}
+                        alt="abc"
+                      ></Image>{" "}
                       <p style={{color:"#42B00F"}}>Location</p>
                     </div>
                     <Row

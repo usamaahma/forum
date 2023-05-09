@@ -192,7 +192,7 @@ function Header3() {
         </div>
         <div>
           <Button className={Styles.buttonthree}>
-            <img src="../images/Plus.png" alt="abc" />
+            <Image  src="../images/Plus.png" alt="abc" />
             Post
           </Button>
         </div>

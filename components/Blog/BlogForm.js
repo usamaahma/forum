@@ -150,7 +150,7 @@ function BlogForm() {
             270 x 158 recommended
           </p>
           <Button className={Styles.buttondrag}>
-            <img src="../images/Small outline btn.png" alt="abc"></img>
+            <Image  src="../images/Small outline btn.png" alt="abc"></Image >
           </Button>
         </Dragger>
       </div>

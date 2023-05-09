@@ -16,17 +16,17 @@ function FirstHeader() {
         <Container className={Styles.cntainer}>
           <div className={Styles.twobrand}>
             <div className={Styles.bongoos}>
-              <img src="../images/bongodesh.png" alt="abc" />
+              <Image  src="../images/bongodesh.png" alt="abc" />
             </div>
             <Navbar.Brand>
               <div className={Styles.displayflex}>
-                <img src="../images/Phone.png" alt="abc" />
+                <Image  src="../images/Phone.png" alt="abc" />
                 <p className={Styles.number}>123-345-678</p>
               </div>
             </Navbar.Brand>
             <Navbar.Brand>
               <div className={Styles.displayflex}>
-                <img src="../images/emailnav.png" alt="abc" />
+                <Image  src="../images/emailnav.png" alt="abc" />
                 <p className={Styles.number}>bongodeshi@gmail.com</p>
               </div>
             </Navbar.Brand>
@@ -74,24 +74,24 @@ function FirstHeader() {
               </div>
             </div>{" "}
             <div className={Styles.not}>
-              <img src="../images/Notification.png" alt="aabc" />
+              <Image  src="../images/Notification.png" alt="aabc" />
             </div>
             <div className={Styles.logoos}>
               <div>
                 {" "}
-                <img src="../images/twitter.png" alt="abc" />
+                <Image  src="../images/twitter.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <img src="../images/faceb.png" alt="abc" />
+                <Image  src="../images/faceb.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <img src="../images/insta.png" alt="abc" />
+                <Image  src="../images/insta.png" alt="abc" />
               </div>
               <div>
                 {" "}
-                <img src="../images/linkdin.png" alt="abc" />
+                <Image  src="../images/linkdin.png" alt="abc" />
               </div>
             </div>
           </Nav>
