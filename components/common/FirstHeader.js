@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Styles from "../../styles/FirstHeader.module.css";
+import Image from 'next/image';
+
 
 function FirstHeader() {
   const [isBangla, setIsBangla] = useState(false);

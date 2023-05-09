@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Styles from "../../styles/footer.module.css";
 import { Row, Col, Button } from "antd";
+import Image from 'next/image';
+
 
 function Footer() {
   const [clickedIndex, setClickedIndex] = useState(-1);

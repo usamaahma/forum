@@ -2,6 +2,8 @@ import React,{ useState } from "react";
 import Styles from "../../styles/Header.module.css";
 import { Input, Button,Drawer,Row,Col,Checkbox,Dropdown,Space  } from "antd";
 import { SearchOutlined, UserOutlined, DownOutlined } from "@ant-design/icons";
+import Image from 'next/image';
+
 
 
 const handleMenuClick = (e) => {

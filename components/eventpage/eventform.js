@@ -3,6 +3,8 @@ import { Row, Col, Input, DatePicker } from "antd";
 import Styles from "../../styles/eventform.module.css";
 import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
 import { Button, Dropdown, Space, message, Upload } from "antd";
+import Image from 'next/image';
+
 
 const handleMenuClick = (e) => {
   message.info("Click on menu item.");

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+import Image from 'next/image';
+
 import {
   Layout,
   Menu,
