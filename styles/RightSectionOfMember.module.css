@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 98%;
+  width: 51rem;
 }
 
 .imgsize {
-  width: 100%;
+  width: 25rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -181,10 +181,10 @@
 
 .Carousel {
   margin-top: 1rem;
-  width: 60rem;
+  width: 51rem;
 }
 .eventbox {
-  width: 60rem;
+  width: 51rem;
 }
 @media (max-width: 2200px) {
   .Carousel {
@@ -217,7 +217,7 @@
     width: 50rem;
   }
   .eventbox {
-    width: 51rem;
+    width: 40rem;
   }
 }
 
@@ -247,11 +247,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
+    width: 24rem;
   }
 
   .imgsize {
-    width: 19rem;
+    width: 17rem;
   }
 
   .Carousel {
@@ -267,7 +267,7 @@
     margin-left: 0.5rem;
   }
   .eventbox {
-    width: 40rem;
+    width: 35rem;
   }
 }
 

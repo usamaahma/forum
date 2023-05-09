@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 88%;
+  width: 51rem;
 }
 .imgsize {
-  width: 100%;
+  width: 25rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -76,7 +76,7 @@
   border-radius: 5px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 70rem;
+  width: 51.5rem;
 }
 .greenbox {
   background: #42b00f;
