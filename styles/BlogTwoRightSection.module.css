@@ -141,10 +141,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 44rem; */
+    width: 44rem;
   }
   .imgsize {
-    width: 24rem;
+    width: 23.5rem;
   }
 }
 @media (max-width: 1404px) {

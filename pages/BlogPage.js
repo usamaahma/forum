@@ -21,8 +21,8 @@ function BlogPage() {
               <BlogLeftSection />
             </div>
           </Col>
-          <Col lg={12}>
-            <div className={Styles.centercol1}>
+          <Col>
+            <div className={Styles.centercol123}>
               <BlogRightSection />
             </div>
           </Col>

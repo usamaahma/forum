@@ -15,9 +15,11 @@
   align-items: center;
   margin-left: 1rem;
 }
+
 .mainland11 {
   padding: 20px 0px;
 }
+
 @media (max-width: 768px) {
   .mbree {
     flex-direction: column-reverse;
@@ -29,6 +31,12 @@
     margin-left: 0rem;
   }
   .centercol12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0rem;
+  }
+  .centercol123 {
     display: flex;
     justify-content: center;
     align-items: center;
