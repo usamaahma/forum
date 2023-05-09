@@ -8,7 +8,7 @@
 }
 .cntainer {
   display: flex;
-  gap: 12rem;
+  gap: 15rem;
   justify-content: center;
   align-items: center;
 }

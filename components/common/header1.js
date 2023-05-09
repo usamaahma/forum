@@ -93,7 +93,7 @@ function Header2() {
         >
           <Select
             dropdownRender={dropdownRender}
-            defaultValue="filter"
+            defaultValue="Filter"
             onClick={showModal}
           />
           <Modal
