@@ -20,7 +20,7 @@ function BlogTwoPage() {
               <BlogTwoLeftSection />
             </div>
           </Col>
-          <Col lg={14}>
+          <Col>
             <div className={Styles.centercol12}>
               <BlogTwoRightSection />
             </div>
