@@ -64,7 +64,7 @@ function RightSectionOfEvents() {
           </div>
         </div>
         {data.map((index) => (
-          <div key={index}>
+          <div key={index} className={Styles.eventbox}>
             <EventPost />
           </div>
         ))}

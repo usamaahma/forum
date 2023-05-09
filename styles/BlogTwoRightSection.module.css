@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 51rem;
 }
 .imgsize {
-  width: 100%;
+  width: 25rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -152,10 +152,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 40rem; */
+    width: 40rem;
   }
   .imgsize {
-    width: 24rem;
+    width: 23rem;
   }
 }
 @media (max-width: 1024px) {
@@ -163,7 +163,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 24rem; */
+    width: 24rem;
   }
   .imgsize {
     width: 17rem;
