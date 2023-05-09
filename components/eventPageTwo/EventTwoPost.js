@@ -74,8 +74,9 @@ function EventTwoPost() {
             style={{
               backgroundColor: "#42b00f",
               borderWidth: 1,
-              width: "7rem",
+              width: "6.5rem",
               border: "#42b00f 1px solid",
+              position: "absolute",
             }}
           ></div>
           <hr

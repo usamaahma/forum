@@ -26,6 +26,7 @@ function EventLeftSection() {
             borderWidth: 1,
             width: "7rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr
@@ -56,8 +57,9 @@ function EventLeftSection() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "4.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
@@ -110,8 +112,9 @@ function EventLeftSection() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "9.4rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr />
@@ -145,8 +148,9 @@ function EventLeftSection() {
             style={{
               backgroundColor: "#42b00f",
               borderWidth: 1,
-              width: "7rem",
+              width: "3rem",
               border: "#42b00f 1px solid",
+              position: "absolute",
             }}
           ></div>
           <hr style={{ border: "1px solid #E8E8E8" }} />

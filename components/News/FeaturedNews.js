@@ -124,8 +124,9 @@ function FeaturedNews() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "7.1rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr
@@ -143,8 +144,9 @@ function FeaturedNews() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "4.8rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr

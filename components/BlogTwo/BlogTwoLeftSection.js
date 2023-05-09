@@ -18,8 +18,9 @@ function BlogTwoLeftSection() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "9.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr />
@@ -67,8 +68,9 @@ function BlogTwoLeftSection() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "5.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
@@ -85,8 +87,9 @@ function BlogTwoLeftSection() {
             style={{
               backgroundColor: "#42b00f",
               borderWidth: 1,
-              width: "7rem",
+              width: "3rem",
               border: "#42b00f 1px solid",
+              position: "absolute",
             }}
           ></div>
           <hr style={{ border: "1px solid #E8E8E8" }} />

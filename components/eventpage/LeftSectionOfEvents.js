@@ -40,8 +40,9 @@ function LeftSectionOfEvents() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "9.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr />
@@ -72,8 +73,9 @@ function LeftSectionOfEvents() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "5.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr />
@@ -89,8 +91,9 @@ function LeftSectionOfEvents() {
           style={{
             backgroundColor: "#42b00f",
             borderWidth: 1,
-            width: "7rem",
+            width: "5.5rem",
             border: "#42b00f 1px solid",
+            position: "absolute",
           }}
         ></div>
         <hr />

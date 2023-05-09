@@ -12,10 +12,7 @@ function LandingPage() {
     <div>
       <MainHeader />
       <HeroSection />
-      <div
-        // className={Styles.mainland}
-        style={{ marginTop: "1rem", padding: "20px 0px" }}
-      >
+      <div style={{ marginTop: "1rem", padding: "20px 0px" }}>
         <Row justify="center" className={Styles.mbree}>
           <Col>
             <div className={Styles.centercol}>

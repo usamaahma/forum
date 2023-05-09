@@ -4,20 +4,24 @@
   align-items: center;
   width: 100%;
 }
+
 .imgsize {
   width: 100%;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
 .inputdiv {
   display: flex;
   padding: 1rem;
 }
+
 .input {
   /* width: 30rem; */
   margin-left: 1rem;
   border: none !important;
 }
+
 .cameradiv {
   display: flex;
   justify-content: space-between;
@@ -25,6 +29,7 @@
   padding: 1rem;
   background-color: #fcfcfc;
 }
+
 .flexbox {
   display: flex;
   justify-content: space-between;
@@ -32,63 +37,77 @@
   margin-top: 2rem;
   padding: 1rem;
 }
+
 .flexbigbox {
   background-color: #ffffff;
   box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   width: 96%;
 }
+
 .clr {
   color: #444444;
   font-weight: 500;
   margin-left: 0.5rem;
 }
+
 .clr1 {
   color: #42b00f !important;
   font-weight: 600;
 }
+
 .selectdiv {
   display: flex;
   align-items: center;
 }
+
 .filter {
   margin-right: 1rem;
   color: #444444;
 }
+
 .frst {
   margin-bottom: 5rem;
   margin-top: 0.6rem;
   color: #7e8284;
   font-size: 0.8rem;
 }
+
 .pehlikarahi {
   width: 10rem;
 }
+
 .coltwo {
   margin-left: 1rem;
 }
+
 .greenimg {
   position: absolute;
 }
+
 .eventsss {
   font-size: 1rem;
   font-weight: 500;
 }
+
 .datess {
   display: flex;
   gap: 0.1rem;
   align-items: center;
 }
+
 .datess55 {
   font-size: 0.8rem;
   color: #7e8284;
   margin-bottom: 0.5rem;
 }
+
 .nameonee {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
+
 .liness {
   background-color: #e8e8e8;
   margin-top: 0.5rem;
@@ -96,13 +115,16 @@
   width: auto;
   height: 0.01rem;
 }
+
 .marginb {
   margin-bottom: 0.5rem;
 }
+
 .datess5 {
   font-size: 1rem;
   color: #7e8284;
 }
+
 .centercol {
   display: flex;
   justify-content: center;
@@ -117,6 +139,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .btngree {
   background-color: #f9f9f9;
   border: #f9f9f9 solid 1px;
@@ -127,11 +150,13 @@
   border-radius: 0.3rem;
   color: #444444;
 }
+
 .btngree:hover {
   background-color: #42b00f;
   border: #42b00f solid 1px;
   color: white;
 }
+
 .post {
   border: solid 1px #42b00f;
   color: #42b00f;
@@ -141,6 +166,7 @@
   padding-bottom: 0.3rem;
   border-radius: 0.2rem;
 }
+
 .postdiv {
   display: flex;
   justify-content: space-between;
@@ -152,10 +178,19 @@
   border-radius: 5px;
   padding: 1rem;
 }
+
 .Carousel {
   margin-top: 1rem;
   width: 80rem;
 }
+
+@media (max-width: 2200px) {
+  .Carousel {
+    margin-top: 1rem;
+    width: 58rem;
+  }
+}
+
 @media (max-width: 1440px) {
   .boxflex {
     display: flex;
@@ -163,20 +198,24 @@
     align-items: center;
     /* width: 44rem; */
   }
+
   .imgsize {
     width: 25rem;
   }
+
   .flexbigbox {
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     width: 98%;
   }
+
   .Carousel {
     margin-top: 1rem;
     width: 50rem;
   }
 }
+
 @media (max-width: 1406px) {
   .boxflex {
     display: flex;
@@ -184,14 +223,17 @@
     align-items: center;
     /* width: 40rem; */
   }
+
   .imgsize {
     width: 23rem;
   }
+
   .Carousel {
     margin-top: 1rem;
     width: 45rem;
   }
 }
+
 @media (max-width: 1024px) {
   .boxflex {
     display: flex;
@@ -199,13 +241,16 @@
     align-items: center;
     /* width: 100%; */
   }
+
   .imgsize {
     width: 18rem;
   }
+
   .Carousel {
     margin-top: 1rem;
     width: 32rem;
   }
+
   .flexbigbox {
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
@@ -219,13 +264,16 @@
   .boxflex {
     display: none !important;
   }
+
   .imgsize {
     display: none !important;
   }
+
   .Carousel {
     margin-top: 1rem;
     width: 36rem;
   }
+
   .flexbigbox {
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
@@ -234,6 +282,7 @@
     margin-left: 0rem;
   }
 }
+
 @media (max-width: 425px) {
   .frst {
     margin-bottom: 5rem;
@@ -245,6 +294,7 @@
   .coltwo {
     margin-left: 0.5rem;
   }
+
   .boxflex {
     display: flex;
     justify-content: center;
@@ -252,6 +302,7 @@
     align-items: center;
     width: 15rem !important;
   }
+
   .flexbox {
     display: flex;
     justify-content: center;
@@ -259,11 +310,13 @@
     margin-top: 2rem;
     padding: 1rem;
   }
+
   .Carousel {
     margin-top: 1rem;
     width: 24rem;
   }
 }
+
 @media (max-width: 375px) {
   .Carousel {
     margin-top: 1rem;

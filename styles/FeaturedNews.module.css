@@ -8,6 +8,7 @@
   color: #42b00f;
   border: #def5d3 solid 1px;
 }
+
 .flexbtndiv {
   display: flex;
   justify-content: space-between;
@@ -15,16 +16,19 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .intertext {
   color: #151515;
   font-size: 1rem;
   font-weight: 600;
 }
+
 .jantext {
   color: #a1a1a1;
   font-size: 0.8rem;
   font-weight: 600;
 }
+
 .lookingtext {
   color: #a1a1a1;
   font-size: 1rem;
@@ -32,38 +36,46 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .blueclr {
   color: #2d9cdb !important;
 }
+
 .centercol {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
+
 .centercol1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
+
 .imgstyle {
   width: 100%;
 }
+
 .imgstyle22 {
-  width: 100%;
+  width: 125%;
 }
+
 .boxpadding {
   padding: 1rem;
   background: #ffffff;
   box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 7.44565px 7.44565px;
   margin-top: -0.5rem;
+  width: 125%;
 }
+
 .btn {
   border: #ffffff solid 1px;
   width: 8rem;
@@ -71,33 +83,63 @@
   border-radius: 0.3rem;
   color: #444444;
 }
+
 .btn:hover {
   background-color: #42b00f;
   border: #42b00f solid 1px;
   color: #ffffff;
 }
+
 .btnflex {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90rem;
+  width: 80rem;
 }
+
 .cardivvv {
-  width: 90rem;
+  width: 80rem;
   margin-top: 1rem;
 }
-/* .width {
-  width: 70rem;
-} */
+
+@media (max-width: 2200px) {
+  .btnflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+  }
+
+  .cardivvv {
+    width: 60rem;
+    margin-top: 1rem;
+  }
+
+  .imgstyle22 {
+    width: 110%;
+  }
+
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
+    width: 110%;
+  }
+}
+
 @media (max-width: 1440px) {
   .cardivvv {
     width: 50rem;
     margin-top: 1rem;
   }
+
   .padindiv {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
   .btnflex {
     display: flex;
     justify-content: center;
@@ -105,13 +147,16 @@
     width: 42rem;
   }
 }
+
 @media (max-width: 1024px) {
   .imgstyle {
     width: 91%;
   }
+
   .imgstyle22 {
     width: 100%;
   }
+
   .flexbtndiv {
     display: flex;
     justify-content: space-between;
@@ -120,19 +165,22 @@
     margin-bottom: 0.5rem;
     width: 90%;
   }
+
   .boxpadding {
-    padding: 0.5rem;
+    padding: 1.5rem;
     background: #ffffff;
     box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
     border-radius: 0px 0px 7.44565px 7.44565px;
     margin-top: -0.5rem;
     width: 25rem;
   }
+
   .intertext {
     color: #151515;
     font-size: 0.85rem;
     font-weight: 600;
   }
+
   .lookingtext {
     color: #a1a1a1;
     font-size: 0.85rem;
@@ -140,15 +188,18 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+
   .cardivvv {
     width: 40rem;
     margin-top: 1rem;
   }
 }
+
 @media (max-width: 768px) {
   .imgstyle {
     width: 100%;
   }
+
   .flexbtndiv {
     display: flex;
     justify-content: space-between;
@@ -157,6 +208,7 @@
     margin-bottom: 0.5rem;
     width: 100%;
   }
+
   .boxpadding {
     padding: 0.5rem;
     background: #ffffff;
@@ -165,11 +217,13 @@
     margin-top: -0.5rem;
     width: 100%;
   }
+
   .intertext {
     color: #151515;
     font-size: 0.85rem;
     font-weight: 600;
   }
+
   .lookingtext {
     color: #a1a1a1;
     font-size: 0.85rem;
@@ -177,11 +231,13 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+
   .cardivvv {
     width: 40rem;
     margin-top: 1rem;
   }
 }
+
 @media (max-width: 425px) {
   .btnflex {
     width: 20rem;
@@ -189,11 +245,13 @@
     margin-top: 2rem;
     margin-bottom: 1rem; */
   }
+
   .centerrrr {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .btn {
     border: #ffffff solid 1px;
     padding-left: 1rem;
@@ -205,6 +263,7 @@
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+
   .cardivvv {
     width: 20rem;
     margin-top: 1rem;

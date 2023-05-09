@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
 }
+
 .flexsmallbox {
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
 }
+
 .bigbox {
   background: #ffffff;
   box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
@@ -15,6 +17,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .text14 {
   color: black;
   font-weight: 600;
@@ -23,6 +26,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .text144 {
   color: black;
   font-weight: 600;
@@ -31,6 +35,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .texta {
   color: #7e8284;
   font-weight: 600;
@@ -39,12 +44,14 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .cel {
   height: 1.5rem;
   width: 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .textap {
   color: #a1a1a1;
   font-size: 0.7rem;
@@ -53,20 +60,24 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .texth {
   color: #444444;
   font-size: 0.9rem;
   font-weight: 400;
 }
+
 .line {
   margin-left: 0.5rem;
   width: 30rem;
 }
+
 @media (max-width: 1024px) {
   .line {
     margin-left: 0.5rem;
     width: 25rem;
   }
+
   .bigbox {
     background: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
@@ -77,6 +88,7 @@
     margin-left: 0.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .bigbox {
     background: #ffffff;
@@ -88,11 +100,13 @@
     margin-left: 0rem;
   }
 }
+
 @media (max-width: 425px) {
   .line {
     margin-left: 0.5rem;
     width: 10rem;
   }
+
   .text14 {
     color: black;
     font-weight: 600;
@@ -101,6 +115,7 @@
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
   .text144 {
     color: black;
     font-weight: 600;
@@ -109,6 +124,7 @@
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
   .texta {
     color: #7e8284;
     font-weight: 600;
@@ -117,12 +133,14 @@
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
   .cel {
     height: 1.5rem;
     width: 1.5rem;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
   .textap {
     color: #a1a1a1;
     font-size: 0.6rem;
@@ -131,12 +149,14 @@
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
+
   .texth {
     color: #444444;
     font-size: 0.6rem;
     font-weight: 400;
   }
 }
+
 @media (max-width: 320px) {
   .line {
     margin-left: 0.5rem;
