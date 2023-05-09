@@ -60,18 +60,27 @@
 }
 
 .imgstyle {
-  width: 100%;
+  width: 70rem;
 }
-
+.imgstyle12 {
+  width: 70rem;
+}
 .boxpadding {
   padding: 1rem;
   background: #ffffff;
   box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 7.44565px 7.44565px;
   margin-top: -0.5rem;
-  width: 100%;
+  width: 70rem;
 }
-
+.boxpadding12 {
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+  border-radius: 0px 0px 7.44565px 7.44565px;
+  margin-top: -0.5rem;
+  width: 70rem;
+}
 .share {
   color: #151515;
   font-size: 1rem;
@@ -131,8 +140,12 @@
   margin-top: 1rem;
   width: 80rem;
 }
+.Carousel123 {
+  margin-top: 1rem;
+  width: 60rem;
+}
 
-@media(max-width:2200px) {
+@media (max-width: 2200px) {
   .Carousel1 {
     margin-top: 1rem;
     width: 60rem;
@@ -151,6 +164,22 @@
   }
 
   .Carousel {
+    margin-top: 1rem;
+    width: 50rem;
+  }
+  .imgstyle {
+    width: 50rem;
+  }
+
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
+    width: 50rem;
+  }
+  .Carousel123 {
     margin-top: 1rem;
     width: 50rem;
   }
@@ -173,7 +202,10 @@
     margin-top: 1rem;
     width: 32rem;
   }
-
+  .Carousel123 {
+    margin-top: 1rem;
+    width: 35rem;
+  }
   .Carousel {
     margin-top: 1rem;
     width: 35rem;
@@ -262,7 +294,10 @@
     margin-top: 1rem;
     width: 24rem;
   }
-
+  .Carousel123 {
+    margin-top: 1rem;
+    width: 25rem;
+  }
   .Carousel1 {
     margin-top: 1rem;
     width: 22rem;
@@ -277,9 +312,12 @@
 
   .Carousel {
     margin-top: 1rem;
-    width: 21rem;
+    width: 20rem;
   }
-
+  .Carousel123 {
+    margin-top: 1rem;
+    width: 18rem;
+  }
   .Carousel1 {
     margin-top: 1rem;
     width: 20rem;

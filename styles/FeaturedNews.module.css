@@ -46,8 +46,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .centercol1 {
@@ -55,8 +55,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .imgstyle {
@@ -64,7 +64,7 @@
 }
 
 .imgstyle22 {
-  width: 125%;
+  /* width: 125%; */
 }
 
 .boxpadding {
@@ -73,7 +73,7 @@
   box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 7.44565px 7.44565px;
   margin-top: -0.5rem;
-  width: 125%;
+  /* width: 125%; */
 }
 
 .btn {
@@ -94,11 +94,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80rem;
+  width: 60rem;
 }
 
 .cardivvv {
-  width: 80rem;
+  width: 60rem;
   margin-top: 1rem;
 }
 
@@ -116,7 +116,7 @@
   }
 
   .imgstyle22 {
-    width: 110%;
+    width: 100%;
   }
 
   .boxpadding {
@@ -125,7 +125,7 @@
     box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
     border-radius: 0px 0px 7.44565px 7.44565px;
     margin-top: -0.5rem;
-    width: 110%;
+    width: 100%;
   }
 }
 
@@ -154,7 +154,7 @@
   }
 
   .imgstyle22 {
-    width: 100%;
+    /* width: 100%; */
   }
 
   .flexbtndiv {
@@ -163,7 +163,7 @@
     align-items: center;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    width: 90%;
+    /* width: 90%; */
   }
 
   .boxpadding {
@@ -192,6 +192,12 @@
   .cardivvv {
     width: 40rem;
     margin-top: 1rem;
+  }
+  .btnflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
   }
 }
 

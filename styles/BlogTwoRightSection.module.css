@@ -141,10 +141,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 44rem;
+    /* width: 44rem; */
   }
   .imgsize {
-    width: 22rem;
+    width: 24rem;
   }
 }
 @media (max-width: 1404px) {
@@ -152,10 +152,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40rem;
+    /* width: 40rem; */
   }
   .imgsize {
-    width: 20rem;
+    width: 24rem;
   }
 }
 @media (max-width: 1024px) {
@@ -163,10 +163,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 24rem;
+    /* width: 24rem; */
   }
   .imgsize {
-    width: 16rem;
+    width: 17rem;
   }
 }
 @media (max-width: 768px) {

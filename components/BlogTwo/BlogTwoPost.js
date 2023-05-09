@@ -90,7 +90,7 @@ function BlogTwoPost() {
             justifyContent: "center",
           }}
         >
-          <div className={Styles.Carousel1}>
+          <div className={Styles.Carousel123}>
             <BlogCarousel />
           </div>
         </div>
