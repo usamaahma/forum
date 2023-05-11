@@ -1,6 +1,6 @@
 import React from "react";
 import Styles from "../../styles/DeshiShopPageTwoRight.module.css";
-import Gallery from "./Carouseldeshitwo";
+import CarouselDeshitwo from "./Carouseldeshitwo";
 
 function RightSectionDeshiTwo() {
   return (
@@ -24,8 +24,8 @@ function RightSectionDeshiTwo() {
           src="../images/greenline.png"
         />
       </div>
-      <div>
-        <Gallery />
+      <div className={Styles.CarouselDeshitwowidth}>
+        <CarouselDeshitwo />
       </div>
     </div>
   );

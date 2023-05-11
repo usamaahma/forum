@@ -26,7 +26,9 @@
 .viwall {
   color: #42b00f;
 }
-
+.CarouselDeshitwowidth {
+  width: 50rem;
+}
 @media (max-width: 1024px) {
   .imagethirt {
     width: 35rem;

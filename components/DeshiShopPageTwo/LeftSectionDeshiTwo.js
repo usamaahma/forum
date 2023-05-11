@@ -88,7 +88,27 @@ function LeftSectiondeshitwo() {
         <div className={Styles.greysmll}>
           <p className={Styles.text}>Home & Living</p>
           <RightOutlined className={Styles.text1} />
+        </div>{" "}
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+        <div className={Styles.greysmll}>
+          <p className={Styles.text}>Store</p>
+          <RightOutlined className={Styles.text1} />
+        </div>{" "}
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+        <div className={Styles.greysmll}>
+          <p className={Styles.text}>Offers</p>
+          <RightOutlined className={Styles.text1} />
+        </div>{" "}
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+        <div className={Styles.greysmll}>
+          <p className={Styles.text}>Location</p>
+          <RightOutlined className={Styles.text1} />
         </div>
+      </div>{" "}
+      <hr style={{ border: "1px solid #E8E8E8" }} />
+      <div className={Styles.greysmll}>
+        <p className={Styles.text}>Price Range</p>
+        <RightOutlined className={Styles.text1} />
       </div>
     </div>
   );
