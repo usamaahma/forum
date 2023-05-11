@@ -105,3 +105,13 @@
     display: none;
   }
 }
+.boxstyle {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0px 2.97466px 19.831px rgba(0, 0, 0, 0.05);
+  border-radius: 2.47888px;
+  padding: 1rem;
+}

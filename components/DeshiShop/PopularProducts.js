@@ -65,7 +65,7 @@ const responsive = {
   1440: { items: 5 },
   2560: { items: 5 },
 };
-function ShopCate() {
+function PopularProducts() {
   return (
     <div>
       <div className={Styles.centercaro}>
@@ -81,7 +81,6 @@ function ShopCate() {
               mouseTracking
               items={items}
               responsive={responsive}
-              // disableDotsControls
               disableButtonsControls
               autoPlay
               autoPlayInterval={2000}
@@ -94,4 +93,4 @@ function ShopCate() {
   );
 }
 
-export default ShopCate;
+export default PopularProducts;
