@@ -5,6 +5,7 @@ import LeftSectionOfDeshi from "@/components/DeshiShop/LeftSectionOfDeshi";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import RightSectionOfDeshi from "@/components/DeshiShop/RightSectionOfDeshi";
+import ShopCate from "@/components/DeshiShop/ShopCate";
 
 function DeshiShopPage() {
   return (
@@ -24,6 +25,7 @@ function DeshiShopPage() {
           </Col>
         </Row>
       </div>
+      <ShopCate />
       <Footer />
     </div>
   );
