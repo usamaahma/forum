@@ -1,0 +1,34 @@
+.imagethirt {
+  width: 50rem;
+}
+.divfontv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.blackline {
+  background-color: #e8e8e8;
+  height: 0.01rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.greenlines {
+  width: 12rem;
+  height: 0.3rem;
+  position: absolute;
+  margin-top: -0.13rem;
+}
+.Populartxt {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.viwall {
+  color: #42b00f;
+}
+
+@media (max-width: 1024px) {
+  .imagethirt {
+    width: 35rem;
+  }
+}

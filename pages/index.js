@@ -1,9 +1,10 @@
+import DeshiShopPageTwo from "./DeshiShopPageTwo";
 import LandingPage from "./landingPage";
 
 export default function Home() {
   return (
     <>
-      <LandingPage />
+      <DeshiShopPageTwo />
     </>
   );
 }
