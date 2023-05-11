@@ -4,7 +4,6 @@ import { Button, Layout, Menu } from "antd";
 import Link from "next/link";
 const { Header } = Layout;
 
-
 function Header3() {
   return (
     <div
@@ -40,20 +39,22 @@ function Header3() {
           </Link>
         </div>
         <div>
-          <Menu
-            bordered="false"
-            className={Styles.gapheaderthreenav}
-            style={{
-              backgroundColor: "#151515",
-              color: "white",
-              height: "2rem",
-            }}
-            mode="horizontal"
-            // defaultSelectedKeys={["2"]}
-            // items={items1}
-          >
-            <p>Deshi Shop</p>
-          </Menu>
+          <Link href="/DeshiShopPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+                height: "2rem",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Deshi Shop</p>
+            </Menu>
+          </Link>
         </div>
         <div>
           <Menu
@@ -193,7 +194,7 @@ function Header3() {
         </div>
         <div>
           <Button className={Styles.buttonthree}>
-            <img  src="../images/Plus.png" alt="abc" />
+            <img src="../images/Plus.png" alt="abc" />
             Post
           </Button>
         </div>

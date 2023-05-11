@@ -1,0 +1,31 @@
+ .greybox {
+     background: #fcfcfc;
+     border-radius: 5px;
+
+ }
+
+ .greysmll {
+     padding: 1.1rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 14rem;
+
+ }
+
+ .text {
+     font-weight: 500;
+     font-size: 1rem;
+     color: #151515;
+     cursor: pointer;
+
+ }
+
+ .text:hover {
+     color: #42B00F;
+ }
+
+ .text1:hover {
+     color: #42B00F;
+     cursor: pointer;
+ }
