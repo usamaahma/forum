@@ -5,8 +5,9 @@ import Rectangle from "../../public/images/Rectangle 75.png";
 import Like from "../../public/images/Like1.png";
 import Share from "../../public/images/Share1.png";
 import Comment from "../../public/images/Comment1.png";
-import { Card } from "antd";
+
 import Link from "next/link";
+import { Card } from "antd";
 const { Meta } = Card;
 function BlogCard() {
   return (

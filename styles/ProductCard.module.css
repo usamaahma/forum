@@ -1,0 +1,52 @@
+.card {
+    width: 14rem;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stardiv {
+    display: flex;
+    align-items: center;
+}
+
+.pronam {
+    color: #444444;
+    font-weight: 500;
+}
+
+.pricetext {
+    color: #151515;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.greenprrice {
+    text-decoration-line: line-through;
+    font-size: .8rem;
+    color: #219653;
+}
+
+.soldtext {
+    color: #A1A1A1;
+    font-size: .8rem;
+}
+
+.border {
+    border: solid 1px rgb(197, 194, 194);
+    padding: .1rem;
+    border-radius: .2rem;
+}
+
+.star {
+    font-size: .8rem;
+}
+
+.thre {
+    font-size: .8rem;
+    margin-left: .5rem;
+    color: #A1A1A1;
+}
