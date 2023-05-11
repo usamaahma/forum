@@ -48,13 +48,34 @@
     height: 2rem;
     color: white;
     text-align: center;
-
-
 }
 
 .smlltext {
     color: #444444;
     font-size: .8rem;
+}
+
+@media(max-width: 1024px) {
+
+    .width {
+        width: 23rem;
+    }
+
+    .bardiv {
+        background: #F9F9F9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        margin-top: -2rem;
+        width: 40rem;
+    }
+
+    .smlltext {
+        color: #444444;
+        font-size: .7rem;
+    }
 }
 
 @media(max-width: 768px) {
@@ -64,5 +85,61 @@
         align-items: center;
         flex-direction: column;
         margin-left: 0rem;
+    }
+
+    .width {
+        width: 35rem;
+    }
+
+    .bardiv {
+        background: #F9F9F9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        margin-top: -2rem;
+        width: 100%;
+    }
+}
+
+@media(max-width: 425px) {
+    .center1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0rem;
+    }
+
+    .width {
+        width: 100%;
+    }
+
+    .bardiv {
+        background: #F9F9F9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .smlltext {
+        color: #444444;
+        font-size: .5rem;
+    }
+
+    .btngreen {
+        background: #42B00F;
+        border-radius: 5px;
+        border: #42B00F solid 1px;
+        width: 7rem;
+        height: 2rem;
+        color: white;
+        text-align: center;
+        font-size: .6rem;
     }
 }

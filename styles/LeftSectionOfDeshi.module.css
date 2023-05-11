@@ -4,6 +4,10 @@
 
  }
 
+ .shoptext {
+     padding-left: 1rem;
+ }
+
  .greysmll {
      padding: 1.1rem;
      display: flex;
@@ -28,4 +32,42 @@
  .text1:hover {
      color: #42B00F;
      cursor: pointer;
+ }
+
+ @media(max-width: 1024px) {
+     .greysmll {
+         padding: 1.4rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         width: 11rem;
+
+     }
+
+     .text {
+         font-weight: 500;
+         font-size: .8rem;
+         color: #151515;
+         cursor: pointer;
+
+     }
+ }
+
+ @media(max-width: 768px) {
+     .greysmll {
+         padding: 1.2rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         width: 14rem;
+
+     }
+
+     .text {
+         font-weight: 500;
+         font-size: 1rem;
+         color: #151515;
+         cursor: pointer;
+
+     }
  }

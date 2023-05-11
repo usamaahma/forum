@@ -50,7 +50,7 @@ function LeftSectionOfDeshi() {
     <div>
       <div className={Styles.greybox}>
         <div>
-          <h3>Shops</h3>
+          <h3 className={Styles.shoptext}>Shops</h3>
         </div>
         <div>
           <Dropdown
