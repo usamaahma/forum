@@ -9,6 +9,7 @@ import PopularProducts from "@/components/DeshiShop/PopularProducts";
 import ShopByCategory from "@/components/DeshiShop/ShopByCategory";
 import PopularProductsTwo from "@/components/DeshiShop/PopularProductsTwo";
 import RecentProducts from "@/components/DeshiShop/RecentProducts";
+import StoreName from "@/components/DeshiShop/StoreName";
 
 function DeshiShopPage() {
   return (
@@ -32,6 +33,7 @@ function DeshiShopPage() {
       <PopularProducts />
       <PopularProductsTwo />
       <RecentProducts />
+      <StoreName />
       <Footer />
     </div>
   );
