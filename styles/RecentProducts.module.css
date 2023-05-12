@@ -1,0 +1,37 @@
+.divimge {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+.divcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imgbanner {
+  width: 31rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .imgbanner {
+    width: 25rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .imgbanner {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .divimge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
