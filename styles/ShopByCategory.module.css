@@ -113,5 +113,16 @@
   background: #ffffff;
   box-shadow: 0px 2.97466px 19.831px rgba(0, 0, 0, 0.05);
   border-radius: 2.47888px;
+  width: 6rem;
+  height: 5.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
+}
+.shoptext {
+  color: #737373;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5rem;
 }

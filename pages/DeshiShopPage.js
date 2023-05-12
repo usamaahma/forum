@@ -7,6 +7,8 @@ import Footer from "@/components/common/footer";
 import RightSectionOfDeshi from "@/components/DeshiShop/RightSectionOfDeshi";
 import PopularProducts from "@/components/DeshiShop/PopularProducts";
 import ShopByCategory from "@/components/DeshiShop/ShopByCategory";
+import PopularProductsTwo from "@/components/DeshiShop/PopularProductsTwo";
+import RecentProducts from "@/components/DeshiShop/RecentProducts";
 
 function DeshiShopPage() {
   return (
@@ -28,6 +30,8 @@ function DeshiShopPage() {
       </div>
       <ShopByCategory />
       <PopularProducts />
+      <PopularProductsTwo />
+      <RecentProducts />
       <Footer />
     </div>
   );
