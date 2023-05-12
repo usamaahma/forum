@@ -27,7 +27,8 @@
   color: #42b00f;
 }
 .CarouselDeshitwowidth {
-  width: 50rem;
+  margin: 0 auto;
+  width: 35rem;
 }
 @media (max-width: 1024px) {
   .imagethirt {

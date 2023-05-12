@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/ShopCate.module.css";
+import Styles from "../../styles/ShopCatetwo.module.css";
 import ProductCard from "./ProductCardtwo";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -62,7 +62,7 @@ const items = [
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1024: { items: 4 },
+  1024: { items: 3 },
   1440: { items: 4 },
   2560: { items: 4 },
 };

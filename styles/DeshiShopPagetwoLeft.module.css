@@ -2,7 +2,13 @@
   background: #fcfcfc;
   border-radius: 5px;
 }
-
+.mapleftsec {
+  display: grid;
+}
+.rowgpp {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .greysmll {
   padding: 1.1rem;
   display: flex;
@@ -10,16 +16,57 @@
   align-items: center;
   width: 14rem;
 }
-
+.colors {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.blackline {
+  background-color: #e8e8e8;
+  height: 0.01rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.fontte{
+  font-weight: bold;
+}
+.greenlines {
+  width: 9rem;
+  height: 0.3rem;
+  position: absolute;
+  margin-top: -0.13rem;
+}
 .text {
   font-weight: 500;
   font-size: 1rem;
   color: #151515;
   cursor: pointer;
 }
-
+.applyfiltertxt {
+  color: #42b00f;
+  font-weight: 600;
+}
+.buttonwhit {
+  background-color: white;
+  border: solid #d9d9d9 0.01rem !important;
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0%;
+}
 .text:hover {
   color: #42b00f;
+}
+.latesttxt {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
 }
 
 .text1:hover {

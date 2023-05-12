@@ -1,7 +1,38 @@
 import React from "react";
 import { RightOutlined } from "@ant-design/icons";
-import { Dropdown } from "antd";
+import { Dropdown, Button, Rate, Row, Col } from "antd";
 import Styles from "../../styles/DeshiShopPagetwoLeft.module.css";
+
+const data = [
+  {
+    key: "1",
+    image: "../images/glasses.png",
+    price: "$99.33",
+    name: "Product Name",
+    stars: <Rate defaultValue={4} />,
+  },
+  {
+    key: "2",
+    image: "../images/earpod.png",
+    price: "$99.33",
+    name: "Product Name",
+    stars: <Rate defaultValue={4} />,
+  },
+  {
+    key: "3",
+    image: "../images/glasses.png",
+    price: "$99.33",
+    name: "Product Name",
+    stars: <Rate defaultValue={4} />,
+  },
+  {
+    key: "4",
+    image: "../images/earpod.png",
+    price: "$99.33",
+    name: "Product Name",
+    stars: <Rate defaultValue={4} />,
+  },
+];
 
 const items = [
   {
@@ -109,7 +140,51 @@ function LeftSectiondeshitwo() {
       <div className={Styles.greysmll}>
         <p className={Styles.text}>Price Range</p>
         <RightOutlined className={Styles.text1} />
+      </div>{" "}
+      <hr style={{ border: "1px solid #E8E8E8" }} />
+      <div className={Styles.colors}>
+        <p>Color</p>
+        <img alt="abc" src="../images/Ellipse 91.png" />
+        <img alt="abc" src="../images/Ellipse 92.png" />
+        <img alt="abc" src="../images/Ellipse 93.png" />
+        <img alt="abc" src="../images/Ellipse 94.png" />
+        <img alt="abc" src="../images/Ellipse 95.png" />
       </div>
+      <div>
+        <Button className={Styles.buttonwhit}>
+          <p className={Styles.applyfiltertxt}>Apply Filter</p>
+        </Button>
+      </div>
+      <div>
+        <img src="../images/image 61.png"></img>
+      </div>
+      <div>
+        <p className={Styles.latesttxt}>Latest Product</p>
+      </div>
+      <div className={Styles.blackline}>
+        {" "}
+        <img
+          className={Styles.greenlines}
+          alt="abc"
+          src="../images/greenline.png"
+        ></img>{" "}
+      </div>
+      {data.map((data, index) => (
+        <div key={index}>
+          <Row className={Styles.rowgpp}>
+            <Col>
+              {" "}
+              <img alt="abc" src={data.image} />{" "}
+            </Col>
+            <Col className={Styles.mapleftsec}>
+              {" "}
+              {data.stars}
+              <p className={Styles.fontte}> {data.price}</p>
+              <p>{data.name}</p>
+            </Col>
+          </Row>
+        </div>
+      ))}
     </div>
   );
 }

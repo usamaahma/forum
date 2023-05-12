@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/ProductCard.module.css";
+import Styles from "../../styles/ProductCardTwo.module.css";
 import Product from "../../public/images/image 65.png";
 import Vector from "../../public/images/Vector.png";
 import { Card, Rate } from "antd";
@@ -11,7 +11,7 @@ function ProductCardtwo() {
       <div>
         <Card
           hoverable
-          className={Styles.card}
+          className={Styles.cardtwo}
           cover={<Image src={Product} alt="abc" />}
         >
           <p className={Styles.pronam}>Product Name</p>

@@ -27,6 +27,9 @@ function RightSectionDeshiTwo() {
       <div className={Styles.CarouselDeshitwowidth}>
         <CarouselDeshitwo />
       </div>
+      <div className={Styles.CarouselDeshitwowidth}>
+        <CarouselDeshitwo />
+      </div>
     </div>
   );
 }
