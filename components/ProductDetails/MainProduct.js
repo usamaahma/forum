@@ -12,6 +12,8 @@ import Instgram from "../../public/images/Group 132.png";
 import Linkdin from "../../public/images/Group 131.png";
 import { RightOutlined } from "@ant-design/icons";
 import TabsOfProducts from "./TabsOfProducts";
+import SimilarProducts from "./SimilarProduct";
+import Products from "./Products";
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
@@ -140,6 +142,8 @@ function MainProduct() {
         </Row>
       </div>
       <TabsOfProducts />
+      <SimilarProducts />
+      <Products />
     </div>
   );
 }

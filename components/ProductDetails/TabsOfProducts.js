@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import Styles from "../../styles/TabsOfProducts.module.css";
 import VendorInfo from "./VendorInfo";
 import Reviews from "./Reviews";
+import Shipping from "./Shipping";
 function TabsOfProducts() {
   return (
     <div className={Styles.centertab}>
@@ -30,7 +31,7 @@ function TabsOfProducts() {
             {
               label: "Shipping & Delivery",
               key: "4",
-              children: "knlnnfw",
+              children: <Shipping />,
             },
           ]}
         />
