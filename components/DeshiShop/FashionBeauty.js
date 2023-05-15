@@ -1,9 +1,11 @@
 import React from "react";
-import Styles from "../../styles/ShopCate.module.css";
-import ProductCard from "./ProductCard";
+import Styles from "../../styles/FashionBeauty.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
+import Post from "../../public/images/image 79.png";
+import Image from "next/image";
+import GlassesProducts from "./glassesProducts";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   0: { items: 1 },
@@ -12,10 +14,16 @@ const responsive = {
   1440: { items: 5 },
   2560: { items: 5 },
 };
-function PopularProductsTwo() {
+function FashionBeauty() {
   return (
     <div>
       <div className={Styles.centercaro}>
+        <div className={Styles.textdiv}>
+          <h3>Fashion & Beauty</h3>
+          <p className={Styles.viewtext}>View all</p>
+          <div className={Styles.greenline}></div>
+        </div>
+        <hr className={Styles.hrline} />
         <div>
           <div className={Styles.carodiv}>
             <AliceCarousel
@@ -27,7 +35,7 @@ function PopularProductsTwo() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <ProductCard />
+                    <GlassesProducts />
                   </div>
                 </div>
               ))}
@@ -39,9 +47,12 @@ function PopularProductsTwo() {
             />
           </div>
         </div>
+        <div>
+          <Image src={Post} alt="" className={Styles.postsize} />
+        </div>
       </div>
     </div>
   );
 }
 
-export default PopularProductsTwo;
+export default FashionBeauty;

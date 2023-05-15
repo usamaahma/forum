@@ -3,61 +3,8 @@ import Styles from "../../styles/ShopCate.module.css";
 import ProductCard from "./ProductCard";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-
+import detail from "../../detail.json";
 const handleDragStart = (e) => e.preventDefault();
-
-const items = [
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={4}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={5}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={6}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-  <div
-    key={7}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <ProductCard />
-  </div>,
-];
-
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
@@ -79,7 +26,17 @@ function PopularProducts() {
           <div className={Styles.carodiv}>
             <AliceCarousel
               mouseTracking
-              items={items}
+              items={detail.map((index) => (
+                <div className={Styles.centercaro}>
+                  <div
+                    key={index}
+                    onDragStart={handleDragStart}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <ProductCard />
+                  </div>
+                </div>
+              ))}
               responsive={responsive}
               disableButtonsControls
               autoPlay

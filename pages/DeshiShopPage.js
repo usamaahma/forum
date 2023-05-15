@@ -9,6 +9,13 @@ import PopularProducts from "@/components/DeshiShop/PopularProducts";
 import ShopByCategory from "@/components/DeshiShop/ShopByCategory";
 import PopularProductsTwo from "@/components/DeshiShop/PopularProductsTwo";
 import RecentProducts from "@/components/DeshiShop/RecentProducts";
+import StoreName from "@/components/DeshiShop/StoreName";
+import ConsumerFood from "@/components/DeshiShop/ConsumerFood";
+import MenWomenClothing from "@/components/DeshiShop/MWClothing";
+import FashionBeauty from "@/components/DeshiShop/FashionBeauty";
+import TabOfFood from "@/components/DeshiShop/TabOfFood";
+import HomeLiving from "@/components/DeshiShop/HomeLiving";
+import TabOfHome from "@/components/DeshiShop/TabOfHome";
 
 function DeshiShopPage() {
   return (
@@ -32,6 +39,13 @@ function DeshiShopPage() {
       <PopularProducts />
       <PopularProductsTwo />
       <RecentProducts />
+      <StoreName />
+      {/* <ConsumerFood /> */}
+      <TabOfFood />
+      <MenWomenClothing />
+      <FashionBeauty />
+      {/* <HomeLiving /> */}
+      <TabOfHome />
       <Footer />
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/ShopCate.module.css";
+import Styles from "../../styles/RecentProductTwo.module.css";
 import ProductCard from "./ProductCard";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
@@ -12,7 +12,7 @@ const responsive = {
   1440: { items: 5 },
   2560: { items: 5 },
 };
-function PopularProductsTwo() {
+function RecentProductTwo() {
   return (
     <div>
       <div className={Styles.centercaro}>
@@ -44,4 +44,4 @@ function PopularProductsTwo() {
   );
 }
 
-export default PopularProductsTwo;
+export default RecentProductTwo;

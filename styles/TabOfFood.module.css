@@ -1,52 +1,30 @@
-.divimge {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 2rem;
-}
-.divcenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.imgbanner {
-  width: 32.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-.divcenter12 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-right: 1rem;
-}
-.divcenter124 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 1rem;
-}
-.banimg {
-  margin-bottom: 1.8rem;
-}
-.bnbigimg {
-  width: 36rem;
-}
 .carodiv {
   width: 68rem;
   border-radius: 0.1rem !important;
 }
-
+.tabdiv {
+  width: 67rem;
+  border-radius: 0.1rem !important;
+}
+.ant {
+  color: #42b00f !important;
+  text-align: right !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.ant:active {
+  color: #42b00f !important;
+}
 .centercaro {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
+.tab-label {
+  display: flex;
+  justify-content: flex-end;
+}
 .textdiv {
   display: flex;
   justify-content: space-between;
@@ -73,21 +51,16 @@
   width: 9rem;
   border: #42b00f 2px solid;
   position: absolute;
-  margin-top: 3.4rem;
+  margin-top: 2.6rem;
+}
+.context {
+  position: absolute;
+  margin-top: 0.5rem;
+}
+.postsize {
+  width: 67rem;
 }
 @media (max-width: 1024px) {
-  .imgbanner {
-    width: 25rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  .bnbigimg {
-    width: 25rem;
-  }
-  .banimg {
-    margin-bottom: 1.8rem;
-    width: 12rem;
-  }
   .carodiv {
     width: 51rem;
     border-radius: 0.1rem !important;
@@ -106,28 +79,16 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+  .postsize {
+    width: 51rem;
+  }
+  .tabdiv {
+    width: 50rem;
+    border-radius: 0.1rem !important;
+  }
 }
+
 @media (max-width: 768px) {
-  .imgbanner {
-    width: 100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    margin-top: 1rem;
-  }
-  .divimge {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .banimg {
-    display: none !important;
-  }
-  .bnbigimg {
-    width: 36rem;
-    height: 12rem;
-    margin-bottom: 1rem;
-  }
   .carodiv {
     width: 45rem;
     border-radius: 0.1rem !important;
@@ -146,19 +107,24 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+  .postsize {
+    width: 45rem;
+  }
+  .greenline {
+    background-color: "#42b00f";
+    border-width: 1;
+    width: 9rem;
+    border: #42b00f 2px solid;
+    position: absolute;
+    margin-top: 2.6rem;
+  }
+  .tabdiv {
+    width: 45rem;
+    border-radius: 0.1rem !important;
+  }
 }
+
 @media (max-width: 425px) {
-  .bnbigimg {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 1rem;
-  }
-  .imgbanner {
-    width: 100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    margin-top: 1rem;
-  }
   .carodiv {
     width: 30rem;
     border-radius: 0.1rem !important;
@@ -180,5 +146,26 @@
 
   .viewtext {
     display: none;
+  }
+  .postsize {
+    width: 100%;
+  }
+  .tabdiv {
+    width: 30rem;
+    border-radius: 0.1rem !important;
+  }
+  .greenline {
+    background-color: "#42b00f";
+    border-width: 1;
+    width: 5rem;
+    border: #42b00f 2px solid;
+    position: absolute;
+    margin-top: 2.6rem;
+  }
+  .context {
+    position: absolute;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    margin-left: 2rem;
   }
 }
