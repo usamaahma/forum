@@ -1,0 +1,23 @@
+.centertab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tabsize {
+  width: 58rem;
+}
+@media (max-width: 1024px) {
+  .tabsize {
+    width: 50rem;
+  }
+}
+@media (max-width: 768px) {
+  .tabsize {
+    width: 35rem;
+  }
+}
+@media (max-width: 425px) {
+  .tabsize {
+    width: 20rem;
+  }
+}
