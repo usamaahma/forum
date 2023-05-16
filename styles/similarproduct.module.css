@@ -1,0 +1,101 @@
+.carodiv {
+  width: 50rem;
+  border-radius: 0.1rem !important;
+}
+
+.centercaro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.viewtext {
+  color: #42b00f;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .carodiv {
+    width: 51rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 50rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .postsize {
+    width: 51rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carodiv {
+    width: 45rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 45rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .postsize {
+    width: 45rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .carodiv {
+    width: 30rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 18rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .viewtext {
+    display: none;
+  }
+  .postsize {
+    width: 100%;
+  }
+}

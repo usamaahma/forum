@@ -19,6 +19,21 @@
   position: absolute;
   margin-top: -0.13rem;
 }
+.ant {
+  color: #42b00f !important;
+  text-align: right !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+.active .ant-tabs-tab-bt {
+  color: #42b00f !important;
+}
+.greenliness {
+  width: 15rem;
+  height: 0.3rem;
+  position: absolute;
+  margin-top: -0.13rem;
+}
 .Populartxt {
   font-size: 1.5rem;
   font-weight: 600;
@@ -29,6 +44,25 @@
 .CarouselDeshitwowidth {
   margin: 0 auto;
   width: 35rem;
+}
+.twoimgeswonder {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.imgeswonder {
+  width: 25rem;
+}
+.imagesdeshitwo {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.colfirstimg {
+  display: grid;
+}
+.imgestowels {
+  margin-top: 0.5rem;
 }
 @media (max-width: 1024px) {
   .imagethirt {
