@@ -125,7 +125,7 @@ function ShoppingCart() {
                 <Select
                   placeholder="free shipping"
                   style={{
-                    width: 200,
+                    width: 260,
                   }}
                   onChange={handleChange}
                   options={[
@@ -147,27 +147,31 @@ function ShoppingCart() {
                   </p>
                 </div>
                 <div className={Styles.divstyle}>
-                  <p>If you have a coupon code, please apply it below.</p>
-                  <div>
-                    <Input placeholder="Coupon code" />
-                    <button>Apply</button>
+                  <p className={Styles.iftext}>
+                    If you have a coupon code, please apply it below.
+                  </p>
+                  <div className={Styles.divrow}>
+                    <Input placeholder="Coupon code" className={Styles.input} />
+                    <button className={Styles.applybtn}>Apply</button>
                   </div>
                 </div>
-                <div>
-                  <p>Subtotal</p>
-                  <p>$800.00</p>
+                <div className={Styles.divrow1}>
+                  <p className={Styles.total}>Subtotal</p>
+                  <p className={Styles.total}>$800.00</p>
                 </div>
-                <div>
-                  <p>Shipping</p>
-                  <p>$9.00</p>
+                <div className={Styles.divrow1}>
+                  <p className={Styles.total}>Shipping</p>
+                  <p className={Styles.total}>$9.00</p>
                 </div>
                 <hr className={Styles.line} />
-                <div>
-                  <p>Total</p>
-                  <p>$809.00</p>
+                <div className={Styles.divrow1}>
+                  <p className={Styles.total}>Total</p>
+                  <p className={Styles.total}>$809.00</p>
                 </div>
-                <button>Proceed to Checkout</button>
-                <button>Continue Shopping</button>
+                <div className={Styles.colm}>
+                  <button className={Styles.probtn}>Proceed to Checkout</button>
+                  <button className={Styles.contbtn}>Continue Shopping</button>
+                </div>
               </div>
             </div>
           </Col>

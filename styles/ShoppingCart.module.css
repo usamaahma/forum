@@ -116,8 +116,8 @@
 }
 .line {
   border: #d0d0d0 solid 1px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .order {
   color: #151515;
@@ -128,20 +128,22 @@
 .shippingtext {
   color: #151515;
   font-weight: 500;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .perdiv {
   display: flex;
   align-items: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .havetext {
   color: #444444;
   font-size: 0.7rem;
   font-weight: 600;
   margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .click {
   color: #42b00f !important;
@@ -150,7 +152,74 @@
   border-style: dashed;
   border-color: #42b00f;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.iftext {
+  color: #737373;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.divrow {
+  display: flex;
+  align-items: center;
+}
+.applybtn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  color: white;
+  margin-left: 0.5rem;
+  border-radius: 0.4rem;
+}
+.input {
+  width: 10rem;
+}
+.divrow1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.total {
+  color: #444444;
+  font-weight: bold;
+}
+.probtn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.contbtn {
+  background-color: white;
+  border: #42b00f solid 1px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #42b00f;
+}
+.colm {
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 768px) {
   .divbox {
