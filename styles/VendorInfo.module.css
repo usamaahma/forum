@@ -1,0 +1,54 @@
+.bigbox {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
+  border-radius: 0px 0px 5px 5px;
+  padding: 1rem;
+}
+.marginleft {
+  margin-left: 1rem;
+}
+.bantext {
+  color: #373737;
+  font-weight: bold;
+}
+.rowflexs {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.address {
+  color: #444444;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.psize {
+  width: 1rem;
+  height: 1rem;
+}
+.flexrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.flexrowone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.no {
+  font-weight: bold !important;
+  color: black !important;
+  pointer-events: none;
+}
+.fotext {
+  color: #c4c4c4;
+  font-weight: 600;
+}
