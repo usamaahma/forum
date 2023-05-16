@@ -7,6 +7,8 @@
   box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .webview {
   display: none;
@@ -20,6 +22,9 @@
   box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .divbox {
   display: flex;
@@ -221,6 +226,50 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1024px) {
+  .divbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    width: 28rem;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .shoebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 5px;
+    width: 28rem;
+    padding: 0.8rem;
+    border: 1px solid #d0d0d0;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .divboxtwo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 11rem;
+  }
+  .centercol12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    width: 20rem;
+  }
+}
 @media (max-width: 768px) {
   .divbox {
     display: flex;
@@ -251,6 +300,18 @@
     justify-content: space-between;
     align-items: center;
     width: 20rem;
+  }
+  .centercol12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-left: 0rem;
+    width: 100%;
   }
 }
 @media (max-width: 425px) {
