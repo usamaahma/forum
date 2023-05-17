@@ -61,11 +61,76 @@
 .colfirstimg {
   display: grid;
 }
-.imgestowels {
-  margin-top: 0.5rem;
+.imgesstudio {
+  height: 19rem;
+  width: 29rem;
 }
 @media (max-width: 1024px) {
   .imagethirt {
     width: 35rem;
+  }
+}
+@media (max-width: 768px) {
+  .imagesdeshitwo {
+    display: grid;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .twoimgeswonder {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .colfirstimg {
+    display: flex;
+    gap: 7.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .imgeswonder {
+    width: 22rem;
+  }
+  .imagethirt {
+    width: 22rem;
+  }
+  .imagesdeshitwo {
+    display: grid;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .imgesstudio {
+    height: 15rem;
+    width: 22rem;
+  }
+  .colfirstimg {
+    display: flex;
+    gap: 1rem;
+  }
+  .divfontv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+  }
+  .greenlines {
+    width: 12rem;
+    height: 0.3rem;
+    position: absolute;
+    margin-top: -0.13rem;
+    margin-left: 6rem;
+  }
+  .greenliness {
+    width: 15rem;
+    height: 0.3rem;
+    position: absolute;
+    margin-top: -0.13rem;
+    margin-left: 5rem;
+  }
+  .imagethirrt {
+    display: flex;
+    justify-content: center;
   }
 }

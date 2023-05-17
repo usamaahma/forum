@@ -24,7 +24,7 @@ const items = [
 function RightSectionDeshiTwo() {
   return (
     <div>
-      <div>
+      <div           className={Styles.imagethirrt}>
         <img
           className={Styles.imagethirt}
           alt="abc"
@@ -79,7 +79,7 @@ function RightSectionDeshiTwo() {
           <Col>
             {" "}
             <img
-              //  className={Styles.imgeswonders}
+             className={Styles.imgesstudio}
               alt="abc"
               src="../images/studio.png"
             ></img>

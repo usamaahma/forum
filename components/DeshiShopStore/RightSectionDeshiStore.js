@@ -36,7 +36,7 @@ const data = [
 function RightSectionDeshiStore() {
   return (
     <div>
-      <div>
+      <div className={Styles.imagethirrt}>
         <img
           className={Styles.imagethirt}
           alt="abc"
@@ -115,7 +115,7 @@ function RightSectionDeshiStore() {
       </div>
       <div className={Styles.cardsstoree}>
         {data.map((data, index) => (
-          <div key={index}>
+          <div key={index} className={Styles.cardContainer}>
             <Card
               hoverable
               style={{
