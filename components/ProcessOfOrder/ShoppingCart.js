@@ -5,6 +5,7 @@ import Image from "next/image";
 import Shoe from "../../public/images/image 134.png";
 import Per from "../../public/images/image 164.png";
 import Frame from "../../public/images/Frame 33785.png";
+import ShoppingProducts from "./ShoppingProducts";
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
@@ -177,6 +178,10 @@ function ShoppingCart() {
           </Col>
         </Row>
       </div>
+      <br />
+      <br />
+      <br />
+      <ShoppingProducts />
     </div>
   );
 }

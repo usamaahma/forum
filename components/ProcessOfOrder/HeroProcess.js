@@ -1,14 +1,78 @@
-import React from "react";
+import { Button, message, Steps, theme } from "antd";
+import { useState } from "react";
+import ShoppingCart from "./ShoppingCart";
 import Styles from "../../styles/HeroSection.module.css";
-function HeroProcess() {
+const steps = [
+  {
+    title: "Shopping Cart ",
+    content: <ShoppingCart />,
+  },
+  {
+    title: "Checkout",
+    content: "Second-content",
+  },
+  {
+    title: "Order Complete",
+    content: "Last-content",
+  },
+];
+const App = () => {
+  const { token } = theme.useToken();
+  const [current, setCurrent] = useState(0);
+  const next = () => {
+    setCurrent(current + 1);
+  };
+  const prev = () => {
+    setCurrent(current - 1);
+  };
+  const items = steps.map((item) => ({
+    key: item.title,
+    title: item.title,
+  }));
+  const contentStyle = {
+    lineHeight: "260px",
+    textAlign: "center",
+    color: token.colorTextTertiary,
+    borderRadius: token.borderRadiusLG,
+    border: `1px dashed ${token.colorBorder}`,
+    marginTop: 16,
+  };
   return (
-    <div className={Styles.mainhero}>
-      <div>
-        <h1 className={Styles.centerhero}>Forum</h1>
-        <p className={Styles.colrgreen}>Home / Network / Forum</p>
+    <>
+      <div className={Styles.mainhero}>
+        <Steps className={Styles.sizesteps} current={current} items={items} />
       </div>
-    </div>
+      <div>{steps[current].content}</div>
+      <div
+        style={{
+          marginTop: 24,
+        }}
+      >
+        {current < steps.length - 1 && (
+          <Button type="primary" onClick={() => next()}>
+            Next
+          </Button>
+        )}
+        {current === steps.length - 1 && (
+          <Button
+            type="primary"
+            onClick={() => message.success("Processing complete!")}
+          >
+            Done
+          </Button>
+        )}
+        {current > 0 && (
+          <Button
+            style={{
+              margin: "0 8px",
+            }}
+            onClick={() => prev()}
+          >
+            Previous
+          </Button>
+        )}
+      </div>
+    </>
   );
-}
-
-export default HeroProcess;
+};
+export default App;

@@ -1,0 +1,107 @@
+.carodiv {
+    width: 67rem;
+    border-radius: 0.1rem !important;
+}
+
+.centercaro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.viewtext {
+    color: #42b00f;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hrline {
+    width: 66rem;
+    margin-bottom: 2rem;
+}
+
+.greenline {
+    background-color: "#42b00f";
+    border-width: 1;
+    width: 9rem;
+    border: #42b00f 2px solid;
+    position: absolute;
+    margin-top: 3.4rem;
+}
+
+@media (max-width: 1024px) {
+    .carodiv {
+        width: 51rem;
+        border-radius: 0.1rem !important;
+    }
+
+    .hrline {
+        width: 50rem;
+        margin-bottom: 2rem;
+    }
+
+    .textdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carodiv {
+        width: 45rem;
+        border-radius: 0.1rem !important;
+    }
+
+    .hrline {
+        width: 45rem;
+        margin-bottom: 2rem;
+    }
+
+    .textdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .carodiv {
+        width: 30rem;
+        border-radius: 0.1rem !important;
+    }
+
+    .hrline {
+        width: 18rem;
+        margin-bottom: 2rem;
+    }
+
+    .textdiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 18rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+
+    .viewtext {
+        display: none;
+    }
+}

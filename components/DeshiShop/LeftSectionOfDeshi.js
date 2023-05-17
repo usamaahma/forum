@@ -45,6 +45,154 @@ const items = [
     label: <a>TEA, BEVERAGE & DRINKS</a>,
   },
 ];
+const items1 = [
+  {
+    key: "1",
+    label: <a>COUPLE T-SHIRT</a>,
+  },
+  {
+    key: "2",
+    label: <a>GABARDINE, TWILL, JOGGERS</a>,
+  },
+  {
+    key: "3",
+    label: <a>HOODIE & SWEATER</a>,
+  },
+  {
+    key: "4",
+    label: <a>INNERWEAR, SOCKS</a>,
+  },
+  {
+    key: "5",
+    label: <a>JACKET AND BLAZER</a>,
+  },
+  {
+    key: "6",
+    label: <a>JEANS PANT</a>,
+  },
+  {
+    key: "7",
+    label: <a>LUNGI</a>,
+  },
+  {
+    key: "8",
+    label: <a>POLO SHIRTS</a>,
+  },
+  {
+    key: "9",
+    label: <a>PUNJABI, KATUA & FOTUA</a>,
+  },
+  {
+    key: "10",
+    label: <a>SHIRTS</a>,
+  },
+  {
+    key: "11",
+    label: <a>SHORTS, 3-QUARTER & TROUSER</a>,
+  },
+  {
+    key: "12",
+    label: <a>T-SHIRTS</a>,
+  },
+];
+const items2 = [
+  {
+    key: "1",
+    label: <a>ABAYA & BORKHA</a>,
+  },
+  {
+    key: "2",
+    label: <a>HIJAB & DUPATTA</a>,
+  },
+  {
+    key: "3",
+    label: <a>INNERWEAR AND LINGERIE</a>,
+  },
+  {
+    key: "4",
+    label: <a>MODERN AND WESTERN</a>,
+  },
+  {
+    key: "5",
+    label: <a>MUSLIMAH COLLECTION</a>,
+  },
+  {
+    key: "6",
+    label: <a>SALWAR KAMIZ THREE-PIECE</a>,
+  },
+  {
+    key: "7",
+    label: <a>SAREE COLLECTION</a>,
+  },
+  {
+    key: "8",
+    label: <a>TOPS AND BLOUSE</a>,
+  },
+];
+const items3 = [
+  {
+    key: "1",
+    label: <a>BODY SPRAY & PERFUME</a>,
+  },
+  {
+    key: "2",
+    label: <a>COSMETICS & SKIN</a>,
+  },
+  {
+    key: "3",
+    label: <a>GENTS FOOTWEAR</a>,
+  },
+  {
+    key: "4",
+    label: <a>GENTS WATCH</a>,
+  },
+  {
+    key: "5",
+    label: <a>LADIES FOOTWEAR</a>,
+  },
+  {
+    key: "6",
+    label: <a>LADIES WATCH</a>,
+  },
+  {
+    key: "7",
+    label: <a>MAKE UP AND CARE</a>,
+  },
+  {
+    key: "8",
+    label: <a>SUN GLASS & EYEWEAR</a>,
+  },
+  {
+    key: "9",
+    label: <a>JEWELLERY</a>,
+  },
+];
+const items4 = [
+  {
+    key: "1",
+    label: <a>KITCHEN & DINING ITEM</a>,
+  },
+  {
+    key: "2",
+    label: <a>FURNITURE</a>,
+  },
+  {
+    key: "3",
+    label: <a>GENTS FOOTWEAR</a>,
+  },
+  {
+    key: "4",
+    label: <a>HOME & OFFICE APPLIANCES</a>,
+  },
+  {
+    key: "5",
+    label: <a>FLOWER & PLAT</a>,
+  },
+  {
+    key: "6",
+    label: <a>SUVENIR</a>,
+  },
+];
 function LeftSectionOfDeshi() {
   return (
     <div>
@@ -69,24 +217,72 @@ function LeftSectionOfDeshi() {
           </Dropdown>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
-        <div className={Styles.greysmll}>
-          <p className={Styles.text}>Men’s Clothing</p>
-          <RightOutlined className={Styles.text1} />
+        <div>
+          <Dropdown
+            menu={{
+              items: items1,
+            }}
+            placement="bottomLeft"
+            arrow={{
+              pointAtCenter: true,
+            }}
+          >
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Men’s Clothing</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Dropdown>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
-        <div className={Styles.greysmll}>
-          <p className={Styles.text}>Women’s Clothing</p>
-          <RightOutlined className={Styles.text1} />
+        <div>
+          <Dropdown
+            menu={{
+              items: items2,
+            }}
+            placement="bottomLeft"
+            arrow={{
+              pointAtCenter: true,
+            }}
+          >
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Women’s Clothing</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Dropdown>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
-        <div className={Styles.greysmll}>
-          <p className={Styles.text}>Fashion & Beauty</p>
-          <RightOutlined className={Styles.text1} />
+        <div>
+          <Dropdown
+            menu={{
+              items: items3,
+            }}
+            placement="bottomLeft"
+            arrow={{
+              pointAtCenter: true,
+            }}
+          >
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Fashion & Beauty</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Dropdown>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
-        <div className={Styles.greysmll}>
-          <p className={Styles.text}>Home & Living</p>
-          <RightOutlined className={Styles.text1} />
+        <div>
+          <Dropdown
+            menu={{
+              items: items4,
+            }}
+            placement="bottomLeft"
+            arrow={{
+              pointAtCenter: true,
+            }}
+          >
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Home & Living</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Dropdown>
         </div>
       </div>
     </div>

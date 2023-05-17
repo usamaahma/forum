@@ -11,7 +11,7 @@ function ProceedOfOrderPage() {
     <div>
       <MainHeader />
       <HeroProcess />
-      <ShoppingCart />
+      {/* <ShoppingCart /> */}
       <Footer />
     </div>
   );

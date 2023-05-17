@@ -9,10 +9,27 @@
   justify-content: center;
   align-items: center;
 }
+
+.sizesteps {
+  width: 40rem;
+}
+
 .centerhero {
   text-align: center;
 }
+
 .colrgreen {
   color: #42b00f;
   text-align: center;
+}
+
+@media(max-width: 425px) {
+  .sizesteps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+
+
+  }
 }
