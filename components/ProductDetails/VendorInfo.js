@@ -12,16 +12,16 @@ function VendorInfo() {
   return (
     <div className={Styles.bigbox}>
       <div>
-        <Image src={Ellipse} alt="" />
+        <Image src={Ellipse} alt="abc" />
       </div>
       <div className={Styles.marginleft}>
         <p className={Styles.bantext}>Bangla shop</p>
         <div className={Styles.rowflexs}>
-          <Image src={Location} alt="" />
+          <Image src={Location} alt="abc" />
           <p className={Styles.address}>1329 Saint lawrence ave .NY </p>
         </div>
         <div className={Styles.rowflexs}>
-          <Image src={Phone} alt="" className={Styles.psize} />
+          <Image src={Phone} alt="abc" className={Styles.psize} />
           <p className={Styles.address}>+1 929 535 3234</p>
         </div>
         <div className={Styles.flexrow}>

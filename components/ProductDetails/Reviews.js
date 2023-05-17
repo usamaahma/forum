@@ -18,7 +18,7 @@ function Reviews() {
         <p className={Styles.right}>1 day ago</p>
         <div className={Styles.ellidiv}>
           <div>
-            <Image src={Ellipse} alt="" />
+            <Image src={Ellipse} alt="abc" />
           </div>
           <div className={Styles.divside}>
             <p className={Styles.pname}>People name</p>
@@ -40,7 +40,7 @@ function Reviews() {
         <p className={Styles.right}>1 day ago</p>
         <div className={Styles.ellidiv}>
           <div>
-            <Image src={Ellipse} alt="" />
+            <Image src={Ellipse} alt="abc" />
           </div>
           <div className={Styles.divside}>
             <p className={Styles.pname}>People name</p>
@@ -74,9 +74,9 @@ function Reviews() {
         />
         <p className={Styles.upltext}>Upload Image</p>
         <div>
-          <Image src={Group} alt="" />
-          <Image src={Group} alt="" />
-          <Image src={Group} alt="" />
+          <Image src={Group} alt="abc" />
+          <Image src={Group} alt="abc" />
+          <Image src={Group} alt="abc" />
         </div>
         <button className={Styles.subbtn}>Submit</button>
       </div>

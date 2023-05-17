@@ -7,7 +7,7 @@ function Shipping() {
     <div className={Styles.mainship}>
       <div className={Styles.padding}>
         <div className={Styles.flex}>
-          <Image src={Van} alt="" />
+          <Image src={Van} alt="abc" />
           <p className={Styles.shiptext}>Shipping</p>
         </div>
         <p className={Styles.standtext}>Standard: Free on all orders</p>

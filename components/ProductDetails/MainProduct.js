@@ -33,11 +33,23 @@ function MainProduct() {
                   <p>Shoe</p>
                   <RightOutlined className={Styles.icon} />
                 </div>
-                <Image src={Shoes} alt="" className={Styles.bigshoe} />
+                <Image src={Shoes} alt="abc" className={Styles.bigshoe} />
                 <div>
-                  <Image src={SmallShoes} alt="" className={Styles.smallshoe} />
-                  <Image src={SmallShoes} alt="" className={Styles.smallshoe} />
-                  <Image src={SmallShoes} alt="" className={Styles.smallshoe} />
+                  <Image
+                    src={SmallShoes}
+                    alt="abc"
+                    className={Styles.smallshoe}
+                  />
+                  <Image
+                    src={SmallShoes}
+                    alt="abc"
+                    className={Styles.smallshoe}
+                  />
+                  <Image
+                    src={SmallShoes}
+                    alt="abc"
+                    className={Styles.smallshoe}
+                  />
                 </div>
               </div>
             </div>
@@ -110,11 +122,11 @@ function MainProduct() {
                 </div>
                 <div className={Styles.divicon}>
                   <div className={Styles.heartdiv}>
-                    <Image src={Heart} alt="" />
+                    <Image src={Heart} alt="abc" />
                     <p className={Styles.whishtext}>Add to Wishlist</p>
                   </div>
                   <div className={Styles.heartdiv}>
-                    <Image src={Vector} alt="" />
+                    <Image src={Vector} alt="abc" />
                     <p className={Styles.whishtext}>Size Guide</p>
                   </div>
                 </div>

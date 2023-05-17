@@ -44,7 +44,7 @@ function Products() {
                 <hr />
                 {data.map((index) => (
                   <div key={index} className={Styles.flexbox}>
-                    <Image src={Rectangle} alt="" />
+                    <Image src={Rectangle} alt="abc" />
                     <div className={Styles.sidediv}>
                       <Rate defaultValue={2.5} className={Styles.star} />
                       <p className={Styles.price}>$99.33</p>
@@ -73,7 +73,7 @@ function Products() {
                 <hr />
                 {data.map((index) => (
                   <div key={index} className={Styles.flexbox}>
-                    <Image src={Rectangle} alt="" />
+                    <Image src={Rectangle} alt="abc" />
                     <div className={Styles.sidediv}>
                       <Rate defaultValue={2.5} className={Styles.star} />
                       <p className={Styles.price}>$99.33</p>
@@ -102,7 +102,7 @@ function Products() {
                 <hr />
                 {data.map((index) => (
                   <div key={index} className={Styles.flexbox}>
-                    <Image src={Rectangle} alt="" />
+                    <Image src={Rectangle} alt="abc" />
                     <div className={Styles.sidediv}>
                       <Rate defaultValue={2.5} className={Styles.star} />
                       <p className={Styles.price}>$99.33</p>
