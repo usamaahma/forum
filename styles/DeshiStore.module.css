@@ -1,0 +1,98 @@
+.imagethirt {
+  width: 50rem;
+}
+.divfontv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.blackline {
+  background-color: #e8e8e8;
+  height: 0.01rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.greenlines {
+  width: 12rem;
+  height: 0.3rem;
+  position: absolute;
+  margin-top: -0.13rem;
+}
+.Populartxt {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.viwall {
+  color: #42b00f;
+}
+.rowcolstore {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cardsstoree {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.imageone {
+  position: absolute;
+  margin-top: -3rem;
+  margin-left: -1.8rem;
+}
+.dicvfdr {
+  text-align: center;
+}
+.nameshop {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.openbutton {
+  color: #42b00f !important;
+  background-color: #def5d3 !important;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+.loctxt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.address {
+  font-size: 0.8rem;
+}
+.butt {
+  background-color: white;
+  color: #42b00f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.disp {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+.fontli {
+  color: #c4c4c4;
+}
+.imgfour {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+
+  gap: 0.5rem;
+}
+.gol {
+  background-color: #f1f1f1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
