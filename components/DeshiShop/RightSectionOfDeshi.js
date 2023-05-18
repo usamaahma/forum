@@ -52,6 +52,12 @@ function RightSectionOfDeshi() {
         </p>
         <button className={Styles.btngreen}>Get Coupon</button>
       </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
+      </div>
     </div>
   );
 }

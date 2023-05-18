@@ -46,6 +46,7 @@
 }
 .dicvfdr {
   text-align: center;
+  width: 15rem;
 }
 .nameshop {
   font-size: 1.2rem;
@@ -105,8 +106,34 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.nonedrawer {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .imagethirt {
+    width: 35rem;
+  }
+  .imagethirrt {
+    display: flex;
+    justify-content: center;
+  }
+  .dicvfdr {
+    text-align: center;
+    width: 10.7rem;
+  }
+}
 
 @media (max-width: 768px) {
+  .dicvfdr {
+    text-align: center;
+    width: 15rem;
+  }
+  .nonedrawer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32rem;
+  }
   .cardsstoree {
     display: grid;
     justify-content: center;
@@ -115,6 +142,7 @@
   }
   .imagethirt {
     width: 40rem;
+    margin-bottom: 2rem;
   }
   .imagethirrt {
     display: flex;
@@ -122,6 +150,10 @@
   }
 }
 @media (max-width: 425px) {
+  .nonedrawer {
+    display: flex;
+    gap: 15rem;
+  }
   .imagethirt {
     width: 22rem;
   }
@@ -137,5 +169,11 @@
     position: absolute;
     margin-top: -0.13rem;
     margin-left: 5rem;
+  }
+}
+@media (max-width: 375px) {
+  .nonedrawer {
+    display: flex;
+    gap: 11rem;
   }
 }

@@ -65,12 +65,29 @@
   height: 19rem;
   width: 29rem;
 }
+.nonedrawer {
+  display: none;
+}
 @media (max-width: 1024px) {
   .imagethirt {
     width: 35rem;
   }
+  .imagethirrt {
+    display: flex;
+    justify-content: center;
+  }
 }
+
 @media (max-width: 768px) {
+  .imagethirt {
+    margin-bottom: 2rem;
+  }
+  .nonedrawer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35rem;
+  }
   .imagesdeshitwo {
     display: grid;
     justify-content: center;
@@ -94,6 +111,7 @@
   }
   .imagethirt {
     width: 22rem;
+    margin-bottom: 2rem;
   }
   .imagesdeshitwo {
     display: grid;
@@ -132,5 +150,15 @@
   .imagethirrt {
     display: flex;
     justify-content: center;
+  }
+  .nonedrawer {
+    display: flex;
+    gap: 15rem;
+  }
+}
+@media (max-width: 375px) {
+  .nonedrawer {
+    display: flex;
+    gap: 11rem;
   }
 }

@@ -33,6 +33,12 @@ function RightSectionDeshiTwo() {
           src="../images/thirtyoff.png"
         />
       </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
+      </div>
       <div className={Styles.divfontv}>
         <p className={Styles.Populartxt}>Popular Products</p>
         <a className={Styles.viwall}>View All</a>

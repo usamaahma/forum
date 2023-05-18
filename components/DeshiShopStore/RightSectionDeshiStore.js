@@ -44,15 +44,18 @@ function RightSectionDeshiStore() {
           src="../images/thirtyoff.png"
         />
       </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
+      </div>
       <div className={Styles.cardsstoree}>
         {data.map((data, index) => (
           <div key={index}>
             <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
               <Card
                 hoverable
-                style={{
-                  width: 240,
-                }}
                 cover={<img alt="example" src={data.image} />}
                 className={Styles.dicvfdr}
               >
@@ -121,9 +124,7 @@ function RightSectionDeshiStore() {
           <div key={index} className={Styles.cardContainer}>
             {/* <Card
               hoverable
-              style={{
-                width: 240,
-              }}
+             
               cover={<img alt="example" src={data.image} />}
               className={Styles.dicvfdr}
             >
