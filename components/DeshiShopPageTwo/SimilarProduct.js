@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/similarProduct.module.css";
+import Styles from "../../styles/similarproduct.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
