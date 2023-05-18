@@ -27,7 +27,7 @@ const data = [
     name: "cart",
   },
 ];
-function ShoppingCart() {
+function ShoppingCart({ next }) {
   return (
     <div>
       <div>
@@ -170,7 +170,9 @@ function ShoppingCart() {
                   <p className={Styles.total}>$809.00</p>
                 </div>
                 <div className={Styles.colm}>
-                  <button className={Styles.probtn}>Proceed to Checkout</button>
+                  <button className={Styles.probtn} onClick={() => next()}>
+                    Proceed to Checkout
+                  </button>
                   <button className={Styles.contbtn}>Continue Shopping</button>
                 </div>
               </div>
