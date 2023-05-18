@@ -1,0 +1,139 @@
+.langbutton {
+  display: inline-flex;
+  height: 30px;
+  border-radius: 3px;
+  width: 10rem;
+  border: 0.5px solid #d9d9d9;
+}
+
+.imagethirt {
+  width: 49rem;
+}
+.imagethirtcard {
+  width: 49rem !important;
+  height: 154px;
+}
+.wdthcardtxt {
+  margin-left: 5rem;
+}
+.imagethirrt {
+  margin-top: 3rem;
+}
+.imggcardshopname {
+  position: absolute;
+  margin-top: -3rem;
+  width: 7rem !important;
+}
+.CarouselDeshitwowidth {
+  margin: 0 auto;
+  width: 33rem;
+}
+.blackline {
+  background-color: #e8e8e8;
+  height: 0.01rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+.divfontv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.greenlinestwo {
+  width: 7rem;
+  height: 0.3rem;
+  position: absolute;
+  margin-top: -0.13rem;
+}
+.Populartxt {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.twogap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.wdhe {
+  width: 1rem;
+  height: 1rem;
+}
+.mrto {
+  font-size: 1.2rem;
+}
+.imgfour {
+  margin-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.gol {
+  background-color: #f1f1f1;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.disp {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+.fontli {
+  color: #c4c4c4;
+}
+.dispnewbet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .imagethirt {
+    width: 40rem;
+  }
+  .imagethirtcard {
+    width: 40rem !important;
+  }
+  .imagethirrt {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 425px) {
+  .langbutton {
+    margin-top: 2rem;
+    display: inline-flex;
+    height: 30px;
+    border-radius: 3px;
+    width: 6rem;
+    border: 0.5px solid #d9d9d9;
+  }
+  .imagethirt {
+    width: 22rem;
+  }
+  .imagethirtcard {
+    width: 23.6rem !important;
+    height: 100px;
+  }
+  .dispnewbet {
+    display: grid;
+  }
+
+  .divfontv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+  }
+  .greenlinestwo {
+    width: 6rem;
+    height: 0.3rem;
+    position: absolute;
+    margin-top: -0.13rem;
+    margin-left: 8rem;
+  }
+}

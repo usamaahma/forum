@@ -3,10 +3,10 @@ import Styles from "../styles/DeshiShopPageTwo.module.css";
 import Footer from "@/components/common/footer";
 import MainHeader from "@/components/common/mainHeader";
 import { Row, Col } from "antd";
-import RightSectionDeshiStore from "@/components/DeshiShopStore/RightSectionDeshiStore";
 import LeftSectiondeshiShop from "@/components/DeshiShopStore/LeftSectionDeshiStore";
+import RightSectionofDeshiStoreTwo from "@/components/DeshiStoreTwo/RightSectionofDeshiStoreTwo";
 
-function DeshiShopStore() {
+function DeshiStoreTwo() {
   return (
     <div>
       <MainHeader />
@@ -20,7 +20,7 @@ function DeshiShopStore() {
           <Col>
             <div className={Styles.centerCol12}>
               {" "}
-              <RightSectionDeshiStore />
+              <RightSectionofDeshiStoreTwo />
             </div>
           </Col>
         </Row>
@@ -30,4 +30,4 @@ function DeshiShopStore() {
   );
 }
 
-export default DeshiShopStore;
+export default DeshiStoreTwo;

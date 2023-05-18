@@ -1,3 +1,36 @@
+.myRadio {
+  /* Your default radio button styles */
+}
+
+/* Define the color for the checked radio button */
+.myRadio:checked {
+  border-color: #42b00f !important;
+  background-color: #42b00f !important;
+}
+.gapdist {
+  display: flex;
+  gap: 2rem;
+}
+.gapdisst {
+  display: flex;
+  gap: 6rem;
+}
+.checkgap {
+  margin-top: 1rem;
+  color: #acacac;
+}
+.butn {
+  background-color: #42b00f !important;
+  color: white !important;
+  text-align: center !important;
+  width: 22rem;
+  height: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.wdin {
+  width: 10rem;
+}
 .centercol {
   display: flex;
   justify-content: center;
