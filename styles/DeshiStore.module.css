@@ -46,6 +46,7 @@
 }
 .dicvfdr {
   text-align: center;
+  width: 15rem;
 }
 .nameshop {
   font-size: 1.2rem;
@@ -110,15 +111,23 @@
 }
 @media (max-width: 1024px) {
   .imagethirt {
-    width: 32rem;
+    width: 35rem;
   }
   .imagethirrt {
     display: flex;
     justify-content: center;
   }
+  .dicvfdr {
+    text-align: center;
+    width: 10.7rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .dicvfdr {
+    text-align: center;
+    width: 15rem;
+  }
   .nonedrawer {
     display: flex;
     align-items: center;

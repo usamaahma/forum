@@ -56,9 +56,6 @@ function RightSectionDeshiStore() {
             <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
               <Card
                 hoverable
-                style={{
-                  width: 240,
-                }}
                 cover={<img alt="example" src={data.image} />}
                 className={Styles.dicvfdr}
               >
@@ -127,9 +124,7 @@ function RightSectionDeshiStore() {
           <div key={index} className={Styles.cardContainer}>
             <Card
               hoverable
-              style={{
-                width: 240,
-              }}
+             
               cover={<img alt="example" src={data.image} />}
               className={Styles.dicvfdr}
             >

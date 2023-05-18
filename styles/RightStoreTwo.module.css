@@ -101,6 +101,10 @@
     display: flex;
     justify-content: center;
   }
+  .imagethirtcard {
+    width: 35rem !important;
+    height: 154px;
+  }
 }
 
 @media (max-width: 768px) {
