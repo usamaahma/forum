@@ -1,0 +1,60 @@
+.txtb {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.txtbo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+.inputs {
+  width: 19rem;
+}
+.dispflx {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+}
+.radiodiv {
+  padding: 1.5rem;
+  border: solid 0.1rem rgb(232, 232, 232);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.line-break::before {
+  content: "\A";
+  white-space: pre;
+}
+@media (max-width: 768px) {
+  .txtb {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  .txtbo {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .line-break::before {
+    content: none; /* Remove line break on mobile view */
+  }
+  .radiodiv {
+    border: solid 0.1rem rgb(232, 232, 232);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .dispflx {
+    display: block;
+    margin-left: 1rem;
+  }
+  .centermbl {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .mrmb {
+    margin-top: 1rem !important;
+  }
+}
