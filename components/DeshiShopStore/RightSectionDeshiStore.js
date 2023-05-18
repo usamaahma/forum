@@ -122,7 +122,7 @@ function RightSectionDeshiStore() {
       <div className={Styles.cardsstoree}>
         {data.map((data, index) => (
           <div key={index} className={Styles.cardContainer}>
-            <Card
+            {/* <Card
               hoverable
              
               cover={<img alt="example" src={data.image} />}
@@ -183,7 +183,7 @@ function RightSectionDeshiStore() {
                   </div>
                 </div>
               </div>
-            </Card>
+            </Card> */}
           </div>
         ))}
       </div>

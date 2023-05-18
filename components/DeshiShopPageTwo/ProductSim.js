@@ -9,9 +9,9 @@ const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   0: { items: 1 },
   568: { items: 2 },
-  1024: { items: 4 },
-  1440: { items: 5 },
-  2560: { items: 5 },
+  1024: { items: 3 },
+  1440: { items: 4 },
+  2560: { items: 4 },
 };
 function ProductSim() {
   return (
