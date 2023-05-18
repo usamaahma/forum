@@ -4,6 +4,7 @@ import ProductCard from "../DeshiShop/ProductCard";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
+import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   0: { items: 1 },
@@ -33,7 +34,12 @@ function SimilarProducts() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <ProductCard />
+                    <Link
+                      href="./DeshiShopStore"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <ProductCard />
+                    </Link>
                   </div>
                 </div>
               ))}

@@ -20,9 +20,10 @@
 }
 
 .viewtext {
-  color: #42b00f;
+  color: #42b00f !important;
   font-size: 0.9rem;
   font-weight: 600;
+  text-decoration: none !important;
 }
 
 .hrline {
