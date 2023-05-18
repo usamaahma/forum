@@ -4,8 +4,6 @@ import CarouselDeshitwo from "./Carouseldeshitwo";
 import { Row, Col, Tabs } from "antd";
 import PopularStore from "./PopularStore";
 import SimilarProduct from "./SimilarProduct";
-import Link from "next/link";
-import TabOfSimliar from "./TabOfSimliar";
 
 const onChange = (key) => {
   console.log(key);
@@ -26,24 +24,19 @@ const items = [
 function RightSectionDeshiTwo() {
   return (
     <div>
-      <div className={Styles.imagethirrt}>
+      <div           className={Styles.imagethirrt}>
         <img
           className={Styles.imagethirt}
           alt="abc"
           src="../images/thirtyoff.png"
         />
       </div>
-      <div>
-        <div className={Styles.nonedrawer}>
-          <img alt="abc" src="../images/Categorymbl.png" />
-          <img alt="abc" src="../images/Frame 44157.png" />
-        </div>
-      </div>
       <div className={Styles.divfontv}>
         <p className={Styles.Populartxt}>Popular Products</p>
         <a className={Styles.viwall}>View All</a>
       </div>
       <div className={Styles.blackline}>
+        {" "}
         <img
           className={Styles.greenlines}
           alt="abc"
@@ -51,9 +44,7 @@ function RightSectionDeshiTwo() {
         />
       </div>
       <div className={Styles.CarouselDeshitwowidth}>
-        <Link href="/ProductDetailsPage">
-          <CarouselDeshitwo />
-        </Link>
+        <CarouselDeshitwo />
       </div>
       <div className={Styles.CarouselDeshitwowidth}>
         <CarouselDeshitwo />
@@ -88,7 +79,7 @@ function RightSectionDeshiTwo() {
           <Col>
             {" "}
             <img
-              className={Styles.imgesstudio}
+             className={Styles.imgesstudio}
               alt="abc"
               src="../images/studio.png"
             ></img>
@@ -142,7 +133,6 @@ function RightSectionDeshiTwo() {
           />
         </div>
         <PopularStore />
-        <TabOfSimliar />
       </div>
     </div>
   );
