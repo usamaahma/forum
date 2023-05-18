@@ -29,6 +29,12 @@ function RightSectionofDeshiStoreTwo() {
           src="../images/thirtyoff.png"
         />
       </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
+      </div>
       <div className={Styles.imagethirrt}>
         <Card
           hoverable

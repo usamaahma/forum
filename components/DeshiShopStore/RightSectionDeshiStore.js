@@ -44,6 +44,12 @@ function RightSectionDeshiStore() {
           src="../images/thirtyoff.png"
         />
       </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
+      </div>
       <div className={Styles.cardsstoree}>
         {data.map((data, index) => (
           <div key={index}>
