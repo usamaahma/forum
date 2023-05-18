@@ -29,14 +29,7 @@ const App = () => {
     key: item.title,
     title: item.title,
   }));
-  const contentStyle = {
-    lineHeight: "260px",
-    textAlign: "center",
-    color: token.colorTextTertiary,
-    borderRadius: token.borderRadiusLG,
-    border: `1px dashed ${token.colorBorder}`,
-    marginTop: 16,
-  };
+
   return (
     <>
       <div className={Styles.mainhero}>
