@@ -3,6 +3,41 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.hoverContainer .cardhover {
+  display: none;
+}
+.anotherhover {
+  display: none;
+}
+
+.hoverContainer:hover .cardhover {
+  display: grid;
+  position: absolute;
+  margin-top: -12rem;
+  z-index: 1;
+  width: 10rem;
+}
+
+.imghvrr:hover + .anotherhover {
+  display: flex;
+}
+.imghvr {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+}
+.imghvrr {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+}
+.btnhover {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #42b00f;
+  color: white;
+}
 
 .price {
   display: flex;

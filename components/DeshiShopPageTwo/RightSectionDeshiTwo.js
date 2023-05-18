@@ -24,12 +24,18 @@ const items = [
 function RightSectionDeshiTwo() {
   return (
     <div>
-      <div           className={Styles.imagethirrt}>
+      <div className={Styles.imagethirrt}>
         <img
           className={Styles.imagethirt}
           alt="abc"
           src="../images/thirtyoff.png"
         />
+      </div>
+      <div>
+        <div className={Styles.nonedrawer}>
+          <img alt="abc" src="../images/Categorymbl.png" />
+          <img alt="abc" src="../images/Frame 44157.png" />
+        </div>
       </div>
       <div className={Styles.divfontv}>
         <p className={Styles.Populartxt}>Popular Products</p>
@@ -79,7 +85,7 @@ function RightSectionDeshiTwo() {
           <Col>
             {" "}
             <img
-             className={Styles.imgesstudio}
+              className={Styles.imgesstudio}
               alt="abc"
               src="../images/studio.png"
             ></img>
