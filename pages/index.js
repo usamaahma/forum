@@ -8,7 +8,7 @@ import DeshiShopCheckout from "./DeshiShopCheckout";
 export default function Home() {
   return (
     <>
-      <DeshiShopCheckout />
+      <LandingPage />
     </>
   );
 }

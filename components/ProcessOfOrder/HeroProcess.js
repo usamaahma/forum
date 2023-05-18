@@ -17,7 +17,7 @@ const steps = [
     content: "Last-content",
   },
 ];
-const App = () => {
+function Stepss() {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const next = () => {
@@ -68,5 +68,5 @@ const App = () => {
       </div>
     </>
   );
-};
-export default App;
+}
+export default Stepss;
