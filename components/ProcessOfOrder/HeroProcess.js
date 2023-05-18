@@ -2,21 +2,9 @@ import { Button, message, Steps, theme } from "antd";
 import { useState } from "react";
 import ShoppingCart from "./ShoppingCart";
 import Styles from "../../styles/HeroSection.module.css";
-const steps = [
-  {
-    title: "Shopping Cart ",
-    content: <ShoppingCart />,
-  },
-  {
-    title: "Checkout",
-    content: "Second-content",
-  },
-  {
-    title: "Order Complete",
-    content: "Last-content",
-  },
-];
-const App = () => {
+import DeshiShopCheckout from "@/pages/DeshiShopCheckout";
+
+function Stepss() {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const next = () => {
@@ -25,25 +13,32 @@ const App = () => {
   const prev = () => {
     setCurrent(current - 1);
   };
+
+  const steps = [
+    {
+      title: "Shopping Cart ",
+      content: <ShoppingCart next={next} prev={prev} />,
+    },
+    {
+      title: "Checkout",
+      content: <DeshiShopCheckout next={next} />,
+    },
+    {
+      title: "Order Complete",
+      content: "Last-content",
+    },
+  ];
   const items = steps.map((item) => ({
     key: item.title,
     title: item.title,
   }));
-  const contentStyle = {
-    lineHeight: "260px",
-    textAlign: "center",
-    color: token.colorTextTertiary,
-    borderRadius: token.borderRadiusLG,
-    border: `1px dashed ${token.colorBorder}`,
-    marginTop: 16,
-  };
   return (
     <>
       <div className={Styles.mainhero}>
         <Steps className={Styles.sizesteps} current={current} items={items} />
       </div>
       <div>{steps[current].content}</div>
-      <div
+      {/* <div
         style={{
           marginTop: 24,
         }}
@@ -71,8 +66,8 @@ const App = () => {
             Previous
           </Button>
         )}
-      </div>
+      </div> */}
     </>
   );
-};
-export default App;
+}
+export default Stepss;

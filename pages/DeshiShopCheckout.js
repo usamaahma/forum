@@ -10,7 +10,6 @@ import RightSectioncheckout from "@/components/DeshiCheckout/RightSectioncheckou
 function DeshiShopCheckout() {
   return (
     <div>
-      <MainHeader />
       <div>
         <Row justify="center">
           <Col>
@@ -20,13 +19,11 @@ function DeshiShopCheckout() {
           </Col>
           <Col>
             <div className={Styles.centerCol12}>
-              {" "}
               <RightSectioncheckout />
             </div>
           </Col>
         </Row>
       </div>
-      <Footer />
     </div>
   );
 }

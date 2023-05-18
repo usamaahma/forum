@@ -4,6 +4,7 @@ import ProductCard from "./ProductCard";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
+import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   0: { items: 1 },
@@ -18,7 +19,9 @@ function PopularProducts() {
       <div className={Styles.centercaro}>
         <div className={Styles.textdiv}>
           <h3>Popular Products</h3>
-          <p className={Styles.viewtext}>View all</p>
+          <Link href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+            <p className={Styles.viewtext}>View all</p>
+          </Link>
           <div className={Styles.greenline}></div>
         </div>
         <hr className={Styles.hrline} />

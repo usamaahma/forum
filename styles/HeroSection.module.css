@@ -12,6 +12,7 @@
 
 .sizesteps {
   width: 40rem;
+
 }
 
 .centerhero {
@@ -22,6 +23,8 @@
   color: #42b00f;
   text-align: center;
 }
+
+
 
 @media(max-width: 425px) {
   .sizesteps {

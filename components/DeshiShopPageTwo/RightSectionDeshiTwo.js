@@ -4,6 +4,7 @@ import CarouselDeshitwo from "./Carouseldeshitwo";
 import { Row, Col, Tabs } from "antd";
 import PopularStore from "./PopularStore";
 import SimilarProduct from "./SimilarProduct";
+import Link from "next/link";
 
 const onChange = (key) => {
   console.log(key);
@@ -42,7 +43,6 @@ function RightSectionDeshiTwo() {
         <a className={Styles.viwall}>View All</a>
       </div>
       <div className={Styles.blackline}>
-        {" "}
         <img
           className={Styles.greenlines}
           alt="abc"
@@ -50,7 +50,9 @@ function RightSectionDeshiTwo() {
         />
       </div>
       <div className={Styles.CarouselDeshitwowidth}>
-        <CarouselDeshitwo />
+        <Link href="/ProductDetailsPage">
+          <CarouselDeshitwo />
+        </Link>
       </div>
       <div className={Styles.CarouselDeshitwowidth}>
         <CarouselDeshitwo />

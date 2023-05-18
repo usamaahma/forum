@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "../../styles/ShoppingCart.module.css";
-import { Radio, Input, Select, Checkbox, Button } from "antd";
+import { Radio, Input, Select, Checkbox, Button, message } from "antd";
 import Image from "next/image";
 import Per from "../../public/images/image 164.png";
 const handleChange = (value) => {
@@ -24,7 +24,7 @@ const data = [
     name: "cart",
   },
 ];
-function RightSectioncheckout() {
+function RightSectioncheckout({ next }) {
   const [value, setValue] = useState(1);
   const onChange = (e) => {
     console.log("radio checked", e.target.value);
@@ -124,7 +124,12 @@ function RightSectioncheckout() {
           Save card details
         </Checkbox>
       </div>
-      <Button className={Styles.butn}>Pay Now</Button>
+      <Button
+        className={Styles.butn}
+        onClick={() => message.success("Processing complete!")}
+      >
+        Pay Now
+      </Button>
     </div>
   );
 }
