@@ -25,6 +25,12 @@
   content: "\A";
   white-space: pre;
 }
+@media (max-width: 1024px) and (min-width: 769px) {
+    .inputs {
+        width: 15rem;
+      }
+
+}
 @media (max-width: 768px) {
   .txtb {
     font-size: 1rem;
