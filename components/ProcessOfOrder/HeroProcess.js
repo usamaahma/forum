@@ -2,6 +2,7 @@ import { Button, message, Steps, theme } from "antd";
 import { useState } from "react";
 import ShoppingCart from "./ShoppingCart";
 import Styles from "../../styles/HeroSection.module.css";
+import DeshiShopCheckout from "@/pages/DeshiShopCheckout";
 const steps = [
   {
     title: "Shopping Cart ",
@@ -9,7 +10,7 @@ const steps = [
   },
   {
     title: "Checkout",
-    content: "Second-content",
+    content: <DeshiShopCheckout />,
   },
   {
     title: "Order Complete",
