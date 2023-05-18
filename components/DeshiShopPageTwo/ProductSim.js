@@ -1,12 +1,10 @@
 import React from "react";
-import Styles from "../../styles/ConsumerFood.module.css";
+import Styles from "../../styles/ProductSim.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
-import FruitVageProductCard from "./FruitVageProductCard";
-import Post from "../../public/images/image 77.png";
 import Image from "next/image";
-import TabOfFood from "./TabOfFood";
+import ProductCard from "../DeshiShop/ProductCard";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   0: { items: 1 },
@@ -15,7 +13,7 @@ const responsive = {
   1440: { items: 5 },
   2560: { items: 5 },
 };
-function ConsumerFood() {
+function ProductSim() {
   return (
     <div>
       <div className={Styles.centercaro}>
@@ -30,7 +28,7 @@ function ConsumerFood() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <FruitVageProductCard />
+                    <ProductCard />
                   </div>
                 </div>
               ))}
@@ -42,12 +40,9 @@ function ConsumerFood() {
             />
           </div>
         </div>
-        <div>
-          <Image src={Post} alt="" className={Styles.postsize} />
-        </div>
       </div>
     </div>
   );
 }
 
-export default ConsumerFood;
+export default ProductSim;

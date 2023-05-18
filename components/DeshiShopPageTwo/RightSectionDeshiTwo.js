@@ -5,6 +5,7 @@ import { Row, Col, Tabs } from "antd";
 import PopularStore from "./PopularStore";
 import SimilarProduct from "./SimilarProduct";
 import Link from "next/link";
+import TabOfSimliar from "./TabOfSimliar";
 
 const onChange = (key) => {
   console.log(key);
@@ -135,6 +136,7 @@ function RightSectionDeshiTwo() {
           />
         </div>
         <PopularStore />
+        <TabOfSimliar />
       </div>
     </div>
   );
