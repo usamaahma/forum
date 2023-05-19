@@ -142,6 +142,8 @@ function RightSectionDeshiTwo() {
           />
         </div>
         <PopularStore />
+        <br />
+        <br />
         <TabOfSimliar />
       </div>
     </div>
