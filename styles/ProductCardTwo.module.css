@@ -1,11 +1,13 @@
-.cardtwo {
-  width: 12.5rem;
+.card {
+  width: 13rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .hoverContainer .cardhover {
   display: none;
 }
+
 .anotherhover {
   display: none;
 }
@@ -18,19 +20,22 @@
   width: 10rem;
 }
 
-.imghvrr:hover + .anotherhover {
+.imghvrr:hover+.anotherhover {
   display: flex;
 }
+
 .imghvr {
   width: 1.8rem;
   height: 1.8rem;
   margin-top: 0.3rem;
 }
+
 .imghvrr {
   width: 1.8rem;
   height: 1.8rem;
   margin-top: 0.3rem;
 }
+
 .btnhover {
   display: flex;
   align-items: center;
@@ -43,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 10rem;
+  width: 11rem;
 }
 
 .stardiv {
@@ -54,6 +59,7 @@
 .pronam {
   color: #444444;
   font-weight: 500;
+  text-align: left;
 }
 
 .pricetext {
@@ -87,4 +93,51 @@
   font-size: 0.8rem;
   margin-left: 0.5rem;
   color: #a1a1a1;
+}
+
+@media(max-width: 1024px) {
+  .card {
+    width: 12.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10.6rem;
+  }
+}
+
+@media(max-width: 425px) {
+  .card {
+    width: 11.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.5rem;
+  }
+
+  .pricetext {
+    color: #151515;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .greenprrice {
+    text-decoration-line: line-through;
+    font-size: 0.7rem;
+    color: #219653;
+  }
+
+  .soldtext {
+    color: #a1a1a1;
+    font-size: 0.7rem;
+  }
 }
