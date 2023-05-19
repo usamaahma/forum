@@ -9,7 +9,7 @@ function BlogRightSection() {
     <div>
       <Row justify="center" className={Styles.widthrow}>
         {card.map((index) => (
-          <Col key={index} xxl={7}>
+          <Col key={index} xxl={10}>
             <BlogCard />
           </Col>
         ))}

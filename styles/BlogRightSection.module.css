@@ -3,6 +3,7 @@
   font-size: 0.7rem;
   font-weight: 500;
 }
+
 .inttext {
   color: #151515;
   font-size: 0.8rem;
@@ -10,11 +11,13 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .prtext {
   color: #737373;
   font-size: 0.7rem;
   font-weight: 500;
 }
+
 .morebtn {
   background-color: #def5d3;
   border: #def5d3 solid 1px;
@@ -27,45 +30,54 @@
   color: #42b00f;
   margin-top: 0.5rem;
 }
+
 .flexsise {
   display: flex;
   align-items: center;
 }
+
 .maindivside {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
 }
+
 .text {
   font-size: 0.5rem;
   margin-left: 0.3rem;
   margin-right: 0.5rem;
   margin-top: 0.2rem;
 }
+
 .text1 {
   font-size: 0.7rem;
   margin-left: 0.3rem;
   margin-top: 0.2rem;
 }
+
 .cardsize {
-  width: 16rem;
+  width: 22rem;
   margin-bottom: 0.5rem;
 }
+
 .widthrow {
   width: 56rem;
 }
+
 @media (max-width: 1440px) {
   .widthrow {
     width: 52rem;
   }
+
   .cardsize {
-    width: 16rem;
+    width: 20rem;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
 }
+
 @media (max-width: 1024px) {
   .cardsize {
     width: 15rem;
@@ -78,19 +90,23 @@
     margin-right: 0.5rem;
     margin-top: 0.2rem;
   }
+
   .text1 {
     font-size: 0.5rem;
     margin-left: 0.3rem;
     margin-top: 0.2rem;
   }
+
   .widthrow {
     width: 35rem;
   }
+
   .cardsize {
     width: 15.5rem;
     margin-bottom: 0.5rem;
   }
 }
+
 @media (max-width: 425px) {
   .widthrow {
     width: 100%;
