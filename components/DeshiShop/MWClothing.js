@@ -19,12 +19,6 @@ function MenWomenClothing() {
   return (
     <div>
       <div className={Styles.centercaro}>
-        <div className={Styles.textdiv}>
-          <h3>Men’s & Women’s Clothing</h3>
-          <p className={Styles.viewtext}>View all</p>
-          <div className={Styles.greenline}></div>
-        </div>
-        <hr className={Styles.hrline} />
         <div>
           <div className={Styles.carodiv}>
             <AliceCarousel
@@ -48,9 +42,9 @@ function MenWomenClothing() {
             />
           </div>
         </div>
-        <div>
+        {/* <div>
           <Image src={Post} alt="" className={Styles.postsize} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

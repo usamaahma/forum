@@ -37,6 +37,26 @@ function TabOfHome() {
           ]}
         />
       </div>
+      {/* <Tabs direction={"rtl"}>
+          <TabList>
+            <Tab style={{ color: "#42B00F" }}>Furniture</Tab>
+            <Tab style={{ color: "#42B00F" }}>Flower & Plant</Tab>
+            <Tab style={{ color: "#42B00F" }}>Kitchen & Dining Items</Tab>
+            <Tab style={{ color: "#42B00F" }}>Home & Office Appliance</Tab>
+          </TabList>
+          <TabPanel>
+            <HomeLiving />
+          </TabPanel>
+          <TabPanel>
+            <HomeLiving />
+          </TabPanel>
+          <TabPanel>
+            <HomeLiving />
+          </TabPanel>
+          <TabPanel>
+            <HomeLiving />
+          </TabPanel>
+        </Tabs> */}
     </div>
   );
 }

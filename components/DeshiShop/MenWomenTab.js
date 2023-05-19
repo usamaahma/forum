@@ -1,15 +1,17 @@
 import React from "react";
-import Styles from "../../styles/TabOfFood.module.css";
+import Styles from "../../styles/MenWomenTab.module.css";
 // import { Tabs } from "antd";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import ConsumerFood from "./ConsumerFood";
+import MenWomenClothing from "./MWClothing";
+import Post from "../../public/images/image 77.png";
+import Image from "next/image";
 
-function TabOfFood() {
+function MenWomenTab() {
   return (
     <div className={Styles.centercaro}>
       <div className={Styles.contdiv}>
-        <h3 className={Styles.foodtext}>Consumer Food</h3>
+        <h3 className={Styles.foodtext}>Men’s & Women’s Clothing</h3>
         <div className={Styles.greenline}></div>
       </div>
 
@@ -34,19 +36,22 @@ function TabOfFood() {
         /> */}
         <Tabs direction={"rtl"}>
           <TabList>
-            <Tab style={{ color: "#42B00F" }}>Fruits & Vegetables</Tab>
-            <Tab style={{ color: "#42B00F" }}>Meat & Fish</Tab>
+            <Tab style={{ color: "#42B00F" }}>Men</Tab>
+            <Tab style={{ color: "#42B00F" }}>Women</Tab>
           </TabList>
           <TabPanel>
-            <ConsumerFood />
+            <MenWomenClothing />
           </TabPanel>
           <TabPanel>
-            <ConsumerFood />
+            <MenWomenClothing />
           </TabPanel>
         </Tabs>
+      </div>
+      <div>
+        <Image src={Post} alt="" className={Styles.postsize} />
       </div>
     </div>
   );
 }
 
-export default TabOfFood;
+export default MenWomenTab;

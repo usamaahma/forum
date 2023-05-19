@@ -10,12 +10,14 @@ import ShopByCategory from "@/components/DeshiShop/ShopByCategory";
 import PopularProductsTwo from "@/components/DeshiShop/PopularProductsTwo";
 import RecentProducts from "@/components/DeshiShop/RecentProducts";
 import StoreName from "@/components/DeshiShop/StoreName";
-import ConsumerFood from "@/components/DeshiShop/ConsumerFood";
-import MenWomenClothing from "@/components/DeshiShop/MWClothing";
+// import ConsumerFood from "@/components/DeshiShop/ConsumerFood";
+// import MenWomenClothing from "@/components/DeshiShop/MWClothing";
 import FashionBeauty from "@/components/DeshiShop/FashionBeauty";
 import TabOfFood from "@/components/DeshiShop/TabOfFood";
-import HomeLiving from "@/components/DeshiShop/HomeLiving";
+// import HomeLiving from "@/components/DeshiShop/HomeLiving";
 import TabOfHome from "@/components/DeshiShop/TabOfHome";
+import MenWomenTab from "@/components/DeshiShop/MenWomenTab";
+import TabOfFashion from "@/components/DeshiShop/TabsOfFashion";
 
 function DeshiShopPage() {
   return (
@@ -41,10 +43,20 @@ function DeshiShopPage() {
       <RecentProducts />
       <StoreName />
       {/* <ConsumerFood /> */}
+      <br />
+      <br />
       <TabOfFood />
-      <MenWomenClothing />
-      <FashionBeauty />
+      <br />
+      <br />
+      {/* <MenWomenClothing /> */}
+      <MenWomenTab />
+      <br />
+      <br />
+      <TabOfFashion />
+      {/* <FashionBeauty /> */}
       {/* <HomeLiving /> */}
+      <br />
+      <br />
       <TabOfHome />
       <Footer />
     </div>
