@@ -39,7 +39,8 @@ function MenWomenClothing() {
                 </div>
               ))}
               responsive={responsive}
-              disableButtonsControls
+              // disableButtonsControls
+              disableDotsControls
               autoPlay
               autoPlayInterval={2000}
               disableAutoPlayOnAction={false}

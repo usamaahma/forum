@@ -7,7 +7,7 @@ import HomeProduct from "./HomeProduct";
 import { Col, Row, Card, Rate } from "antd";
 import Image from "next/image";
 import Product from "../../public/images/Frame 44777.png";
-import Vector from "../../public/images/Vector.png";
+import Vector from "../../public/images/store.png";
 
 const { Meta } = Card;
 const handleDragStart = (e) => e.preventDefault();

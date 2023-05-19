@@ -21,7 +21,13 @@ function ProductCard() {
         <Card
           hoverable
           className={`${Styles.card} ${Styles.hoverContainer}`}
-          cover={<Image src={Product} alt="abc" />}
+          cover={
+            <Image
+              src={Product}
+              alt="abc"
+              style={{ backgroundColor: "#F8F8F8" }}
+            />
+          }
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
