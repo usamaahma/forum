@@ -14,6 +14,7 @@ import { RightOutlined } from "@ant-design/icons";
 import TabsOfProducts from "./TabsOfProducts";
 import SimilarProducts from "./SimilarProduct";
 import Products from "./Products";
+import Link from "next/link";
 const handleChange = (value) => {
   console.log(`selected ${value}`);
 };
@@ -118,7 +119,12 @@ function MainProduct() {
                 </div>
                 <div className={Styles.btndiv}>
                   <button className={Styles.buybtn}>BUY NOW</button>
-                  <button className={Styles.addbtn}>ADD TO CART</button>
+                  <Link
+                    href="./ProceedOfOrderPage"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <button className={Styles.addbtn}>ADD TO CART</button>
+                  </Link>
                 </div>
                 <div className={Styles.divicon}>
                   <div className={Styles.heartdiv}>

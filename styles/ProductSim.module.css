@@ -1,5 +1,5 @@
 .carodiv {
-  width: 68rem;
+  width: 52rem;
   border-radius: 0.1rem !important;
 }
 
@@ -20,10 +20,9 @@
 }
 
 .viewtext {
-  color: #42b00f !important;
+  color: #42b00f;
   font-size: 0.9rem;
   font-weight: 600;
-  text-decoration: none !important;
 }
 
 .hrline {
@@ -39,7 +38,9 @@
   position: absolute;
   margin-top: 3.4rem;
 }
-
+.postsize {
+  width: 67rem;
+}
 @media (max-width: 1024px) {
   .carodiv {
     width: 51rem;
@@ -58,6 +59,9 @@
     width: 50rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+  }
+  .postsize {
+    width: 40rem;
   }
 }
 
@@ -79,6 +83,9 @@
     width: 45rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+  }
+  .postsize {
+    width: 45rem;
   }
 }
 
@@ -104,5 +111,8 @@
 
   .viewtext {
     display: none;
+  }
+  .postsize {
+    width: 100%;
   }
 }

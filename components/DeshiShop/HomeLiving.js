@@ -52,9 +52,8 @@ function HomeLiving() {
                     <AliceCarousel
                       mouseTracking
                       items={detail.map((index) => (
-                        <div className={Styles.centercaro}>
+                        <div key={index} className={Styles.centercaro}>
                           <div
-                            key={index}
                             onDragStart={handleDragStart}
                             style={{
                               display: "flex",
@@ -80,9 +79,8 @@ function HomeLiving() {
                     <AliceCarousel
                       mouseTracking
                       items={detail.map((index) => (
-                        <div className={Styles.centercaro}>
+                        <div key={index} className={Styles.centercaro}>
                           <div
-                            key={index}
                             onDragStart={handleDragStart}
                             style={{
                               display: "flex",

@@ -90,9 +90,33 @@
   justify-content: space-between;
   align-items: center;
 }
+.nonedrawer {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .imagethirt {
+    width: 35rem;
+  }
+  .imagethirrt {
+    display: flex;
+    justify-content: center;
+  }
+  .imagethirtcard {
+    width: 35rem !important;
+    height: 154px;
+  }
+}
+
 @media (max-width: 768px) {
+  .nonedrawer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32rem;
+  }
   .imagethirt {
     width: 40rem;
+    margin-bottom: 2rem;
   }
   .imagethirtcard {
     width: 40rem !important;
@@ -104,6 +128,10 @@
   }
 }
 @media (max-width: 425px) {
+  .nonedrawer {
+    display: flex;
+    gap: 15rem;
+  }
   .langbutton {
     margin-top: 2rem;
     display: inline-flex;
@@ -135,5 +163,11 @@
     position: absolute;
     margin-top: -0.13rem;
     margin-left: 8rem;
+  }
+}
+@media (max-width: 375px) {
+  .nonedrawer {
+    display: flex;
+    gap: 11rem;
   }
 }

@@ -1,7 +1,3 @@
-.myRadio {
-  /* Your default radio button styles */
-}
-
 /* Define the color for the checked radio button */
 .myRadio:checked {
   border-color: #42b00f !important;
