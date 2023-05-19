@@ -38,9 +38,11 @@
   position: absolute;
   margin-top: 3.4rem;
 }
+
 .postsize {
   width: 67rem;
 }
+
 @media (max-width: 1024px) {
   .carodiv {
     width: 51rem;
@@ -60,6 +62,7 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+
   .postsize {
     width: 51rem;
   }
@@ -84,6 +87,7 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+
   .postsize {
     width: 45rem;
   }
@@ -91,7 +95,7 @@
 
 @media (max-width: 425px) {
   .carodiv {
-    width: 30rem;
+    width: 24rem;
     border-radius: 0.1rem !important;
   }
 
@@ -112,6 +116,7 @@
   .viewtext {
     display: none;
   }
+
   .postsize {
     width: 100%;
   }

@@ -109,3 +109,35 @@
     width: 10.6rem;
   }
 }
+
+@media(max-width: 425px) {
+  .card {
+    width: 11.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.5rem;
+  }
+
+  .pricetext {
+    color: #151515;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .greenprrice {
+    text-decoration-line: line-through;
+    font-size: 0.7rem;
+    color: #219653;
+  }
+
+  .soldtext {
+    color: #a1a1a1;
+    font-size: 0.7rem;
+  }
+}

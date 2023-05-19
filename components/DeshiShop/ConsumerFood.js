@@ -9,7 +9,8 @@ import Image from "next/image";
 import TabOfFood from "./TabOfFood";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
-  0: { items: 1 },
+  375: { items: 1 },
+  425: { items: 2 },
   568: { items: 2 },
   1024: { items: 4 },
   1440: { items: 5 },

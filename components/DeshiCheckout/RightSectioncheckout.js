@@ -24,7 +24,7 @@ const data = [
     name: "cart",
   },
 ];
-function RightSectioncheckout({ next }) {
+function RightSectioncheckout() {
   const [value, setValue] = useState(1);
   const onChange = (e) => {
     console.log("radio checked", e.target.value);
