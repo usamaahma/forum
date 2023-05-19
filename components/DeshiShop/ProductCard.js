@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "../../styles/ProductCard.module.css";
 import Product from "../../public/images/image 65.png";
-import Vector from "../../public/images/Vector.png";
+import Vector from "../../public/images/store.png";
 import { Card, Rate } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
