@@ -5,6 +5,9 @@
 .mapleftsec {
   display: grid;
 }
+.shoptext {
+  padding: 0.5rem;
+}
 .rowgpp {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -28,7 +31,7 @@
   margin-top: 0.5rem;
   margin-bottom: 2rem;
 }
-.fontte{
+.fontte {
   font-weight: bold;
 }
 .greenlines {

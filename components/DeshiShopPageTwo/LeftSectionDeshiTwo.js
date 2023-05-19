@@ -316,7 +316,9 @@ function LeftSectiondeshitwo() {
             </div>
           </Dropdown>
         </div>
-        <hr style={{ border: "1px solid #E8E8E8" }} />
+      </div>
+      <br />
+      <div className={Styles.greybox}>
         <div className={Styles.greysmll}>
           <p className={Styles.text}>Store</p>
           <RightOutlined className={Styles.text1} />
@@ -331,25 +333,25 @@ function LeftSectiondeshitwo() {
           <p className={Styles.text}>Location</p>
           <RightOutlined className={Styles.text1} />
         </div>
-      </div>{" "}
-      <hr style={{ border: "1px solid #E8E8E8" }} />
-      <div className={Styles.greysmll}>
-        <p className={Styles.text}>Price Range</p>
-        <RightOutlined className={Styles.text1} />
-      </div>{" "}
-      <hr style={{ border: "1px solid #E8E8E8" }} />
-      <div className={Styles.colors}>
-        <p>Color</p>
-        <img alt="abc" src="../images/Ellipse 91.png" />
-        <img alt="abc" src="../images/Ellipse 92.png" />
-        <img alt="abc" src="../images/Ellipse 93.png" />
-        <img alt="abc" src="../images/Ellipse 94.png" />
-        <img alt="abc" src="../images/Ellipse 95.png" />
-      </div>
-      <div>
-        <Button className={Styles.buttonwhit}>
-          <p className={Styles.applyfiltertxt}>Apply Filter</p>
-        </Button>
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+        <div className={Styles.greysmll}>
+          <p className={Styles.text}>Price Range</p>
+          <RightOutlined className={Styles.text1} />
+        </div>{" "}
+        <hr style={{ border: "1px solid #E8E8E8" }} />
+        <div className={Styles.colors}>
+          <p>Color</p>
+          <img alt="abc" src="../images/Ellipse 91.png" />
+          <img alt="abc" src="../images/Ellipse 92.png" />
+          <img alt="abc" src="../images/Ellipse 93.png" />
+          <img alt="abc" src="../images/Ellipse 94.png" />
+          <img alt="abc" src="../images/Ellipse 95.png" />
+        </div>
+        <div>
+          <Button className={Styles.buttonwhit}>
+            <p className={Styles.applyfiltertxt}>Apply Filter</p>
+          </Button>
+        </div>
       </div>
       <div>
         <img src="../images/image 61.png"></img>

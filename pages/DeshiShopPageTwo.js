@@ -19,7 +19,6 @@ function DeshiShopPageTwo() {
           </Col>
           <Col>
             <div className={Styles.centerCol12}>
-              {" "}
               <RightSectionDeshiTwo />
             </div>
           </Col>
