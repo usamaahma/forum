@@ -9,21 +9,25 @@
   align-items: center;
   flex-direction: column;
 }
+
 .divdiv {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: -6rem;
 }
+
 .divdiv1 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 2rem;
 }
+
 .img {
   height: 39.7rem;
 }
+
 .card {
   width: 20rem;
   margin-top: 0.5rem;
@@ -85,12 +89,14 @@
     width: 30rem;
     border-radius: 0.1rem !important;
   }
+
   .divdiv {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: -1.1rem;
   }
+
   .divdiv1 {
     display: flex;
     justify-content: center;
@@ -112,13 +118,14 @@
 
 @media (max-width: 425px) {
   .carodiv {
-    width: 30rem;
+    width: 24rem;
     border-radius: 0.1rem !important;
   }
 
   .viewtext {
     display: none;
   }
+
   .postsize {
     width: 100%;
   }

@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
+
 .centercol1 {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 0.5rem;
 }
+
 .centercol12 {
   display: flex;
   justify-content: center;
@@ -16,26 +19,45 @@
   margin-left: 1rem;
 }
 
+.centercol123 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -3rem;
+}
+
 .mainland11 {
   padding: 20px 0px;
+}
+
+@media(max-width: 1024px) {
+  .centercol123 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .mbree {
     flex-direction: column-reverse;
   }
+
   .centercol1 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 0rem;
   }
+
   .centercol12 {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 0rem;
   }
+
   .centercol123 {
     display: flex;
     justify-content: center;

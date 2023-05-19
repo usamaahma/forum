@@ -28,9 +28,8 @@ function SimilarProducts() {
             <AliceCarousel
               mouseTracking
               items={detail.map((index) => (
-                <div className={Styles.centercaro}>
+                <div className={Styles.centercaro} key={index}>
                   <div
-                    key={index}
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >

@@ -60,7 +60,8 @@ const items = [
 ];
 
 const responsive = {
-  0: { items: 1 },
+  375: { items: 1 },
+  425: { items: 2 },
   568: { items: 2 },
   1024: { items: 3 },
   1440: { items: 4 },
@@ -76,8 +77,8 @@ function CarouselDeshitwo() {
               mouseTracking
               items={items}
               responsive={responsive}
-              // disableDotsControls
-              disableButtonsControls
+              disableDotsControls
+              // disableButtonsControls
               autoPlay
               autoPlayInterval={2000}
               disableAutoPlayOnAction={false}

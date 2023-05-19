@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/similarProduct.module.css";
+import Styles from "../../styles/similarproduct.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
@@ -8,7 +8,8 @@ import Image from "next/image";
 import ClothesProducts from "../DeshiShop/ClothesProducts";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
-  0: { items: 1 },
+  375: { items: 1 },
+  425: { items: 2 },
   568: { items: 2 },
   1024: { items: 4 },
   1440: { items: 4 },
@@ -23,9 +24,8 @@ function SimilarProduct() {
             <AliceCarousel
               mouseTracking
               items={detail.map((index) => (
-                <div className={Styles.centercaro}>
+                <div className={Styles.centercaro} key={index}>
                   <div
-                    key={index}
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >

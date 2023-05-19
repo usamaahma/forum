@@ -20,9 +20,11 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Deshi Shop
-    </Button>
+    <Link href="/DeshiShopPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Deshi Shop
+      </Button>
+    </Link>
   </div>,
   <div
     key="deshi-service"
@@ -39,7 +41,7 @@ const items = [
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
     <Button style={{ color: "black", borderColor: "transparent" }}>
-      Buy & Sell{" "}
+      Buy & Sell
     </Button>
   </div>,
   <div

@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "../../styles/ProductCard.module.css";
 import Product from "../../public/images/glass.png";
-import Vector from "../../public/images/Vector.png";
+import Vector from "../../public/images/store.png";
 import { Card, Rate } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
@@ -12,7 +12,13 @@ function GlassesProducts() {
         <Card
           hoverable
           className={Styles.card}
-          cover={<Image src={Product} alt="abc" />}
+          cover={
+            <Image
+              src={Product}
+              alt="abc"
+              style={{ backgroundColor: "#F8F8F8" }}
+            />
+          }
         >
           <p className={Styles.pronam}>Product Name</p>
           <div className={Styles.price}>

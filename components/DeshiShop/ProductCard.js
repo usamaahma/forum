@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Styles from "../../styles/ProductCard.module.css";
 import Product from "../../public/images/image 65.png";
-import Vector from "../../public/images/Vector.png";
-import { Button, Card, Rate } from "antd";
+import Vector from "../../public/images/store.png";
+import { Card, Rate } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
 function ProductCard() {
@@ -21,7 +21,13 @@ function ProductCard() {
         <Card
           hoverable
           className={`${Styles.card} ${Styles.hoverContainer}`}
-          cover={<Image src={Product} alt="abc" />}
+          cover={
+            <Image
+              src={Product}
+              alt="abc"
+              style={{ backgroundColor: "#F8F8F8" }}
+            />
+          }
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

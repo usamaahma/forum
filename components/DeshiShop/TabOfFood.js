@@ -1,15 +1,20 @@
 import React from "react";
 import Styles from "../../styles/TabOfFood.module.css";
-import { Tabs } from "antd";
+// import { Tabs } from "antd";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import ConsumerFood from "./ConsumerFood";
 
 function TabOfFood() {
   return (
     <div className={Styles.centercaro}>
-      <div className={Styles.tabdiv}>
-        <h3 className={Styles.context}>Consumer Food</h3>
+      <div className={Styles.contdiv}>
+        <h3>Consumer Food</h3>
         <div className={Styles.greenline}></div>
-        <Tabs
+      </div>
+
+      <div dir="rtl">
+        {/* <Tabs
           centered
           className={Styles.ant}
           defaultActiveKey="1"
@@ -25,7 +30,20 @@ function TabOfFood() {
               children: <ConsumerFood />,
             },
           ]}
-        />
+          
+        /> */}
+        <Tabs direction={"rtl"}>
+          <TabList>
+            <Tab style={{ color: "#42B00F" }}>Fruits & Vegetables</Tab>
+            <Tab style={{ color: "#42B00F" }}>Meat & Fish</Tab>
+          </TabList>
+          <TabPanel>
+            <ConsumerFood />
+          </TabPanel>
+          <TabPanel>
+            <ConsumerFood />
+          </TabPanel>
+        </Tabs>
       </div>
     </div>
   );

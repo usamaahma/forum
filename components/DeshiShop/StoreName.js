@@ -126,7 +126,8 @@ function StoreName() {
           mouseTracking
           items={items}
           responsive={responsive}
-          disableButtonsControls
+          // disableButtonsControls
+          disableDotsControls
           autoPlay
           autoPlayInterval={2000}
           disableAutoPlayOnAction={false}

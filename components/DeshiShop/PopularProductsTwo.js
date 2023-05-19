@@ -6,7 +6,8 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
-  0: { items: 1 },
+  375: { items: 1 },
+  425: { items: 2 },
   568: { items: 2 },
   1024: { items: 4 },
   1440: { items: 5 },
@@ -21,9 +22,8 @@ function PopularProductsTwo() {
             <AliceCarousel
               mouseTracking
               items={detail.map((index) => (
-                <div className={Styles.centercaro}>
+                <div className={Styles.centercaro} key={index}>
                   <div
-                    key={index}
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
@@ -32,7 +32,8 @@ function PopularProductsTwo() {
                 </div>
               ))}
               responsive={responsive}
-              disableButtonsControls
+              // disableButtonsControls
+              disableDotsControls
               autoPlay
               autoPlayInterval={2000}
               disableAutoPlayOnAction={false}

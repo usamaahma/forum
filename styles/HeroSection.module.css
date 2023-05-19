@@ -11,7 +11,7 @@
 }
 
 .sizesteps {
-  width: 40rem;
+  width: 50%;
 
 }
 
@@ -24,15 +24,16 @@
   text-align: center;
 }
 
+@media(max-width: 1024px) {
+  .sizesteps {
 
+    width: 70%
+  }
+}
 
 @media(max-width: 425px) {
   .sizesteps {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20rem;
 
-
+    width: 40%
   }
 }

@@ -7,12 +7,13 @@ import HomeProduct from "./HomeProduct";
 import { Col, Row, Card, Rate } from "antd";
 import Image from "next/image";
 import Product from "../../public/images/Frame 44777.png";
-import Vector from "../../public/images/Vector.png";
+import Vector from "../../public/images/store.png";
 
 const { Meta } = Card;
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
-  0: { items: 1 },
+  375: { items: 1 },
+  425: { items: 2 },
   568: { items: 2 },
   1024: { items: 2 },
   1440: { items: 3 },
@@ -52,9 +53,8 @@ function HomeLiving() {
                     <AliceCarousel
                       mouseTracking
                       items={detail.map((index) => (
-                        <div className={Styles.centercaro}>
+                        <div key={index} className={Styles.centercaro}>
                           <div
-                            key={index}
                             onDragStart={handleDragStart}
                             style={{
                               display: "flex",
@@ -80,9 +80,8 @@ function HomeLiving() {
                     <AliceCarousel
                       mouseTracking
                       items={detail.map((index) => (
-                        <div className={Styles.centercaro}>
+                        <div key={index} className={Styles.centercaro}>
                           <div
-                            key={index}
                             onDragStart={handleDragStart}
                             style={{
                               display: "flex",
