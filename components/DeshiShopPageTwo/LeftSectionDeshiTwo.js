@@ -1,7 +1,15 @@
 import React from "react";
-import { RightOutlined } from "@ant-design/icons";
-import { Dropdown, Button, Rate, Row, Col } from "antd";
+import { RightOutlined, DownOutlined } from "@ant-design/icons";
+import { Dropdown, Button, Rate, Row, Col, Space } from "antd";
 import Styles from "../../styles/DeshiShopPagetwoLeft.module.css";
+import RangeSlider from "./RangeSlider";
+
+const pricerange = [
+  {
+    key: "1",
+    label: <RangeSlider />,
+  },
+];
 
 const data = [
   {
@@ -334,10 +342,20 @@ function LeftSectiondeshitwo() {
           <RightOutlined className={Styles.text1} />
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
-        <div className={Styles.greysmll}>
-          <p className={Styles.text}>Price Range</p>
-          <RightOutlined className={Styles.text1} />
-        </div>{" "}
+        <div>
+          <Dropdown
+            menu={{
+              items: pricerange,
+            }}
+          >
+            <Space>
+              <div className={Styles.greysmll}>
+                <p className={Styles.text}>Price Range</p>
+                <DownOutlined className={Styles.text1} />
+              </div>
+            </Space>
+          </Dropdown>
+        </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div className={Styles.colors}>
           <p>Color</p>
