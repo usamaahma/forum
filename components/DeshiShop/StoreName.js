@@ -117,7 +117,7 @@ function StoreName() {
   return (
     <div className={Styles.centercaro}>
       <div className={Styles.textdiv}>
-        <h3>Shop By Category</h3>
+        <h3>Popular Store Name</h3>
         <div className={Styles.greenline}></div>
       </div>
       <hr className={Styles.hrline} />
