@@ -1,0 +1,62 @@
+.vewtext {
+  color: #42b00f;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.poptext {
+  color: #151515;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.enddiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 48rem;
+}
+.colsize {
+  width: 48rem;
+}
+.centercard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imsizebig {
+  width: 48rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 1024px) {
+  .enddiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 38rem;
+  }
+  .colsize {
+    width: 38rem;
+  }
+  .imsizebig {
+    width: 38rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .enddiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .colsize {
+    width: 100%;
+  }
+  .imsizebig {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

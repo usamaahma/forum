@@ -5,6 +5,8 @@ import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import HeroSectionOfDeshiSer from "@/components/DeshiServices/HeroSectionOfDeshiSer";
 import ImageSectionOfDeshi from "@/components/DeshiServices/ImageSectionOfDeshi";
+import LeftSectionDeshi from "@/components/DeshiServices/LeftSectionDeshi";
+import RightSectionDeshi from "@/components/DeshiServices/RightSectionDeshi";
 function DeshiServicePage() {
   return (
     <div>
@@ -14,10 +16,14 @@ function DeshiServicePage() {
       <div>
         <Row justify="center">
           <Col>
-            <div className={Styles.centercoldeshi}></div>
+            <div className={Styles.centercoldeshi}>
+              <LeftSectionDeshi />
+            </div>
           </Col>
           <Col>
-            <div className={Styles.centercoldeshi}></div>
+            <div className={Styles.centercoldeshi1}>
+              <RightSectionDeshi />
+            </div>
           </Col>
         </Row>
       </div>
