@@ -23,10 +23,32 @@
   align-items: center;
   flex-direction: column;
 }
+.centercard12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
 .imsizebig {
   width: 48rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.bigimgh {
+  width: 27rem;
+}
+.smallimgh {
+  width: 20rem;
+  margin-bottom: 1.7rem;
+}
+.widthofcar {
+  width: 48rem;
+}
+.centercar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1024px) {
   .enddiv {
@@ -43,6 +65,16 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+  .bigimgh {
+    width: 20rem;
+  }
+  .smallimgh {
+    width: 15rem;
+    margin-bottom: 1.7rem;
+  }
+  .widthofcar {
+    width: 38rem;
+  }
 }
 @media (max-width: 768px) {
   .enddiv {
@@ -51,12 +83,94 @@
     align-items: center;
     width: 100%;
   }
+  .widthofcar {
+    width: 45rem;
+  }
+
   .colsize {
-    width: 100%;
+    width: 45rem;
   }
   .imsizebig {
-    width: 100%;
+    width: 45rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+  .row {
+    display: grid;
+  }
+  .bigimgh {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .smallimgh {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .centercard12 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 425px) {
+  .colsize {
+    width: 25rem;
+  }
+  .widthofcar {
+    width: 25rem;
+  }
+  .imsizebig {
+    width: 25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .bigimgh {
+    width: 22rem;
+    margin-bottom: 1rem;
+  }
+  .smallimgh {
+    width: 22rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 375px) {
+  .colsize {
+    width: 20rem;
+  }
+  .widthofcar {
+    width: 20rem;
+  }
+  .imsizebig {
+    width: 20rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .bigimgh {
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+  .smallimgh {
+    width: 20rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .colsize {
+    width: 18rem;
+  }
+  .imsizebig {
+    width: 18rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .bigimgh {
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+  .smallimgh {
+    width: 18rem;
+    margin-bottom: 1rem;
   }
 }

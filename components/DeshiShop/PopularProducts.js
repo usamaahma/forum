@@ -42,7 +42,6 @@ function PopularProducts() {
                 </div>
               ))}
               responsive={responsive}
-              // disableButtonsControls
               disableDotsControls
               autoPlay
               autoPlayInterval={2000}

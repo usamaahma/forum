@@ -7,6 +7,7 @@ import Phone from "../../public/images/Phone1.png";
 import Like from "../../public/images/Like3.png";
 import Eye from "../../public/images/Eye3.png";
 import Share from "../../public/images/Share3.png";
+import { HeartOutlined } from "@ant-design/icons";
 import { Card, Rate } from "antd";
 import Image from "next/image";
 const { Meta } = Card;
@@ -37,6 +38,10 @@ function DeshiProductCard() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+          <div className={Styles.heartdiv}>
+            <HeartOutlined />
+          </div>
+          <div className={Styles.divbtn}>Construction</div>
           <div className={Styles.stardiv}>
             <div className={Styles.flexfive}>
               <Rate value={1} count={1} className={Styles.strtext} />
