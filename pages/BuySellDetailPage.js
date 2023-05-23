@@ -5,6 +5,8 @@ import LeftSectionBuyDetail from "@/components/BuyAndSellDetail/LeftSectionBuyDe
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import HeroBuyDetail from "@/components/BuyAndSellDetail/HeroBuyDetail";
+import RightSectionBuyDetail from "@/components/BuyAndSellDetail/RightSectionBuyDetail";
+import CarouselDetail from "@/components/BuyAndSellDetail/CarouselDetail";
 function BuySellDetailPage() {
   return (
     <div>
@@ -19,10 +21,15 @@ function BuySellDetailPage() {
           </Col>
           <Col>
             <div className={Styles.centercolde1}>
-              <LeftSectionBuyDetail />
+              <RightSectionBuyDetail />
             </div>
           </Col>
         </Row>
+      </div>
+      <div className={Styles.centercolde}>
+        <div>
+          <CarouselDetail />
+        </div>
       </div>
       <Footer />
     </div>

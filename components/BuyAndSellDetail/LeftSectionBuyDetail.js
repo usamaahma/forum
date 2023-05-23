@@ -12,11 +12,20 @@ import Instgram from "../../public/images/Group 132.png";
 import Linkdin from "../../public/images/Group 131.png";
 import Mess from "../../public/images/Group 135.png";
 import TabOfDetails from "./TabOfDetails";
+import Laptop from "../../public/images/Rectangle 4573.png";
+import Laptop1 from "../../public/images/Rectangle 4574.png";
+import CarouselDetail from "./CarouselDetail";
 function LeftSectionBuyDetail() {
   return (
     <div>
-      <div>
-        <Image src={BigLap} alt="" className={Styles.img} />
+      <div className={Styles.padding}>
+        <div className={Styles.flexdivv}>
+          <Image src={BigLap} alt="" className={Styles.img} />
+          <div className={Styles.mblview}>
+            <Image src={Laptop} alt="" className={Styles.sizelapimg} />
+            <Image src={Laptop1} alt="" className={Styles.sizelapimg} />
+          </div>
+        </div>
         <div>
           <div className={Styles.btndiv}>
             <button className={Styles.btnuse}>Used</button>
@@ -54,6 +63,12 @@ function LeftSectionBuyDetail() {
         </div>
         <div>
           <TabOfDetails />
+        </div>
+        <div className={Styles.btnsdiv}>
+          <button className={Styles.btns}>Hotel</button>
+          <button className={Styles.btns}>Luxury</button>
+          <button className={Styles.btns}>Rooms</button>
+          <button className={Styles.btns}>Family</button>
         </div>
       </div>
     </div>
