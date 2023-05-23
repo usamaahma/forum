@@ -103,6 +103,30 @@
   }
 
   .viewtext {
-    display: none;
+    /* display: none; */
+  }
+}
+@media (max-width: 375px) {
+  .carodiv {
+    width: 23rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 19rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 19rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .viewtext {
+    /* display: none; */
   }
 }

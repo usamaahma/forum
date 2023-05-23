@@ -1,0 +1,38 @@
+.carodiv {
+  width: 48rem;
+  border-radius: 0.1rem !important;
+}
+
+.centercaro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .carodiv {
+    width: 38rem;
+    border-radius: 0.1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carodiv {
+    width: 45rem;
+    border-radius: 0.1rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .carodiv {
+    width: 25rem;
+    border-radius: 0.1rem !important;
+  }
+}
+@media (max-width: 375px) {
+  .carodiv {
+    width: 20rem;
+    border-radius: 0.1rem !important;
+  }
+}

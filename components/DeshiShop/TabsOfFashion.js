@@ -17,8 +17,8 @@ function TabOfFashion() {
 
       <div dir="rtl">
         {/* <Tabs
-          centered
-          className={Styles.ant}
+          centered 
+          className={Styles.ant} 
           defaultActiveKey="1"
           items={[
             {
