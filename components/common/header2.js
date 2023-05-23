@@ -111,20 +111,22 @@ function Header3() {
           </Link>
         </div>
         <div>
-          <Menu
-            bordered="false"
-            className={Styles.gapheaderthreenav}
-            style={{
-              backgroundColor: "#151515",
-              color: "white",
-              height: "2rem",
-            }}
-            mode="horizontal"
-            // defaultSelectedKeys={["2"]}
-            // items={items1}
-          >
-            <p>Job</p>
-          </Menu>
+          <Link href="./JobPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+                height: "2rem",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Job</p>
+            </Menu>
+          </Link>
         </div>
         <div>
           <Link href="/NewsPage">
