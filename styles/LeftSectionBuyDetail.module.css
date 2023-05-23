@@ -1,0 +1,56 @@
+.img {
+  width: 30rem;
+  height: 20rem;
+}
+.btndiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btnuse {
+  background-color: #def5d3;
+  border: #def5d3 solid 1px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  color: #42b00f;
+}
+.pricetext {
+  color: #444444;
+  font-weight: 700;
+}
+.septext {
+  color: #444444;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+.watchdiv {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.spacediv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 16rem;
+  margin-bottom: 0.5rem;
+}
+.flexrow {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+.share {
+  font-weight: 500;
+  color: black;
+}
