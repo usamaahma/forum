@@ -1,7 +1,7 @@
 import React from "react";
-import Styles from "../../styles/LeftSectionBuyDetail.module.css";
+import Styles from "../../styles/LeftRentalDetail.module.css";
 import Image from "next/image";
-import BigLap from "../../public/images/lapbig.png";
+import BigLap from "../../public/images/rental.png";
 import Watch from "../../public/images/watch.png";
 import Like from "../../public/images/Like3.png";
 import Location from "../../public/images/locationone.png";
@@ -11,12 +11,13 @@ import Twitter from "../../public/images/Group 134.png";
 import Instgram from "../../public/images/Group 132.png";
 import Linkdin from "../../public/images/Group 131.png";
 import Mess from "../../public/images/Group 135.png";
-import TabOfDetails from "./TabOfDetails";
 import Laptop from "../../public/images/Rectangle 4573.png";
 import Laptop1 from "../../public/images/Rectangle 4574.png";
 import { HeartOutlined } from "@ant-design/icons";
+import { Rate } from "antd";
+import TabOfRentalDetail from "./TabOfRentalDetail";
 
-function LeftSectionBuyDetail() {
+function LeftRentalDetail() {
   return (
     <div>
       <div className={Styles.padding}>
@@ -32,10 +33,10 @@ function LeftSectionBuyDetail() {
         </div>
         <div>
           <div className={Styles.btndiv}>
-            <button className={Styles.btnuse}>Used</button>
+            <button className={Styles.btnuse}>Monthly</button>
             <p className={Styles.pricetext}>$9900</p>
           </div>
-          <h2 className={Styles.pricetext}>Computer pc for sell..</h2>
+          <h2 className={Styles.pricetext}>Notebook BIgscreen Z51-70</h2>
           <div className={Styles.watchdiv}>
             <Image src={Watch} alt="" />
             <p className={Styles.septext}>Sep 10, 2022 8:12 pm</p>
@@ -66,7 +67,7 @@ function LeftSectionBuyDetail() {
           </div>
         </div>
         <div>
-          <TabOfDetails />
+          <TabOfRentalDetail />
         </div>
         <div className={Styles.btnsdiv}>
           <button className={Styles.btns}>Hotel</button>
@@ -79,4 +80,4 @@ function LeftSectionBuyDetail() {
   );
 }
 
-export default LeftSectionBuyDetail;
+export default LeftRentalDetail;

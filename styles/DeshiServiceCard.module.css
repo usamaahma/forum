@@ -1,5 +1,5 @@
 .cardsize {
-  width: 15rem;
+  width: 11.7rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rems;
 }
@@ -61,8 +61,10 @@
   align-items: center;
   background-color: white;
   border: solid 1px #e8e8e8;
-  width: 12rem;
-  padding: 0.3rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   color: #42b00f;
   font-size: 0.9rem;
   border-radius: 0.3rem;
@@ -112,23 +114,4 @@
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: -0.5rem;
-}
-@media (max-width: 425px) {
-  .cardsize {
-    width: 12rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rems;
-  }
-  .calldiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border: solid 1px #e8e8e8;
-    width: 12rem;
-    padding: 0.3rem;
-    color: #42b00f;
-    font-size: 0.9rem;
-    border-radius: 0.3rem;
-  }
 }

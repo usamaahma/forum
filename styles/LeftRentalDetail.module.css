@@ -90,6 +90,27 @@
   margin-top: 1rem;
   margin-left: 1rem;
 }
+.fivtext {
+  font-size: 0.8rem;
+  color: #ffab00;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.ratetext {
+  font-size: 0.8rem;
+  color: #a1a1a1 !important;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.strtext {
+  font-size: 0.8rem;
+  color: #ffab00 !important;
+  margin-left: 1rem;
+}
+.flexstar {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 1024px) {
   .img {
     width: 31rem;

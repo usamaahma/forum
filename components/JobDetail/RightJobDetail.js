@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/RightSectionBuyDetail.module.css";
+import Styles from "../../styles/RightJobDetail.module.css";
 import Image from "next/image";
 import Laptop from "../../public/images/Rectangle 4573.png";
 import Laptop1 from "../../public/images/Rectangle 4574.png";
@@ -9,7 +9,7 @@ import Calling from "../../public/images/Calling.png";
 import messa from "../../public/images/messa.png";
 import Web from "../../public/images/web.png";
 
-function RightSectionBuyDetail() {
+function RightJobDetail() {
   return (
     <div>
       <div className={Styles.colmbox}>
@@ -48,4 +48,4 @@ function RightSectionBuyDetail() {
   );
 }
 
-export default RightSectionBuyDetail;
+export default RightJobDetail;

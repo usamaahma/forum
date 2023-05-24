@@ -66,6 +66,7 @@
   font-weight: 600;
   border-radius: 0.2rem;
 }
+
 .btnsdiv {
   display: flex;
   justify-content: space-between;
@@ -73,6 +74,27 @@
   width: 25rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+.btnsdiv1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 32rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btns1 {
+  background-color: #f9f9f9;
+  border: #f9f9f9 solid 1px;
+  width: 6rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555454;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
 }
 .mblview {
   display: none;
@@ -90,10 +112,83 @@
   margin-top: 1rem;
   margin-left: 1rem;
 }
+.fivtext {
+  font-size: 0.8rem;
+  color: #ffab00;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.ratetext {
+  font-size: 0.8rem;
+  color: #a1a1a1 !important;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.strtext {
+  font-size: 0.8rem;
+  color: #ffab00 !important;
+  margin-left: 1rem;
+}
+.flexstar {
+  display: flex;
+  align-items: center;
+}
+.destext {
+  color: #737373;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.borderjob {
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.line {
+  border: 1px solid #d0d0d0;
+}
+.jotext {
+  color: #151515;
+  padding: 1rem;
+}
+.paddingdiv {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 28rem;
+}
+.textdiv {
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.textdiv1 {
+  display: flex;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.textdes {
+  color: #444444;
+  font-weight: 700;
+}
+.textde1s {
+  color: #444444;
+  font-weight: 500;
+  margin-left: 1rem;
+}
 @media (max-width: 1024px) {
   .img {
     width: 31rem;
     height: 22rem;
+  }
+
+  .destext {
+    color: #737373;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 768px) {
@@ -115,6 +210,13 @@
     width: 13rem;
     height: 8.5rem;
     margin-bottom: 1rem;
+  }
+  .destext {
+    color: #737373;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 425px) {
@@ -147,6 +249,46 @@
   }
   .padding {
     padding: 0.5rem;
+  }
+  .btnsdiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .btns1 {
+    background-color: #f9f9f9;
+    border: #f9f9f9 solid 1px;
+    width: 6rem;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555454;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .paddingdiv {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .textdiv1 {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .textde1s {
+    color: #444444;
+    font-weight: 500;
+    margin-left: 4rem;
   }
 }
 @media (max-width: 375px) {
