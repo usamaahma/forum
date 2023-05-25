@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 51rem;
 }
 .imgsize {
-  width: 100%;
+  width: 24rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -101,10 +101,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 44rem; */
+    width: 44rem;
   }
   .imgsize {
-    /* width: 27rem; */
+    width: 23rem;
   }
   .feadiv {
     display: flex;
@@ -130,10 +130,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 24rem;
+    width: 35rem;
   }
   .imgsize {
-    width: 22rem;
+    width: 17rem;
   }
   .feadiv {
     display: flex;

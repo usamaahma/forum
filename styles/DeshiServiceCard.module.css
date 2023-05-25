@@ -1,0 +1,117 @@
+.cardsize {
+  width: 11.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rems;
+}
+.sizeim {
+  height: 9rem;
+}
+.stardiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexfive {
+  display: flex;
+  align-items: center;
+}
+.strtext {
+  font-size: 0.8rem;
+  color: #ffab00 !important;
+}
+.fivtext {
+  font-size: 0.8rem;
+  color: #ffab00;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+.ratetext {
+  font-size: 0.8rem;
+  color: #a1a1a1 !important;
+  margin-top: 0.1rem;
+  margin-left: 0.1rem;
+}
+.doltext {
+  color: #444444;
+  font-weight: bold;
+  margin-top: 0.2rem;
+}
+.mittext {
+  font-size: 0.7rem;
+  color: #a1a1a1 !important;
+  font-weight: 400;
+}
+.saimtext {
+  color: #444444;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.userdiv {
+  display: flex;
+  align-items: center;
+}
+.usertext {
+  color: #444444;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+.calldiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: solid 1px #e8e8e8;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  color: #42b00f;
+  font-size: 0.9rem;
+  border-radius: 0.3rem;
+}
+.centerbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.threediv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.thumtext {
+  color: #444444;
+  font-size: 0.9rem;
+  margin-left: 0.3rem;
+  margin-top: 0.1rem;
+}
+.nodiv {
+  display: flex;
+  align-items: center;
+}
+.heartdiv {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  margin-left: -0.5rem;
+}
+.divbtn {
+  color: #42b00f;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  position: absolute;
+  margin-top: -3.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: -0.5rem;
+}

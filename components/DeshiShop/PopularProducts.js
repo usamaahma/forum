@@ -7,7 +7,8 @@ import detail from "../../detail.json";
 import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
-  375: { items: 1 },
+  320: { items: 1 },
+  375: { items: 2 },
   425: { items: 2 },
   568: { items: 2 },
   1024: { items: 4 },
@@ -41,7 +42,6 @@ function PopularProducts() {
                 </div>
               ))}
               responsive={responsive}
-              // disableButtonsControls
               disableDotsControls
               autoPlay
               autoPlayInterval={2000}

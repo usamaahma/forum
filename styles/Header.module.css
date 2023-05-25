@@ -36,6 +36,7 @@
 .txttttst {
   margin-top: -2.5rem;
   font-size: 0.8rem;
+  color: black !important;
 }
 .ico {
   margin-left: 1.2rem;
@@ -127,6 +128,26 @@
 }
 .showheader {
   display: none;
+}
+.btnaccount {
+  background-color: #42b00f;
+  color: white !important;
+  width: 8rem;
+  border: #42b00f solid 1px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+}
+.btnaccount1 {
+  background-color: white;
+  color: #42b00f !important;
+  width: 8rem;
+  border: #42b00f solid 1px;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
 }
 @media only screen and (min-width: 1440px) {
   .gapheaderthreenav {

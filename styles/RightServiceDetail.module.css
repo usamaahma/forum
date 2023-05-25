@@ -1,0 +1,115 @@
+.sizelapimg {
+  width: 21rem;
+  height: 10.5rem;
+  margin-bottom: 1rem;
+}
+.colmbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imgbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.left {
+  margin-left: 0.5rem;
+}
+.comp {
+  color: #151515;
+  font-weight: 600;
+}
+.mem {
+  color: #444444;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.borderbox {
+  border: #e8e8e8 1px solid;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mapimg {
+  width: 18rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.btngreen {
+  background-color: #42b00f;
+  width: 18rem;
+  padding: 0.5rem;
+  border: #42b00f solid 1px;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.btnwhite {
+  background-color: white;
+  width: 18rem;
+  padding: 0.5rem;
+  border: #d9d9d9 solid 1px;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444444;
+}
+.north {
+  color: #737373;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 1024px) {
+  .sizelapimg {
+    width: 18rem;
+    height: 10.5rem;
+    margin-bottom: 1rem;
+  }
+  .mapimg {
+    width: 16rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .btngreen {
+    background-color: #42b00f;
+    width: 16rem;
+    padding: 0.5rem;
+    border: #42b00f solid 1px;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .btnwhite {
+    background-color: white;
+    width: 16rem;
+    padding: 0.5rem;
+    border: #d9d9d9 solid 1px;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444444;
+  }
+}
+@media (max-width: 768px) {
+  .sizelapimg {
+    display: none;
+  }
+}

@@ -20,7 +20,7 @@
   width: 10rem;
 }
 
-.imghvrr:hover+.anotherhover {
+.imghvrr:hover + .anotherhover {
   display: flex;
 }
 
@@ -95,7 +95,7 @@
   color: #a1a1a1;
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .card {
     width: 12.6rem;
     margin-top: 0.5rem;
@@ -110,7 +110,7 @@
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .card {
     width: 11.7rem;
     margin-top: 0.5rem;
@@ -138,6 +138,41 @@
 
   .soldtext {
     color: #a1a1a1;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 11.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.5rem;
+  }
+
+  .pricetext {
+    color: #151515;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .greenprrice {
+    text-decoration-line: line-through;
+    font-size: 0.7rem;
+    color: #219653;
+  }
+
+  .soldtext {
+    color: #a1a1a1;
+    font-size: 0.7rem;
+  }
+  .star {
     font-size: 0.7rem;
   }
 }

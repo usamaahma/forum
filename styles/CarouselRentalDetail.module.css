@@ -1,0 +1,43 @@
+.carodiv {
+  width: 62rem;
+  border-radius: 0.1rem !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.line {
+  border: solid 1px #e8e8e8;
+}
+.centercaro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+  .carodiv {
+    width: 50rem;
+    border-radius: 0.1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carodiv {
+    width: 46rem;
+    border-radius: 0.1rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .carodiv {
+    width: 25rem;
+    border-radius: 0.1rem !important;
+  }
+}
+@media (max-width: 375px) {
+  .carodiv {
+    width: 20rem;
+    border-radius: 0.1rem !important;
+  }
+}
