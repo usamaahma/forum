@@ -13,6 +13,7 @@ import Post from "../../public/images/Group 9888.png";
 import Room from "../../public/images/Group 9889.png";
 import Sign from "../../public/images/Group 98810.png";
 import Image from "next/image";
+import Link from "next/link";
 const data = [
   {
     key: 1,
