@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs } from "antd";
 import Styles from "../../styles/RightProfile.module.css";
+import PersonalInfo from "./PersonalInfo";
 
 function callback(key) {
   console.log(key);
@@ -11,13 +12,18 @@ function RightProfile() {
   return (
     <div className={Styles.flexbet}>
       <div>
-        <Tabs onChange={callback} type="card" size="small">
+        <Tabs
+          onChange={callback}
+          type="card"
+          size="small"
+          className={Styles.sizetab}
+        >
           <TabPane
             tab="Personal Information"
             key="1"
             className={Styles.blscktext}
           >
-            Profile
+            <PersonalInfo />
           </TabPane>
           <TabPane
             tab="Login & Security Info "
