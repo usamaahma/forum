@@ -9,7 +9,26 @@
   align-items: center;
   margin-left: 0.5rem !important;
 }
+.displayyes {
+}
+.nodisplay {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .nodisplay {
+    display: flex;
+  }
+  .centercoldeshi1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem !important;
+    margin-top: 4rem;
+  }
+  .displayyes {
+    display: none;
+  }
 }
 .centercoldeshi1 {
   display: flex;
