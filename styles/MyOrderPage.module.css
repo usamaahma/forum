@@ -9,5 +9,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+}
+@media (max-width: 768px) {
+  .centercolorder1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0rem;
+  }
 }

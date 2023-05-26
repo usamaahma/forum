@@ -1,0 +1,42 @@
+.flexbet {
+  display: flex;
+  justify-content: center;
+  /* width: 50rem; */
+}
+.blscktext {
+  color: black !important;
+  border-bottom: none !important;
+}
+.mblviewend {
+  position: absolute;
+  margin-left: -7.5rem;
+}
+
+@media (max-width: 1024px) {
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    /* width: 40rem; */
+  }
+}
+@media (max-width: 768px) {
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    /* width: 50rem; */
+  }
+  .mblviewend {
+    display: none !important;
+  }
+}
+@media (max-width: 425px) {
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .mblviewend {
+    display: none !important;
+  }
+}

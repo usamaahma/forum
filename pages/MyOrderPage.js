@@ -5,12 +5,15 @@ import HeroMyOrder from "@/components/MyOrder/HeroMyOrder";
 import Footer from "@/components/common/footer";
 import { Col, Row } from "antd";
 import LeftOrder from "@/components/MyOrder/LeftOrder";
+import RightOrder from "@/components/MyOrder/RightOrder";
 function MyOrderPage() {
   return (
     <div>
       <div>
         <MainHeader />
         <HeroMyOrder />
+        <br />
+        <br />
         <div>
           <Row justify="center">
             <Col>
@@ -19,7 +22,9 @@ function MyOrderPage() {
               </div>
             </Col>
             <Col>
-              <div className={Styles.centercolorder1}></div>
+              <div className={Styles.centercolorder1}>
+                <RightOrder />
+              </div>
             </Col>
           </Row>
         </div>
