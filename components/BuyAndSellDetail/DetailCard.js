@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "../../styles/DetailCard.module.css";
-import Product from "../../public/images/Laptop.png";
+import Product from "../../public/images/laptop.png";
 import User from "../../public/images/userpro.png";
 import Location from "../../public/images/Locatinone.png";
 import Phone from "../../public/images/Phone1.png";
