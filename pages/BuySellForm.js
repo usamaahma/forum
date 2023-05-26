@@ -363,7 +363,7 @@ function BuySellForm() {
               />
             </div>
             <div className={Styles1.displdeshiservic}>
-              <p className={Styles1.txtgap}>Buy & Sell Description</p>
+              <p className={Styles1.txtgap}>Buy&Sell Description</p>
               <RichTextEditor />
             </div>
 
