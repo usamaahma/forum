@@ -14,7 +14,13 @@
   align-items: center;
   width: 12rem;
 }
-
+.greysmll1 {
+  padding: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 8rem;
+}
 .text {
   font-weight: 500;
   font-size: 0.8rem;
@@ -22,15 +28,24 @@
   cursor: pointer;
 }
 
+.text1 {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #151515 !important;
+  cursor: pointer;
+}
 .text:hover {
-  color: #42b00f;
+  color: #42b00f !important;
 }
 
 .text1:hover {
-  color: #42b00f;
+  color: #42b00f !important;
   cursor: pointer;
 }
-
+.sign {
+  width: 2rem;
+  height: 2rem;
+}
 @media (max-width: 1024px) {
   .greysmll {
     padding: 1.4rem;
