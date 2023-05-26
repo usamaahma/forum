@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
-import { Button, Layout, Menu } from "antd";
+import { Button, Layout, Menu, Modal } from "antd";
 import Link from "next/link";
 const { Header } = Layout;
 
 function Header3() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div
       className={`${Styles.Headerthree} ${Styles.remove1}`}
@@ -21,7 +31,7 @@ function Header3() {
         }}
       >
         <div>
-          <Link href="/landingPage">
+          <Link href="/MyOrderPage">
             <Menu
               bordered="false"
               className={Styles.gapheaderthreenav}
@@ -111,20 +121,22 @@ function Header3() {
           </Link>
         </div>
         <div>
-          <Menu
-            bordered="false"
-            className={Styles.gapheaderthreenav}
-            style={{
-              backgroundColor: "#151515",
-              color: "white",
-              height: "2rem",
-            }}
-            mode="horizontal"
-            // defaultSelectedKeys={["2"]}
-            // items={items1}
-          >
-            <p>Job</p>
-          </Menu>
+          <Link href="./JobPage">
+            <Menu
+              bordered="false"
+              className={Styles.gapheaderthreenav}
+              style={{
+                backgroundColor: "#151515",
+                color: "white",
+                height: "2rem",
+              }}
+              mode="horizontal"
+              // defaultSelectedKeys={["2"]}
+              // items={items1}
+            >
+              <p>Job</p>
+            </Menu>
+          </Link>
         </div>
         <div>
           <Link href="/NewsPage">
@@ -199,7 +211,88 @@ function Header3() {
           </Link>
         </div>
         <div>
-          <Button className={Styles.buttonthree}>
+          <Modal
+            title="Post in "
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <div style={{ display: "grid", justifyContent: "center" }}>
+              <Link href="/DeshiServiceForm">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Deshi Service
+                </Button>
+              </Link>
+              <Link href="/BuySellForm">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Buy & Sell
+                </Button>
+              </Link>
+              <Link href="/RentalForm">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Rental
+                </Button>
+              </Link>
+              <Link href="/JobForm">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Job
+                </Button>
+              </Link>
+              <Link href="/EventsFormPage">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Event
+                </Button>
+              </Link>
+              <Link href="/BlogFormPage">
+                <Button
+                  style={{
+                    backgroundColor: "#42b00f",
+                    color: "white",
+                    marginTop: "1rem",
+                    width: "10rem",
+                  }}
+                >
+                  Blog
+                </Button>
+              </Link>
+            </div>
+          </Modal>
+          <Button className={Styles.buttonthree} onClick={showModal}>
             <img src="../images/Plus.png" alt="abc" />
             Post
           </Button>

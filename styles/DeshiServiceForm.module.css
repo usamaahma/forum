@@ -1,0 +1,307 @@
+.displdeshiservice {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+.displdeshiservic {
+  display: block;
+  gap: 3rem;
+  margin-top: 1.5rem;
+}
+.txtgap {
+  margin-bottom: 0.5rem;
+}
+.txtgaps {
+  margin-bottom: 0.5rem;
+  margin-left: -2rem;
+}
+.wdthinpu {
+  width: 22rem !important;
+  height: 2.5rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #737373 !important;
+}
+.wdthinput {
+  width: 22rem !important;
+  height: 2.5rem !important;
+  border: solid #d0d0d0 0.1rem;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+.wdthinputtts {
+  width: 22rem !important;
+  height: 2.5rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #737373 !important;
+  margin-left: -2rem;
+}
+.radios {
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+}
+.gapfourth {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.dropwidhei {
+  width: 3rem !important;
+  height: 1.5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #42b00f !important;
+  margin-top: -0.3rem;
+}
+.txtaddfeature {
+  color: #42b00f !important;
+}
+.plustxt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plustxttt {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1.5rem;
+}
+.plusbutton {
+  margin-top: -0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.divnew {
+  border: solid #d0d0d0 0.1rem;
+  height: auto;
+  border-radius: 0.3rem;
+}
+.divnew5 {
+  padding: 1rem;
+}
+.modaldicwdth {
+  width: 10rem;
+  border: solid #d0d0d0 0.1rem;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+}
+.pmodal {
+  padding: 0.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.imgt {
+  width: 1rem;
+  height: 1rem;
+}
+.dragger {
+  margin-top: 1.5rem;
+  width: 35rem;
+}
+.draggercenter {
+  display: flex;
+  justify-content: center;
+}
+.buttondrag {
+  background-color: none !important;
+  border-color: transparent !important;
+}
+.scnddivservice {
+  margin-top: 3rem;
+}
+.largetct {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.fourdivs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.submitbutt {
+  background-color: #42b00f;
+  color: white;
+  margin-top: 5rem;
+  margin-bottom: 15rem;
+}
+.nonedis {
+  display: none;
+}
+.wdthi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.conddis {
+  display: flex;
+}
+.radiose {
+  margin-right: 3.5rem;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  .radiose {
+    margin-right: 0rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0rem;
+  }
+  .wdthi {
+    width: 40rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .conddis {
+    display: grid;
+    align-items: start;
+  }
+  .wdthinpu {
+    width: 40rem !important;
+    height: 2.5rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #737373 !important;
+  }
+  .wdthinput {
+    width: 40rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+  }
+  .wdthinputtts {
+    width: 40rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0rem;
+  }
+  .txtgaps {
+    margin-bottom: 0.5rem;
+    margin-left: 0rem;
+    margin-top: 1.5rem;
+  }
+  .fourdivs {
+    display: block;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .displdeshiservice {
+    display: block;
+  }
+  .displdeshiservic {
+    display: block;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1.5rem;
+  }
+  .gapscnd {
+    margin-top: 1.5rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .dri {
+    margin-bottom: 1.5rem;
+  }
+  .radiose {
+    margin-right: 0rem;
+    margin-bottom: -1.5rem;
+    margin-top: 0rem;
+  }
+  .largetct {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 4rem;
+  }
+  .fourdivs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  .gapscnd {
+    margin-top: -1.5rem;
+  }
+  .nonedis {
+    display: none;
+  }
+  .displdeshiservice {
+    display: grid;
+    justify-content: center;
+  }
+  .displdeshiservic {
+    display: grid;
+    justify-content: center;
+  }
+  .wdthi {
+    width: 18rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .wdthinput {
+    width: 18rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+  }
+  .wdthinpu {
+    width: 18rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+  }
+  .wdthinp {
+    width: 18rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+  }
+  .wdthinputtts {
+    width: 18rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+  .txtgaps {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .submitbutt {
+    background-color: #42b00f;
+    color: white;
+    margin-top: 0.1rem;
+    margin-bottom: 15rem;
+    margin-left: 4.5rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .wdthinputtts {
+    width: 18rem !important;
+    border: solid #d0d0d0 0.1rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+  }
+  .txtgaps {
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}

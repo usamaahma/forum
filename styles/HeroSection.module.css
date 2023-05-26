@@ -8,11 +8,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -2rem;
 }
 
 .sizesteps {
   width: 50%;
-
 }
 
 .centerhero {
@@ -24,16 +24,14 @@
   text-align: center;
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .sizesteps {
-
-    width: 70%
+    width: 70%;
   }
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .sizesteps {
-
-    width: 40%
+    width: 40%;
   }
 }

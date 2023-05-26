@@ -8,6 +8,7 @@ import Ser1 from "../../public/images/Rectangle 4654 (1).png";
 import Ser2 from "../../public/images/Rectangle 4655 (1).png";
 import RentalCard from "./RentalCard";
 import CarouselRental from "./CarouselRental";
+import Link from "next/link";
 const data = [
   { key: 1, name: "card" },
   { key: 2, name: "card" },
@@ -23,7 +24,9 @@ function RightSectionRental() {
     <div>
       <div className={Styles.enddiv}>
         <p className={Styles.poptext}>Popular Services</p>
-        <p className={Styles.vewtext}>View all</p>
+        <Link href="./RentalDetailPage">
+          <p className={Styles.vewtext}>View all</p>
+        </Link>
       </div>
       <div
         style={{

@@ -1,8 +1,13 @@
 .carodiv {
-  width: 48rem;
+  width: 50rem;
   border-radius: 0.1rem !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-
+.line {
+  border: solid 1px #e8e8e8;
+}
 .centercaro {
   display: flex;
   justify-content: center;
@@ -12,14 +17,14 @@
 
 @media (max-width: 1024px) {
   .carodiv {
-    width: 38rem;
+    width: 40rem;
     border-radius: 0.1rem !important;
   }
 }
 
 @media (max-width: 768px) {
   .carodiv {
-    width: 45rem;
+    width: 46rem;
     border-radius: 0.1rem !important;
   }
 }

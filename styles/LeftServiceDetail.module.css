@@ -1,0 +1,216 @@
+.img {
+  width: 40rem;
+  height: 22rem;
+}
+.btndiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.btnuse {
+  background-color: #def5d3;
+  border: #def5d3 solid 1px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0.3rem;
+  color: #42b00f;
+}
+.pricetext {
+  color: #444444;
+  font-weight: 700;
+}
+.septext {
+  color: #444444;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+.watchdiv {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.spacediv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 16rem;
+  margin-bottom: 0.5rem;
+}
+.flexrow {
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+}
+.share {
+  font-weight: 500;
+  color: black;
+}
+.btns {
+  background-color: white;
+  border: #e8e8e8 solid 1px;
+  width: 5rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555454;
+  font-weight: 600;
+  border-radius: 0.2rem;
+}
+.btnsdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.mblview {
+  display: none;
+}
+.heartdiv {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  border-radius: 0.4rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.fivtext {
+  font-size: 0.8rem;
+  color: #ffab00;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.ratetext {
+  font-size: 0.8rem;
+  color: #a1a1a1 !important;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+.strtext {
+  font-size: 0.8rem;
+  color: #ffab00 !important;
+  margin-left: 1rem;
+}
+.flexstar {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .img {
+    width: 31rem;
+    height: 22rem;
+  }
+}
+@media (max-width: 768px) {
+  .img {
+    width: 22rem;
+    height: 18rem;
+  }
+  .flexdivv {
+    display: flex;
+  }
+  .mblview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+  .sizelapimg {
+    width: 13rem;
+    height: 8.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .flexdivv {
+    display: flex;
+  }
+  .mblview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+  .sizelapimg {
+    width: 10.8rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+  }
+  .btnsdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .padding {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 375px) {
+  .img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .mblview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+  .sizelapimg {
+    width: 9.8rem;
+    height: 5.5rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .mblview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0.5rem;
+  }
+  .sizelapimg {
+    width: 8.5rem;
+    height: 4.5rem;
+    margin-bottom: 1rem;
+  }
+  .btnsdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
