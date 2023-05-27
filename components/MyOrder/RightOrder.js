@@ -20,7 +20,12 @@ function RightOrder() {
   return (
     <div className={Styles.flexbet}>
       <div>
-        <Tabs onChange={callback} type="card" size="small">
+        <Tabs
+          onChange={callback}
+          type="card"
+          size="small"
+          className={Styles.sizetab}
+        >
           <TabPane tab="All Order" key="1" className={Styles.blscktext}>
             <Order />
           </TabPane>
