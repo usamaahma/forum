@@ -1,0 +1,153 @@
+.orderdiv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 50rem;
+}
+.lapdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.smalllapdiv {
+  display: flex;
+  align-items: center;
+}
+.smalllapdiv1 {
+  display: flex;
+  align-items: center;
+}
+.leftdiv {
+  margin-left: 1rem;
+}
+.mactext {
+  color: #151515;
+  font-weight: 500;
+}
+.spacetext {
+  color: #737373;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.center {
+  font-size: 1.2rem;
+  color: #151515;
+  font-weight: 600;
+  text-align: center;
+}
+.pricetext {
+  font-size: 1.2rem;
+  color: #151515;
+  font-weight: 600;
+  text-align: right;
+  margin-top: -1.8rem;
+}
+.esttext {
+  color: #42b00f;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+.esttext1 {
+  color: #42b00f;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+
+.nametext {
+  color: #42b00f;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ortext {
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.shiptext {
+  color: #151515;
+  font-weight: 500;
+}
+
+.idtext {
+  color: #151515;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.trackbtn {
+  background: #42b00f;
+  border-radius: 12px;
+  border: #42b00f solid 1px;
+  width: 8rem;
+  padding: 0.4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menudiv {
+  background-color: white;
+  width: 2.2rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 0.3rem;
+  margin-left: 0.5rem;
+}
+.itemtext {
+  color: #151515;
+}
+.itemtext:hover {
+  color: #42b00f !important;
+}
+.imgsize {
+  height: 4.5rem;
+}
+@media (max-width: 1024px) {
+  .orderdiv {
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 40rem;
+  }
+}
+@media (max-width: 768px) {
+  .orderdiv {
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+  }
+  .trackbtn {
+    display: none;
+  }
+  .smalllapdiv1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .esttext {
+    color: #42b00f;
+    font-size: 0.6rem;
+    font-weight: 500;
+    margin-left: 0rem;
+  }
+  .esttext1 {
+    color: #42b00f;
+    font-size: 0.6rem;
+    font-weight: 500;
+    margin-right: 0rem;
+  }
+}

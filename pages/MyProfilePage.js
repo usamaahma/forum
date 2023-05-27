@@ -1,17 +1,17 @@
 import React from "react";
-import Styles from "../styles/MyOrderPage.module.css";
+import Styles from "../styles/MyProfilePage.module.css";
 import MainHeader from "@/components/common/mainHeader";
-import HeroMyOrder from "@/components/MyOrder/HeroMyOrder";
 import Footer from "@/components/common/footer";
 import { Col, Row } from "antd";
 import LeftOrder from "@/components/MyOrder/LeftOrder";
-import RightOrder from "@/components/MyOrder/RightOrder";
-function MyOrderPage() {
+import HeroProfile from "@/components/YourProfile/HeroProfile";
+import RightProfile from "@/components/YourProfile/RightProfile";
+function MyProfilePage() {
   return (
     <div>
       <div>
         <MainHeader />
-        <HeroMyOrder />
+        <HeroProfile />
         <br />
         <br />
         <div>
@@ -23,7 +23,7 @@ function MyOrderPage() {
             </Col>
             <Col>
               <div className={Styles.centercolorder1}>
-                <RightOrder />
+                <RightProfile />
               </div>
             </Col>
           </Row>
@@ -34,4 +34,4 @@ function MyOrderPage() {
   );
 }
 
-export default MyOrderPage;
+export default MyProfilePage;

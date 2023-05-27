@@ -5,7 +5,7 @@ import { RightOutlined } from "@ant-design/icons";
 import Sign from "../../public/images/Group 98810.png";
 import Link from "next/link";
 
-function LeftOrder() {
+function LeftProfile() {
   return (
     <div>
       <div className={Styles.greybox}>
@@ -19,12 +19,10 @@ function LeftOrder() {
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <Link href="./MyProfilePage">
-            <div className={Styles.greysmll}>
-              <p className={Styles.text}>Your Profile</p>
-              <RightOutlined className={Styles.text1} />
-            </div>
-          </Link>
+          <div className={Styles.greysmll}>
+            <p className={Styles.text}>Your Profile</p>
+            <RightOutlined className={Styles.text1} />
+          </div>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
@@ -101,4 +99,4 @@ function LeftOrder() {
   );
 }
 
-export default LeftOrder;
+export default LeftProfile;
