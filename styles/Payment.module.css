@@ -37,6 +37,68 @@
   color: #444444;
   font-size: 1.2rem;
 }
+.divrwo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.input22 {
+  width: 14rem;
+}
+.mrtop {
+  margin-top: 3rem;
+}
+.divbox {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 24rem;
+  height: 10rem;
+}
+.bigdivbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flerowdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.savtext {
+  color: #a1a1a1;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.notext {
+  color: #444444;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.acctext {
+  color: #444444;
+  font-weight: 500;
+}
+.faiztext {
+  color: #444444;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.edittext {
+  color: #444444 !important;
+}
+.edittext:hover {
+  color: #42b00f !important;
+}
 @media (max-width: 1024px) {
   .divmain {
     background: #ffffff;
@@ -44,6 +106,19 @@
     border-radius: 5px;
     padding: 1rem;
     width: 40rem;
+  }
+  .input22 {
+    width: 11rem;
+  }
+  .divbox {
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 19.5rem;
+    height: 10rem;
   }
 }
 @media (max-width: 768px) {
@@ -53,5 +128,29 @@
     border-radius: 5px;
     padding: 1rem;
     width: 100%;
+  }
+  .divbox {
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 18rem;
+    height: 10rem;
+  }
+}
+@media (max-width: 425px) {
+  .divrwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .bigdivbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
