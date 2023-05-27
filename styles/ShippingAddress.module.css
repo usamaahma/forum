@@ -1,0 +1,103 @@
+.mainbox {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.centerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.paddingdiv {
+  padding: 1rem;
+  width: 50rem;
+}
+.input {
+  width: 18rem;
+  padding: 0.5rem;
+}
+.input1 {
+  width: 8rem;
+  padding: 0.5rem;
+}
+.namtext {
+  color: #151515;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.greenbtn {
+  background-color: #42b00f;
+  border: #42b00f 1px solid;
+  width: 10rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: white;
+  border-radius: 0.3rem;
+}
+.fortext {
+  color: Blue;
+  font-weight: 500;
+}
+.paddleft {
+  padding-left: 3rem;
+}
+.spacebet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .paddingdiv {
+    padding: 1rem;
+    width: 40rem;
+  }
+  .input {
+    width: 17rem;
+    padding: 0.5rem;
+  }
+  .drag {
+    padding: 1rem;
+    width: 20rem;
+  }
+  .paddleft {
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .paddingdiv {
+    padding: 1rem;
+    width: 100%;
+  }
+  .input {
+    width: 15rem;
+    padding: 0.5rem;
+  }
+  .paddleft {
+    padding-left: 1.5rem;
+  }
+  .input1 {
+    width: 6rem;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .paddingdiv {
+    padding: 1rem;
+    width: 100%;
+  }
+  .input {
+    width: 15rem;
+    padding: 0.5rem;
+  }
+  .paddleft {
+    padding-left: 4rem;
+  }
+}
+@media (max-width: 375px) {
+  .paddleft {
+    padding-left: 2rem;
+  }
+}

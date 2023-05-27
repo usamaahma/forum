@@ -57,17 +57,17 @@ function PersonalInfo() {
     <div>
       <div className={Styles.mainbox}>
         <div className={Styles.eidtdiv}>
-          <p>Personal Information</p>
+          <h4>Personal Information</h4>
           <Image src={Edit} alt="" />
         </div>
-        <hr />
+        <hr style={{ border: "solid 1px #E8E8E8" }} />
         <div className={Styles.paddingdiv}>
           <Row justify="center">
             <Col lg={12} md={12} xs={24}>
               <div className={Styles.centerdiv}>
                 <div>
                   <h3>Basic Information</h3>
-                  <hr />
+                  <hr style={{ border: "solid 1px #E8E8E8" }} />
                   <br />
                   <Form
                     name="basic"
@@ -161,7 +161,7 @@ function PersonalInfo() {
               <div className={Styles.centerdiv}>
                 <div>
                   <h3>Education</h3>
-                  <hr />
+                  <hr style={{ border: "solid 1px #E8E8E8" }} />
                   <br />
                   <Form
                     name="basic"
@@ -218,12 +218,18 @@ function PersonalInfo() {
             </Col>
           </Row>
         </div>
-        <hr />
+        <hr style={{ border: "solid 1px #E8E8E8" }} />
         <div className={Styles.eidtdiv}>
-          <p>Business Info</p>
+          <h4>Business Info</h4>
           <Image src={Edit} alt="" />
         </div>
-        <hr />
+        <hr
+          style={{
+            border: "solid 1px #E8E8E8",
+            marginLeft: "1rem",
+            marginRight: "1rem",
+          }}
+        />
         <div className={Styles.paddingdiv}>
           <Row justify="center">
             <Col lg={12} md={12} xs={24}>
@@ -362,12 +368,22 @@ function PersonalInfo() {
             </Col>
           </Row>
         </div>
-        <hr />
+        <hr
+          style={{
+            border: "solid 1px #E8E8E8",
+          }}
+        />
         <div className={Styles.eidtdiv}>
-          <p>Social Network</p>
+          <h4>Social Network</h4>
           <Image src={Edit} alt="" />
         </div>
-        <hr />
+        <hr
+          style={{
+            border: "solid 1px #E8E8E8",
+            marginLeft: "1rem",
+            marginRight: "1rem",
+          }}
+        />
         <div className={Styles.paddingdiv}>
           <Row justify="center">
             <Col lg={12} md={12} xs={24}>

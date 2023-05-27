@@ -2,6 +2,9 @@ import React from "react";
 import { Tabs } from "antd";
 import Styles from "../../styles/RightProfile.module.css";
 import PersonalInfo from "./PersonalInfo";
+import LoginInfo from "./LoginInfo";
+import ShippingAddress from "./ShippingAddress";
+import Payment from "./Payment";
 
 function callback(key) {
   console.log(key);
@@ -30,13 +33,13 @@ function RightProfile() {
             key="2"
             className={Styles.blscktext}
           >
-            Profile
+            <LoginInfo />
           </TabPane>
           <TabPane tab="Shipping Address" key="3" className={Styles.blscktext}>
-            Profile
+            <ShippingAddress />
           </TabPane>
           <TabPane tab="Payment Setting" key="4" className={Styles.blscktext}>
-            Profile
+            <Payment />
           </TabPane>
         </Tabs>
       </div>
