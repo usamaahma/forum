@@ -30,6 +30,20 @@
   }
 }
 
+@media (max-width: 768px) {
+  .mainhero {
+    background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 28vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+  }
+}
 @media (max-width: 425px) {
   .sizesteps {
     width: 40%;
