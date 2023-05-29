@@ -1,24 +1,31 @@
 import React from "react";
-import Styles from "../../styles/ConsumerFood.module.css";
+import Styles from "../../styles/DeshiShopViewed.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
-import FruitVageProductCard from "./FruitVageProductCard";
-import Post from "../../public/images/image 77.png";
-import Image from "next/image";
+import ProductViewCard from "./ProductViewCard";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   375: { items: 1 },
   425: { items: 2 },
   568: { items: 2 },
-  1024: { items: 4 },
-  1440: { items: 5 },
-  2560: { items: 5 },
+  768: { items: 3 },
+  1024: { items: 3 },
+  1440: { items: 4 },
+  2560: { items: 4 },
 };
-function ConsumerFood() {
+function ListingViewed() {
   return (
     <div>
+      <div className={Styles.divcenter}></div>
+      <br />
       <div className={Styles.centercaro}>
+        <div className={Styles.textdiv}>
+          <h2>Products</h2>
+          <p className={Styles.viewtext}>View all</p>
+          <div className={Styles.greenline}></div>
+        </div>
+        <hr className={Styles.hrline} />
         <div>
           <div className={Styles.carodiv}>
             <AliceCarousel
@@ -29,24 +36,22 @@ function ConsumerFood() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <FruitVageProductCard />
+                    <ProductViewCard />
                   </div>
                 </div>
               ))}
               responsive={responsive}
-              disableButtonsControls
+              // disableButtonsControls
+              disableDotsControls
               autoPlay
               autoPlayInterval={2000}
               disableAutoPlayOnAction={false}
             />
           </div>
         </div>
-        <div>
-          <Image src={Post} alt="" className={Styles.postsize} />
-        </div>
       </div>
     </div>
   );
 }
 
-export default ConsumerFood;
+export default ListingViewed;
