@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs, Select } from "antd";
 import Styles from "../../styles/RightViewed.module.css";
 import DeshiShopViewed from "./DeshiShopViewed";
+import ListingViewed from "./ListingViewed";
 
 const { Option } = Select;
 
@@ -27,7 +28,7 @@ function RightViewed() {
             <DeshiShopViewed />
           </TabPane>
           <TabPane tab="Listing" key="2" className={Styles.blscktext}>
-            done
+            <ListingViewed />
           </TabPane>
         </Tabs>
       </div>
