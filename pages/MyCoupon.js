@@ -1,19 +1,18 @@
 import React from "react";
 import Styles from "../styles/MyOrderPage.module.css";
-import MainHeader from "@/components/common/mainHeader";
-import Footer from "@/components/common/footer";
+import MainHeader from "../components/common/mainHeader";
+import Footer from "../components/common/footer";
 import { Col, Row } from "antd";
+import HeroCoupon from "@/components/MyCoupon/HeroCoupon";
 import LeftOrder from "@/components/MyOrder/LeftOrder";
-// import RightOrder from "@/components/MyOrder/RightOrder";
-import HeroMyComments from "@/components/MyComments/HeroComments";
-import RightComments from "@/components/MyComments/RightComments";
+import RightCoupon from "@/components/MyCoupon/RightCoupon";
 
-function MyComments() {
+function MyCoupon() {
   return (
     <div>
       <div>
         <MainHeader />
-        <HeroMyComments />
+        <HeroCoupon />
         <br />
         <br />
         <div>
@@ -25,7 +24,7 @@ function MyComments() {
             </Col>
             <Col>
               <div className={Styles.centercolorder1}>
-                <RightComments />
+                <RightCoupon />
               </div>
             </Col>
           </Row>
@@ -36,4 +35,4 @@ function MyComments() {
   );
 }
 
-export default MyComments;
+export default MyCoupon;
