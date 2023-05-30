@@ -1,0 +1,72 @@
+.mainReview {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  width: 50rem;
+}
+.smllprodiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.padding {
+  padding: 1rem;
+}
+.goodtext {
+  font-size: 0.9rem;
+  color: #444444;
+  font-weight: 700;
+}
+.longtext {
+  color: #737373;
+  font-size: 0.8rem;
+}
+.imgsize {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+}
+.divflexbox {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.shoptext {
+  color: #373737;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.protext {
+  color: #444444;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.pricetext {
+  color: #151515;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.gretext {
+  color: #a1a1a1;
+  text-decoration-line: line-through;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.soldtext {
+  color: #a1a1a1;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+.divbox {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.startext {
+  font-size: 0.9rem;
+}
+.marleft {
+  margin-left: 0.5rem;
+}
