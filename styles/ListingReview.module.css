@@ -24,7 +24,7 @@
   font-size: 0.8rem;
 }
 .imgsize {
-  width: 4rem;
+  width: 5rem;
   height: 5rem;
   border-radius: 0.5rem;
 }
@@ -78,6 +78,9 @@
 }
 .edit:hover {
   color: #42b00f !important;
+}
+.line {
+  border: 1px solid #d0d0d0;
 }
 @media (max-width: 1024px) {
   .mainReview {
