@@ -87,9 +87,9 @@ function RightSectionOfMember() {
           </div>
         </div>
       </div>
-      <Row justify="space-evenly">
+      <Row justify="center" className={Styles.wirow}>
         {card.map((index) => (
-          <Col key={index}>
+          <Col key={index} xxl={8} xl={8} lg={12} md={8} xs={24}>
             <div className={Styles.centercol}>
               <Link href="/memberPageTwo">
                 <MemberCard />
