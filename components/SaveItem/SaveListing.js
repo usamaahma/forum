@@ -3,7 +3,6 @@ import Styles from "../../styles/DeshiShopViewed.module.css";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
-import ProductViewCard from "./ProductViewCard";
 import DeshiProductCard from "../DeshiServices/DeshiProductCard";
 import BuyProductCard from "../BuyAndSell/BuyProductCard";
 import RentalCard from "../Rental/RentalCard";
@@ -18,7 +17,7 @@ const responsive = {
   1440: { items: 4 },
   2560: { items: 4 },
 };
-function ListingViewed() {
+function SaveListing() {
   return (
     <div>
       <br />
@@ -153,4 +152,4 @@ function ListingViewed() {
   );
 }
 
-export default ListingViewed;
+export default SaveListing;
