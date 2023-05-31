@@ -19,7 +19,7 @@ function NewsRightSection() {
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.feadiv}>
-        {/* <div className={Styles.boxgreen}>
+        <div className={Styles.boxgreen}>
           <Image
             style={{ width: "10rem", height: "5rem" }}
             src={Group}
@@ -31,7 +31,7 @@ function NewsRightSection() {
               Ipsum is simply dummy text of the printing
             </p>
           </div>
-        </div> */}
+        </div>
         <div>
           <p style={{ color: "#151515", fontWeight: "600" }}>Featured News</p>
           <div
