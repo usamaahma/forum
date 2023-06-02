@@ -4,6 +4,7 @@ import { Tabs } from "antd";
 import PaymentRoom from "./PaymentRoom";
 import RightCoupon from "../MyCoupon/RightCoupon";
 import Coupon from "./Coupon";
+import Store from "./Store";
 function callback(key) {
   console.log(key);
 }
@@ -21,7 +22,7 @@ function Setting() {
             className={Styles.sizetab}
           >
             <TabPane tab="Store" key="1" className={Styles.blscktext}>
-              abc
+              <Store />
             </TabPane>
             <TabPane tab="Payment" key="2" className={Styles.blscktext}>
               <PaymentRoom />
