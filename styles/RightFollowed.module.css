@@ -1,0 +1,12 @@
+.blscktext {
+  color: black !important;
+  border-bottom: none !important;
+}
+.dispcrd {
+  display: flex;
+}
+@media (max-width: 425px) {
+  .dispcrd {
+    display: block;
+  }
+}

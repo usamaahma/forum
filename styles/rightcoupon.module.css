@@ -1,0 +1,14 @@
+.twobtnds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.datatbl {
+  width: 52rem !important;
+}
+
+@media (max-width: 1024px) {
+  .datatbl {
+    width: 40rem !important;
+  }
+}
