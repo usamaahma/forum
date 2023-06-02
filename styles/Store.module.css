@@ -2,6 +2,7 @@
   background: #ffffff;
   box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
+  padding: 20px 0px;
 }
 .eidtdiv {
   display: flex;
@@ -20,13 +21,10 @@
   padding: 1rem;
 }
 .input {
-  width: 20rem;
+  width: 18rem;
   padding: 0.5rem;
 }
-.input1 {
-  width: 8rem;
-  padding: 0.5rem;
-}
+
 .namtext {
   color: #151515;
   font-weight: 500;
@@ -39,7 +37,7 @@
 }
 .updiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 .centerup {
@@ -56,7 +54,7 @@
 }
 .drag {
   padding: 1rem;
-  width: 30rem;
+  width: 28rem;
 }
 .textupp {
   color: #444444;
@@ -83,6 +81,35 @@
   color: white;
   border-radius: 0.3rem;
 }
+.addtext {
+  margin-left: 2.2rem;
+  color: #151515;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.imsize {
+  width: 10rem;
+  height: 10rem;
+}
+.weekdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.upbtn {
+  background-color: #42b00f;
+  border: #42b00f 1px solid;
+  width: 6rem;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 0.2rem;
+}
+.map {
+  width: 100%;
+  height: 18.5rem;
+}
 @media (max-width: 1024px) {
   .eidtdiv {
     display: flex;
@@ -92,12 +119,18 @@
     width: 40rem;
   }
   .input {
-    width: 17rem;
+    width: 15rem;
     padding: 0.5rem;
   }
   .drag {
     padding: 1rem;
     width: 20rem;
+  }
+  .addtext {
+    margin-left: 1.2rem;
+    color: #151515;
+    font-weight: 700;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -127,8 +160,6 @@
     width: 100%;
   }
   .updiv {
-    border: 2px dashed #d0d0d0;
-    border-radius: 18px;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -137,5 +168,11 @@
   }
   .divcneter {
     margin-top: 1rem;
+  }
+  .addtext {
+    margin-left: 3.3rem;
+    color: #151515;
+    font-weight: 700;
+    font-size: 1rem;
   }
 }
