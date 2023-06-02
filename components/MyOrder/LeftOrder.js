@@ -55,47 +55,57 @@ function LeftOrder() {
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Your Comments</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
+          <Link href="./MyComments">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Your Comments</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Coupons & offers</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
+          <Link href="./MyCoupon">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Coupons & offers</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Followed Shops</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
+          <Link href="./MyFollowed">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Followed Shops</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Your Listings</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
+          <Link href="./MyListing">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Your Listings</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Your Posts</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
+          <Link href="./MyPost">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Your Posts</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
-          {/* <Link href="./MeSellerPage"> */}
-          <div className={Styles.greysmll}>
-            <p className={Styles.text}>Seller Room</p>
-            <RightOutlined className={Styles.text1} />
-          </div>
-          {/* </Link> */}
+          <Link href="./MySellerPage">
+            <div className={Styles.greysmll}>
+              <p className={Styles.text}>Seller Room</p>
+              <RightOutlined className={Styles.text1} />
+            </div>
+          </Link>
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>

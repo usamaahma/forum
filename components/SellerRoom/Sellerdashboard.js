@@ -50,7 +50,7 @@ function Sellerdashboard() {
             <Card
               bordered={false}
               style={{
-                width: 200,
+                width: 150,
               }}
             >
               <p className={Styles.saletxt}>Sales</p>
@@ -61,7 +61,7 @@ function Sellerdashboard() {
             <Card
               bordered={false}
               style={{
-                width: 200,
+                width: 150,
               }}
             >
               <p className={Styles.saletxt}>Earning</p>
@@ -73,7 +73,7 @@ function Sellerdashboard() {
             <Card
               bordered={false}
               style={{
-                width: 200,
+                width: 150,
               }}
             >
               <p className={Styles.saletxt}>Orders</p>
@@ -85,7 +85,7 @@ function Sellerdashboard() {
             <Card
               bordered={false}
               style={{
-                width: 200,
+                width: 150,
               }}
             >
               <p className={Styles.saletxt}>Pageview</p>
@@ -119,7 +119,7 @@ function Sellerdashboard() {
             </Card>
           </Col>
           <Col>
-            <Card bordered={false} style={{ width: 250 }}>
+            <Card bordered={false} style={{ width: 200 }}>
               <p className={Styles.otherr}>Orders</p>
               <div>
                 <div className={Styles.disbet}>
@@ -159,7 +159,7 @@ function Sellerdashboard() {
           </Col>
 
           <Col>
-            <Card bordered={false} style={{ width: 250 }}>
+            <Card bordered={false} style={{ width: 200 }}>
               <p className={Styles.otherr}>Products</p>
               {productdata.map((data, index) => (
                 <div key={index}>

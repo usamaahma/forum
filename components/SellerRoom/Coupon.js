@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../../styles/Coupon.module.css";
 import { DownOutlined, DashOutlined } from "@ant-design/icons";
-import { Input, Space, Button, Dropdown, Tag } from "antd";
+import {
+  Input,
+  Space,
+  Button,
+  Dropdown,
+  Tag,
+  Modal,
+  Row,
+  Col,
+  Form,
+  DatePicker,
+  Select,
+} from "antd";
 import DataTable from "react-data-table-component";
+import Image from "next/image";
+import Frame from "../../public/images/Frame 44979.png";
+const handleChange = (value) => {
+  console.log(`selected ${value}`);
+};
+const onFinish = (values) => {
+  console.log("Success:", values);
+};
+const onFinishFailed = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
+const { Search } = Input;
 
+const onSearch = (value) => console.log(value);
 const columns = [
   {
     name: "Name",
@@ -123,11 +148,18 @@ const items1 = [
     label: <a>Delete</a>,
   },
 ];
-const { Search } = Input;
-
-const onSearch = (value) => console.log(value);
 
 function Coupon() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <div className={Styles.twobtnds}>
@@ -142,7 +174,7 @@ function Coupon() {
             />
           </Space>
         </div>
-        <div>
+        <div className={Styles.flexxxx}>
           <Dropdown
             menu={{
               items,
@@ -157,6 +189,12 @@ function Coupon() {
               <DownOutlined />
             </Button>
           </Dropdown>
+          <Image
+            src={Frame}
+            alt=""
+            className={Styles.mrleft}
+            onClick={showModal}
+          />
         </div>
       </div>
       <div>
@@ -166,6 +204,150 @@ function Coupon() {
           data={data}
           selectableRows
         />
+      </div>
+      <div>
+        <Modal
+          title="Basic Modal"
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={null}
+        >
+          <Row justify="center">
+            <Col lg={12}>
+              <div className={Styles.centerdiv}>
+                <div>
+                  <br />
+                  <Form
+                    name="basic"
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    autoComplete="off"
+                  >
+                    <p className={Styles.namtext}>Campaigns Name</p>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Campaigns Name!",
+                        },
+                      ]}
+                    >
+                      <Input
+                        className={Styles.input}
+                        placeholder="Campaigns Name"
+                      />
+                    </Form.Item>
+                    <p className={Styles.namtext}>Start Date </p>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Start Date !",
+                        },
+                      ]}
+                    >
+                      <DatePicker
+                        className={Styles.input}
+                        placeholder="Start Date "
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Code!",
+                        },
+                      ]}
+                    >
+                      <p className={Styles.namtext}>Code</p>
+                      <Input className={Styles.input} placeholder="Code" />
+                    </Form.Item>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                        },
+                      ]}
+                    >
+                      <Button htmlType="submit" className={Styles.btnsub}>
+                        Generate
+                      </Button>
+                    </Form.Item>
+                  </Form>
+                </div>
+              </div>
+            </Col>
+            <Col lg={12}>
+              <div className={Styles.centerdiv}>
+                <div>
+                  <br />
+                  <Form
+                    name="basic"
+                    onFinish={onFinish}
+                    onFinishFailed={onFinishFailed}
+                    autoComplete="off"
+                  >
+                    <p className={Styles.namtext}>Percentage</p>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Percentage!",
+                        },
+                      ]}
+                    >
+                      <Input
+                        className={Styles.input}
+                        placeholder="Percentage"
+                      />
+                    </Form.Item>
+                    <p className={Styles.namtext}>End Date</p>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your End Date!",
+                        },
+                      ]}
+                    >
+                      <DatePicker
+                        className={Styles.input}
+                        placeholder="End Date"
+                      />
+                    </Form.Item>
+                    <Form.Item
+                      rules={[
+                        {
+                          required: true,
+                          message: "Please input your Product Type!",
+                        },
+                      ]}
+                    >
+                      <p className={Styles.namtext}>Product Type</p>
+                      <Select
+                        placeholder="Product Type"
+                        defaultValue="Product Type"
+                        className={Styles.input}
+                        onChange={handleChange}
+                        options={[
+                          {
+                            value: "Product Type",
+                            label: "Product Type",
+                          },
+                          {
+                            value: "Product Type",
+                            label: "Product Type",
+                          },
+                        ]}
+                      />
+                    </Form.Item>
+                  </Form>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Modal>
       </div>
     </div>
   );
