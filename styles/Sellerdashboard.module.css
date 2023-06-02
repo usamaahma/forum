@@ -1,20 +1,21 @@
 .saletxt {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #737373;
 }
 .other {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #151515;
+  margin-bottom: 1rem;
 }
 .otherr {
   font-size: 1.2rem;
   color: #151515;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 
 .cards {
   display: flex;
+  justify-content: space-evenly !important;
   flex-wrap: nowrap;
 }
 .cardelements {
@@ -30,7 +31,7 @@
 .disbet {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
 }
 @media (max-width: 768px) {
   .cards {
