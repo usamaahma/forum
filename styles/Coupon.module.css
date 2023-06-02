@@ -39,4 +39,7 @@
   .datatbl {
     width: 100% !important;
   }
+  .input {
+    width: 14rem;
+  }
 }

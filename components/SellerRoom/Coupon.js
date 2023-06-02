@@ -214,7 +214,7 @@ function Coupon() {
           footer={null}
         >
           <Row justify="center">
-            <Col lg={12}>
+            <Col lg={12} md={12}>
               <div className={Styles.centerdiv}>
                 <div>
                   <br />
@@ -278,7 +278,7 @@ function Coupon() {
                 </div>
               </div>
             </Col>
-            <Col lg={12}>
+            <Col lg={12} md={12}>
               <div className={Styles.centerdiv}>
                 <div>
                   <br />
