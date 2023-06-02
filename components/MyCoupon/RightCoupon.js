@@ -1,30 +1,63 @@
 import React from "react";
 import Styles from "../../styles/rightcoupon.module.css";
-import { DownOutlined } from "@ant-design/icons";
+import { DownOutlined, DeleteOutlined } from "@ant-design/icons";
 import { Input, Space, Button, Dropdown } from "antd";
 import DataTable from "react-data-table-component";
 
 const columns = [
   {
-    name: "Title",
-    selector: (row) => row.title,
+    name: "Name",
+    selector: (row) => row.name,
   },
   {
-    name: "Year",
-    selector: (row) => row.year,
+    name: "Code",
+    selector: (row) => row.code,
+  },
+  {
+    name: "Amount",
+    selector: (row) => row.amount,
+  },
+  {
+    name: "Status",
+    selector: (row) => row.status,
+  },
+  {
+    name: "Product",
+    selector: (row) => row.product,
+  },
+  {
+    name: "Action",
+    selector: (row) => row.action,
   },
 ];
 
 const data = [
   {
     id: 1,
-    title: "Beetlejuice",
-    year: "1988",
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Active",
+    product: "All Products",
+    action: <DeleteOutlined />,
   },
   {
     id: 2,
-    title: "Ghostbusters",
-    year: "1984",
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Expired",
+    product: "All Products",
+    action: <DeleteOutlined />,
+  },
+  {
+    id: 3,
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Expired",
+    product: "All Products",
+    action: <DeleteOutlined />,
   },
 ];
 
@@ -91,7 +124,7 @@ function RightCoupon() {
         </div>
       </div>
       <div>
-        <DataTable columns={columns} data={data} />
+        <DataTable className={Styles.datatbl} columns={columns} data={data} selectableRows />{" "}
       </div>
     </div>
   );

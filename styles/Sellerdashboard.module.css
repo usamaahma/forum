@@ -1,0 +1,41 @@
+.saletxt {
+  font-size: 1.5rem;
+  color: #737373;
+}
+.other {
+  font-size: 1.8rem;
+  color: #151515;
+}
+.otherr {
+  font-size: 1.2rem;
+  color: #151515;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.cardelements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center !important;
+  margin-bottom: 2rem;
+}
+.monthtxt {
+  color: #737373;
+  font-size: 1rem;
+}
+.disbet {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3rem;
+}
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
