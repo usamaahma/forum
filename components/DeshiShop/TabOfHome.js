@@ -1,6 +1,8 @@
 import React from "react";
-import Styles from "../../styles/TabOfFood.module.css";
-import { Tabs } from "antd";
+import Styles from "../../styles/TabOfHome.module.css";
+// import { Tabs } from "antd";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import HomeLiving from "./HomeLiving";
 
 function TabOfHome() {
@@ -9,7 +11,7 @@ function TabOfHome() {
       <div className={Styles.tabdiv}>
         <h3 className={Styles.context}>Home & Living</h3>
         <div className={Styles.greenline}></div>
-        <Tabs
+        {/* <Tabs
           centered
           className={Styles.ant}
           defaultActiveKey="1"
@@ -35,9 +37,10 @@ function TabOfHome() {
               children: <HomeLiving />,
             },
           ]}
-        />
+        /> */}
       </div>
-      {/* <Tabs direction={"rtl"}>
+      <div dir="rtl" className={Styles.widthtab}>
+        <Tabs direction={"rtl"}>
           <TabList>
             <Tab style={{ color: "#42B00F" }}>Furniture</Tab>
             <Tab style={{ color: "#42B00F" }}>Flower & Plant</Tab>
@@ -56,7 +59,8 @@ function TabOfHome() {
           <TabPanel>
             <HomeLiving />
           </TabPanel>
-        </Tabs> */}
+        </Tabs>
+      </div>
     </div>
   );
 }

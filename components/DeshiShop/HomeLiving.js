@@ -24,28 +24,7 @@ function HomeLiving() {
     <div>
       <div>
         <Row justify="center">
-          <Col>
-            <div className={Styles.divdiv}>
-              <Card
-                hoverable
-                className={Styles.card}
-                cover={<Image src={Product} alt="abc" className={Styles.img} />}
-              >
-                <p className={Styles.pronam}>Product Name</p>
-                <div className={Styles.price}>
-                  <p className={Styles.pricetext}>$50.99</p>
-                  <p className={Styles.greenprrice}>$50.99</p>
-                  <p className={Styles.soldtext}>30+ sold</p>
-                  <Image src={Vector} alt="abc" className={Styles.border} />
-                </div>
-                <div className={Styles.stardiv}>
-                  <Rate allowHalf defaultValue={2.5} className={Styles.star} />
-                  <p className={Styles.thre}>(30+)</p>
-                </div>
-              </Card>
-            </div>
-          </Col>
-          <Col lg={14} className={Styles.divdiv1}>
+          <Col xxl={14} xl={14} lg={14} md={11} className={Styles.divdiv1}>
             <Row justify="center">
               <Col>
                 <div className={Styles.centercaro}>
@@ -74,7 +53,7 @@ function HomeLiving() {
                   </div>
                 </div>
               </Col>
-              <Col>
+              <Col xxl={10} xl={10} lg={10} md={10}>
                 <div className={Styles.centercaro}>
                   <div className={Styles.carodiv}>
                     <AliceCarousel
@@ -102,6 +81,28 @@ function HomeLiving() {
                 </div>
               </Col>
             </Row>
+          </Col>
+          <Col>
+            <div className={Styles.divdiv}>
+              <Card
+                hoverable
+                className={Styles.card}
+                cover={<Image src={Product} alt="abc" className={Styles.img} />}
+              >
+                <p className={Styles.pronam}>Product Name</p>
+
+                <div className={Styles.price}>
+                  <Image src={Vector} alt="abc" className={Styles.border} />
+                  <p className={Styles.soldtext}>30+ sold</p>
+                  <p className={Styles.greenprrice}>$50.99</p>
+                  <p className={Styles.pricetext}>$50.99</p>
+                </div>
+                <div className={Styles.stardiv}>
+                  <p className={Styles.thre}>(30+)</p>
+                  <Rate allowHalf defaultValue={2.5} className={Styles.star} />
+                </div>
+              </Card>
+            </div>
           </Col>
         </Row>
       </div>
