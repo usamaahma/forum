@@ -1,0 +1,173 @@
+import React from "react";
+import Styles from "../../styles/Coupon.module.css";
+import { DownOutlined, DashOutlined } from "@ant-design/icons";
+import { Input, Space, Button, Dropdown, Tag } from "antd";
+import DataTable from "react-data-table-component";
+
+const columns = [
+  {
+    name: "Name",
+    selector: (row) => row.name,
+  },
+  {
+    name: "Code",
+    selector: (row) => (
+      <div>
+        <Tag className={Styles.btn}>{row.code}</Tag>
+      </div>
+    ),
+  },
+  {
+    name: "Amount",
+    selector: (row) => row.amount,
+  },
+  {
+    name: "Status",
+    selector: (row) => (
+      <div>
+        <Tag className={Styles.btn}>{row.status}</Tag>
+      </div>
+    ),
+  },
+  {
+    name: "Product",
+    selector: (row) => row.product,
+  },
+  {
+    name: "Action",
+    selector: (row) => (
+      <div>
+        <Dropdown
+          menu={{
+            items: items1,
+          }}
+          placement="bottomLeft"
+          arrow={{
+            pointAtCenter: true,
+          }}
+        >
+          {row.action}
+        </Dropdown>
+      </div>
+    ),
+  },
+];
+
+const data = [
+  {
+    id: 1,
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Active",
+    product: "All Products",
+    action: <DashOutlined />,
+  },
+  {
+    id: 2,
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Active",
+    product: "All Products",
+    action: <DashOutlined />,
+  },
+  {
+    id: 3,
+    name: "Black Friday",
+    code: "Black Friday",
+    amount: "50%",
+    status: "Active",
+    product: "All Products",
+    action: <DashOutlined />,
+  },
+];
+
+const items = [
+  {
+    key: "1",
+    label: <a>Active </a>,
+  },
+  {
+    key: "2",
+    label: <a>Disable</a>,
+  },
+  {
+    key: "3",
+    label: <a>Archive</a>,
+  },
+  {
+    key: "4",
+    label: <a>Delete</a>,
+  },
+];
+const items1 = [
+  {
+    key: "1",
+    label: <a>Active </a>,
+  },
+  {
+    key: "2",
+    label: <a>Disable</a>,
+  },
+  {
+    key: "3",
+    label: <a>Archive</a>,
+  },
+  {
+    key: "4",
+    label: <a>Edit</a>,
+  },
+  {
+    key: "5",
+    label: <a>Delete</a>,
+  },
+];
+const { Search } = Input;
+
+const onSearch = (value) => console.log(value);
+
+function Coupon() {
+  return (
+    <div>
+      <div className={Styles.twobtnds}>
+        <div>
+          <Space direction="vertical">
+            <Search
+              placeholder="input search text"
+              onSearch={onSearch}
+              style={{
+                width: 200,
+              }}
+            />
+          </Space>
+        </div>
+        <div>
+          <Dropdown
+            menu={{
+              items,
+            }}
+            placement="bottomLeft"
+            arrow={{
+              pointAtCenter: true,
+            }}
+          >
+            <Button>
+              Filter
+              <DownOutlined />
+            </Button>
+          </Dropdown>
+        </div>
+      </div>
+      <div>
+        <DataTable
+          className={Styles.datatbl}
+          columns={columns}
+          data={data}
+          selectableRows
+        />
+      </div>
+    </div>
+  );
+}
+export default Coupon;

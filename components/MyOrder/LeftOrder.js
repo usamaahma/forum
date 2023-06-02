@@ -90,10 +90,12 @@ function LeftOrder() {
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>
+          {/* <Link href="./MeSellerPage"> */}
           <div className={Styles.greysmll}>
             <p className={Styles.text}>Seller Room</p>
             <RightOutlined className={Styles.text1} />
           </div>
+          {/* </Link> */}
         </div>
         <hr style={{ border: "1px solid #E8E8E8" }} />
         <div>

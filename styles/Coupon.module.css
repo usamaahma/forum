@@ -1,0 +1,26 @@
+.twobtnds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.datatbl {
+  width: 47rem !important;
+}
+.btn {
+  background-color: #def5d3;
+  border: #def5d3 solid 1px;
+  color: #42b00f;
+  padding: 0.2rem;
+}
+
+@media (max-width: 1024px) {
+  .datatbl {
+    width: 35rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .datatbl {
+    width: 100% !important;
+  }
+}

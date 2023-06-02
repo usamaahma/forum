@@ -1,0 +1,86 @@
+.maindiv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+}
+.flexbet {
+  display: flex;
+  justify-content: center;
+  /* width: 50rem; */
+}
+.blscktext {
+  color: black !important;
+  border-bottom: none !important;
+}
+.mblviewend {
+  position: absolute;
+  margin-left: -7.5rem;
+  margin-top: -0.1rem !important;
+}
+.sizetab {
+  width: 45rem;
+}
+.rcnttxte {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.blackln {
+  border-bottom: solid black 0.001rem;
+  margin-top: 0.2rem;
+}
+.imgabs {
+  position: absolute;
+  margin-top: -0.1rem;
+}
+.srvcard {
+  padding: 1.5rem;
+}
+.tabbutton {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .srvcard {
+    padding: 1rem;
+  }
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    /* width: 40rem; */
+  }
+  .sizetab {
+    width: 35rem;
+  }
+}
+@media (max-width: 768px) {
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    /* width: 50rem; */
+  }
+  .mblviewend {
+    display: none !important;
+  }
+}
+@media (max-width: 425px) {
+  .srvcard {
+    padding: 0.5rem;
+  }
+  .flexbet {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .mblviewend {
+    display: none !important;
+  }
+  .sizetab {
+    width: 22rem;
+  }
+}
+@media (max-width: 375px) {
+  .sizetab {
+    width: 20rem;
+  }
+}

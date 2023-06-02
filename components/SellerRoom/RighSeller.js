@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Tabs, Card } from "antd";
 import Styles from "../../styles/RightListing.module.css";
 import Sellerdashboard from "./Sellerdashboard";
+import Setting from "./Setting";
 
 function callback(key) {
   console.log(key);
@@ -32,7 +33,7 @@ function RightSeller() {
             abc
           </TabPane>
           <TabPane tab="Settings" key="5" className={Styles.blscktext}>
-            abc
+            <Setting />
           </TabPane>
         </Tabs>
       </div>
