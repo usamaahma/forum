@@ -28,7 +28,6 @@ function MySellerPage() {
               <img alt="abc" src="../images/Frame 44157.png" />
             </Button>
             <Drawer
-              title="Basic Drawer"
               placement="right"
               onClose={onClose}
               open={open}

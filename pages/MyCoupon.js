@@ -31,7 +31,6 @@ function MyCoupon() {
             </Button>
 
             <Drawer
-              title="Basic Drawer"
               placement="right"
               onClose={onClose}
               open={open}
