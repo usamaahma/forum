@@ -3,6 +3,7 @@ import { Button, Tabs, Card } from "antd";
 import Styles from "../../styles/RightListing.module.css";
 import Sellerdashboard from "./Sellerdashboard";
 import ProductsTable from "./ProductTable";
+import Setting from "./Setting";
 
 function callback(key) {
   console.log(key);
@@ -13,6 +14,7 @@ const { TabPane } = Tabs;
 function RightSeller() {
   return (
     <div className={Styles.flexbet}>
+      {" "}
       <div className={Styles.tabbutton}>
         <Tabs
           onChange={callback}
@@ -33,10 +35,11 @@ function RightSeller() {
             abc
           </TabPane>
           <TabPane tab="Settings" key="5" className={Styles.blscktext}>
-            abc
+            <Setting />
           </TabPane>
         </Tabs>
       </div>
+      <Button className={Styles.addprotxt}>+ Add New Product</Button>
     </div>
   );
 }

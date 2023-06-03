@@ -1,3 +1,9 @@
+.maindiv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+}
 .flexbet {
   display: flex;
   justify-content: center;
@@ -13,7 +19,7 @@
   margin-top: -0.1rem !important;
 }
 .sizetab {
-  width: 50rem;
+  width: 45rem;
 }
 .rcnttxte {
   font-size: 1.2rem;
@@ -34,13 +40,6 @@
   display: flex;
   align-items: center;
 }
-.addprotxt {
-  position: absolute;
-  right: 0;
-  color: #42b00f;
-  border-color: #42b00f;
-  background-color: #f9f9f9;
-}
 @media (max-width: 1024px) {
   .srvcard {
     padding: 1rem;
@@ -51,7 +50,7 @@
     /* width: 40rem; */
   }
   .sizetab {
-    width: 40rem;
+    width: 35rem;
   }
 }
 @media (max-width: 768px) {
@@ -65,11 +64,6 @@
   }
 }
 @media (max-width: 425px) {
-  .addprotxt {
-    position: absolute;
-    right: 0;
-    margin-top: 2.5rem;
-  }
   .srvcard {
     padding: 0.5rem;
   }
@@ -82,11 +76,11 @@
     display: none !important;
   }
   .sizetab {
-    width: 26rem;
+    width: 22rem;
   }
 }
 @media (max-width: 375px) {
   .sizetab {
-    width: 26rem;
+    width: 20rem;
   }
 }
