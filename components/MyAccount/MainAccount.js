@@ -38,7 +38,11 @@ const data = [
   {
     key: 3,
     image: <Image src={Eye} alt="" />,
-    text: "Recently Viewed",
+    text: (
+      <Link href="./RecentlyViewedPage" className={Styles.linktext}>
+        Recently Viewed
+      </Link>
+    ),
     text1: "Recently Viewed Product & Listing",
   },
   {
@@ -50,44 +54,72 @@ const data = [
   {
     key: 5,
     image: <Image src={Star} alt="" />,
-    text: "Your Review",
+    text: (
+      <Link href="./YourReviewsPage" className={Styles.linktext}>
+        Your Review
+      </Link>
+    ),
     text1: "Reviewed Product, Listing & Post Comment ",
   },
   {
     key: 6,
     image: <Image src={Star} alt="" />,
-    text: "Your Comments",
+    text: (
+      <Link href="./MyComments" className={Styles.linktext}>
+        Your Comments
+      </Link>
+    ),
     text1: "Reviewed Product, Listing & Post Comment ",
   },
   {
     key: 7,
     image: <Image src={Offer} alt="" />,
-    text: "Coupons & Offer",
+    text: (
+      <Link href="./MyCoupon" className={Styles.linktext}>
+        Coupons & Offer
+      </Link>
+    ),
     text1: "Recent Coupon & Offers",
   },
   {
     key: 8,
     image: <Image src={Add} alt="" />,
-    text: "Followed ",
+    text: (
+      <Link href="./MyFollowed" className={Styles.linktext}>
+        Followed
+      </Link>
+    ),
     text1: "Followed Community Members",
   },
   {
     key: 9,
     image: <Image src={List} alt="" />,
-    text: "Your Listing",
+    text: (
+      <Link href="./MyListing" className={Styles.linktext}>
+        Your Listing
+      </Link>
+    ),
     text1:
       "Listed Service & Product on Deshi Service, Buy & Sell , Rental & Job",
   },
   {
     key: 10,
     image: <Image src={Post} alt="" />,
-    text: "Your Post",
+    text: (
+      <Link href="./MyPost" className={Styles.linktext}>
+        Your Post
+      </Link>
+    ),
     text1: "Posted Topic & Article on Forum & Blog",
   },
   {
     key: 11,
     image: <Image src={Room} alt="" />,
-    text: "Seller Room ",
+    text: (
+      <Link href="./MySellerPage" className={Styles.linktext}>
+        Seller Room
+      </Link>
+    ),
     text1: "Dashboard, Add Product, Orders, Withdrawal",
   },
   {
