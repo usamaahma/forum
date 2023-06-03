@@ -1,9 +1,12 @@
-import React from "react";
-import { Button, Tabs, Card } from "antd";
+import React, { useState } from "react";
+import { Button, Tabs, Modal } from "antd";
 import Styles from "../../styles/RightListing.module.css";
 import Sellerdashboard from "./Sellerdashboard";
 import ProductsTable from "./ProductTable";
 import Setting from "./Setting";
+import Addnewproduct from "./Addnewproduct";
+import Withdraw from "./Withdraw";
+import OrderTable from "./OrderTable";
 
 function callback(key) {
   console.log(key);
@@ -12,6 +15,17 @@ function callback(key) {
 const { TabPane } = Tabs;
 
 function RightSeller() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className={Styles.flexbet}>
       {" "}
@@ -29,17 +43,27 @@ function RightSeller() {
             <ProductsTable />
           </TabPane>
           <TabPane tab="Orders" key="3" className={Styles.blscktext}>
-            abc
+            <OrderTable />
           </TabPane>
           <TabPane tab="Withdraw" key="4" className={Styles.blscktext}>
-            abc
+            <Withdraw />
           </TabPane>
           <TabPane tab="Settings" key="5" className={Styles.blscktext}>
             <Setting />
           </TabPane>
         </Tabs>
       </div>
-      <Button className={Styles.addprotxt}>+ Add New Product</Button>
+      <Button className={Styles.addprotxt} onClick={showModal}>
+        + Add New Product
+      </Button>
+      <Modal
+        className={Styles.widthmodal}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <Addnewproduct />
+      </Modal>
     </div>
   );
 }

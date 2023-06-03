@@ -41,6 +41,9 @@
   border-color: #42b00f;
   background-color: #f9f9f9;
 }
+.widthmodal {
+  width: 55rem !important;
+}
 @media (max-width: 1024px) {
   .srvcard {
     padding: 1rem;

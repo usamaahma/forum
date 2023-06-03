@@ -7,7 +7,11 @@ import DataTable from "react-data-table-component";
 const columns = [
   {
     name: "Image",
-    selector: (row) => row.img,
+    selector: (row) => (
+      <div style={{ width: "15rem" }}>
+        {row.img} {row.picname}
+      </div>
+    ),
   },
   {
     name: "Status",

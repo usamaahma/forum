@@ -18,7 +18,7 @@
   gap: 1rem;
 }
 .datatbl {
-  width: 52rem !important;
+  width: 55rem !important;
 }
 .power {
   width: 0.5rem;
@@ -49,5 +49,18 @@
   }
   .abc {
     float: center;
+  }
+}
+@media (max-width: 375px) {
+  .threetxt {
+    text-align: center;
+    display: grid;
+    justify-content: center !important;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .imgw {
+    margin-left: 5rem;
   }
 }
