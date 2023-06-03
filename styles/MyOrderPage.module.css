@@ -14,6 +14,7 @@
 .drawer {
   display: none;
 }
+
 @media (max-width: 768px) {
   .centercolorder1 {
     display: flex;
@@ -34,5 +35,12 @@
     border: none !important;
     background-color: none !important;
     margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+  .btnnnn {
+    border: none !important;
+    background-color: none !important;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
   }
 }
