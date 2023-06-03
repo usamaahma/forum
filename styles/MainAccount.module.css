@@ -22,9 +22,13 @@
   margin-bottom: 1rem;
 }
 .yourtext {
-  color: #000000;
+  color: #000000 !important;
   font-weight: 600;
   margin-left: 0.5rem;
+}
+.linktext {
+  color: #000000 !important;
+  font-weight: 600 !important;
 }
 .tracktext {
   color: #a1a1a1;

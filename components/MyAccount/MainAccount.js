@@ -18,13 +18,21 @@ const data = [
   {
     key: 1,
     image: <Image src={Bag} alt="" />,
-    text: "Your Orders",
+    text: (
+      <Link href="./MyOrderPage" className={Styles.linktext}>
+        Your Orders
+      </Link>
+    ),
     text1: " Track, Return, Cancel, Invoice for All Order",
   },
   {
     key: 2,
     image: <Image src={Pro} alt="" />,
-    text: "Your Profile",
+    text: (
+      <Link href="./MyProfilePage" className={Styles.linktext}>
+        Your Profile
+      </Link>
+    ),
     text1: "Personal Info, Login & Security,Address, Payment",
   },
   {
