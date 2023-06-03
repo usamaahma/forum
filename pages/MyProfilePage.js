@@ -1,8 +1,8 @@
-import React,{useState} from "react";
-import Styles from "../styles/MyProfilePage.module.css";
+import React, { useState } from "react";
+import Styles from "../styles/MyOrderPage.module.css";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
-import { Col, Row,Button,Drawer } from "antd";
+import { Col, Row, Button, Drawer } from "antd";
 import LeftOrder from "@/components/MyOrder/LeftOrder";
 import HeroProfile from "@/components/YourProfile/HeroProfile";
 import RightProfile from "@/components/YourProfile/RightProfile";
@@ -23,8 +23,8 @@ function MyProfilePage() {
         <br />
         <br />
         <div>
-        <div className={Styles.drawer}>
-            <Button onClick={showDrawer} className={Styles.btnnn}>
+          <div className={Styles.drawer}>
+            <Button onClick={showDrawer} className={Styles.btnnnn}>
               <img alt="abc" src="../images/Frame 44157.png" />
             </Button>
 
