@@ -47,7 +47,7 @@ function MyCoupon() {
             </Col>
             <Col>
               <div className={Styles.centercolorder1}>
-                <Coupon />
+                <RightCoupon />
               </div>
             </Col>
           </Row>

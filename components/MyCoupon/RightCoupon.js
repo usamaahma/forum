@@ -124,7 +124,12 @@ function RightCoupon() {
         </div>
       </div>
       <div>
-        <DataTable className={Styles.datatbl} columns={columns} data={data} selectableRows />{" "}
+        <DataTable
+          className={Styles.datatbl}
+          columns={columns}
+          data={data}
+          selectableRows
+        />
       </div>
     </div>
   );
