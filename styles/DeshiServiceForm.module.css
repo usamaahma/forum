@@ -226,6 +226,16 @@
   }
 }
 @media only screen and (max-width: 425px) {
+  .cardabs {
+    margin-top: 3rem;
+  }
+  .withapp {
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+  }
   .dri {
     margin-bottom: 1.5rem;
   }
