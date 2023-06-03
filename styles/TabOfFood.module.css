@@ -78,6 +78,9 @@
 .postsize {
   width: 67rem;
 }
+.widthtab {
+  width: 67rem;
+}
 @media (max-width: 1440px) {
   .contdiv {
     position: absolute;

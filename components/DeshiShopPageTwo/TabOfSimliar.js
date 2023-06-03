@@ -12,8 +12,8 @@ function TabOfSimliar() {
         <h3 className={Styles.foodtext}>Fashion & Beauty</h3>
         <div className={Styles.greenline}></div>
       </div>
-      <div dir="rtl">
-        {/* <Tabs
+      <div dir="rtl" className={Styles.divtab}>
+        {/* <Tabs 
           centered
           className={Styles.ant}
           defaultActiveKey="1"

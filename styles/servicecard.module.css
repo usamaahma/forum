@@ -1,0 +1,114 @@
+.btnconst {
+  background-color: #def5d3;
+  color: #42b00f;
+  font-weight: 700;
+  border: none;
+  padding: 0.5rem;
+}
+
+.gapro {
+  display: flex;
+  gap: 1rem;
+}
+.butico {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+}
+.imgs {
+  width: 1rem;
+  height: 1rem;
+}
+.seconddiv {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nam {
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+.pric {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.det {
+  color: #737373;
+  font-weight: 500;
+}
+.btncomp {
+  background-color: #fff7d8;
+  color: #ffab00;
+  font-weight: 700;
+  border: none;
+  padding: 0.4rem;
+}
+.btncompp {
+  background-color: #f4f4f4;
+  color: #737373;
+  font-weight: 700;
+  border: none;
+  padding: 0.4rem;
+}
+.stat {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.collstw {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+.collstww {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.availbleswitch {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.rowlast {
+  display: flex;
+  gap: 2rem;
+}
+.rowlastt {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1024px) {
+  .imgmaincard {
+    width: 9rem;
+    height: 15rem;
+  }
+
+  .rowlast {
+    display: block;
+  }
+  .rowlastt {
+    display: block;
+  }
+  .availbleswitch {
+    display: flex;
+    align-items: center;
+    float: right;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 425px) {
+  .nam {
+    font-size: 0.7rem;
+    font-weight: 550;
+  }
+  .pric {
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .imgmaincard {
+    width: 5rem;
+    height: auto;
+  }
+}

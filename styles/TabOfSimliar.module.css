@@ -127,12 +127,15 @@
     width: 9rem;
     border: #42b00f 2px solid;
     position: absolute;
-    margin-top: 2.6rem;
+    margin-top: 1.5rem;
   }
 
-  .tabdiv {
+  /* .tabdiv {
     width: 45rem;
     border-radius: 0.1rem !important;
+  } */
+  .divtab {
+    width: 43rem;
   }
 }
 
@@ -159,18 +162,17 @@
     width: 100%;
   }
 
-  .tabdiv {
-    width: 30rem;
-    border-radius: 0.1rem !important;
+  .divtab {
+    width: 24rem;
   }
 
   .greenline {
     background-color: "#42b00f";
     border-width: 1;
-    width: 5rem;
+    width: 6rem;
     border: #42b00f 2px solid;
     position: absolute;
-    margin-top: 2.6rem;
+    margin-top: 1.6rem;
   }
 
   .context {
@@ -178,5 +180,33 @@
     margin-top: 0.5rem;
     font-size: 0.7rem;
     margin-left: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .divtab {
+    width: 20rem;
+  }
+
+  .greenline {
+    background-color: "#42b00f";
+    border-width: 1;
+    width: 6rem;
+    border: #42b00f 2px solid;
+    position: absolute;
+    margin-top: 1.6rem;
+  }
+}
+@media (max-width: 320px) {
+  .divtab {
+    width: 18rem;
+  }
+
+  .greenline {
+    background-color: "#42b00f";
+    border-width: 1;
+    width: 6rem;
+    border: #42b00f 2px solid;
+    position: absolute;
+    margin-top: 1.6rem;
   }
 }

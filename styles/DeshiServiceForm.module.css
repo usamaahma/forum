@@ -1,3 +1,17 @@
+.curmin {
+  font-weight: 600;
+}
+.withapp {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.submbutto {
+  background-color: #42b00f;
+  width: 8rem;
+  color: white;
+  margin-top: 1.5rem;
+}
 .displdeshiservice {
   display: flex;
   gap: 3rem;
@@ -75,6 +89,7 @@
   margin-top: -0.7rem;
   display: flex;
   align-items: center;
+  border: none !important;
   gap: 0.2rem;
 }
 .divnew {

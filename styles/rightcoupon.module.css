@@ -1,0 +1,66 @@
+.twobtnds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.twobtndss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.threetxt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.datatbl {
+  width: 55rem !important;
+}
+.power {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #42b00f;
+  border-radius: 5rem;
+}
+@media (max-width: 1024px) {
+  .datatbl {
+    width: 40rem !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .twobtndss {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .threetxt {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .abc {
+    float: center;
+  }
+}
+@media (max-width: 375px) {
+  .threetxt {
+    text-align: center;
+    display: grid;
+    justify-content: center !important;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .imgw {
+    margin-left: 5rem;
+  }
+}

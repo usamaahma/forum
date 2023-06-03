@@ -1,0 +1,142 @@
+.divcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divcenter12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+.centercaro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.carodiv {
+  width: 52rem;
+  border-radius: 0.1rem !important;
+}
+.textdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 52rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.hrline {
+  width: 52rem;
+  margin-bottom: 2rem;
+}
+
+.viewtext {
+  color: #42b00f;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.greenline {
+  background-color: "#42b00f";
+  border-width: 1;
+  width: 9rem;
+  border: #42b00f 2px solid;
+  position: absolute;
+  margin-top: 3.9rem;
+}
+
+@media (max-width: 1024px) {
+  .carodiv {
+    width: 40rem;
+    border-radius: 0.1rem !important;
+  }
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .hrline {
+    width: 40rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgbanner {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-top: 1rem;
+  }
+
+  .carodiv {
+    width: 45rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 45rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .carodiv {
+    width: 25rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 24rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .viewtext {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .carodiv {
+    width: 20rem;
+    border-radius: 0.1rem !important;
+  }
+
+  .hrline {
+    width: 18rem;
+    margin-bottom: 2rem;
+  }
+
+  .textdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 18rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,178 @@
+.card {
+  width: 12.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hoverContainer .cardhover {
+  display: none;
+}
+
+.anotherhover {
+  display: none;
+}
+
+.hoverContainer:hover .cardhover {
+  display: grid;
+  position: absolute;
+  margin-top: -12rem;
+  z-index: 1;
+  width: 10rem;
+}
+
+.imghvrr:hover + .anotherhover {
+  display: flex;
+}
+
+.imghvr {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+}
+
+.imghvrr {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-top: 0.3rem;
+}
+
+.btnhover {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #42b00f;
+  color: white;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10.5rem;
+}
+
+.stardiv {
+  display: flex;
+  align-items: center;
+}
+
+.pronam {
+  color: #444444;
+  font-weight: 500;
+  text-align: left;
+}
+
+.pricetext {
+  color: #151515;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.greenprrice {
+  text-decoration-line: line-through;
+  font-size: 0.75rem;
+  color: #219653;
+}
+
+.soldtext {
+  color: #a1a1a1;
+  font-size: 0.75rem;
+}
+
+.border {
+  border: solid 1px rgb(197, 194, 194);
+  padding: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+.star {
+  font-size: 0.8rem;
+}
+
+.thre {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  color: #a1a1a1;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 12.6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .card {
+    width: 11.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.5rem;
+  }
+
+  .pricetext {
+    color: #151515;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .greenprrice {
+    text-decoration-line: line-through;
+    font-size: 0.7rem;
+    color: #219653;
+  }
+
+  .soldtext {
+    color: #a1a1a1;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    width: 11.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 9.5rem;
+  }
+
+  .pricetext {
+    color: #151515;
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+
+  .greenprrice {
+    text-decoration-line: line-through;
+    font-size: 0.7rem;
+    color: #219653;
+  }
+
+  .soldtext {
+    color: #a1a1a1;
+    font-size: 0.7rem;
+  }
+  .star {
+    font-size: 0.7rem;
+  }
+}

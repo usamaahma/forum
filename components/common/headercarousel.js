@@ -13,7 +13,11 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>Home</Button>
+    <Link href="./MyProfilePage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Home
+      </Button>
+    </Link>
   </div>,
   <div
     key="deshi-shop"
@@ -31,34 +35,44 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Deshi Service
-    </Button>
+    <Link href="./DeshiServicePage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Deshi Service
+      </Button>
+    </Link>
   </div>,
   <div
     key="buy-sell"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Buy & Sell
-    </Button>
+    <Link href="./BuyAndSellPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Buy & Sell
+      </Button>
+    </Link>
   </div>,
   <div
     key="rental"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>
-      Rental
-    </Button>
+    <Link href="./RentalPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Rental
+      </Button>
+    </Link>
   </div>,
   <div
     key="job"
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Button style={{ color: "black", borderColor: "transparent" }}>Job</Button>
+    <Link href="./JobPage">
+      <Button style={{ color: "black", borderColor: "transparent" }}>
+        Job
+      </Button>
+    </Link>
   </div>,
   <div
     key="news"

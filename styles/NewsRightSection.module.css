@@ -101,17 +101,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 44rem;
+    /* width: 44rem; */
   }
   .imgsize {
-    width: 23rem;
+    width: 24rem;
   }
   .feadiv {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 55rem;
+    width: 50.5rem;
   }
 }
 @media (max-width: 1404px) {
@@ -139,7 +139,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45rem;
+    width: 35.5rem;
     flex-direction: column;
   }
 }

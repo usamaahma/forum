@@ -42,7 +42,7 @@
   background-color: #ffffff;
   box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  width: 96%;
+  width: 51rem;
 }
 
 .clr {
@@ -186,12 +186,15 @@
 .eventbox {
   width: 51rem;
 }
-@media (max-width: 2200px) {
+.wirow {
+  width: 52rem;
+}
+/* @media (max-width: 2200px) {
   .Carousel {
     margin-top: 1rem;
     width: 58rem;
   }
-}
+} */
 
 @media (max-width: 1440px) {
   .boxflex {
@@ -209,7 +212,7 @@
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
-    width: 98%;
+    width: 51rem;
   }
 
   .Carousel {
@@ -263,10 +266,12 @@
     background-color: #ffffff;
     box-shadow: 0px 2.55885px 17.059px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
-    width: 98%;
-    margin-left: 0.5rem;
+    width: 35rem;
   }
   .eventbox {
+    width: 35rem;
+  }
+  .wirow {
     width: 35rem;
   }
 }
@@ -293,6 +298,9 @@
     margin-left: 0rem;
   }
   .eventbox {
+    width: 100%;
+  }
+  .wirow {
     width: 100%;
   }
 }

@@ -19,7 +19,7 @@ function MembersPage() {
               <LeftSectionOfMembers />
             </div>
           </Col>
-          <Col lg={12}>
+          <Col>
             <div className={Styles.centercol12}>
               <RightSectionOfMember />
             </div>

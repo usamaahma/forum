@@ -1,0 +1,30 @@
+.mainnewsdiv {
+  padding: 1rem;
+}
+.dispbetw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.txttime {
+  color: #7e8284;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+.datainterv {
+  display: flex;
+  gap: 0.9rem;
+}
+.txtint {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.fontw {
+  font-weight: 650;
+}
+.gaptwop {
+  margin-bottom: 1.5rem;
+}
+.buttons {
+  border-color: transparent !important;
+}

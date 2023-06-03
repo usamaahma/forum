@@ -64,7 +64,7 @@
 }
 
 .imgstyle22 {
-  /* width: 125%; */
+  width: 32.5rem;
 }
 
 .boxpadding {
@@ -73,7 +73,7 @@
   box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
   border-radius: 0px 0px 7.44565px 7.44565px;
   margin-top: -0.5rem;
-  /* width: 125%; */
+  width: 32.5rem;
 }
 
 .btn {
@@ -94,11 +94,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60rem;
+  width: 51rem;
 }
 
 .cardivvv {
-  width: 60rem;
+  width: 51rem;
   margin-top: 1rem;
 }
 
@@ -107,16 +107,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    /* width: 60rem; */
   }
 
   .cardivvv {
-    width: 60rem;
+    /* width: 60rem; */
     margin-top: 1rem;
   }
 
   .imgstyle22 {
-    width: 100%;
+    /* width: 100%; */
   }
 
   .boxpadding {
@@ -130,11 +130,6 @@
 }
 
 @media (max-width: 1440px) {
-  .cardivvv {
-    width: 50rem;
-    margin-top: 1rem;
-  }
-
   .padindiv {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -144,7 +139,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 42rem;
+    width: 50rem;
+  }
+
+  .cardivvv {
+    width: 50rem;
+    margin-top: 1rem;
+  }
+  .imgstyle22 {
+    width: 30rem;
+  }
+
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
+    width: 30rem;
   }
 }
 
@@ -166,13 +178,17 @@
     /* width: 90%; */
   }
 
+  .imgstyle22 {
+    width: 21rem;
+  }
+
   .boxpadding {
-    padding: 1.5rem;
+    padding: 1rem;
     background: #ffffff;
     box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
     border-radius: 0px 0px 7.44565px 7.44565px;
     margin-top: -0.5rem;
-    width: 25rem;
+    width: 21rem;
   }
 
   .intertext {
@@ -190,28 +206,28 @@
   }
 
   .cardivvv {
-    width: 40rem;
+    width: 35rem;
     margin-top: 1rem;
   }
   .btnflex {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40rem;
+    width: 35rem;
   }
 }
 
 @media (max-width: 768px) {
-  .imgstyle {
+  .imgstyle22 {
     width: 100%;
   }
 
-  .flexbtndiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  .boxpadding {
+    padding: 1rem;
+    background: #ffffff;
+    box-shadow: 0px 3.81047px 25.4031px rgba(0, 0, 0, 0.05);
+    border-radius: 0px 0px 7.44565px 7.44565px;
+    margin-top: -0.5rem;
     width: 100%;
   }
 

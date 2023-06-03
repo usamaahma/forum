@@ -1,0 +1,45 @@
+.twobtnds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.datatbl {
+  width: 47rem !important;
+}
+.btn {
+  background-color: #def5d3;
+  border: #def5d3 solid 1px;
+  color: #42b00f;
+  padding: 0.2rem;
+}
+.flexxxx {
+  display: flex;
+  /* align-items: center; */
+}
+.mrleft {
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.input {
+  width: 14rem;
+}
+.btnsub {
+  background-color: #42b00f;
+  border: #42b00f 1px solid;
+  color: white;
+}
+@media (max-width: 1024px) {
+  .datatbl {
+    width: 35rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .datatbl {
+    width: 100% !important;
+  }
+  .input {
+    width: 14rem;
+  }
+}

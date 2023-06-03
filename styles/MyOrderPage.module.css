@@ -9,5 +9,30 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+}
+.drawer {
+  display: none;
+}
+@media (max-width: 768px) {
+  .centercolorder1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0rem;
+  }
+}
+@media (max-width: 425px) {
+  .centercolorder {
+    display: none;
+  }
+  .drawer {
+    display: flex;
+  }
+  .btnnn {
+    border: none !important;
+    background-color: none !important;
+    margin-left: 1rem;
+  }
 }

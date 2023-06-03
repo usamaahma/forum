@@ -6,7 +6,6 @@ import detail from "../../detail.json";
 import FruitVageProductCard from "./FruitVageProductCard";
 import Post from "../../public/images/image 77.png";
 import Image from "next/image";
-import TabOfFood from "./TabOfFood";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   375: { items: 1 },
