@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+import { ShoppingCartOutlined } from "@ant-design/icons";
+import { useSelector } from "react-redux";
 
 import {
   Layout,
@@ -13,6 +15,7 @@ import {
   Checkbox,
   Space,
   Dropdown,
+  Badge,
 } from "antd";
 import {
   SearchOutlined,
@@ -63,6 +66,8 @@ const menuProps = {
 };
 function Header2() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { totalCartItems } = useSelector((state) => state.cart);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -318,7 +323,15 @@ function Header2() {
         >
           <div className={Styles.menudiv4}>
             <div className={Styles.imgpp}>
-              <img alt="abc" src="../images/Cart.png" />
+              <Badge
+                showZero
+                count={totalCartItems}
+                // count={1}
+                style={{ marginTop: "-.3rem", backgroundColor: "#42B00F" }}
+              >
+                <ShoppingCartOutlined style={{ fontSize: "1.5rem" }} />
+              </Badge>
+
               <p className={Styles.txttttst}>Cart</p>
             </div>
             <div className={Styles.imgpp}>
