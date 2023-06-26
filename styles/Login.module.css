@@ -1,0 +1,74 @@
+.centercol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sizeimg {
+  width: 30rem;
+  height: 36.3rem;
+  margin-left: -1.7rem;
+}
+.input {
+  width: 22rem;
+  height: 2.5rem;
+  border-radius: 0.2rem !important;
+}
+.whitediv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  height: 32.6rem;
+  margin-top: 1.6rem;
+}
+.btn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 22rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.2rem !important;
+}
+.btn1 {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  border: #ffffff solid 1px;
+  width: 22rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #737373;
+  border-radius: 0.2rem !important;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.flexdivpass {
+  display: flex;
+  justify-content: space-between;
+}
+.fortxt {
+  color: #42b00f;
+  margin-top: 0.3rem;
+}
+.textor {
+  text-align: center;
+  font-weight: 600;
+  margin-top: -1rem;
+  margin-bottom: 0.5rem;
+}
+.donttext {
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+.signtext {
+  color: #2f80ed !important;
+}
+.logo {
+  margin-right: 1rem;
+}

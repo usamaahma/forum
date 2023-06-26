@@ -2,24 +2,31 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const CART_KEY = "cart";
 
-const stateCartItems = JSON.parse(localStorage.getItem(CART_KEY))?.cart
-  ? JSON.parse(localStorage.getItem(CART_KEY)).cart
-  : [];
-const stateTotalPrice = JSON.parse(localStorage.getItem(CART_KEY))?.totalPrice
-  ? JSON.parse(localStorage.getItem(CART_KEY)).totalPrice
-  : 0;
-const stateTotalItems = JSON.parse(localStorage.getItem(CART_KEY))
-  ?.totalCartItems
-  ? JSON.parse(localStorage.getItem(CART_KEY)).totalCartItems
-  : 0;
+// Define initial state values
+const initialState = {
+  cart: [],
+  totalCartItems: 0,
+  totalPrice: 0,
+};
+
+// Retrieve cart data from localStorage on the client-side
+if (typeof window !== "undefined") {
+  const stateCartItems = JSON.parse(localStorage.getItem(CART_KEY))?.cart;
+  const stateTotalPrice = JSON.parse(
+    localStorage.getItem(CART_KEY)
+  )?.totalPrice;
+  const stateTotalItems = JSON.parse(
+    localStorage.getItem(CART_KEY)
+  )?.totalCartItems;
+
+  if (stateCartItems) initialState.cart = stateCartItems;
+  if (stateTotalPrice) initialState.totalPrice = stateTotalPrice;
+  if (stateTotalItems) initialState.totalCartItems = stateTotalItems;
+}
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: {
-    cart: stateCartItems,
-    totalCartItems: stateTotalItems,
-    totalPrice: stateTotalPrice,
-  },
+  initialState,
   reducers: {
     addToCart: (state, action) => {
       const itemInCart = state.cart.find(
