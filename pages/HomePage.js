@@ -4,6 +4,7 @@ import Footer from "@/components/common/footer";
 import HeroSectionHome from "../components/Home/HeroSectonHome";
 import FirstSectionHome from "@/components/Home/FirstSectionHome";
 import SecondHome from "@/components/Home/SecondHome";
+import OpenDeshiShop from "@/components/Home/OpenDeshiShop";
 function HomePage() {
   return (
     <div>
@@ -11,6 +12,7 @@ function HomePage() {
         <MainHeader />
         <HeroSectionHome />
         <FirstSectionHome />
+        <OpenDeshiShop />
         <SecondHome />
         <Footer />
       </div>

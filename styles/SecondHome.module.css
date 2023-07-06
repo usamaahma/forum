@@ -63,8 +63,8 @@
   font-weight: 600;
 }
 .boxwhite {
-  width: 13rem;
-  height: 13rem;
+  width: 15rem;
+  height: 15rem;
   background-color: white;
   padding: 1rem;
   display: flex;
@@ -73,9 +73,43 @@
   flex-direction: column;
   position: absolute;
   right: 0;
-  margin-right: 18rem;
+  margin-right: 45rem;
   border-radius: 0.5rem;
-  margin-top: 12rem;
+  margin-top: 25rem;
+}
+@media (max-width: 1440px) {
+  .boxwhite {
+    width: 13rem;
+    height: 13rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 18rem;
+    border-radius: 0.5rem;
+    margin-top: 12rem;
+  }
+}
+@media (max-width: 1024px) {
+  .boxwhite {
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 10rem;
+    border-radius: 0.5rem;
+    margin-top: 8rem;
+  }
 }
 @media (max-width: 768px) {
   .boxbig {
@@ -86,5 +120,161 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .boxwhite {
+    width: 12rem;
+    height: 12rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 6rem;
+  }
+}
+@media (max-width: 425px) {
+  .boxwhite {
+    width: 8.5rem;
+    height: 8.5rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+  }
+  .Google {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  .btngoogle {
+    width: 7rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.7rem;
+  }
+  .gettext {
+    font-size: 0.6rem !important;
+  }
+  .downtext {
+    text-align: center;
+    color: #42b00f;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+}
+@media (max-width: 375px) {
+  .boxwhite {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+  .Google {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  .btngoogle {
+    width: 6rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.6rem;
+  }
+  .gettext {
+    font-size: 0.5rem !important;
+  }
+  .downtext {
+    text-align: center;
+    color: #42b00f;
+    font-size: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-weight: 600;
+  }
+}
+@media (max-width: 325px) {
+  .boxwhite {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    margin-right: 0.2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+  .Google {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+  .btngoogle {
+    width: 6rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 0.6rem;
+  }
+  .gettext {
+    font-size: 0.5rem !important;
+  }
+  .downtext {
+    text-align: center;
+    color: #42b00f;
+    font-size: 0.6rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-weight: 600;
   }
 }
