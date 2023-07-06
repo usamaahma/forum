@@ -42,6 +42,13 @@
   width: 15rem;
   height: 15rem;
 }
+.flo1 {
+  position: absolute;
+  left: 0;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 48rem;
+}
 @media (max-width: 1024px) {
   .boxx {
     width: 13rem;
@@ -64,7 +71,14 @@
   .flo {
     position: absolute;
     right: 0;
-    margin-top: -42rem;
+    margin-top: -44rem;
+    width: 12rem;
+    height: 12rem;
+  }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 44rem;
     width: 12rem;
     height: 12rem;
   }
@@ -77,6 +91,13 @@
     width: 12rem;
     height: 12rem;
   }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 45rem;
+    width: 12rem;
+    height: 12rem;
+  }
 }
 @media (max-width: 425px) {
   .flo {
@@ -85,5 +106,12 @@
     margin-top: -130rem;
     width: 10rem;
     height: 10rem;
+  }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 130rem;
+    width: 12rem;
+    height: 12rem;
   }
 }

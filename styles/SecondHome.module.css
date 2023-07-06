@@ -1,0 +1,90 @@
+.centercol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.imgposter {
+  height: 20rem;
+  width: 15rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.boxbig {
+  padding: 2rem;
+  height: 40rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imgsize {
+  width: 100%;
+  height: 100%;
+}
+/* .bgimg {
+  background-image: url("../public//images/Frame 48096145 1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 110vh;
+} */
+.Google {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+.btngoogle {
+  width: 10rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.gettext {
+  font-size: 0.8rem;
+}
+.downtext {
+  text-align: center;
+  color: #42b00f;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.boxwhite {
+  width: 13rem;
+  height: 13rem;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  margin-right: 18rem;
+  border-radius: 0.5rem;
+  margin-top: 12rem;
+}
+@media (max-width: 768px) {
+  .boxbig {
+    padding: 2rem;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
