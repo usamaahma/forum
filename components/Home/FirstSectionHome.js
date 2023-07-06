@@ -11,6 +11,7 @@ import News from "../../public/images/Frame.png";
 import Event from "../../public/images/Group (6).png";
 import Forum from "../../public/images/Group (7).png";
 import Blog from "../../public/images/Blogpost.png";
+import Folwer from "../../public/images/Group (4).png";
 const data = [
   {
     id: 1,
@@ -61,6 +62,7 @@ const data = [
 function FirstSectionHome() {
   return (
     <div className={Styles.bgboxx}>
+      <Image src={Folwer} alt="" className={Styles.flo} />
       <div>
         <Row justify="center" className={Styles.widthh}>
           {data.map((item, index) => (
