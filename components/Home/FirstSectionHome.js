@@ -13,50 +13,87 @@ import Forum from "../../public/images/Group (7).png";
 import Blog from "../../public/images/Blogpost.png";
 import Folwer from "../../public/images/Group (4).png";
 import Folwer1 from "../../public/images/Group (5).png";
+import Link from "next/link";
 const data = [
   {
     id: 1,
-    image: <Image src={Deshi} alt="" />,
+    image: (
+      <Link href="/DeshiShopPage">
+        <Image src={Deshi} alt="" className={Styles.img} />
+      </Link>
+    ),
     detail: "Deshi Shop",
   },
   {
     id: 2,
-    image: <Image src={Service} alt="" />,
+    image: (
+      <Link href="/DeshiServicePage">
+        <Image src={Service} alt="" className={Styles.img} />
+      </Link>
+    ),
     detail: "Deshi Service",
   },
   {
     id: 3,
-    image: <Image src={Buy} alt="" />,
+    image: (
+      <Link href="/BuyAndSellPage">
+        <Image src={Buy} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Buy & Sell",
   },
   {
     id: 4,
-    image: <Image src={Rental} alt="" />,
+    image: (
+      <Link href="/RentalPage">
+        <Image src={Rental} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Rental",
   },
   {
     id: 5,
-    image: <Image src={Job} alt="" />,
+    image: (
+      <Link href="/JobPage">
+        <Image src={Job} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Job",
   },
   {
     id: 6,
-    image: <Image src={News} alt="" />,
+    image: (
+      <Link href="/NewsPage">
+        <Image src={News} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "News",
   },
   {
     id: 7,
-    image: <Image src={Event} alt="" />,
+    image: (
+      <Link href="/events">
+        <Image src={Event} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Event",
   },
   {
     id: 8,
-    image: <Image src={Forum} alt="" />,
+    image: (
+      <Link href="/landingPage">
+        <Image src={Forum} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Forum",
   },
   {
     id: 9,
-    image: <Image src={Blog} alt="" />,
+    image: (
+      <Link href="/BlogPage">
+        <Image src={Blog} alt="" className={Styles.img} />{" "}
+      </Link>
+    ),
     detail: "Blog",
   },
 ];
@@ -72,7 +109,7 @@ function FirstSectionHome() {
               <div className={Styles.boxcenter}>
                 <div className={Styles.boxx}>
                   <div>{item.image}</div>
-                  <p>{item.detail}</p>
+                  <p className={Styles.texts}>{item.detail}</p>
                 </div>
               </div>
             </Col>

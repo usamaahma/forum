@@ -49,6 +49,15 @@
   height: 15rem;
   margin-top: 48rem;
 }
+.texts {
+  color: #151515;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.img {
+  width: 6rem;
+  height: 6rem;
+}
 @media (max-width: 1024px) {
   .boxx {
     width: 13rem;

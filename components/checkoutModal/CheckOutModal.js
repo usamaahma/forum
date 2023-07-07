@@ -3,6 +3,7 @@ import Styles from "../../styles/CheckOutModal.module.css";
 import Product from "../../public/images/checkpro.png";
 import Image from "next/image";
 import { CloseOutlined } from "@ant-design/icons";
+import Link from "next/link";
 const data = [
   {
     id: 1,
@@ -53,7 +54,9 @@ function CheckOutModal() {
       <p className={Styles.order}>Your order qualify for free shipping!</p>
       <hr style={{ border: "solid 1px #42B00F" }} />
       <div className={Styles.flexboxx12}>
-        <button className={Styles.checkbtn1}>View Cart</button>
+        <Link href="/ProceedOfOrderPage">
+          <button className={Styles.checkbtn1}>View Cart</button>
+        </Link>
         <button className={Styles.checkbtn}>Checkout</button>
       </div>
     </div>
