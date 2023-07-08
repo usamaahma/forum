@@ -80,7 +80,7 @@ function Login() {
                   </button>
                 </Form.Item>
                 <p className={Styles.donttext}>
-                  Don't have any account?{" "}
+                  Dont have any account?{" "}
                   <a className={Styles.signtext}>Sign Up</a>
                 </p>
               </Form>
