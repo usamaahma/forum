@@ -41,7 +41,7 @@ function BlogTwoRightSection() {
         </div>
         <div className={Styles.commdiv}>
           <Image className={Styles.smllbox} src={Heart} alt="abc" />
-          <Image className={Styles.smllbox} src={Forward} alt="abc" />
+          {/* <Image className={Styles.smllbox} src={Forward} alt="abc" /> */}
           <Image className={Styles.smllbox} src={Comments} alt="abc" />
           <p>50k</p>
         </div>

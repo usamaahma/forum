@@ -7,6 +7,7 @@ import Profile from "../public/images/Ellipse 9.png";
 import Camera from "../public/images/Camera.png";
 import File from "../public/images/File_dock_add.png";
 import Arrowdown from "../public/images/Mask group (2).png";
+import Locatin from "../public/images/Loc.png";
 import dataOne from "../dataOne.json";
 import { Input, Select } from "antd";
 import Post from "./post";
@@ -47,14 +48,20 @@ function RightSection() {
         </div>
         <div className={Styles.cameradiv}>
           <div>
-            <Image src={Camera} alt="abc" />
-            <Image src={File} alt="abc" />
+            <Image src={Camera} alt="abc" style={{ marginLeft: ".4rem" }} />
+            <Image src={File} alt="abc" style={{ marginLeft: ".4rem" }} />
+            <Image
+              src={Locatin}
+              alt="abc"
+              style={{ width: "1.5rem", height: "1.4rem", marginLeft: ".4rem" }}
+            />
           </div>
           <div className={Styles.post}>
             <p>Post</p>
           </div>
         </div>
       </div>
+
       <div className={Styles.threebtn}>
         <Link href="/landingPage">
           <button className={Styles.btngree}>Post</button>

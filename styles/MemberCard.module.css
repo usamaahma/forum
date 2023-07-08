@@ -80,14 +80,14 @@
 }
 @media (max-width: 1440px) {
   .cardstyle {
-    width: 14rem;
+    width: 16rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 1404px) {
   .cardstyle {
-    width: 13rem;
+    width: 16rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }

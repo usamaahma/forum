@@ -62,6 +62,7 @@ function BlogTwoLeftSection() {
           <p>USA Life</p>
         </div>
       </div>
+      <br />
       <div className={Styles.boxdiv}>
         <p className={Styles.jointext}>Recent Blog</p>
         <div

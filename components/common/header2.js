@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
 import { Button, Layout, Menu, Modal } from "antd";
 import Link from "next/link";
+
 const { Header } = Layout;
 
 function Header3() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -15,6 +17,7 @@ function Header3() {
   const handleCancel = () => {
     setIsModalOpen(false);
   };
+
   return (
     <div
       className={`${Styles.Headerthree} ${Styles.remove1}`}
@@ -31,7 +34,7 @@ function Header3() {
         }}
       >
         <div>
-          <Link href="/MyOrderPage">
+          <Link href="/HomePage">
             <Menu
               bordered="false"
               className={Styles.gapheaderthreenav}
@@ -292,6 +295,7 @@ function Header3() {
               </Link>
             </div>
           </Modal>
+
           <Button className={Styles.buttonthree} onClick={showModal}>
             <img src="../images/Plus.png" alt="abc" />
             Post

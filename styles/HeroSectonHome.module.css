@@ -1,0 +1,65 @@
+.herobg {
+  background-image: url("../public/images/Group 48096129.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin-top: -2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bigtext {
+  color: white;
+  font-weight: 700;
+  text-align: center !important;
+  margin-top: 10rem;
+}
+.bigtext1 {
+  color: white !important;
+  font-weight: 300 !important;
+  text-align: center !important;
+}
+.btnsign {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 7rem;
+  height: 2.5rem;
+  text-align: center;
+  color: white;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+}
+.centercol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.texthindi {
+  margin-top: 1rem;
+}
+.bggreen {
+  background-color: RGBA(66, 176, 15, 0.8);
+  width: 100%;
+  padding: 4rem;
+  margin-top: 10rem;
+}
+@media (max-width: 768px) {
+  .herobg {
+    background-image: url("../public/images/Group 48096129.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5rem;
+  }
+}

@@ -13,7 +13,7 @@ const items = [
     onDragStart={handleDragStart}
     style={{ display: "flex", justifyContent: "space-evenly" }}
   >
-    <Link href="./MyProfilePage">
+    <Link href="./HomePage">
       <Button style={{ color: "black", borderColor: "transparent" }}>
         Home
       </Button>

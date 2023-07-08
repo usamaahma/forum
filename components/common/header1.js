@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+import { ShoppingCartOutlined } from "@ant-design/icons";
+import { useSelector } from "react-redux";
 
 import {
   Layout,
@@ -13,6 +15,7 @@ import {
   Checkbox,
   Space,
   Dropdown,
+  Badge,
 } from "antd";
 import {
   SearchOutlined,
@@ -21,6 +24,7 @@ import {
   LoginOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
+import CheckOutModal from "../checkoutModal/CheckOutModal";
 
 const handleMenuClick = (e) => {
   message.info("Click on menu item.");
@@ -63,6 +67,9 @@ const menuProps = {
 };
 function Header2() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen1, setIsModalOpen1] = useState(false);
+  const { totalCartItems } = useSelector((state) => state.cart);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -71,6 +78,15 @@ function Header2() {
   };
   const handleCancel = () => {
     setIsModalOpen(false);
+  };
+  const showModal1 = () => {
+    setIsModalOpen1(true);
+  };
+  const handleOk1 = () => {
+    setIsModalOpen1(false);
+  };
+  const handleCancel1 = () => {
+    setIsModalOpen1(false);
   };
   const dropdownRender = () => [];
   const items = [
@@ -290,6 +306,15 @@ function Header2() {
               </Col>
             </Row>
           </Modal>
+          <Modal
+            width={370}
+            footer
+            open={isModalOpen1}
+            onOk={handleOk1}
+            onCancel={handleCancel1}
+          >
+            <CheckOutModal />
+          </Modal>
           <Search
             style={{
               width: 280,
@@ -318,7 +343,18 @@ function Header2() {
         >
           <div className={Styles.menudiv4}>
             <div className={Styles.imgpp}>
-              <img alt="abc" src="../images/Cart.png" />
+              <Badge
+                showZero
+                count={totalCartItems}
+                // count={1}
+                style={{ marginTop: "-.3rem", backgroundColor: "#42B00F" }}
+              >
+                <ShoppingCartOutlined
+                  style={{ fontSize: "1.5rem" }}
+                  onClick={showModal1}
+                />
+              </Badge>
+
               <p className={Styles.txttttst}>Cart</p>
             </div>
             <div className={Styles.imgpp}>
@@ -327,7 +363,6 @@ function Header2() {
                 alt="abc"
                 src="../images/Group (1).png"
               />
-
               <Dropdown
                 menu={{
                   items,

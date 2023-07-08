@@ -1,0 +1,126 @@
+.bgboxx {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  background: #ffffff;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+}
+.boxx {
+  width: 15rem;
+  height: 15rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.boxx:hover {
+  border: solid 1px #42a911;
+}
+.boxcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.widthh {
+  width: 50rem;
+}
+.flo {
+  position: absolute;
+  right: 0;
+  margin-top: -50rem;
+  width: 15rem;
+  height: 15rem;
+}
+.flo1 {
+  position: absolute;
+  left: 0;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 48rem;
+}
+.texts {
+  color: #151515;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.img {
+  width: 6rem;
+  height: 6rem;
+}
+@media (max-width: 1024px) {
+  .boxx {
+    width: 13rem;
+    height: 13rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .widthh {
+    width: 50rem;
+  }
+  .flo {
+    position: absolute;
+    right: 0;
+    margin-top: -44rem;
+    width: 12rem;
+    height: 12rem;
+  }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 44rem;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .flo {
+    position: absolute;
+    right: 0;
+    margin-top: -45rem;
+    width: 12rem;
+    height: 12rem;
+  }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 45rem;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@media (max-width: 425px) {
+  .flo {
+    position: absolute;
+    right: 0;
+    margin-top: -130rem;
+    width: 10rem;
+    height: 10rem;
+  }
+  .flo1 {
+    position: absolute;
+    left: 0;
+    margin-top: 130rem;
+    width: 12rem;
+    height: 12rem;
+  }
+}
