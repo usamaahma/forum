@@ -31,6 +31,7 @@
   color: white;
   border-radius: 0.2rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .centercol {
   display: flex;

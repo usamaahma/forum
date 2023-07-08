@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "../../styles/HeroSectonHome.module.css";
 import { Col, Row } from "antd";
+import Link from "next/link";
 function HeroSectonHome() {
   return (
     <div>
@@ -10,7 +11,9 @@ function HeroSectonHome() {
           <a className={Styles.bigtext1}>Bengali Community</a>
         </h1>
         <div>
-          <button className={Styles.btnsign}>Sign In</button>
+          <Link href="/LoginScreen">
+            <button className={Styles.btnsign}>Sign In</button>
+          </Link>
         </div>
         <div className={Styles.bggreen}>
           <Row justify="center">
