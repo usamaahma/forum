@@ -5,6 +5,7 @@ import LoginImage from "../../public/images/Frame 44804.png";
 import Google from "../../public/images/Group 9847.png";
 import Facebbok from "../../public/images/Vector (10).png";
 import Styles from "../../styles/Login.module.css";
+import Link from "next/link";
 
 const onFinish = (values) => {
   console.log("Success:", values);
@@ -81,7 +82,10 @@ function Login() {
                 </Form.Item>
                 <p className={Styles.donttext}>
                   Dont have any account?{" "}
-                  <a className={Styles.signtext}>Sign Up</a>
+                  <Link href="/SignUpProcessPage">
+                    {" "}
+                    <a className={Styles.signtext}>Sign Up</a>
+                  </Link>
                 </p>
               </Form>
             </div>
