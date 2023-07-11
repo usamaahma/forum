@@ -2,6 +2,7 @@ import React from "react";
 import Styles from "../../styles/HeroSectonHome.module.css";
 import { Col, Row } from "antd";
 import Link from "next/link";
+import { Slide } from "react-awesome-reveal";
 function HeroSectonHome() {
   return (
     <div>
@@ -20,7 +21,9 @@ function HeroSectonHome() {
             <Col>
               <div className={Styles.centercol}>
                 <div>
-                  <h3>Deshi Shop</h3>
+                  <Slide direction="right" triggerOnce duration="2000">
+                    <h3>Deshi Shop</h3>
+                  </Slide>
                   <p className={Styles.texthindi}>
                     দেশী শপে দোকান খুলে পণ্য ক্রয়
                     <br /> বিক্রয় করুন।
@@ -31,7 +34,9 @@ function HeroSectonHome() {
             <Col>
               <div className={Styles.centercol}>
                 <div>
-                  <h3>Deshi service</h3>
+                  <Slide direction="right" triggerOnce duration="3000">
+                    <h3>Deshi service</h3>
+                  </Slide>
                   <p className={Styles.texthindi}>
                     দেশী ভাই-বোনদের সেবা দিতে
                     <br /> দেশী সার্ভিসে আপনার প্রতিষ্ঠানের <br />
@@ -43,7 +48,9 @@ function HeroSectonHome() {
             <Col>
               <div className={Styles.centercol}>
                 <div>
-                  <h3>Buy & Sell</h3>
+                  <Slide direction="right" triggerOnce duration="4000">
+                    <h3>Buy & Sell</h3>
+                  </Slide>
                   <p className={Styles.texthindi}>
                     বাই এন্ড সেলে আপনার ব্যবহৃত ও <br />
                     অব্যবহৃত সকল পণ্য ক্রয়-বিক্রয়ের <br />
@@ -55,7 +62,9 @@ function HeroSectonHome() {
             <Col>
               <div className={Styles.centercol}>
                 <div>
-                  <h3>Rental</h3>
+                  <Slide direction="right" triggerOnce duration="5000">
+                    <h3>Rental</h3>
+                  </Slide>
                   <p className={Styles.texthindi}>
                     রেন্টালে আপনার গাড়ি ,বাড়ি সহ <br /> যেকোনো কিছু ভাড়া দিতে
                     বিজ্ঞাপন <br />
@@ -67,7 +76,9 @@ function HeroSectonHome() {
             <Col>
               <div className={Styles.centercol}>
                 <div>
-                  <h3>Job</h3>
+                  <Slide direction="right" triggerOnce duration="6000">
+                    <h3>Job</h3>
+                  </Slide>
                   <p className={Styles.texthindi}>
                     জবস এর মাধ্যমে নিজে চাকুরী <br /> খুঁজুন ও দেশী ভাই-বোনদের
                     চাকুরীর <br />
