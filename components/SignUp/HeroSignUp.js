@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../../styles/HeroSection.module.css";
+import Styles from "../../styles/HeroSignUp.module.css";
 function HeroSignUp() {
   return (
     <div className={Styles.mainhero}>

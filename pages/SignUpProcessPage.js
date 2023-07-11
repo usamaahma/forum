@@ -5,6 +5,10 @@ import MainHeader from "@/components/common/mainHeader";
 import HeroSignUp from "@/components/SignUp/HeroSignUp";
 import Footer from "@/components/common/footer";
 import SignUp from "@/components/SignUp/SignUp";
+import BasicInfo from "@/components/BasicInfo/BasicInfo";
+import BusinessInfo from "@/components/BusinessInfo/BusinessInfo";
+import SocialNetwork from "@/components/SocialNetwork/SocialNetwork";
+import UploadImage from "@/components/UploadImage/UploadImage";
 
 function SignUpProcessPage() {
   const { token } = theme.useToken();
@@ -23,19 +27,19 @@ function SignUpProcessPage() {
     },
     {
       title: "Basic Info",
-      content: <SignUp next={next} />,
+      content: <BasicInfo next={next} />,
     },
     {
       title: "Business Info",
-      content: <SignUp next={next} />,
+      content: <BusinessInfo next={next} />,
     },
     {
       title: "Social Network",
-      content: <SignUp next={next} />,
+      content: <SocialNetwork next={next} />,
     },
     {
       title: "Upload Image",
-      content: <SignUp next={next} />,
+      content: <UploadImage next={next} />,
     },
   ];
   const items = steps.map((item) => ({

@@ -1,0 +1,102 @@
+.centercol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textlet {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.input {
+  width: 26rem;
+  height: 2.5rem;
+  border-radius: 0.2rem !important;
+}
+.input1 {
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 0.2rem !important;
+}
+.flexdis {
+  display: flex;
+  justify-content: space-between;
+}
+.centerwholediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.whitediv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+.leftside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.btn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.2rem !important;
+}
+
+.signtext {
+  color: #2f80ed !important;
+}
+.flexbet {
+  display: flex;
+  justify-content: space-between;
+}
+.textinput {
+  color: #151515;
+  font-weight: 500;
+}
+.infotext {
+  color: #151515;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 425px) {
+  .textlet {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+}
+@media (max-width: 375px) {
+  .input {
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 0.2rem !important;
+  }
+  .input1 {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 0.2rem !important;
+  }
+  .btn {
+    background-color: #42b00f;
+    border: #42b00f solid 1px;
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0.2rem !important;
+  }
+}

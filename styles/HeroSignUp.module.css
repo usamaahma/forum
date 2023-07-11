@@ -11,10 +11,6 @@
   margin-top: -2rem;
 }
 
-.sizesteps {
-  width: 70%;
-}
-
 .centerhero {
   text-align: center;
 }
@@ -22,12 +18,6 @@
 .colrgreen {
   color: #42b00f;
   text-align: center;
-}
-
-@media (max-width: 1024px) {
-  .sizesteps {
-    width: 80%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -43,13 +33,27 @@
     align-items: center;
     margin-top: 0rem;
   }
-  .sizesteps {
-    width: 85%;
-  }
 }
 @media (max-width: 425px) {
-  .sizesteps {
-    width: 30%;
-    margin-top: -20rem;
+  .mainhero {
+    background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+  }
+  .centerhero {
+    text-align: center;
+    margin-top: -8rem;
+  }
+
+  .colrgreen {
+    color: #42b00f;
+    text-align: center;
   }
 }

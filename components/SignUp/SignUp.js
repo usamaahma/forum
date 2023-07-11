@@ -12,7 +12,7 @@ const onFinish = (values) => {
 const onFinishFailed = (errorInfo) => {
   console.log("Failed:", errorInfo);
 };
-function SignUp() {
+function SignUp({ next }) {
   return (
     <div>
       <Row justify="center">
@@ -112,7 +112,11 @@ function SignUp() {
                   </Form.Item>
                 </div>
                 <Form.Item>
-                  <button htmlType="submit" className={Styles.btn}>
+                  <button
+                    htmlType="submit"
+                    className={Styles.btn}
+                    onClick={() => next()}
+                  >
                     Sign Up
                   </button>
                 </Form.Item>
