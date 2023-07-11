@@ -4,9 +4,14 @@ import Product from "../../public/images/image 65.png";
 import Vector from "../../public/images/store.png";
 import { Card, Rate } from "antd";
 import Image from "next/image";
+import { addToCart } from "../../redux/cart";
+import { useDispatch, useSelector } from "react-redux";
+
 const { Meta } = Card;
 function ProductCard() {
   const [hovered, setHovered] = useState(false);
+  const dispatch = useDispatch();
+  const { totalCartItems } = useSelector((state) => state.cart);
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -15,6 +20,7 @@ function ProductCard() {
   const handleMouseLeave = () => {
     setHovered(false);
   };
+
   return (
     <div>
       <div>
@@ -60,12 +66,24 @@ function ProductCard() {
             </button>
           </div>
           <p className={Styles.pronam}>Product Name</p>
-
           <div className={Styles.price}>
             <p className={Styles.pricetext}>$50.99</p>
             <p className={Styles.greenprrice}>$50.99</p>
             <p className={Styles.soldtext}>30+ sold</p>
-            <Image src={Vector} alt="abc" className={Styles.border} />
+            <Image
+              src={Vector}
+              alt="abc"
+              className={Styles.border}
+              onClick={() => {
+                dispatch(
+                  addToCart({
+                    id: 1,
+                    name: "product",
+                    price: "$50.59",
+                  })
+                );
+              }}
+            />
           </div>
           <div className={Styles.stardiv}>
             <Rate allowHalf defaultValue={2.5} className={Styles.star} />

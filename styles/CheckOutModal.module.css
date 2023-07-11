@@ -1,0 +1,78 @@
+.boxx {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  width: 18rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.text {
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  color: #444444;
+}
+.price {
+  color: #6aba6a;
+  font-weight: 600;
+}
+.addbtn {
+  background-color: white;
+  border: none;
+  width: 2rem;
+  border-radius: 0.5rem;
+}
+.flexbtn {
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px #cccccc;
+  border-radius: 0.5rem;
+  width: 5rem;
+}
+.flexboxx {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+.flexboxx1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.flexboxx12 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.subtext {
+  color: #737373;
+  font-weight: 600;
+}
+.subtext1 {
+  color: #444444;
+  font-weight: 600;
+}
+.order {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: black;
+}
+.checkbtn {
+  background-color: #42b00f;
+  width: 6rem;
+  padding: 0.5rem;
+  color: white;
+  border: #42b00f solid 1px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.checkbtn1 {
+  background-color: white;
+  width: 6rem;
+  padding: 0.5rem;
+  color: #42b00f;
+  border: #42b00f solid 1px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
