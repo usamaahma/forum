@@ -1,0 +1,174 @@
+.textlet {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.flexdis {
+  display: flex;
+  justify-content: space-between;
+}
+.centerwholediv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.whitediv {
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.textinput {
+  color: #151515;
+  font-weight: 500;
+}
+.infotext {
+  color: #151515;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.centerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.paddingdiv {
+  padding: 1rem;
+  border: dashed #d0d0d0;
+  border-radius: 0.5rem;
+}
+
+.namtext {
+  color: #151515;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+.spacebet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.updiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40rem;
+}
+.centerup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn {
+  border: none !important;
+  color: #2d9cdb !important;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.drag {
+  padding: 1rem;
+  width: 28rem;
+}
+.textupp {
+  color: #444444;
+  font-size: 0.8rem;
+}
+.jptext {
+  color: #737373;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.grenclr {
+  color: #42b00f;
+  font-size: 1rem;
+}
+.divcneter {
+  margin-top: -5rem;
+}
+.imsize {
+  width: 10rem;
+  height: 10rem;
+}
+.divswi {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.lefttext {
+  margin-left: 1rem;
+}
+.btngreen {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 6rem;
+  height: 2.2rem;
+  color: white;
+  border-radius: 0.3rem;
+}
+.flexbet {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+@media (max-width: 1024px) {
+  .drag {
+    padding: 1rem;
+    width: 20rem;
+  }
+  .updiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .eidtdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .drag {
+    padding: 1rem;
+    width: 18rem;
+  }
+}
+@media (max-width: 425px) {
+  .textlet {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .drag {
+    padding: 1rem;
+    width: 100%;
+  }
+  .updiv {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .divcneter {
+    margin-top: 1rem;
+  }
+  .addtext {
+    margin-left: 3.3rem;
+    color: #151515;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+}
