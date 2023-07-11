@@ -97,6 +97,11 @@
     height: 2.5rem;
     border-radius: 0.2rem !important;
   }
+  .input1 {
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 0.2rem !important;
+  }
   .btn {
     background-color: #42b00f;
     border: #42b00f solid 1px;
