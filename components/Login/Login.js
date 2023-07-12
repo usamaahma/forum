@@ -2,10 +2,14 @@ import React from "react";
 import { Col, Row, Button, Checkbox, Form, Input } from "antd";
 import Image from "next/image";
 import LoginImage from "../../public/images/Frame 44804.png";
+import LoginImage1 from "../../public/images/Frame 45130.png";
+import LoginImage2 from "../../public/images/Frame 45131.png";
 import Google from "../../public/images/Group 9847.png";
 import Facebbok from "../../public/images/Vector (10).png";
 import Styles from "../../styles/Login.module.css";
 import Link from "next/link";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 const onFinish = (values) => {
   console.log("Success:", values);
@@ -93,8 +97,25 @@ function Login() {
         </Col>
         <Col>
           <div className={Styles.centercol}>
-            <div>
-              <Image src={LoginImage} alt="" className={Styles.sizeimg} />
+            <div className={Styles.width}>
+              <Carousel
+                infiniteLoop
+                showArrows={false}
+                showStatus={false}
+                showIndicators={false}
+                autoPlay={true}
+                transitionTime={2000}
+              >
+                <div className={Styles.center}>
+                  <Image src={LoginImage} alt="" className={Styles.sizeimg} />
+                </div>
+                <div className={Styles.center}>
+                  <Image src={LoginImage1} alt="" className={Styles.sizeimg} />
+                </div>
+                <div className={Styles.center}>
+                  <Image src={LoginImage2} alt="" className={Styles.sizeimg} />
+                </div>
+              </Carousel>
             </div>
           </div>
         </Col>
