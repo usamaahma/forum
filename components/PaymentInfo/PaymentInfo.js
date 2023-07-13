@@ -6,7 +6,7 @@ import Payment from "./Pay";
 function PaymentInfo({ next }) {
   return (
     <div  style={{ marginTop: "5rem" }}>
-      <div className={Styles.flexbet}>
+      <div className={Styles.flexbeta}>
         {" "}
         <Payment />
       </div>
