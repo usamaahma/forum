@@ -84,6 +84,12 @@
   display: flex;
   justify-content: space-between;
 }
+.width {
+  width: 30rem;
+  /* height: 38rem; */
+  /* margin-left: -1.5rem; */
+  /* background: linear-gradient(#2b7e04, #42b00f); */
+}
 @media (max-width: 768px) {
   .sizeimg {
     width: 30rem;
