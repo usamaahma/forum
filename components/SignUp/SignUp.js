@@ -5,6 +5,7 @@ import LoginImage from "../../public/images/Frame 44804.png";
 import Google from "../../public/images/Group 9847.png";
 import Facebbok from "../../public/images/Vector (10).png";
 import Styles from "../../styles/SignUp.module.css";
+import Link from "next/link";
 
 const onFinish = (values) => {
   console.log("Success:", values);
@@ -136,16 +137,18 @@ function SignUp({ next }) {
                 <p className={Styles.donttext}>
                   By creating an account, you agree to bongodeshi’s
                   <br />
-                  <a className={Styles.signtext}>Sterm of condition</a> and{" "}
+                  <a className={Styles.signtext}>Terms & Conditions</a> and{" "}
                   <a className={Styles.signtext}>Privacy Policy.</a>
                 </p>
                 <hr style={{ border: "#E8E8E8 solid 1px" }} />
                 <p className={Styles.donttext}>
                   Want to do business on Bongodeshi?
                   <br />
+                  <Link href="/BusinessSignUp">
                   <a className={Styles.signtext}>
                     Create a business account.
                   </a>{" "}
+                  </Link>
                 </p>
               </Form>
             </div>
