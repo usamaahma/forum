@@ -119,14 +119,7 @@ function BusinessSignUp() {
   ];
   const items = steps.map((item) => ({
     key: item.title,
-    title: (
-      <>
-        <div style={{ display: "block", alignItems: "center" }}>
-          <div style={{ marginRight: "0.5em" }}>&nbsp;</div>
-          <div style={{ marginLeft: "-2rem" }}>{item.title}</div>
-        </div>
-      </>
-    ),
+    title: item.title,
   }));
 
   return (
