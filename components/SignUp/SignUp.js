@@ -9,6 +9,7 @@ import LoginImage1 from "../../public/images/Frame 45130.png";
 import LoginImage2 from "../../public/images/Frame 45131.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Link from "next/link";
 
 const onFinish = (values) => {
   console.log("Success:", values);
@@ -140,16 +141,18 @@ function SignUp({ next }) {
                 <p className={Styles.donttext}>
                   By creating an account, you agree to bongodeshi’s
                   <br />
-                  <a className={Styles.signtext}>Sterm of condition</a> and{" "}
+                  <a className={Styles.signtext}>Terms & Conditions</a> and{" "}
                   <a className={Styles.signtext}>Privacy Policy.</a>
                 </p>
                 <hr style={{ border: "#E8E8E8 solid 1px" }} />
                 <p className={Styles.donttext}>
                   Want to do business on Bongodeshi?
                   <br />
-                  <a className={Styles.signtext}>
-                    Create a business account.
-                  </a>{" "}
+                  <Link href="/BusinessSignUp">
+                    <a className={Styles.signtext}>
+                      Create a business account.
+                    </a>{" "}
+                  </Link>
                 </p>
               </Form>
             </div>

@@ -3,6 +3,28 @@
   justify-content: center;
   /* width: 50rem; */
 }
+.flexbeta {
+  display: flex;
+  justify-content: center;
+  /* width: 50rem; */
+}
+.leftside {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.btn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.2rem !important;
+}
 .blscktext {
   color: black !important;
   border-bottom: none !important;

@@ -53,7 +53,7 @@ const data = [
 function Withdraw() {
   return (
     <div>
-      <Card type="inner">
+      <Card type="inner" className={Styles1.cardabs}>
         {data.map((data, index) => (
           <div key={index} className={Styles1.curmin}>
             <p>Current Balance: {data.currentbalance}</p>

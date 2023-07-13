@@ -63,7 +63,7 @@ function ServiceCard() {
                       <img
                         className={Styles.imgs}
                         alt="abc"
-                        src="../images/delete.png"
+                        src="../images/Delete.png"
                       />
                     </div>
                   </div>

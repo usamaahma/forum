@@ -1,3 +1,8 @@
+.customSteps .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #42b00f !important;
+  border-color: #42b00f !important;
+}
+
 .mainhero {
   background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
   background-position: center;

@@ -1,0 +1,153 @@
+.mrtoptax {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.widthinp{
+    width: 15rem;
+    height: 2.5rem;
+}
+.bothewet{
+    display: flex;
+    justify-content: space-between;
+}
+.paddingall {
+  padding: 3%;
+  width: 65rem;
+  background: #ffffff;
+  box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+}
+.twonogap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.radiobuttons {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.radiobutton {
+  margin-top: 0.5rem;
+}
+.buttons {
+  border-radius: 100%;
+  width: 1rem;
+  border: solid 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bth {
+  width: 15rem;
+  height: 2.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.twoinputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.spaces {
+  margin-top: 0.5rem;
+  height: 2.5rem;
+  width: 30rem;
+}
+.btan{
+    background-color: transparent;
+    border: #42b00f solid 1px;
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #42b00f;
+    border-radius: 0.2rem !important;
+}
+.btn {
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  width: 10rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.2rem !important;
+}
+.leftside {
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 1024px) {
+  .paddingall {
+    padding: 3%;
+    width: 55rem;
+    background: #ffffff;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+  }
+  .spaces {
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    width: 25rem;
+  }
+  .onshort{
+    font-size: 0.76rem;
+  }
+}
+@media (max-width: 768px) {
+    
+    .twoinputs {
+        display: block;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .paddingall {
+        display: block;
+        justify-content: center;
+        text-align: center;
+        padding: 3%;
+        width: 65rem;
+        background: #ffffff;
+        box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.05);
+      }
+      .twonogap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .abcfd{
+        display: flex;
+        justify-content: center;
+      }
+      .formcenter{
+        margin-left: 10rem;
+      }
+      .leftside {
+        display: flex;
+        justify-content: center;
+      }
+
+}
+@media (max-width: 425px) {
+    .formcenter{
+        margin-left: 0rem;
+      }
+
+    .spaces {
+        margin-top: 0.5rem;
+        height: 2.5rem;
+        width: 15rem;
+      }
+      .leftside {
+        display: flex;
+        justify-content: center;
+      }
+
+
+}
+
