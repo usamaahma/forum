@@ -5,9 +5,8 @@
   flex-direction: column;
 }
 .sizeimg {
-  width: 35rem;
-  height: 40rem;
-  margin-left: -1.7rem;
+  width: 30rem;
+  height: 36.3rem;
 }
 .input {
   width: 22rem;
@@ -71,6 +70,11 @@
 }
 .logo {
   margin-right: 1rem;
+}
+.width {
+  width: 30rem;
+  height: 36.3rem;
+  margin-left: -1.5rem;
 }
 @media (max-width: 768px) {
   .sizeimg {
