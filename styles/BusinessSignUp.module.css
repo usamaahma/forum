@@ -4,20 +4,13 @@
 }
 
 .mainhero {
-  /* background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 28vh; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem;
 }
 
 .sizesteps {
-  width: 90%;
+  width: 80%;
 }
 
 .centerhero {
@@ -32,32 +25,35 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
+@media (max-width: 1440px) {
+  .sizesteps {
+    width: 90% !important;
+  }
+}
 @media (max-width: 1024px) {
   .sizesteps {
-    width: 90%;
+    width: 90% !important;
+  }
+  .textsign {
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 }
 
 @media (max-width: 768px) {
   .mainhero {
-    background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 28vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 0rem;
   }
   .sizesteps {
-    width: 85%;
+    width: 30% !important;
+    display: grid;
   }
 }
 @media (max-width: 425px) {
   .sizesteps {
     width: 30%;
-    margin-top: -20rem;
   }
 }
