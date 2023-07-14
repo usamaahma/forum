@@ -105,7 +105,7 @@ function FirstSectionHome() {
       <div>
         <Row justify="center" className={Styles.widthh}>
           {data.map((item, index) => (
-            <Col key={index} xxl={8} xl={8} lg={7} md={7} xs={24}>
+            <Col key={index} xxl={8} xl={8} lg={7} md={7} xs={7}>
               <div className={Styles.boxcenter}>
                 <div className={Styles.boxx}>
                   <div>{item.image}</div>

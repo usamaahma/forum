@@ -50,8 +50,17 @@
 .bggreen {
   background-color: RGBA(66, 176, 15, 0.8);
   width: 100%;
-  padding: 4rem;
+  padding: 2rem;
   margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .texthindi {
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
 }
 @media (max-width: 768px) {
   .herobg {

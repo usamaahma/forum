@@ -33,6 +33,7 @@ function SecondHome() {
         </div>
       </div>
       {/* <div className={Styles.bgimg}></div> */}
+      <Image src={Poster4} alt="" className={Styles.imgsize} />
       <div className={Styles.boxwhite}>
         <p className={Styles.downtext}>Download Now</p>
         <div className={Styles.btngoogle}>
@@ -54,7 +55,6 @@ function SecondHome() {
           </div>
         </div>
       </div>
-      <Image src={Poster4} alt="" className={Styles.imgsize} />
     </>
   );
 }
