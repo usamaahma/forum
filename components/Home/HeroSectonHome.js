@@ -6,17 +6,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 const handleDragStart = (e) => e.preventDefault();
 const items = [
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
-    <div>
-      <h3>Deshi Shop</h3>
-
-      <p className={Styles.texthindi}>
-        দেশী শপে দোকান খুলে পণ্য ক্রয়
-        <br /> বিক্রয় করুন।
-      </p>
-    </div>
-  </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={1} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>Deshi service</h3>
 
@@ -27,10 +17,9 @@ const items = [
       </p>
     </div>
   </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={2} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>Buy & Sell</h3>
-
       <p className={Styles.texthindi}>
         বাই এন্ড সেলে আপনার ব্যবহৃত ও <br />
         অব্যবহৃত সকল পণ্য ক্রয়-বিক্রয়ের <br />
@@ -38,7 +27,7 @@ const items = [
       </p>
     </div>
   </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={3} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>Rental</h3>
       <p className={Styles.texthindi}>
@@ -48,7 +37,7 @@ const items = [
       </p>
     </div>
   </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={4} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>Job</h3>
       <p className={Styles.texthindi}>
@@ -58,7 +47,7 @@ const items = [
       </p>
     </div>
   </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={5} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>News</h3>
       <p className={Styles.texthindi}>
@@ -66,7 +55,7 @@ const items = [
       </p>
     </div>
   </div>,
-  <div className={Styles.centercol} onDragStart={handleDragStart}>
+  <div key={6} className={Styles.centercol} onDragStart={handleDragStart}>
     <div>
       <h3>Event</h3>
       <p className={Styles.texthindi}>
