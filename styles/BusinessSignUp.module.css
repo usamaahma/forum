@@ -7,12 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .sizesteps {
-  width: 70%;
+  width: 80%;
 }
 
 .centerhero {
@@ -23,10 +21,22 @@
   color: #42b00f;
   text-align: center;
 }
-
+.textsign {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+@media (max-width: 1440px) {
+  .sizesteps {
+    width: 90% !important;
+  }
+}
 @media (max-width: 1024px) {
   .sizesteps {
-    width: 80%;
+    width: 90% !important;
+  }
+  .textsign {
+    font-size: 0.7rem;
+    font-weight: 600;
   }
 }
 
@@ -34,12 +44,12 @@
   .mainhero {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    /* align-items: center; */
+    margin-top: 0rem;
   }
   .sizesteps {
-    width: 85%;
+    width: 30% !important;
+    display: grid;
   }
 }
 @media (max-width: 425px) {

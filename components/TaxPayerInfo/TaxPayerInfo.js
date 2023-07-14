@@ -63,7 +63,7 @@ function TaxPayerInfo({ next }) {
   return (
     <div className={Styles.mrtoptax}>
       <div className={Styles.paddingall}>
-        <h2> Let's start Business With Bongodeshi</h2>
+        <h2> Lets start Business With Bongodeshi</h2>
         <hr style={{ border: "solid 1px  #D0D0D0", marginBottom: "2rem" }} />
         <br />
         <h3>Taxpayer Information</h3>
@@ -159,7 +159,7 @@ function TaxPayerInfo({ next }) {
         <hr style={{ border: "solid 1px  #E8E8E8", marginBottom: "2rem" }} />
         <br /> <br />
         <Form
-        className={Styles.formcenter}
+          className={Styles.formcenter}
           name="basic"
           labelCol={{
             span: 8,
@@ -199,7 +199,10 @@ function TaxPayerInfo({ next }) {
                 },
               ]}
             >
-              <p className={Styles.onshort}> Doing Business as “DBA” or trade name (optional)</p>
+              <p className={Styles.onshort}>
+                {" "}
+                Doing Business as “DBA” or trade name (optional)
+              </p>
               <Input className={Styles.spaces} />
             </Form.Item>
           </div>

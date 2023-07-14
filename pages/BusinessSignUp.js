@@ -1,6 +1,6 @@
 import { Steps, theme } from "antd";
 import { useState } from "react";
-import Styles from "../styles/SignUpProcessPage.module.css";
+import Styles from "../styles/BusinessSignUp.module.css";
 import MainHeader from "@/components/common/mainHeader";
 import HeroSignUp from "@/components/SignUp/HeroSignUp";
 import Footer from "@/components/common/footer";
@@ -28,7 +28,7 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>Sign Up</h5>
+          <p className={Styles.textsign}>Sign Up</p>
         </>
       ),
       content: <SignUp next={next} prev={prev} />,
@@ -36,7 +36,7 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>Basic Info</h5>
+          <p className={Styles.textsign}>Basic Info</p>
         </>
       ),
       content: <BasicInfo next={next} />,
@@ -44,7 +44,7 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>Business Info</h5>
+          <p className={Styles.textsign}>Business Info</p>
         </>
       ),
       content: <BusinessInfo next={next} />,
@@ -52,10 +52,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Taxpayer <br />
             Information
-          </h5>
+          </p>
         </>
       ),
       content: <TaxPayerInfo next={next} />,
@@ -63,10 +63,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Payment And
             <br /> Banking
-          </h5>
+          </p>
         </>
       ),
       content: <PaymentInfo next={next} />,
@@ -74,10 +74,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Verify
             <br /> Identity
-          </h5>
+          </p>
         </>
       ),
       content: <VerifyIdentity next={next} />,
@@ -86,10 +86,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Social
             <br /> Network
-          </h5>
+          </p>
         </>
       ),
       content: <SocialNetwork next={next} />,
@@ -97,10 +97,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Upload
             <br /> Image
-          </h5>
+          </p>
         </>
       ),
       content: <UploadBusinessImage next={next} />,
@@ -108,10 +108,10 @@ function BusinessSignUp() {
     {
       title: (
         <>
-          <h5>
+          <p className={Styles.textsign}>
             Terms &
             <br /> Conditions
-          </h5>
+          </p>
         </>
       ),
       content: <TermsConditions next={next} />,

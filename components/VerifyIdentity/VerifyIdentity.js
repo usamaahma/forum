@@ -63,7 +63,7 @@ function VerifyIdentity({ next }) {
   return (
     <div className={Styles.mrtoptax}>
       <div className={Styles.paddingall}>
-        <h2> Let's start Business With Bongodeshi</h2>
+        <h2> Lets start Business With Bongodeshi</h2>
         <hr style={{ border: "solid 1px  #D0D0D0", marginBottom: "2rem" }} />
         <br />
         <div className={Styles.bothewet}>
