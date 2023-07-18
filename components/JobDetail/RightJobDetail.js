@@ -19,7 +19,6 @@ function RightJobDetail() {
       <div className={Styles.borderbox}>
         <div className={Styles.imgbox}>
           <Image src={Logo} alt="" />
-
           <div className={Styles.left}>
             <p className={Styles.comp}>Company Name</p>
             <p className={Styles.mem}>Member Since 2023</p>

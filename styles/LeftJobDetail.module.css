@@ -79,22 +79,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 32rem;
+  width: 38rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .btns1 {
   background-color: #f9f9f9;
   border: #f9f9f9 solid 1px;
-  width: 6rem;
+  width: 7rem;
   padding: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #555454;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  font-size: 0.75rem;
 }
 .mblview {
   display: none;
