@@ -137,7 +137,7 @@
 }
 @media (max-width: 375px) {
   .colsize {
-    width: 20rem;
+    width: 21.5rem;
   }
   .widthofcar {
     width: 20rem;
@@ -148,7 +148,7 @@
     margin-bottom: 2rem;
   }
   .bigimgh {
-    width: 20rem;
+    width: 22rem;
     margin-bottom: 1rem;
   }
   .smallimgh {
@@ -158,7 +158,7 @@
 }
 @media (max-width: 320px) {
   .colsize {
-    width: 18rem;
+    width: 19.5rem;
   }
   .imsizebig {
     width: 18rem;
