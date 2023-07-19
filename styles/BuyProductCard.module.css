@@ -1,5 +1,5 @@
 .cardsize {
-  width: 11.7rem;
+  width: 15rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rems;
 }
@@ -130,4 +130,39 @@
   top: 0;
   right: 0;
   margin-top: 1rem;
+}
+@media (max-width: 1024px) {
+  .cardsize {
+    width: 12.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
+}
+@media (max-width: 768px) {
+  .cardsize {
+    width: 14rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
+}
+@media (max-width: 425px) {
+  .cardsize {
+    width: 12.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
+}
+@media (max-width: 375px) {
+  .cardsize {
+    width: 10.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
+}
+@media (max-width: 320px) {
+  .cardsize {
+    width: 9.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
 }
