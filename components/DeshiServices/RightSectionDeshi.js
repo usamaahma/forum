@@ -18,6 +18,7 @@ const data = [
   { key: 6, name: "card" },
   { key: 7, name: "card" },
   { key: 8, name: "card" },
+  { key: 9, name: "card" },
 ];
 function RightSectionDeshi() {
   return (
@@ -42,7 +43,7 @@ function RightSectionDeshi() {
         <br />
         <Row justify="center" className={Styles.colsize}>
           {data.map((index) => (
-            <Col key={index} xxl={6} xl={6} lg={8} md={8} xs={12}>
+            <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
               <div className={Styles.centercard}>
                 <DeshiProductCard />
               </div>
@@ -72,7 +73,7 @@ function RightSectionDeshi() {
           <br />
           <Row justify="center" className={Styles.colsize}>
             {data.map((index) => (
-              <Col key={index} xxl={6} xl={6} lg={8} md={8} xs={12}>
+              <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
                 <div className={Styles.centercard}>
                   <DeshiProductCard />
                 </div>
