@@ -7,6 +7,7 @@
   color: #151515;
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .enddiv {
   display: flex;
@@ -137,7 +138,7 @@
 }
 @media (max-width: 375px) {
   .colsize {
-    width: 20rem;
+    width: 22rem;
   }
   .widthofcar {
     width: 20rem;
@@ -155,10 +156,16 @@
     width: 20rem;
     margin-bottom: 1rem;
   }
+  .vewtext {
+    color: #42b00f;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-left: -0.5rem;
+  }
 }
 @media (max-width: 320px) {
   .colsize {
-    width: 18rem;
+    width: 19.5rem;
   }
   .imsizebig {
     width: 18rem;
@@ -172,5 +179,11 @@
   .smallimgh {
     width: 18rem;
     margin-bottom: 1rem;
+  }
+  .vewtext {
+    color: #42b00f;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-right: 0.5rem !important;
   }
 }

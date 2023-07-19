@@ -24,11 +24,11 @@
   text-align: center;
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .sizesteps {
     width: 70%;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .mainhero {
@@ -37,7 +37,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 28vh;
+    height: 35vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,5 +47,6 @@
 @media (max-width: 425px) {
   .sizesteps {
     width: 40%;
+    margin-top: 1rem;
   }
 }

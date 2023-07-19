@@ -35,38 +35,14 @@ function Stepss() {
   return (
     <>
       <div className={Styles.mainhero}>
-        <Steps className={Styles.sizesteps} current={current} items={items} />
+        <Steps
+          progressDot
+          className={Styles.sizesteps}
+          current={current}
+          items={items}
+        />
       </div>
       <div>{steps[current].content}</div>
-      {/* <div
-        style={{
-          marginTop: 24,
-        }}
-      >
-        {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Next
-          </Button>
-        )}
-        {current === steps.length - 1 && (
-          <Button
-            type="primary"
-            onClick={() => message.success("Processing complete!")}
-          >
-            Done
-          </Button>
-        )}
-        {current > 0 && (
-          <Button
-            style={{
-              margin: "0 8px",
-            }}
-            onClick={() => prev()}
-          >
-            Previous
-          </Button>
-        )}
-      </div> */}
     </>
   );
 }

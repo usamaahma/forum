@@ -37,6 +37,12 @@
 }
 @media (max-width: 375px) {
   .carodiv {
+    width: 22rem;
+    border-radius: 0.1rem !important;
+  }
+}
+@media (max-width: 320px) {
+  .carodiv {
     width: 20rem;
     border-radius: 0.1rem !important;
   }

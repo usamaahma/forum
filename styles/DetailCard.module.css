@@ -1,5 +1,5 @@
 .cardsize {
-  /* width: 14rem; */
+  width: 14.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rems;
 }
@@ -146,5 +146,12 @@
     color: #42b00f;
     font-size: 0.9rem;
     border-radius: 0.3rem;
+  }
+}
+@media (max-width: 375px) {
+  .cardsize {
+    width: 10.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
   }
 }

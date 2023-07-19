@@ -10,8 +10,8 @@ const responsive = {
   320: { items: 1 },
   375: { items: 2 },
   425: { items: 2 },
-  568: { items: 2 },
-  1024: { items: 2 },
+  568: { items: 3 },
+  1024: { items: 3 },
   1440: { items: 3 },
   2560: { items: 3 },
 };
