@@ -163,6 +163,15 @@
   margin-right: 3.5rem;
   margin-top: 2rem;
 }
+.btnsacvve {
+  width: 5rem;
+  height: 2rem;
+  background-color: #42b00f;
+  border: #42b00f solid 1px;
+  color: white;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
 @media only screen and (max-width: 768px) {
   .radiose {
     margin-right: 0rem;

@@ -139,7 +139,12 @@ function DeshiServiceForm() {
         </div>
       </div>{" "}
       <div>
-        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+        <Modal
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer
+        >
           <Row justify={"center"}>
             <Col>
               {" "}
@@ -164,6 +169,7 @@ function DeshiServiceForm() {
               <div className={Styles1.modaldicwdth}>
                 <p className={Styles1.pmodal}>Furniture:</p>
               </div>
+              <button className={Styles1.btnsacvve}>Save</button>
             </Col>
             <Col style={{ marginLeft: "1rem" }}>
               <div className={Styles1.pmodal}>
