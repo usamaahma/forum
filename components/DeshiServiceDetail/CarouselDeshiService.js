@@ -19,11 +19,11 @@ function CarouselDeshiService() {
   return (
     <div>
       <div>
-        <h3>Related Service</h3>
+        <h3 style={{ marginBottom: ".5rem" }}>Related Service</h3>
         <div
           style={{
             backgroundColor: "#42b00f",
-            borderWidth: 1,
+            borderWidth: 2,
             width: "6rem",
             border: "#42b00f 1px solid",
             position: "absolute",
