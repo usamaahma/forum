@@ -112,7 +112,10 @@ function FeaturedNews() {
           <Col xxl={9} xl={9} lg={10} md={8} xs={24}>
             {dataOne.map((index) => (
               <div key={index} className={Styles.centercol1}>
-                <FeaturedPost />
+                <Link href="/NewsPageTwo">
+                  {" "}
+                  <FeaturedPost />
+                </Link>
               </div>
             ))}
           </Col>
@@ -188,9 +191,9 @@ function FeaturedNews() {
         }}
       >
         <div className={Styles.cardivvv}>
-          <Link href="/NewsPageTwo">
-            <NewsCarousel />
-          </Link>
+          {/* <Link href="/NewsPageTwo"> */}
+          <NewsCarousel />
+          {/* </Link> */}
         </div>
       </div>
     </div>

@@ -138,7 +138,7 @@ function DeshiServiceForm() {
           <p className={Styles.colrgreen}>Home / Add Deshi Service</p>
         </div>
       </div>{" "}
-      <div>
+      <div style={{ background: "white" }}>
         <Modal
           open={isModalOpen}
           onOk={handleOk}

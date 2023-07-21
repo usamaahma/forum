@@ -70,6 +70,7 @@
 .line {
   margin-left: 0.5rem;
   width: 30rem;
+  color: #e8e8e8 !important;
 }
 
 @media (max-width: 1024px) {

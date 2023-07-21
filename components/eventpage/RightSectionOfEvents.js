@@ -6,6 +6,7 @@ import Shoes from "../../public/images/Rectangle 46 (1).png";
 import { Select, Row, Col } from "antd";
 import Carousel from "./carousel";
 import EventPost from "./eventpost";
+import Link from "next/link";
 const { Option } = Select;
 const data = [
   {
@@ -65,7 +66,9 @@ function RightSectionOfEvents() {
         </div>
         {data.map((index) => (
           <div key={index} className={Styles.eventbox}>
-            <EventPost />
+            <Link href="/EventsTwoPage">
+              <EventPost />
+            </Link>
           </div>
         ))}
       </div>
@@ -75,7 +78,7 @@ function RightSectionOfEvents() {
           <div
             style={{
               backgroundColor: "#42b00f",
-              borderWidth: 1,
+              borderWidth: 2,
               width: "6.2rem",
               border: "#42b00f 1px solid",
               position: "absolute",
