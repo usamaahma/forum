@@ -14,6 +14,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import detail from "../../detail.json";
 import RecentProductTwo from "./RecentProductTwo";
+import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 const responsive = {
   375: { items: 1 },
@@ -75,7 +76,13 @@ function RecentProducts() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <ProductCard />
+                    <Link
+                      href="/ProductDetailsPage"
+                      style={{ textDecoration: "none" }}
+                    >
+                      {" "}
+                      <ProductCard />{" "}
+                    </Link>
                   </div>
                 </div>
               ))}

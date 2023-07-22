@@ -11,99 +11,118 @@ import Vector5 from "../../public/images/image 75 (2).png";
 import Vector6 from "../../public/images/image 75 (3).png";
 import Vector33 from "../../public/images/com.png";
 import Image from "next/image";
+import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector} alt="" />
-      <p className={Styles.shoptext}>Devon Lane</p>
-    </div>
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector1} alt="" />
-      <p className={Styles.shoptext}>Guy Hawkins</p>
-    </div>
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector2} alt="" />
-      <p className={Styles.shoptext}>Jane Cooper</p>
-    </div>
-  </div>,
-  <div
-    key={4}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector3} alt="" />
-      <p className={Styles.shoptext}>Darlene Robertson</p>
-    </div>
-  </div>,
-  <div
-    key={5}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector4} alt="" />
-      <p className={Styles.shoptext}>Devon Lane</p>
-    </div>
-  </div>,
-  <div
-    key={6}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector5} alt="" />
-      <p className={Styles.shoptext}>Jacob Jones</p>
-    </div>
-  </div>,
-  <div
-    key={7}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector33} alt="" />
-      <p className={Styles.shoptext}>Jacob Jones</p>
-    </div>
-  </div>,
-  <div
-    key={8}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Jacob Jones</p>
-    </div>
-  </div>,
-  <div
-    key={9}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Jacob Jones</p>
-    </div>
-  </div>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={1}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector} alt="" />
+        <p className={Styles.shoptext}>Devon Lane</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={2}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector1} alt="" />
+        <p className={Styles.shoptext}>Guy Hawkins</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={3}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector2} alt="" />
+        <p className={Styles.shoptext}>Jane Cooper</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={4}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector3} alt="" />
+        <p className={Styles.shoptext}>Darlene Robertson</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={5}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector4} alt="" />
+        <p className={Styles.shoptext}>Devon Lane</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={6}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector5} alt="" />
+        <p className={Styles.shoptext}>Jacob Jones</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={7}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector33} alt="" />
+        <p className={Styles.shoptext}>Jacob Jones</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={8}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Jacob Jones</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+    <div
+      key={9}
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Jacob Jones</p>
+      </div>
+    </div>{" "}
+  </Link>,
 ];
 
 const responsive = {

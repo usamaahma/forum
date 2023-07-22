@@ -37,7 +37,12 @@ function PopularProducts() {
                     onDragStart={handleDragStart}
                     style={{ display: "flex", justifyContent: "center" }}
                   >
-                    <ProductCard />
+                    <Link
+                      href="/ProductDetailsPage"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <ProductCard />
+                    </Link>
                   </div>
                 </div>
               ))}
