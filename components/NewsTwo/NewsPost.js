@@ -65,7 +65,7 @@ function NewsPost() {
         <div
           style={{
             backgroundColor: "#42b00f",
-            borderWidth: 1,
+            borderWidth: 2,
             width: "6rem",
             border: "#42b00f 1px solid",
             position: "absolute",
@@ -86,9 +86,9 @@ function NewsPost() {
           }}
         >
           <div className={Styles.Carousel1}>
-            <Link href="/NewsPageTwo">
-              <NewsCarousel />
-            </Link>
+            {/* <Link href="/NewsPageTwo"> */}
+            <NewsCarousel />
+            {/* </Link> */}
           </div>
         </div>
       </div>

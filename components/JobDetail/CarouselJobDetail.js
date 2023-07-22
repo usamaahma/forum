@@ -19,7 +19,7 @@ function CarouselJobDetail() {
   return (
     <div>
       <div>
-        <h3>Related Service</h3>
+        <h3 style={{ marginBottom: ".5rem" }}>Related Service</h3>
         <div
           style={{
             backgroundColor: "#42b00f",

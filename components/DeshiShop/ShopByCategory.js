@@ -11,129 +11,142 @@ import Vector5 from "../../public/images/Group (3).png";
 import Vector6 from "../../public/images/Vector (8).png";
 import Vector33 from "../../public/images/com.png";
 import Image from "next/image";
+import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector} alt="" />
-      <p className={Styles.shoptext}>Men Clothing</p>
-    </div>
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector1} alt="" />
-      <p className={Styles.shoptext}>Women’s Clothing</p>
-    </div>
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector2} alt="" />
-      <p className={Styles.shoptext}>Sunglass & Eyewear</p>
-    </div>
-  </div>,
-  <div
-    key={4}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector3} alt="" />
-      <p className={Styles.shoptext}>T-shirts</p>
-    </div>
-  </div>,
-  <div
-    key={5}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector4} alt="" />
-      <p className={Styles.shoptext}>Jesrcy</p>
-    </div>
-  </div>,
-  <div
-    key={6}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector5} alt="" />
-      <p className={Styles.shoptext}>Security System</p>
-    </div>
-  </div>,
-  <div
-    key={7}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector33} alt="" />
-      <p className={Styles.shoptext}>Television</p>
-    </div>
-  </div>,
-  <div
-    key={8}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Toys and Games</p>
-    </div>
-  </div>,
-  <div
-    key={9}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Toys and Games</p>
-    </div>
-  </div>,
-  <div
-    key={10}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Toys and Games</p>
-    </div>
-  </div>,
-  <div
-    key={11}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Toys and Games</p>
-    </div>
-  </div>,
-  <div
-    key={12}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "center" }}
-  >
-    <div className={Styles.boxstyle}>
-      <Image src={Vector6} alt="" />
-      <p className={Styles.shoptext}>Toys and Games</p>
-    </div>
-  </div>,
+  <Link key={1} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector} alt="" />
+        <p className={Styles.shoptext}>Men Clothing</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={2} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector1} alt="" />
+        <p className={Styles.shoptext}>Women’s Clothing</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={3} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector2} alt="" />
+        <p className={Styles.shoptext}>Sunglass & Eyewear</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={4} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector3} alt="" />
+        <p className={Styles.shoptext}>T-shirts</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={5} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector4} alt="" />
+        <p className={Styles.shoptext}>Jesrcy</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={6} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector5} alt="" />
+        <p className={Styles.shoptext}>Security System</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={7} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector33} alt="" />
+        <p className={Styles.shoptext}>Television</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={8} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Toys and Games</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={9} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Toys and Games</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={10} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Toys and Games</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={11} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Toys and Games</p>
+      </div>
+    </div>{" "}
+  </Link>,
+  <Link key={12} href="/DeshiShopPageTwo" style={{ textDecoration: "none" }}>
+    <div
+      onDragStart={handleDragStart}
+      style={{ display: "flex", justifyContent: "center" }}
+    >
+      <div className={Styles.boxstyle}>
+        <Image src={Vector6} alt="" />
+        <p className={Styles.shoptext}>Toys and Games</p>
+      </div>
+    </div>{" "}
+  </Link>,
 ];
 
 const responsive = {
@@ -156,7 +169,6 @@ function ShopByCategory() {
           mouseTracking
           items={items}
           responsive={responsive}
-          // disableButtonsControls
           disableDotsControls
           autoPlay
           autoPlayInterval={2000}

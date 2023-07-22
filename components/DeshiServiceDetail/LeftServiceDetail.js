@@ -8,7 +8,7 @@ import Location from "../../public/images/locationone.png";
 import Eye from "../../public/images/Eye3.png";
 import Facebook from "../../public/images/Group 133.png";
 import Twitter from "../../public/images/Group 134.png";
-import Instgram from "../../public/images/Group 132.png";
+import Instgram from "../../public/images/Group 132.png"; 
 import Linkdin from "../../public/images/Group 131.png";
 import Mess from "../../public/images/Group 135.png";
 import Laptop from "../../public/images/Rectangle 4573.png";
