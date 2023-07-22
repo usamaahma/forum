@@ -45,7 +45,10 @@ function RightSectionDeshi() {
           {data.map((index) => (
             <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
               <div className={Styles.centercard}>
-                <DeshiProductCard />
+                <Link href="./DeshiServiceDetailPage">
+                  {" "}
+                  <DeshiProductCard />{" "}
+                </Link>
               </div>
             </Col>
           ))}
@@ -75,7 +78,10 @@ function RightSectionDeshi() {
             {data.map((index) => (
               <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
                 <div className={Styles.centercard}>
-                  <DeshiProductCard />
+                  <Link href="./DeshiServiceDetailPage">
+                    {" "}
+                    <DeshiProductCard />{" "}
+                  </Link>
                 </div>
               </Col>
             ))}
