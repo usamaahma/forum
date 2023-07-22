@@ -15,9 +15,8 @@ import Link from "next/link";
 const handleDragStart = (e) => e.preventDefault();
 
 const items = [
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={1} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={1}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -27,9 +26,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={2} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={2}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -39,9 +37,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={3} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={3}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -51,9 +48,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={4} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={4}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -63,9 +59,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={5} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={5}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -75,9 +70,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={6} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={6}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -87,9 +81,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={7} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={7}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -99,9 +92,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={8} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={8}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
@@ -111,9 +103,8 @@ const items = [
       </div>
     </div>{" "}
   </Link>,
-  <Link href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
+  <Link key={9} href="/DeshiStoreTwo" style={{ textDecoration: "none" }}>
     <div
-      key={9}
       onDragStart={handleDragStart}
       style={{ display: "flex", justifyContent: "center" }}
     >
