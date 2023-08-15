@@ -269,7 +269,7 @@ function Header3() {
                   Job
                 </Button>
               </Link>
-              <Link href="./EventsFormPage">
+              <Link href="/EventsFormPage">
                 <Button
                   style={{
                     backgroundColor: "#42b00f",
