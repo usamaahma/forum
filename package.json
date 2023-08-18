@@ -16,6 +16,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
+    "firebase": "^10.2.0",
     "flickity": "^2.3.0",
     "google-map-react": "^2.2.1",
     "next": "13.3.1",

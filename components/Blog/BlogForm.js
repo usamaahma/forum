@@ -6,48 +6,65 @@ import { Button, Dropdown, Space, message, Upload, Form } from "antd";
 import { blogForm } from "../../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
-
+import { Storage } from "../../firebase";
+import {
+  uploadBytes,
+  ref,
+  getDownloadURL,
+  uploadBytesResumable,
+} from "firebase/storage";
 const { TextArea } = Input;
 const { Dragger } = Upload;
 
 function BlogForm({ initialValues }) {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState();
+  const [Pdf, setPdf] = useState(null);
+  const [url, setUrl] = useState("");
+  const [percent, setPercent] = useState("");
+
   // const dispatch = useDispatch();
 
-  const onFinish = async (values) => {
-    // Continue with the API call
-    console.log(values, "doneee");
-    localStorage.setItem("blogFormData", JSON.stringify(values));
-    const dataForApi = {
-      yourName: values.yourName,
-      postTitle: values.postTitle,
-      category: values.category,
-      subCategory: values.subCategory,
-      tag: values.tag,
-      date: values.date,
-      description: values.description,
-    };
-    blogForm({
-      method: "post",
-      data: dataForApi,
-    })
-      .then((res) => {
-        console.log(res.data.user, "api");
-        message.success("API call successful!");
-        localStorage.removeItem("blogFormData");
-      })
-      .catch((error) => {
-        setLoading(false);
-        message.error("API call failed.");
-      })
-      .finally(() => {
-        onReset();
+  ////////
+  const date = new Date();
+  const showTime =
+    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+  const handlesubmit = (values) => {
+    let uploadedFile = values.image?.[0]; // Access the uploaded file from the form values
+
+    if (uploadedFile) {
+      const imageDocument = ref(
+        Storage,
+        `images/${uploadedFile.name + showTime}`
+      );
+      const uploadTask = uploadBytesResumable(imageDocument, uploadedFile);
+
+      uploadBytes(imageDocument, uploadedFile)
+        .then(() => {
+          getDownloadURL(imageDocument)
+            .then((Url) => {
+              setUrl(Url);
+              console.log(Url);
+            })
+            .catch((error) => {
+              console.log(error.message, "error getting the image url");
+            });
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+
+      uploadTask.on("state_changed", (snapshot) => {
+        const percent = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setPercent(percent);
       });
+    }
+    console.log(url, "ggg");
   };
-  const onReset = () => {
-    form.resetFields();
-  };
+
+  //////////////////
   const props = {
     name: "file",
     multiple: true,
@@ -121,30 +138,42 @@ function BlogForm({ initialValues }) {
   const onChange = (date, dateString) => {
     console.log(date, dateString);
   };
-  // const createBlogForm = (values) => {
-  //   setLoading(true);
-  //   const data = {
-  //     country: storedItem,
-  //     city: storedItem1,
-  //     prefrence: storedItem2,
-  //   };
+  const onFinish = async (values) => {
+    // Continue with the API call
+    console.log(values, "doneee");
+    localStorage.setItem("blogFormData", JSON.stringify(values));
+    const dataForApi = {
+      yourName: values.yourName,
+      postTitle: values.postTitle,
+      category: values.category,
+      subCategory: values.subCategory,
+      tag: values.tag,
+      date: values.date,
+      description: values.description,
+      image: [url],
+    };
+    blogForm({
+      method: "post",
+      data: dataForApi,
+    })
+      .then((res) => {
+        console.log(res.data, "api");
+        message.success("API call successful!");
+        localStorage.removeItem("blogFormData");
+        setUrl("");
+      })
+      .catch((error) => {
+        setLoading(false);
+        message.error("API call failed.");
+      })
+      .finally(() => {
+        onReset();
+      });
+  };
+  const onReset = () => {
+    form.resetFields();
+  };
 
-  //   blogForm({
-  //     method: "post",
-  //     data: data,
-  //   })
-  //     .then((res) => {
-  //       setLoading(false);
-  //       console.log(res.data.user, "api");
-  //       message.success("API call successful!");
-  //       // Do something after successful API call (e.g., navigate to another page)
-  //     })
-  //     .catch((error) => {
-  //       setLoading(false);
-  //       // Handle error if the API call fails
-  //       message.error("API call failed."); // Show error messages
-  //     });
-  // };
   return (
     <div>
       <Form
@@ -280,11 +309,12 @@ function BlogForm({ initialValues }) {
           </Col>
         </Row>
         <div className={Styles.draggercenter} style={{ marginTop: "1rem" }}>
-          <Dragger
+          <Form.Item name="image">
+            {/* <Dragger
             {...props}
             className={Styles.dragger}
             onChange={handleimageChange}
-          >
+          > */}
             <p className="ant-upload-drag-icon">
               <InboxOutlined />
             </p>
@@ -296,10 +326,12 @@ function BlogForm({ initialValues }) {
               <br />
               270 x 158 recommended
             </p>
-            <Button className={Styles.buttondrag}>
-              <img src="../images/Small outline btn.png" alt="abc" />
-            </Button>
-          </Dragger>
+            {/* <Button className={Styles.buttondrag}>
+              <img src="../images/Small outline btn.png" alt="abc" /> */}
+            <input type="file" onChange={handlesubmit} />
+            {/* </Button> */}
+            {/* </Dragger> */}
+          </Form.Item>
         </div>
         <Row justify="center" className={Styles.colgap}>
           <Col className={Styles.colgapppssss}>
