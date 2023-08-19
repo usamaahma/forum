@@ -13,6 +13,7 @@ import {
   getDownloadURL,
   uploadBytesResumable,
 } from "firebase/storage";
+
 const { TextArea } = Input;
 const { Dragger } = Upload;
 
@@ -22,15 +23,15 @@ function BlogForm({ initialValues }) {
   const [Pdf, setPdf] = useState(null);
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
-
+  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   // const dispatch = useDispatch();
 
-  ////////
+  /////////////////////////////
   const date = new Date();
   const showTime =
     date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-  const handlesubmit = (values) => {
-    let uploadedFile = values.image?.[0]; // Access the uploaded file from the form values
+  const handlesubmit = (e) => {
+    const uploadedFile = e.target.files[0]; // Get the uploaded file
 
     if (uploadedFile) {
       const imageDocument = ref(
@@ -39,11 +40,19 @@ function BlogForm({ initialValues }) {
       );
       const uploadTask = uploadBytesResumable(imageDocument, uploadedFile);
 
+      uploadTask.on("state_changed", (snapshot) => {
+        const percent = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        );
+        setPercent(percent);
+      });
+
       uploadBytes(imageDocument, uploadedFile)
         .then(() => {
           getDownloadURL(imageDocument)
             .then((Url) => {
               setUrl(Url);
+              setUploadedImageUrl(Url); // Set the uploaded image URL
               console.log(Url);
             })
             .catch((error) => {
@@ -53,15 +62,7 @@ function BlogForm({ initialValues }) {
         .catch((error) => {
           console.log(error.message);
         });
-
-      uploadTask.on("state_changed", (snapshot) => {
-        const percent = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        );
-        setPercent(percent);
-      });
     }
-    console.log(url, "ggg");
   };
 
   //////////////////
@@ -93,35 +94,6 @@ function BlogForm({ initialValues }) {
     console.log("click", e);
   };
 
-  const items = [
-    {
-      label: "1st menu item",
-      key: "1",
-      icon: <UserOutlined />,
-    },
-    {
-      label: "2nd menu item",
-      key: "2",
-      icon: <UserOutlined />,
-    },
-    {
-      label: "3rd menu item",
-      key: "3",
-      icon: <UserOutlined />,
-      danger: true,
-    },
-    {
-      label: "4rd menu item",
-      key: "4",
-      icon: <UserOutlined />,
-      danger: true,
-      disabled: true,
-    },
-  ];
-  const menuProps = {
-    items,
-    onClick: handleMenuClick,
-  };
   const handleCategoryChange = (value) => {
     form.setFieldsValue({ category: value });
   };
