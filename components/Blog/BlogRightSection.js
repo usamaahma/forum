@@ -9,11 +9,13 @@ import Like from "../../public/images/Like1.png";
 import Share from "../../public/images/Share1.png";
 import Comment from "../../public/images/Comment1.png";
 import { blogForm } from "../../helper/axios";
+import { useRouter } from "next/router"; // Import the useRouter hook
 
 const { Meta } = Card;
 ////////////////
 
 function BlogRightSection() {
+  const router = useRouter();
   const [data, setData] = useState();
   const [loading, setloading] = useState();
 
@@ -56,6 +58,7 @@ function BlogRightSection() {
               cover={
                 <img src={item.image?.[0]} alt="abc" width={200} height={200} />
               }
+              onClick={() => router.push(`/BlogTwoPage?blogId=${item.id}`)}
             >
               <div>
                 <p className={Styles.textsmall}>Culture - 2 Hours ago </p>

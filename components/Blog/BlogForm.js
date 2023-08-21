@@ -265,6 +265,7 @@ function BlogForm({ initialValues }) {
                   className={Styles.inputgap}
                   placeholder="Date"
                   onChange={handledateChange}
+                  format="YYYY-MM-DD"
                 />
               </div>
             </Form.Item>
