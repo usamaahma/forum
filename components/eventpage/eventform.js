@@ -75,7 +75,7 @@ function Eventform() {
         </Col>
         <Col>
           <div className={Styles.divssss}>
-            Start Date
+            Category
             <DatePicker
               className={Styles.inputgap}
               onChange={onChange}
