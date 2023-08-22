@@ -11,26 +11,13 @@ import BlogCard from "../Blog/BlogCard";
 import Link from "next/link";
 import BlogCarousel from "./BlogCarousel";
 const { TextArea } = Input;
-function BlogTwoPost() {
+function BlogTwoPost({ data }) {
   return (
     <div className={Styles.divvpad}>
       <div>
-        <Image className={Styles.imgstyle} src={Business} alt="abc" />
+        <img className={Styles.imgstyle} src={data.image?.[0]} alt="abc" />
         <div className={Styles.boxpadding}>
-          <p className={Styles.lookingtext}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s,
-            <br />
-            <br />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, Lorem Ipsum is simply dummy text of the
-            printing and typesetting industry. Lorem Ipsum has been the
-            industry&apos;s standard dummy text ever since the 1500s,
-          </p>
+          <p className={Styles.lookingtext}>{data.description}</p>
         </div>
       </div>
       <div className={Styles.mblview}>
