@@ -21,9 +21,9 @@ function BlogForm({ initialValues }) {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState();
   const [Pdf, setPdf] = useState(null);
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(null);
   const [percent, setPercent] = useState("");
-  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+  const [uploadedImageUrl, setUploadedImageUrl] = useState(null);
   // const dispatch = useDispatch();
 
   /////////////////////////////
@@ -52,7 +52,7 @@ function BlogForm({ initialValues }) {
           getDownloadURL(imageDocument)
             .then((Url) => {
               setUrl(Url);
-              setUploadedImageUrl(Url); // Set the uploaded image URL
+              setUploadedImageUrl(Url);
               console.log(Url);
             })
             .catch((error) => {
@@ -111,6 +111,10 @@ function BlogForm({ initialValues }) {
     console.log(date, dateString);
   };
   const onFinish = async (values) => {
+    if (!url) {
+      message.error("Please upload an image.");
+      return;
+    }
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("blogFormData", JSON.stringify(values));
@@ -132,7 +136,7 @@ function BlogForm({ initialValues }) {
         console.log(res.data, "api");
         message.success("API call successful!");
         localStorage.removeItem("blogFormData");
-        setUrl("");
+        setUrl(null);
       })
       .catch((error) => {
         setLoading(false);
@@ -144,6 +148,8 @@ function BlogForm({ initialValues }) {
   };
   const onReset = () => {
     form.resetFields();
+    setUrl(null); // Reset image URL on form reset
+    setUploadedImageUrl(null);
   };
 
   return (
