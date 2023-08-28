@@ -1,32 +1,34 @@
-import React from "react";
-import Styles from "../../styles/EventPost.module.css";
+import React, { useEffect } from "react";
+import Styles1 from "../../styles/EventPost.module.css";
 import Kharai from "../../public/images/pehlikarahi.png";
 import Calendar from "../../public/images/Calendar 2.png";
 import Locatin from "../../public/images/Locatin (1).png";
 import Image from "next/image";
-function EventPost() {
+function EventPost({ item }) {
+  console.log(item, "eventdata");
+
   return (
-    <div className={Styles.bigbox}>
-      <div className={Styles.flexbox}>
-        <Image src={Kharai} alt="" />
+    <div className={Styles1.bigbox}>
+      <div className={Styles1.flexbox}>
+        <img src={item.image?.[0]} alt="abc" width={100} height={100} />
         <div>
-          <div className={Styles.flexsmallbox}>
-            <Image src={Calendar} alt="" className={Styles.cel} />
-            <p className={Styles.text14}>14</p>
-            <p className={Styles.texta}>APR</p>
+          <div className={Styles1.flexsmallbox}>
+            <Image src={Calendar} alt="" className={Styles1.cel} />
+            <p className={Styles1.text14}>{item.startDate} </p>
+            {/* <p className={Styles1.texta}>APR</p> */}
           </div>
-          <hr className={Styles.line} />
-          <p className={Styles.textap}>April 14,2023 10:00PM- April 16,2023</p>
-          <p className={Styles.text144}>Pohela Boisakh</p>
-          <div className={Styles.flexsmallbox}>
+          <hr className={Styles1.line} />
+          <p className={Styles1.textap}>
+            {item.startDate}- {item.endDate}
+          </p>
+          <p className={Styles1.text144}>{item.eventName}</p>
+          <div className={Styles1.flexsmallbox}>
             <Image src={Locatin} alt="" />
-            <p className={Styles.texth}>
-              Hilton Hotel, Jacksion Heights NY 10473
-            </p>
+            <p className={Styles1.texth}>{item.location}</p>
           </div>
         </div>
       </div>
-      <p className={Styles.textap}>
+      <p className={Styles1.textap}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text
         ever since the 1500s, when an unknown printer took a galley of type and

@@ -92,6 +92,61 @@ users.interceptors.request.use(
     return Promise.reject(err);
   }
 );
+const eventForm = axios.create({
+  baseURL: `${url}/eventForm`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const jobForm = axios.create({
+  baseURL: `${url}/jobForm`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const rentalForm = axios.create({
+  baseURL: `${url}/rentalForm`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const buySellForm = axios.create({
+  baseURL: `${url}/buySellForm`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const deshiOneForm = axios.create({
+  baseURL: `${url}/deshiOneForm`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
 export {
   login,
   users,
@@ -100,4 +155,9 @@ export {
   socialNetwork,
   busiBusinessInfo,
   blogForm,
+  eventForm,
+  jobForm,
+  rentalForm,
+  buySellForm,
+  deshiOneForm,
 };

@@ -15,7 +15,7 @@ import dataOne from "../../dataOne.json";
 import RecentBlog from "../members/RecentBlog";
 import NewsEvent from "../News/NewsEvent";
 
-function EventLeftSection() {
+function EventLeftSection({ data }) {
   return (
     <div>
       <div>
@@ -40,14 +40,14 @@ function EventLeftSection() {
           <p className={Styles.textgreen}>Start Date</p>
           <Image src={Calendertick} alt="abc" />
           <p className={Styles.text22}>
-            14 <a className={Styles.text33}>APR, 2023</a>
+            <a className={Styles.text33}>{data.startDate}</a>
           </p>
         </div>
         <div className={Styles.divcale}>
           <p className={Styles.textgreen}>End Date</p>
           <Image src={Calendercross} alt="abc" />
           <p className={Styles.text22}>
-            23 <a className={Styles.text33}>Dec, 2023</a>
+            <a className={Styles.text33}>{data.endDate}</a>
           </p>
         </div>
       </div>

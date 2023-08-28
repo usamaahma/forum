@@ -126,6 +126,13 @@
   width: 50%;
   margin-bottom: 1rem;
 }
+.mainimgelldiv1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 50%; */
+  margin-bottom: 1rem;
+}
 .commdiv {
   display: flex;
   justify-content: space-around;

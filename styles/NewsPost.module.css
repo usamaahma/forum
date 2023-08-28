@@ -135,7 +135,15 @@
   margin-top: 1rem;
   width: 50rem;
 }
-
+.mblview {
+  display: flex;
+  justify-content: space-between;
+}
+.share11 {
+  color: #42b00f;
+  text-align: right;
+  font-weight: 500;
+}
 @media (max-width: 2200px) {
   .Carousel1 {
     margin-top: 1rem;

@@ -1,8 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Input, DatePicker, Select } from "antd";
+
 import Styles from "../../styles/eventform.module.css";
 import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
-import { Button, Dropdown, Space, message, Upload, Form } from "antd";
+import {
+  Button,
+  Dropdown,
+  Space,
+  message,
+  Upload,
+  Form,
+  Row,
+  Col,
+  Input,
+  DatePicker,
+  Select,
+} from "antd";
 import { blogForm } from "../../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
@@ -21,9 +33,9 @@ function BlogForm({ initialValues }) {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState();
   const [Pdf, setPdf] = useState(null);
-  const [url, setUrl] = useState(null);
+  const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
-  const [uploadedImageUrl, setUploadedImageUrl] = useState(null);
+  const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   // const dispatch = useDispatch();
 
   /////////////////////////////
@@ -32,7 +44,6 @@ function BlogForm({ initialValues }) {
     date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
   const handlesubmit = (e) => {
     const uploadedFile = e.target.files[0]; // Get the uploaded file
-
     if (uploadedFile) {
       const imageDocument = ref(
         Storage,
@@ -52,7 +63,7 @@ function BlogForm({ initialValues }) {
           getDownloadURL(imageDocument)
             .then((Url) => {
               setUrl(Url);
-              setUploadedImageUrl(Url);
+              setUploadedImageUrl(Url); // Set the uploaded image URL
               console.log(Url);
             })
             .catch((error) => {
@@ -89,11 +100,6 @@ function BlogForm({ initialValues }) {
     console.log("Failed:", errorInfo);
   };
 
-  const handleMenuClick = (e) => {
-    message.info("Click on menu item.");
-    console.log("click", e);
-  };
-
   const handleCategoryChange = (value) => {
     form.setFieldsValue({ category: value });
   };
@@ -111,10 +117,6 @@ function BlogForm({ initialValues }) {
     console.log(date, dateString);
   };
   const onFinish = async (values) => {
-    if (!url) {
-      message.error("Please upload an image.");
-      return;
-    }
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("blogFormData", JSON.stringify(values));
@@ -136,7 +138,7 @@ function BlogForm({ initialValues }) {
         console.log(res.data, "api");
         message.success("API call successful!");
         localStorage.removeItem("blogFormData");
-        setUrl(null);
+        setUrl("");
       })
       .catch((error) => {
         setLoading(false);
@@ -148,8 +150,6 @@ function BlogForm({ initialValues }) {
   };
   const onReset = () => {
     form.resetFields();
-    setUrl(null); // Reset image URL on form reset
-    setUploadedImageUrl(null);
   };
 
   return (
@@ -289,11 +289,6 @@ function BlogForm({ initialValues }) {
         </Row>
         <div className={Styles.draggercenter} style={{ marginTop: "1rem" }}>
           <Form.Item name="image">
-            {/* <Dragger
-            {...props}
-            className={Styles.dragger}
-            onChange={handleimageChange}
-          > */}
             <p className="ant-upload-drag-icon">
               <InboxOutlined />
             </p>
@@ -305,11 +300,7 @@ function BlogForm({ initialValues }) {
               <br />
               270 x 158 recommended
             </p>
-            {/* <Button className={Styles.buttondrag}>
-              <img src="../images/Small outline btn.png" alt="abc" /> */}
             <input type="file" onChange={handlesubmit} />
-            {/* </Button> */}
-            {/* </Dragger> */}
           </Form.Item>
         </div>
         <Row justify="center" className={Styles.colgap}>
