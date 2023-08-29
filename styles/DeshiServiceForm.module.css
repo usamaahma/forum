@@ -31,7 +31,7 @@
 }
 .wdthinpu {
   width: 22rem !important;
-  height: 2.5rem !important;
+  height: 2rem !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@
 }
 .wdthinput {
   width: 22rem !important;
-  height: 2.5rem !important;
+  height: 2rem !important;
   border: solid #d0d0d0 0.1rem;
   border-radius: 0.3rem;
   display: flex;
