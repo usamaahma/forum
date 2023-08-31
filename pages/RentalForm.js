@@ -131,13 +131,15 @@ function RentalForm({ initialValues }) {
   const handleSubCategoryChange = (value) => {
     form.setFieldsValue({ subCategory: value });
   };
-  const handleSalaryTypeChange = (value) => {
-    form.setFieldsValue({ salaryType: value });
+  const handlePriceTypeChange = (value) => {
+    form.setFieldsValue({ priceType: value });
   };
-  const handleSalaryChange = (value) => {
-    form.setFieldsValue({ salary: value });
+  const handlePriceChange = (value) => {
+    form.setFieldsValue({ price: value });
   };
-
+  const handleTimeChange = (value) => {
+    form.setFieldsValue({ time: value });
+  };
   const handleDeadlineChange = (value) => {
     form.setFieldsValue({ deadline: value });
   };
@@ -389,7 +391,7 @@ function RentalForm({ initialValues }) {
                           width: "20rem",
                           marginTop: ".5rem",
                         }}
-                        onChange={handleSalaryTypeChange}
+                        onChange={handlePriceTypeChange}
                         options={[
                           {
                             value: "Yearly",
@@ -408,21 +410,31 @@ function RentalForm({ initialValues }) {
               <div className={Styles1.displdeshiservice}>
                 <div className={Styles1.gapscnd}>
                   <div className={Styles1.gapfourth}>
-                    <p className={Styles1.txtgap}>Price</p>
-                    <Dropdown
-                      menu={{
-                        items,
-                      }}
-                      placement="bottom"
-                      arrow
-                    >
-                      <Button className={Styles1.dropwidhei}>
-                        $
-                        <DownOutlined />
-                      </Button>
-                    </Dropdown>
+                    <Form.Item name="price">
+                      <div className={Styles.divssss}>
+                        <p style={{ marginTop: "-.1rem" }}>Price</p>
+                        <Select
+                          defaultValue="Yearly"
+                          style={{
+                            width: "20rem",
+                            marginTop: ".5rem",
+                          }}
+                          onChange={handlePriceChange}
+                          options={[
+                            {
+                              value: "Yearly",
+                              label: "Yearly",
+                            },
+                            {
+                              value: "monthly",
+                              label: "monthly",
+                            },
+                          ]}
+                        />
+                      </div>
+                    </Form.Item>
                   </div>
-                  <Dropdown
+                  {/* <Dropdown
                     menu={{
                       items,
                     }}
@@ -433,51 +445,63 @@ function RentalForm({ initialValues }) {
                       55
                       <DownOutlined />
                     </Button>
-                  </Dropdown>
+                  </Dropdown> */}
                 </div>
                 <div>
-                  <p className={Styles1.txtgap}> Time</p>
-                  <Dropdown
-                    menu={{
-                      items,
-                    }}
-                    placement="bottom"
-                    arrow
-                  >
-                    <Button className={Styles1.wdthinpu}>
-                      Monthly
-                      <DownOutlined />
-                    </Button>
-                  </Dropdown>
+                  <Form.Item name="time">
+                    <div className={Styles.divssss}>
+                      <p style={{ marginTop: "-.1rem" }}>Time</p>
+                      <Select
+                        defaultValue="Yearly"
+                        style={{
+                          width: "20rem",
+                          marginTop: ".5rem",
+                        }}
+                        onChange={handleTimeChange}
+                        options={[
+                          {
+                            value: "Yearly",
+                            label: "Yearly",
+                          },
+                          {
+                            value: "monthly",
+                            label: "monthly",
+                          },
+                        ]}
+                      />
+                    </div>
+                  </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservic}>
-                <p className={Styles1.txtgap}>Meta Description</p>
-                <TextArea
-                  className={Styles1.wdthinp}
-                  autoSize={{
-                    minRows: 2,
-                    maxRows: 8,
-                  }}
-                />
+                <Form.Item name="metaDescription">
+                  <p className={Styles1.txtgap}>Meta Description</p>
+                  <TextArea
+                    className={Styles1.wdthinp}
+                    autoSize={{
+                      minRows: 2,
+                      maxRows: 8,
+                    }}
+                  />
+                </Form.Item>
               </div>
               <div className={Styles1.displdeshiservic}>
-                <p className={Styles1.txtgap}>Service Description</p>
-                <RichTextEditor />
+                <Form.Item name="serviceDescription">
+                  <p className={Styles1.txtgap}>Service Description</p>
+                  <RichTextEditor />
+                </Form.Item>
               </div>
 
               <div className={Styles1.displdeshiservic}>
                 <div className={Styles1.plustxt}>
-                  {" "}
                   <p className={Styles1.txtgap}>Feature</p>
                   <Button className={Styles1.plusbutton} onClick={showModal}>
-                    {" "}
                     <img alt="abc" src="../images/Plus1.png" />{" "}
                     <p className={Styles1.txtaddfeature}>Add Feature</p>
                   </Button>
                 </div>
                 <div className={Styles1.divnew}>
-                  <div className={Styles1.divnew5}>
+                  {/* <div className={Styles1.divnew5}>
                     {data.map((data, index) => (
                       <div key={index}>
                         Size: &nbsp;&nbsp;&nbsp;{data.size}
@@ -490,14 +514,14 @@ function RentalForm({ initialValues }) {
                         <br />
                       </div>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div
-                className={Styles1.draggercenter}
+                className={Styles.draggercenter}
                 style={{ marginTop: "1rem" }}
               >
-                <Dragger {...props} className={Styles1.dragger}>
+                <Form.Item name="image">
                   <p className="ant-upload-drag-icon">
                     <InboxOutlined />
                   </p>
@@ -509,10 +533,8 @@ function RentalForm({ initialValues }) {
                     <br />
                     270 x 158 recommended
                   </p>
-                  <Button className={Styles1.buttondrag}>
-                    <img src="../images/Small outline btn.png" alt="abc"></img>
-                  </Button>
-                </Dragger>
+                  <input type="file" onChange={handlesubmit} />
+                </Form.Item>
               </div>
               <div className={Styles1.scnddivservice}>
                 <p className={Styles1.largetct}>Contact Details</p>

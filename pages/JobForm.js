@@ -120,7 +120,12 @@ function JobForm({ initialValues }) {
   const handleSalaryChange = (value) => {
     form.setFieldsValue({ salary: value });
   };
-
+  const handleJobTypeChange = (value) => {
+    form.setFieldsValue({ jobType: value });
+  };
+  const handleJobPositionChange = (value) => {
+    form.setFieldsValue({ jobPosition: value });
+  };
   const handleDeadlineChange = (value) => {
     form.setFieldsValue({ deadline: value });
   };
@@ -129,22 +134,33 @@ function JobForm({ initialValues }) {
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
-    localStorage.setItem("eventFormData", JSON.stringify(values));
+    localStorage.setItem("jobFormData", JSON.stringify(values));
     const dataForApi = {
-      eventName: values.eventName,
-      startDate: values.startDate,
-      endDate: values.endDate,
+      title: values.title,
       category: values.category,
-      startTime: values.startTime,
-      endTime: values.endTime,
-      location: values.location,
-      contactNumber: values.contactNumber,
-      sellTicket: values.sellTicket,
-      ticketPrice: values.ticketPrice,
-      ticketSpot: values.ticketSpot,
+      subCategory: values.subCategory,
+      tags: values.tags,
+      salaryType: values.salaryType,
+      salary: values.salary,
+      metaDescription: values.metaDescription,
+      industry: values.industry,
+      jobApplyLink: values.jobApplyLink,
+      experience: values.experience,
+      jobType: values.jobType,
+      jobPosition: values.jobPosition,
+      tagsJob: values.tagsJob,
+      deadline: values.deadline,
+      addressJob: values.addressJob,
+      jobDescription: values.jobDescription,
       name: values.name,
+      contactNumber: values.contactNumber,
+      email: values.email,
+      website: values.website,
       address: values.address,
-      contactNumberti: values.contactNumberti,
+      city: values.city,
+      state: values.state,
+      postal: values.postal,
+      country: values.country,
       image: [url],
     };
     jobForm({
@@ -154,7 +170,7 @@ function JobForm({ initialValues }) {
       .then((res) => {
         console.log(res.data, "api");
         message.success("API call successful!");
-        localStorage.removeItem("eventFormData");
+        localStorage.removeItem("jobFormData");
         setUrl("");
       })
       .catch((error) => {
@@ -178,83 +194,23 @@ function JobForm({ initialValues }) {
         </div>
       </div>
       <div>
-        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <Row>
-            <Col>
-              {" "}
-              <div className={Styles1.pmodal}>
-                Job Description{" "}
-                <img
-                  className={Styles1.imgt}
-                  style={{ marginLeft: ".5rem" }}
-                  alt="abc"
-                  src="../images/question.png"
-                />
-              </div>{" "}
-              <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
-                {/* <Dropdown
-                  menu={{
-                    items,
-                  }}
-                  placement="bottom"
-                  arrow
-                >
-                  <Button className={Styles1.wdthinpu}>
-                    Description
-                    <DownOutlined />
-                  </Button>
-                </Dropdown>{" "} */}
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-              <div style={{ marginTop: "1rem" }}>
-                {" "}
-                <RichTextEditor />
-              </div>{" "}
-              <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
-                {/* <Dropdown
-                  menu={{
-                    items,
-                  }}
-                  placement="bottom"
-                  arrow
-                >
-                  <Button className={Styles1.wdthinpu}>
-                    Key Responsibilities
-                    <DownOutlined />
-                  </Button>
-                </Dropdown>{" "} */}
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-              <div style={{ marginTop: "1rem" }}>
-                {" "}
-                <RichTextEditor />
-              </div>
-            </Col>
-          </Row>
-        </Modal>
-        <Row justify={"center"}>
-          <Form
-            name="basic"
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-            form={form}
-            initialValues={initialValues}
-          >
+        <Form
+          name="basic"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+          form={form}
+          initialValues={initialValues}
+        >
+          <Row justify="center">
             <Col>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="title">
-                    <p className={Styles1.txtgap}>Title</p>
+                <Form.Item name="title">
+                  <div>
+                    Title
                     <Input className={Styles1.wdthinpu} placeholder="Title" />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="category">
                     <div className={Styles.divssss}>
@@ -262,7 +218,7 @@ function JobForm({ initialValues }) {
                       <Select
                         defaultValue="Category1"
                         style={{
-                          width: "20rem",
+                          width: "22rem",
                           marginTop: ".5rem",
                         }}
                         onChange={handleCategoryChange}
@@ -292,7 +248,7 @@ function JobForm({ initialValues }) {
                     <Select
                       defaultValue="subCategory1"
                       style={{
-                        width: "20rem",
+                        width: "22rem",
                         marginTop: ".5rem",
                       }}
                       onChange={handleSubCategoryChange}
@@ -315,22 +271,10 @@ function JobForm({ initialValues }) {
                 </Form.Item>
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="tags">
-                    <p className={Styles1.txtgap}>Tags</p>
-                    <div className={Styles1.wdthinput}>
-                      <Tag
-                        closable
-                        onClose={log}
-                        style={{ marginLeft: ".5rem" }}
-                      >
-                        Tag 1
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        Headphone
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        Business
-                      </Tag>
-                    </div>{" "}
+                    <div>
+                      Tags
+                      <Input className={Styles1.wdthinpu} placeholder="tags" />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
@@ -344,7 +288,6 @@ function JobForm({ initialValues }) {
                     </Radio.Group>
                   </div>
                 </Form.Item>
-                <div className={Styles1.nonedis}></div>
               </div>
               <div className={Styles1.displdeshiservice}>
                 <Form.Item name="salaryType">
@@ -353,7 +296,7 @@ function JobForm({ initialValues }) {
                     <Select
                       defaultValue="Yearly"
                       style={{
-                        width: "20rem",
+                        width: "22rem",
                         marginTop: ".5rem",
                       }}
                       onChange={handleSalaryTypeChange}
@@ -378,7 +321,7 @@ function JobForm({ initialValues }) {
                         <Select
                           defaultValue="Yearly"
                           style={{
-                            width: "20rem",
+                            width: "22rem",
                             marginTop: ".5rem",
                           }}
                           onChange={handleSalaryChange}
@@ -425,60 +368,64 @@ function JobForm({ initialValues }) {
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="metaDescription">
-                  <p className={Styles1.txtgap}>Meta Description</p>
-                  <TextArea
-                    className={Styles1.wdthinp}
-                    autoSize={{
-                      minRows: 2,
-                      maxRows: 8,
-                    }}
-                  />
+                  <div>
+                    Meta Description
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      autoSize={{
+                        minRows: 2,
+                        maxRows: 8,
+                      }}
+                    />
+                  </div>
                 </Form.Item>
               </div>
               <p className={Styles1.largetct} style={{ marginTop: "1rem" }}>
                 Job Overview
               </p>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="industry">
-                    <p className={Styles1.txtgap}>Industry</p>
+                <Form.Item name="industry">
+                  <div>
+                    Industry
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="Industry"
                     />
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="jobApplyLink">
-                    <p className={Styles1.txtgap}>Job Apply Link</p>
+                  </div>
+                </Form.Item>
+
+                <Form.Item name="jobApplyLink">
+                  <div>
+                    Job Apply Link
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="Job apply link"
                     />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="experience">
-                    <p className={Styles1.txtgap}>Experience</p>
+                <Form.Item name="experience">
+                  <div>
+                    Experience
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="1-2 years"
                     />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
+
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="jobType">
                     <div className={Styles.divssss}>
                       <p style={{ marginTop: "-.1rem" }}>Job Type</p>
                       <Select
-                        defaultValue="Yearly"
+                        defaultValue="Job"
                         style={{
                           width: "20rem",
                           marginTop: ".5rem",
                         }}
-                        onChange={handleSalaryTypeChange}
+                        onChange={handleJobTypeChange}
                         options={[
                           {
                             value: "Yearly",
@@ -495,61 +442,54 @@ function JobForm({ initialValues }) {
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="jobPosition">
-                    <div className={Styles.divssss}>
-                      <p style={{ marginTop: "-.1rem" }}>Job Position</p>
-                      <Select
-                        defaultValue="Yearly"
-                        style={{
-                          width: "20rem",
-                          marginTop: ".5rem",
-                        }}
-                        onChange={handleSalaryTypeChange}
-                        options={[
-                          {
-                            value: "Yearly",
-                            label: "Yearly",
-                          },
-                          {
-                            value: "monthly",
-                            label: "monthly",
-                          },
-                        ]}
+                <Form.Item name="jobPosition">
+                  <div className={Styles.divssss}>
+                    <p style={{ marginTop: "-.1rem" }}>Job Position</p>
+                    <Select
+                      defaultValue="Position"
+                      style={{
+                        width: "20rem",
+                        marginTop: ".5rem",
+                      }}
+                      onChange={handleJobPositionChange}
+                      options={[
+                        {
+                          value: "Yearly",
+                          label: "Yearly",
+                        },
+                        {
+                          value: "monthly",
+                          label: "monthly",
+                        },
+                      ]}
+                    />
+                  </div>
+                </Form.Item>
+
+                <div className={Styles1.gapscnd}>
+                  <Form.Item name="tagsJob">
+                    <div>
+                      Tags
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="tagsJob"
                       />
                     </div>
                   </Form.Item>
                 </div>
-                <div className={Styles1.gapscnd}>
-                  <Form.Item name="tags">
-                    <p className={Styles1.txtgap}>Tags</p>
-                    <div className={Styles1.wdthinput}>
-                      <Tag
-                        closable
-                        onClose={log}
-                        style={{ marginLeft: ".5rem" }}
-                      >
-                        Photoshop
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        Figma
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        UI/UX
-                      </Tag>
-                    </div>{" "}
-                  </Form.Item>
-                </div>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="address">
-                    <p className={Styles1.txtgap}>Address</p>
-                    <Input className={Styles1.wdthinpu} placeholder="address" />
-                  </Form.Item>
-                </div>
+                <Form.Item name="addressJob">
+                  <div>
+                    Address
+                    <Input
+                      className={Styles1.wdthinpu}
+                      placeholder="addressJob"
+                    />
+                  </div>
+                </Form.Item>
                 <div className={Styles1.gapscnd}>
-                  <Form.Item name="Deadline">
+                  <Form.Item name="deadline">
                     <p className={Styles1.txtgap}>Deadline</p>
                     <DatePicker
                       defaultValue={dayjs("2015/01/01", dateFormat)}
@@ -561,21 +501,25 @@ function JobForm({ initialValues }) {
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="jobDescription">
-                  <div className={Styles1.plustxt}>
-                    <p className={Styles1.txtgap}>Job Description</p>
-                    <Button className={Styles1.plusbutton} onClick={showModal}>
-                      {" "}
-                      <img alt="abc" src="../images/Plus1.png" />{" "}
-                      <p className={Styles1.txtaddfeature}>Add Description</p>
-                    </Button>
+                  <div>
+                    <div className={Styles1.plustxt}>
+                      Job Description
+                      <Button
+                        className={Styles1.plusbutton}
+                        onClick={showModal}
+                      >
+                        <img alt="abc" src="../images/Plus1.png" />{" "}
+                        <p className={Styles1.txtaddfeature}>Add Description</p>
+                      </Button>
+                    </div>
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      autoSize={{
+                        minRows: 2,
+                        maxRows: 8,
+                      }}
+                    />
                   </div>
-                  <TextArea
-                    className={Styles1.wdthinp}
-                    autoSize={{
-                      minRows: 2,
-                      maxRows: 8,
-                    }}
-                  />
                 </Form.Item>
               </div>
               <div
@@ -583,99 +527,105 @@ function JobForm({ initialValues }) {
                 style={{ marginTop: "1rem" }}
               >
                 <Form.Item name="image">
-                  <p className="ant-upload-drag-icon">
-                    <InboxOutlined />
-                  </p>
-                  <p className="ant-upload-text">
-                    Select a file or drag and drop here
-                  </p>
-                  <p className="ant-upload-hint">
-                    JPG, PNG or PDF, file size no more than 3 MB
-                    <br />
-                    270 x 158 recommended
-                  </p>
-                  <input type="file" onChange={handlesubmit} />
+                  <div>
+                    <p className="ant-upload-drag-icon">
+                      <InboxOutlined />
+                    </p>
+                    <p className="ant-upload-text">
+                      Select a file or drag and drop here
+                    </p>
+                    <p className="ant-upload-hint">
+                      JPG, PNG or PDF, file size no more than 3 MB
+                      <br />
+                      270 x 158 recommended
+                    </p>
+                    <input type="file" onChange={handlesubmit} />
+                  </div>
                 </Form.Item>
               </div>
               <div className={Styles1.scnddivservice}>
                 <p className={Styles1.largetct}>Contact Details</p>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="name">
-                    <p className={Styles1.txtgap}>Name</p>
+                <Form.Item name="name">
+                  <div>
+                    Name
                     <Input className={Styles1.wdthinpu} placeholder="Name" />
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="contactNumber">
-                    <p className={Styles1.txtgap}>Contact Number</p>
+                  </div>
+                </Form.Item>
+                <Form.Item name="contactNumber">
+                  <div>
+                    Contact Number
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="+1 (929) 303 0303"
                     />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="email">
-                    <p className={Styles1.txtgap}>Email</p>
+                <Form.Item name="email">
+                  <div>
+                    Email
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="efat@gmail.com"
                     />
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="website">
-                    <p className={Styles1.txtgap}>Website</p>
+                  </div>
+                </Form.Item>
+
+                <Form.Item name="website">
+                  <div>
+                    Website
                     <Input
                       className={Styles1.wdthinpu}
                       placeholder="www.website.com"
                     />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="address">
-                  <p className={Styles1.txtgap}>Address</p>
-                  <TextArea
-                    className={Styles1.wdthinp}
-                    placeholder="1329 Saint Lawrence Ave, Bronx, NY"
-                    autoSize={{
-                      minRows: 1.5,
-                      maxRows: 5,
-                    }}
-                  />
+                  <div>
+                    Address
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      placeholder="1329 Saint Lawrence Ave, Bronx, NY"
+                      autoSize={{
+                        minRows: 1.5,
+                        maxRows: 5,
+                      }}
+                    />
+                  </div>
                 </Form.Item>
               </div>
               <div className={Styles1.fourdivs}>
-                <div>
-                  <Form.Item name="city">
-                    <p className={Styles1.txtgap}>City</p>
+                <Form.Item name="city">
+                  <div>
+                    City
                     <Input placeholder="city" className={Styles1.wdthinp} />
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="state">
-                    <p className={Styles1.txtgap}>State</p>
+                  </div>
+                </Form.Item>
+                <Form.Item name="state">
+                  <div>
+                    State
                     <Input placeholder="State" className={Styles1.wdthinp} />
-                  </Form.Item>
-                </div>{" "}
-                <div>
-                  <Form.Item name="postal">
-                    <p className={Styles1.txtgap}>Postal</p>
+                  </div>
+                </Form.Item>
+
+                <Form.Item name="postal">
+                  <div>
+                    Postal
                     <Input placeholder="Postal" className={Styles1.wdthinp} />
-                  </Form.Item>
-                </div>{" "}
-                <div>
-                  {" "}
-                  <Form.Item name="country">
-                    <p className={Styles1.txtgap}>Country</p>
+                  </div>
+                </Form.Item>
+
+                <Form.Item name="country">
+                  <div>
+                    Country
                     <Input placeholder="Country" className={Styles1.wdthinp} />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
               </div>
 
               <div className={Styles1.scnddivservice}>
@@ -738,8 +688,70 @@ function JobForm({ initialValues }) {
                 </Button>
               </Form.Item>
             </Col>
-          </Form>
-        </Row>
+          </Row>
+        </Form>
+      </div>
+      <div>
+        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+          <Row>
+            <Col>
+              {" "}
+              <div className={Styles1.pmodal}>
+                Job Description{" "}
+                <img
+                  className={Styles1.imgt}
+                  style={{ marginLeft: ".5rem" }}
+                  alt="abc"
+                  src="../images/question.png"
+                />
+              </div>{" "}
+              <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
+                {/* <Dropdown
+                  menu={{
+                    items,
+                  }}
+                  placement="bottom"
+                  arrow
+                >
+                  <Button className={Styles1.wdthinpu}>
+                    Description
+                    <DownOutlined />
+                  </Button>
+                </Dropdown>{" "} */}
+                <div className={Styles1.plustxttt}>
+                  <img alt="abc" src="../images/Delete.png" />
+                  <img alt="abc" src="../images/circle-plus-24.png" />
+                </div>
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                {" "}
+                <RichTextEditor />
+              </div>{" "}
+              <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
+                {/* <Dropdown
+                  menu={{
+                    items,
+                  }}
+                  placement="bottom"
+                  arrow
+                >
+                  <Button className={Styles1.wdthinpu}>
+                    Key Responsibilities
+                    <DownOutlined />
+                  </Button>
+                </Dropdown>{" "} */}
+                <div className={Styles1.plustxttt}>
+                  <img alt="abc" src="../images/Delete.png" />
+                  <img alt="abc" src="../images/circle-plus-24.png" />
+                </div>
+              </div>
+              <div style={{ marginTop: "1rem" }}>
+                {" "}
+                <RichTextEditor />
+              </div>
+            </Col>
+          </Row>
+        </Modal>
       </div>
       <Footer />
     </div>
