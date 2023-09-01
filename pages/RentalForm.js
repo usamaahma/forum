@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "../styles/HeroSection.module.css";
 import Styles1 from "../styles/DeshiServiceForm.module.css";
 import MainHeader from "@/components/common/mainHeader";
@@ -21,7 +21,7 @@ import {
   Modal,
 } from "antd";
 import { DownOutlined, InboxOutlined } from "@ant-design/icons";
-import RichTextEditor from "@/components/texteditor";
+
 import { rentalForm } from "../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
@@ -32,35 +32,11 @@ import {
   getDownloadURL,
   uploadBytesResumable,
 } from "firebase/storage";
-const { TextArea } = Input;
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
 
-const log = (e) => {
-  console.log(e);
-};
-const preventDefault = (e) => {
-  e.preventDefault();
-  console.log("Clicked! But prevent default.");
-};
-const { Dragger } = Upload;
-const props = {
-  name: "file",
-  multiple: true,
-  action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-  onChange(info) {
-    const { status } = info.file;
-    if (status !== "uploading") {
-      console.log(info.file, info.fileList);
-    }
-    if (status === "done") {
-      message.success(`${info.file.name} file uploaded successfully.`);
-    } else if (status === "error") {
-      message.error(`${info.file.name} file upload failed.`);
-    }
-  },
-  onDrop(e) {
-    console.log("Dropped files", e.dataTransfer.files);
-  },
-};
+const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+const { TextArea } = Input;
 
 function RentalForm({ initialValues }) {
   const [loadings, setLoadings] = useState([]);
@@ -72,7 +48,13 @@ function RentalForm({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
-
+  const [size, setSize] = useState("");
+  const [bedroom, setBedroom] = useState("");
+  const [bathroom, setBathroom] = useState("");
+  const [furniture, setFurniture] = useState("");
+  const [text, setText] = useState("");
+  const [featureDetails, setFeatureDetails] = useState([]);
+  // State for rich text editor content
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -140,33 +122,41 @@ function RentalForm({ initialValues }) {
   const handleTimeChange = (value) => {
     form.setFieldsValue({ time: value });
   };
-  const handleDeadlineChange = (value) => {
-    form.setFieldsValue({ deadline: value });
+  const handleServiceDescriptionChange = (value) => {
+    form.setFieldsValue({ serviceDescription: value });
   };
   const onChange = (e) => {
     console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
+  ///////////////////////////
+
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
+
     localStorage.setItem("eventFormData", JSON.stringify(values));
     const dataForApi = {
-      eventName: values.eventName,
-      startDate: values.startDate,
-      endDate: values.endDate,
+      title: values.title,
       category: values.category,
-      startTime: values.startTime,
-      endTime: values.endTime,
-      location: values.location,
-      contactNumber: values.contactNumber,
-      sellTicket: values.sellTicket,
-      ticketPrice: values.ticketPrice,
-      ticketSpot: values.ticketSpot,
+      subCategory: values.subCategory,
+      tags: values.tags,
+      priceType: values.priceType,
+      price: values.price,
+      time: values.time,
+      metaDescription: values.metaDescription,
+      serviceDescription: values.serviceDescription,
+      feature: values.feature,
       name: values.name,
+      contactNumber: values.contactNumber,
+      email: values.email,
+      website: values.website,
       address: values.address,
-      contactNumberti: values.contactNumberti,
+      city: values.city,
+      state: values.state,
+      postal: values.postal,
+      country: values.country,
       image: [url],
     };
     rentalForm({
@@ -190,6 +180,14 @@ function RentalForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
+  const updateFeatureValues = () => {
+    const featureDetails = `Size: ${size}, Bedroom: ${bedroom}, Bathroom: ${bathroom}, Furniture: ${furniture}`;
+    form.setFieldsValue({ feature: featureDetails });
+  };
+
+  useEffect(() => {
+    updateFeatureValues(); // Call the function to update feature values
+  }, [size, bedroom, bathroom, furniture]);
   return (
     <div>
       <MainHeader />
@@ -237,32 +235,52 @@ function RentalForm({ initialValues }) {
                 />{" "}
               </div>{" "}
               <div className={Styles1.plustxt}>
-                {" "}
-                <Input className={Styles1.modaldicwdth} placeholder="1500 sf" />
+                <Form.Item name="size">
+                  <Input
+                    className={Styles1.modaldicwdth}
+                    placeholder="1500 sf"
+                    onChange={(e) => setSize(e.target.value)}
+                  />
+                </Form.Item>
                 <div className={Styles1.plustxttt}>
                   <img alt="abc" src="../images/Delete.png" />
                   <img alt="abc" src="../images/circle-plus-24.png" />
                 </div>
               </div>
               <div className={Styles1.plustxt}>
-                <Input className={Styles1.modaldicwdth} placeholder="3 Bed" />
+                <Form.Item name="bedroom">
+                  <Input
+                    className={Styles1.modaldicwdth}
+                    placeholder="3 Bed"
+                    onChange={(e) => setBedroom(e.target.value)}
+                  />
+                </Form.Item>
                 <div className={Styles1.plustxttt}>
                   <img alt="abc" src="../images/Delete.png" />
                   <img alt="abc" src="../images/circle-plus-24.png" />
                 </div>
               </div>
               <div className={Styles1.plustxt}>
-                <Input className={Styles1.modaldicwdth} placeholder="1 Bath" />
+                <Form.Item name="bathroom">
+                  <Input
+                    className={Styles1.modaldicwdth}
+                    placeholder="1 Bath"
+                    onChange={(e) => setBathroom(e.target.value)}
+                  />
+                </Form.Item>
                 <div className={Styles1.plustxttt}>
                   <img alt="abc" src="../images/Delete.png" />
                   <img alt="abc" src="../images/circle-plus-24.png" />
                 </div>
               </div>
               <div className={Styles1.plustxt}>
-                <Input
-                  className={Styles1.modaldicwdth}
-                  placeholder="Not Furnished"
-                />
+                <Form.Item name="furniture">
+                  <Input
+                    className={Styles1.modaldicwdth}
+                    placeholder="Not Furnished"
+                    onChange={(e) => setFurniture(e.target.value)}
+                  />
+                </Form.Item>
                 <div className={Styles1.plustxttt}>
                   <img alt="abc" src="../images/Delete.png" />
                   <img alt="abc" src="../images/circle-plus-24.png" />
@@ -282,12 +300,12 @@ function RentalForm({ initialValues }) {
           >
             <Col>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="title">
-                    <p className={Styles1.txtgap}>Title</p>
+                <Form.Item name="title">
+                  <div>
+                    Title
                     <Input className={Styles1.wdthinpu} placeholder="Title" />
-                  </Form.Item>
-                </div>
+                  </div>
+                </Form.Item>
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="category">
                     <div className={Styles.divssss}>
@@ -319,53 +337,40 @@ function RentalForm({ initialValues }) {
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="subCategory">
-                    <div className={Styles.divssss}>
-                      <p style={{ marginTop: "-.1rem" }}>Sub Category</p>
-                      <Select
-                        defaultValue="subCategory1"
-                        style={{
-                          width: "20rem",
-                          marginTop: ".5rem",
-                        }}
-                        onChange={handleSubCategoryChange}
-                        options={[
-                          {
-                            value: "subCategory12",
-                            label: "subCategory12",
-                          },
-                          {
-                            value: "subCategory13",
-                            label: "subCategory13",
-                          },
-                          {
-                            value: "subCategory14",
-                            label: "subCategory14",
-                          },
-                        ]}
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
+                <Form.Item name="subCategory">
+                  <div className={Styles.divssss}>
+                    <p style={{ marginTop: "-.1rem" }}>Sub Category</p>
+                    <Select
+                      defaultValue="subCategory1"
+                      style={{
+                        width: "20rem",
+                        marginTop: ".5rem",
+                      }}
+                      onChange={handleSubCategoryChange}
+                      options={[
+                        {
+                          value: "subCategory12",
+                          label: "subCategory12",
+                        },
+                        {
+                          value: "subCategory13",
+                          label: "subCategory13",
+                        },
+                        {
+                          value: "subCategory14",
+                          label: "subCategory14",
+                        },
+                      ]}
+                    />
+                  </div>
+                </Form.Item>
+
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="tags">
-                    <p className={Styles1.txtgap}>Tags</p>
-                    <div className={Styles1.wdthinput}>
-                      <Tag
-                        closable
-                        onClose={log}
-                        style={{ marginLeft: ".5rem" }}
-                      >
-                        Tag 1
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        Headphone
-                      </Tag>{" "}
-                      <Tag closable onClose={log}>
-                        Business
-                      </Tag>
-                    </div>{" "}
+                    <div>
+                      Tags
+                      <Input className={Styles1.wdthinpu} placeholder="Tags" />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
@@ -410,6 +415,28 @@ function RentalForm({ initialValues }) {
               <div className={Styles1.displdeshiservice}>
                 <div className={Styles1.gapscnd}>
                   <div className={Styles1.gapfourth}>
+                    <Form.Item name="priceType">
+                      <div className={Styles.divssss}>
+                        <Select
+                          defaultValue=" $"
+                          style={{
+                            width: "4rem",
+                            marginTop: "1.7rem",
+                          }}
+                          onChange={handlePriceTypeChange}
+                          options={[
+                            {
+                              value: "pkr",
+                              label: "pkr",
+                            },
+                            {
+                              value: "dihram",
+                              label: "dihram",
+                            },
+                          ]}
+                        />
+                      </div>
+                    </Form.Item>
                     <Form.Item name="price">
                       <div className={Styles.divssss}>
                         <p style={{ marginTop: "-.1rem" }}>Price</p>
@@ -434,18 +461,6 @@ function RentalForm({ initialValues }) {
                       </div>
                     </Form.Item>
                   </div>
-                  {/* <Dropdown
-                    menu={{
-                      items,
-                    }}
-                    placement="bottom"
-                    arrow
-                  >
-                    <Button className={Styles1.wdthinpu}>
-                      55
-                      <DownOutlined />
-                    </Button>
-                  </Dropdown> */}
                 </div>
                 <div>
                   <Form.Item name="time">
@@ -475,65 +490,80 @@ function RentalForm({ initialValues }) {
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="metaDescription">
-                  <p className={Styles1.txtgap}>Meta Description</p>
-                  <TextArea
-                    className={Styles1.wdthinp}
-                    autoSize={{
-                      minRows: 2,
-                      maxRows: 8,
-                    }}
-                  />
+                  <div>
+                    Meta Description
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      autoSize={{
+                        minRows: 2,
+                        maxRows: 8,
+                      }}
+                    />
+                  </div>
                 </Form.Item>
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="serviceDescription">
-                  <p className={Styles1.txtgap}>Service Description</p>
-                  <RichTextEditor />
+                  <div>
+                    Service Description
+                    <DynamicReactQuill
+                      value={text}
+                      onChange={handleServiceDescriptionChange}
+                    />
+                  </div>
                 </Form.Item>
               </div>
 
               <div className={Styles1.displdeshiservic}>
-                <div className={Styles1.plustxt}>
-                  <p className={Styles1.txtgap}>Feature</p>
-                  <Button className={Styles1.plusbutton} onClick={showModal}>
-                    <img alt="abc" src="../images/Plus1.png" />{" "}
-                    <p className={Styles1.txtaddfeature}>Add Feature</p>
-                  </Button>
-                </div>
-                <div className={Styles1.divnew}>
-                  {/* <div className={Styles1.divnew5}>
-                    {data.map((data, index) => (
-                      <div key={index}>
-                        Size: &nbsp;&nbsp;&nbsp;{data.size}
-                        <br />
-                        Bedroom: &nbsp;&nbsp;&nbsp;{data.bedroom}
-                        <br />
-                        Bathroom: &nbsp;&nbsp;&nbsp;{data.bathroom}
-                        <br />
-                        Furniture: &nbsp;&nbsp;&nbsp;{data.furniture}
-                        <br />
+                <Form.Item name="feature">
+                  <div>
+                    <div className={Styles1.plustxt}>
+                      Feature
+                      <Button
+                        className={Styles1.plusbutton}
+                        onClick={showModal}
+                      >
+                        <img alt="abc" src="../images/Plus1.png" />{" "}
+                        <p className={Styles1.txtaddfeature}>Add Feature</p>
+                      </Button>
+                    </div>
+                    <div className={Styles1.divnew}>
+                      <div className={Styles1.divnew5}>
+                        {/* <div>
+                          Size: {size}
+                          <br />
+                          Bedroom: {bedroom}
+                          <br />
+                          Bathroom: {bathroom}
+                          <br />
+                          Furniture: {furniture}
+                          <br />
+                        </div> */}
+                        Feature: {form.getFieldValue("feature")}
                       </div>
-                    ))}
-                  </div> */}
-                </div>
+                    </div>
+                  </div>
+                </Form.Item>
               </div>
               <div
                 className={Styles.draggercenter}
                 style={{ marginTop: "1rem" }}
               >
                 <Form.Item name="image">
-                  <p className="ant-upload-drag-icon">
-                    <InboxOutlined />
-                  </p>
-                  <p className="ant-upload-text">
-                    Select a file or drag and drop here
-                  </p>
-                  <p className="ant-upload-hint">
-                    JPG, PNG or PDF, file size no more than 3 MB
-                    <br />
-                    270 x 158 recommended
-                  </p>
-                  <input type="file" onChange={handlesubmit} />
+                  <div>
+                    <p className="ant-upload-drag-icon">
+                      <InboxOutlined />
+                    </p>
+                    <p className="ant-upload-text">
+                      Select a file or drag and drop here
+                    </p>
+                    <p className="ant-upload-hint">
+                      JPG, PNG or PDF, file size no more than 3 MB
+                      <br />
+                      270 x 158 recommended
+                    </p>
+                    <input type="file" onChange={handlesubmit} />
+                  </div>
                 </Form.Item>
               </div>
               <div className={Styles1.scnddivservice}>
@@ -542,77 +572,98 @@ function RentalForm({ initialValues }) {
               <div className={Styles1.displdeshiservice}>
                 <div>
                   <Form.Item name="name">
-                    <p className={Styles1.txtgap}>Name</p>
-                    <Input className={Styles1.wdthinpu} placeholder="Name" />
+                    <div>
+                      Name
+                      <Input className={Styles1.wdthinpu} placeholder="Name" />
+                    </div>
                   </Form.Item>
                 </div>
                 <div>
                   <Form.Item name="contactNumber">
-                    <p className={Styles1.txtgap}>Contact Number</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="+1 (929) 303 0303"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Contact Number</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="+1 (929) 303 0303"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
                 <div>
                   <Form.Item name="email">
-                    <p className={Styles1.txtgap}>Email</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="efat@gmail.com"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Email</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="efat@gmail.com"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
                 <div>
                   <Form.Item name="website">
-                    <p className={Styles1.txtgap}>Website</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="www.website.com"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Website</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="www.website.com"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservic}>
                 <Form.Item name="address">
-                  <p className={Styles1.txtgap}>Address</p>
-                  <TextArea
-                    className={Styles1.wdthinp}
-                    placeholder="1329 Saint Lawrence Ave, Bronx, NY"
-                    autoSize={{
-                      minRows: 1.5,
-                      maxRows: 5,
-                    }}
-                  />
+                  <div>
+                    <p className={Styles1.txtgap}>Address</p>
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      placeholder="1329 Saint Lawrence Ave, Bronx, NY"
+                      autoSize={{
+                        minRows: 1.5,
+                        maxRows: 5,
+                      }}
+                    />
+                  </div>
                 </Form.Item>
               </div>
               <div className={Styles1.fourdivs}>
                 <div>
                   <Form.Item name="city">
-                    <p className={Styles1.txtgap}>City</p>
-                    <Input placeholder="city" className={Styles1.wdthinp} />
+                    <div>
+                      <p className={Styles1.txtgap}>City</p>
+                      <Input placeholder="city" className={Styles1.wdthinp} />
+                    </div>
                   </Form.Item>
                 </div>
                 <div>
                   <Form.Item name="state">
-                    <p className={Styles1.txtgap}>State</p>
-                    <Input placeholder="State" className={Styles1.wdthinp} />
+                    <div>
+                      <p className={Styles1.txtgap}>State</p>
+                      <Input placeholder="State" className={Styles1.wdthinp} />
+                    </div>
                   </Form.Item>
                 </div>{" "}
                 <div>
                   <Form.Item name="postal">
-                    <p className={Styles1.txtgap}>Postal</p>
-                    <Input placeholder="Postal" className={Styles1.wdthinp} />
+                    <div>
+                      <p className={Styles1.txtgap}>Postal</p>
+                      <Input placeholder="Postal" className={Styles1.wdthinp} />
+                    </div>
                   </Form.Item>
                 </div>{" "}
                 <div>
                   {" "}
                   <Form.Item name="country">
-                    <p className={Styles1.txtgap}>Country</p>
-                    <Input placeholder="Country" className={Styles1.wdthinp} />
+                    <div>
+                      <p className={Styles1.txtgap}>Country</p>
+                      <Input
+                        placeholder="Country"
+                        className={Styles1.wdthinp}
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
@@ -623,51 +674,61 @@ function RentalForm({ initialValues }) {
               <div className={Styles1.displdeshiservice}>
                 <div>
                   <Form.Item name="facebook">
-                    <p className={Styles1.txtgap}>Facebook</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="Tchnovee"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Facebook</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="Tchnovee"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
                 <div>
                   <Form.Item name="instagram">
-                    <p className={Styles1.txtgap}>Instagram</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="Istiaq_firoz"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Instagram</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="Istiaq_firoz"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
                 <div>
                   <Form.Item name="twitter">
-                    <p className={Styles1.txtgap}>Twitter</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="Istiaq_firoz"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Twitter</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="Istiaq_firoz"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
                 <div>
                   <Form.Item name="youtube">
-                    <p className={Styles1.txtgap}>Youtube</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="Istiaq_firoz"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Youtube</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="Istiaq_firoz"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
                 <div>
                   <Form.Item name="linkdin">
-                    <p className={Styles1.txtgap}>Linkdin</p>
-                    <Input
-                      className={Styles1.wdthinpu}
-                      placeholder="Istiaq_firoz"
-                    />
+                    <div>
+                      <p className={Styles1.txtgap}>Linkdin</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="Istiaq_firoz"
+                      />
+                    </div>
                   </Form.Item>
                 </div>
               </div>

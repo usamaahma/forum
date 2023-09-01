@@ -17,12 +17,12 @@ import { HeartOutlined } from "@ant-design/icons";
 import { Rate } from "antd";
 import TabOfRentalDetail from "./TabOfRentalDetail";
 
-function LeftRentalDetail() {
+function LeftRentalDetail({ data }) {
   return (
     <div>
       <div className={Styles.padding}>
         <div className={Styles.flexdivv}>
-          <Image src={BigLap} alt="" className={Styles.img} />
+          <img src={data.image?.[0]} alt="" className={Styles.img} />
           <div className={Styles.heartdiv}>
             <HeartOutlined />
           </div>
@@ -33,10 +33,10 @@ function LeftRentalDetail() {
         </div>
         <div>
           <div className={Styles.btndiv}>
-            <button className={Styles.btnuse}>Monthly</button>
-            <p className={Styles.pricetext}>$9900</p>
+            <button className={Styles.btnuse}>{data.priceType}</button>
+            <p className={Styles.pricetext}>{data.price}</p>
           </div>
-          <h2 className={Styles.pricetext}>Notebook BIgscreen Z51-70</h2>
+          <h2 className={Styles.pricetext}>{data.title}</h2>
           <div className={Styles.watchdiv}>
             <Image src={Watch} alt="" />
             <p className={Styles.septext}>Sep 10, 2022 8:12 pm</p>
@@ -67,7 +67,7 @@ function LeftRentalDetail() {
           </div>
         </div>
         <div>
-          <TabOfRentalDetail />
+          <TabOfRentalDetail data={data} />
         </div>
         <div className={Styles.btnsdiv}>
           <button className={Styles.btns}>Hotel</button>

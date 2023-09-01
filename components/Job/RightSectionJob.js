@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/RightSectionJob.module.css";
 import Styles1 from "../../styles/JobCard.module.css";
-import { Col, Row, Card } from "antd";
+import { Col, Row, Card, message } from "antd";
 import Image from "next/image";
 import Pic from "../../public/images/image 77 (1).png";
 import Ser from "../../public/images/Rectangle 4653 (1).png";
@@ -20,17 +20,17 @@ import { HeartOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { jobForm } from "@/helper/axios";
 import { useRouter } from "next/router";
-const data = [
-  { key: 1, name: "card" },
-  { key: 2, name: "card" },
-  { key: 3, name: "card" },
-  { key: 4, name: "card" },
-  { key: 5, name: "card" },
-  { key: 6, name: "card" },
-  { key: 7, name: "card" },
-  { key: 8, name: "card" },
-  { key: 9, name: "card" },
-];
+// const data = [
+//   { key: 1, name: "card" },
+//   { key: 2, name: "card" },
+//   { key: 3, name: "card" },
+//   { key: 4, name: "card" },
+//   { key: 5, name: "card" },
+//   { key: 6, name: "card" },
+//   { key: 7, name: "card" },
+//   { key: 8, name: "card" },
+//   { key: 9, name: "card" },
+// ];
 function RightSectionJob() {
   const [hovered, setHovered] = useState(false);
   const router = useRouter();

@@ -3,7 +3,7 @@ import Styles from "../../styles/TabOfDetails.module.css";
 import { Tabs } from "antd";
 import Description from "../BuyAndSellDetail/Description";
 
-function TabOfRentalDetail() {
+function TabOfRentalDetail({ data }) {
   return (
     <div>
       <Tabs
@@ -12,7 +12,7 @@ function TabOfRentalDetail() {
           {
             label: "Description",
             key: "1",
-            children: <Description />,
+            children: <div>{data.metaDescription}</div>,
           },
           {
             label: "Features",

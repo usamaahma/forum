@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row } from "antd";
+import { Col, Row, message } from "antd";
 import Styles from "../styles/BuySellDetail.module.css";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
