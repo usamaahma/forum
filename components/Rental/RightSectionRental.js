@@ -22,17 +22,7 @@ import { rentalForm } from "@/helper/axios";
 import { useRouter } from "next/router";
 
 const { Meta } = Card;
-// const data = [
-//   { key: 1, name: "card" },
-//   { key: 2, name: "card" },
-//   { key: 3, name: "card" },
-//   { key: 4, name: "card" },
-//   { key: 5, name: "card" },
-//   { key: 6, name: "card" },
-//   { key: 7, name: "card" },
-//   { key: 8, name: "card" },
-//   { key: 9, name: "card" },
-// ];
+
 function RightSectionRental() {
   const [hovered, setHovered] = useState(false);
   const router = useRouter();

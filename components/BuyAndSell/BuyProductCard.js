@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "../../styles/BuyProductCard.module.css";
+import Styles1 from "../../styles/BuyProductCard.module.css";
 import Product from "../../public/images/laptop.png";
 import User from "../../public/images/userpro.png";
 import Location from "../../public/images/Locatinone.png";
@@ -27,57 +27,57 @@ function BuyProductCard() {
       <div>
         <Card
           hoverable
-          className={Styles.cardsize}
+          className={Styles1.cardsize}
           cover={
             <Image
               src={Product}
               alt="abc"
               style={{ backgroundColor: "#F8F8F8" }}
-              className={Styles.sizeim}
+              className={Styles1.sizeim}
             />
           }
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <Image src={Group} alt="" className={Styles.tag} />
-          <div className={Styles.heartdiv}>
+          <Image src={Group} alt="" className={Styles1.tag} />
+          <div className={Styles1.heartdiv}>
             <HeartOutlined />
           </div>
-          <div className={Styles.divbtn}>Electronics</div>
-          <div className={Styles.stardiv}>
-            <div className={Styles.flexfive}>
-              <button className={Styles.usedbtn}>Used</button>
+          <div className={Styles1.divbtn}>Electronics</div>
+          <div className={Styles1.stardiv}>
+            <div className={Styles1.flexfive}>
+              <button className={Styles1.usedbtn}>Used</button>
             </div>
-            <p className={Styles.doltext}>$9900</p>
+            <p className={Styles1.doltext}>$9900</p>
           </div>
-          <p className={Styles.mittext}>2min ago</p>
-          <p className={Styles.saimtext}>Computer pc for sell..</p>
-          <div className={Styles.userdiv}>
+          <p className={Styles1.mittext}>2min ago</p>
+          <p className={Styles1.saimtext}>Computer pc for sell..</p>
+          <div className={Styles1.userdiv}>
             <Image src={User} alt="" />
-            <p className={Styles.usertext}>Username</p>
+            <p className={Styles1.usertext}>Username</p>
           </div>
-          <div className={Styles.userdiv}>
+          <div className={Styles1.userdiv}>
             <Image src={Location} alt="" />
-            <p className={Styles.usertext}>4517 Washington Ave.</p>
+            <p className={Styles1.usertext}>4517 Washington Ave.</p>
           </div>
-          <div className={Styles.centerbtn}>
-            <button className={Styles.calldiv}>
+          <div className={Styles1.centerbtn}>
+            <button className={Styles1.calldiv}>
               <Image src={Phone} alt="" />
               <p style={{ marginLeft: ".5rem" }}>Call</p>
             </button>
           </div>
-          <div className={Styles.threediv}>
-            <div className={Styles.nodiv}>
+          <div className={Styles1.threediv}>
+            <div className={Styles1.nodiv}>
               <Image src={Like} alt="" />
-              <p className={Styles.thumtext}>25</p>
+              <p className={Styles1.thumtext}>25</p>
             </div>
-            <div className={Styles.nodiv}>
+            <div className={Styles1.nodiv}>
               <Image src={Eye} alt="" />
-              <p className={Styles.thumtext}>50</p>
+              <p className={Styles1.thumtext}>50</p>
             </div>
-            <div className={Styles.nodiv}>
+            <div className={Styles1.nodiv}>
               <Image src={Share} alt="" />
-              <p className={Styles.thumtext}>30</p>
+              <p className={Styles1.thumtext}>30</p>
             </div>
           </div>
         </Card>
