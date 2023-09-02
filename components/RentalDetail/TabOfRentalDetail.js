@@ -12,12 +12,20 @@ function TabOfRentalDetail({ data }) {
           {
             label: "Description",
             key: "1",
-            children: <div>{data.metaDescription}</div>,
+            children: (
+              <div>
+                <p style={{ width: "40rem" }}>{data.metaDescription}</p>
+              </div>
+            ),
           },
           {
             label: "Features",
             key: "2",
-            children: <Description />,
+            children: (
+              <div>
+                <p>{data.feature}</p>
+              </div>
+            ),
           },
           {
             label: "Write a Review",
