@@ -16,12 +16,12 @@ import Laptop from "../../public/images/Rectangle 4573.png";
 import Laptop1 from "../../public/images/Rectangle 4574.png";
 import { HeartOutlined } from "@ant-design/icons";
 
-function LeftSectionBuyDetail() {
+function LeftSectionBuyDetail({ data }) {
   return (
     <div>
       <div className={Styles.padding}>
         <div className={Styles.flexdivv}>
-          <Image src={BigLap} alt="" className={Styles.img} />
+          <img className={Styles.imgstyle} src={data.image?.[0]} alt="abc" />
           <div className={Styles.heartdiv}>
             <HeartOutlined />
           </div>
@@ -33,9 +33,9 @@ function LeftSectionBuyDetail() {
         <div>
           <div className={Styles.btndiv}>
             <button className={Styles.btnuse}>Used</button>
-            <p className={Styles.pricetext}>$9900</p>
+            <p className={Styles.pricetext}>{data.price}</p>
           </div>
-          <h2 className={Styles.pricetext}>Computer pc for sell..</h2>
+          <h2 className={Styles.pricetext}>{data.title}</h2>
           <div className={Styles.watchdiv}>
             <Image src={Watch} alt="" />
             <p className={Styles.septext}>Sep 10, 2022 8:12 pm</p>
@@ -66,7 +66,7 @@ function LeftSectionBuyDetail() {
           </div>
         </div>
         <div>
-          <TabOfDetails />
+          <TabOfDetails data={data} />
         </div>
         <div className={Styles.btnsdiv}>
           <button className={Styles.btns}>Hotel</button>

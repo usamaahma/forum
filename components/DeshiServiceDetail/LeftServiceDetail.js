@@ -8,7 +8,7 @@ import Location from "../../public/images/locationone.png";
 import Eye from "../../public/images/Eye3.png";
 import Facebook from "../../public/images/Group 133.png";
 import Twitter from "../../public/images/Group 134.png";
-import Instgram from "../../public/images/Group 132.png"; 
+import Instgram from "../../public/images/Group 132.png";
 import Linkdin from "../../public/images/Group 131.png";
 import Mess from "../../public/images/Group 135.png";
 import Laptop from "../../public/images/Rectangle 4573.png";
@@ -17,12 +17,12 @@ import { HeartOutlined } from "@ant-design/icons";
 import TabOfServiceDetails from "./TabOfServiceDetail";
 import { Rate } from "antd";
 
-function LeftServiceDetail() {
+function LeftServiceDetail({ data }) {
   return (
     <div>
       <div className={Styles.padding}>
         <div className={Styles.flexdivv}>
-          <Image src={BigLap} alt="" className={Styles.img} />
+          <img className={Styles.imgstyle} src={data.image?.[0]} alt="abc" />
           <div className={Styles.heartdiv}>
             <HeartOutlined />
           </div>
@@ -39,9 +39,9 @@ function LeftServiceDetail() {
               <p className={Styles.fivtext}> 5.0</p>
               <p className={Styles.ratetext}>(30+)</p>
             </div>
-            <p className={Styles.pricetext}>$963</p>
+            <p className={Styles.pricetext}>{data.price}</p>
           </div>
-          <h2 className={Styles.pricetext}>Notebook BIgscreen Z51-70</h2>
+          <h2 className={Styles.pricetext}>{data.title}</h2>
           <div className={Styles.watchdiv}>
             <Image src={Watch} alt="" />
             <p className={Styles.septext}>Sep 10, 2022 8:12 pm</p>
@@ -72,7 +72,7 @@ function LeftServiceDetail() {
           </div>
         </div>
         <div>
-          <TabOfServiceDetails />
+          <TabOfServiceDetails data={data} />
         </div>
         <div className={Styles.btnsdiv}>
           <button className={Styles.btns}>Hotel</button>

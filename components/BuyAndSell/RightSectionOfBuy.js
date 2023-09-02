@@ -114,10 +114,10 @@ function RightSectionOfBuy() {
                     <div className={Styles1.flexfive}>
                       <button className={Styles1.usedbtn}>Used</button>
                     </div>
-                    <p className={Styles1.doltext}>$9900</p>
+                    <p className={Styles1.doltext}>{item.price}</p>
                   </div>
                   <p className={Styles1.mittext}>2min ago</p>
-                  <p className={Styles1.saimtext}>Computer pc for sell..</p>
+                  <p className={Styles1.saimtext}>{item.title}</p>
                   <div className={Styles1.userdiv}>
                     <Image src={User} alt="" />
                     <p className={Styles1.usertext}>Username</p>
