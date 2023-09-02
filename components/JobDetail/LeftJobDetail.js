@@ -15,12 +15,13 @@ import Laptop from "../../public/images/Rectangle 4573.png";
 import Laptop1 from "../../public/images/Rectangle 4574.png";
 import { HeartOutlined } from "@ant-design/icons";
 
-function LeftJobDetail() {
+function LeftJobDetail({ data }) {
+  console.log(data, "job");
   return (
     <div>
       <div className={Styles.padding}>
         <div className={Styles.flexdivv}>
-          <Image src={BigLap} alt="" className={Styles.img} />
+          <img src={data.image?.[0]} alt="" className={Styles.img} />
           <div className={Styles.heartdiv}>
             <HeartOutlined />
           </div>
@@ -31,13 +32,13 @@ function LeftJobDetail() {
         </div>
         <div>
           <div className={Styles.btndiv}>
-            <button className={Styles.btnuse}>Hourly</button>
-            <p className={Styles.pricetext}>$27</p>
+            <button className={Styles.btnuse}>{data.salaryType}</button>
+            <p className={Styles.pricetext}>{data.salary}</p>
           </div>
-          <h2 className={Styles.pricetext}>Software Development Engineer</h2>
+          <h2 className={Styles.pricetext}>{data.title}</h2>
           <div className={Styles.watchdiv}>
             <Image src={Watch} alt="" />
-            <p className={Styles.septext}>Sep 10, 2022 8:12 pm</p>
+            <p className={Styles.septext}>sep 8 </p>
           </div>
           <div className={Styles.spacediv}>
             <div className={Styles.watchdiv}>
@@ -78,33 +79,33 @@ function LeftJobDetail() {
             <div>
               <div className={Styles.textdiv}>
                 <p className={Styles.textdes}>Industry:</p>
-                <p className={Styles.textde1s}>Software</p>
+                <p className={Styles.textde1s}>{data.industry}</p>
               </div>
               <div className={Styles.textdiv}>
                 <p className={Styles.textdes}>Job Type:</p>
-                <p className={Styles.textde1s}>Full time</p>
+                <p className={Styles.textde1s}>{data.jobType}</p>
               </div>
               <div className={Styles.textdiv1}>
                 <p className={Styles.textdes}>Experience:</p>
-                <p className={Styles.textde1s}>3 Years</p>
+                <p className={Styles.textde1s}>{data.experience}</p>
               </div>
               <div className={Styles.textdiv}>
                 <p className={Styles.textdes}>Salary:</p>
-                <p className={Styles.textde1s}>35k - 60k month</p>
+                <p className={Styles.textde1s}>{data.salary}</p>
               </div>
             </div>
             <div>
               <div className={Styles.textdiv}>
                 <p className={Styles.textdes}>Job Position:</p>
-                <p className={Styles.textde1s}>Desk Job</p>
+                <p className={Styles.textde1s}>{data.jobPosition}</p>
               </div>
               <div className={Styles.textdiv}>
                 <p className={Styles.textdes}>Location:</p>
-                <p className={Styles.textde1s}>New York</p>
+                <p className={Styles.textde1s}>{data.addressJob}</p>
               </div>
               <div className={Styles.textdiv1}>
                 <p className={Styles.textdes}>Deadline:</p>
-                <p className={Styles.textde1s}>5 Jan, 2023</p>
+                <p className={Styles.textde1s}>{data.deadline}</p>
               </div>
             </div>
           </div>
@@ -112,7 +113,7 @@ function LeftJobDetail() {
         <div>
           <h3>Job Description</h3>
           <p className={Styles.destext}>
-            As a Product Designer, you will work within a Product Delivery Team
+            {/* As a Product Designer, you will work within a Product Delivery Team
             fused with UX,
             <br /> engineering, product and data talent. You will help the team
             design beautiful interfaces that
@@ -121,7 +122,8 @@ function LeftJobDetail() {
             <br />
             based applications for AML, KYC and Sanctions List management
             workflows. This role is
-            <br /> ideal if you are looking to segue your career into the{" "}
+            <br /> ideal if you are looking to segue your career into the{" "} */}
+            {data.jobDescription}
           </p>
         </div>
         <div>

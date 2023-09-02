@@ -13,12 +13,12 @@ import BlogCard from "../Blog/BlogCard";
 import Carousel from "../eventpage/carousel";
 import Link from "next/link";
 const { TextArea } = Input;
-function EventTwoPost() {
+function EventTwoPost({ data }) {
   return (
     <div>
       <div className={Styles.css}>
         <div>
-          <Image className={Styles.imgstyle} src={Business} alt="abc" />
+          <img className={Styles.imgstyle} src={data.image?.[0]} alt="abc" />
           <div className={Styles.boxpadding}>
             <p className={Styles.lookingtext}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -36,12 +36,18 @@ function EventTwoPost() {
           </div>
         </div>
         <div className={Styles.mblview}>
-          <p className={Styles.share}>Share This Event</p>
-          <div className={Styles.imgdivflex}>
-            <Image src={Tiww} alt="abc" />
-            <Image src={Fb} alt="abc" />
-            <Image src={Ins} alt="abc" />
-            <Image src={Lin} alt="abc" />
+          <div>
+            <p className={Styles.share}>Share This Event</p>
+            <div className={Styles.imgdivflex}>
+              <Image src={Tiww} alt="abc" />
+              <Image src={Fb} alt="abc" />
+              <Image src={Ins} alt="abc" />
+              <Image src={Lin} alt="abc" />
+            </div>
+          </div>
+          <div>
+            <p className={Styles.share}>Ticket Price: ${data.ticketPrice}</p>
+            <p className={Styles.share11}>Ticket Spot</p>
           </div>
         </div>
         <div>

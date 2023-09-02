@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "../../styles/DeshiProductCard.module.css";
+import Styles1 from "../../styles/DeshiProductCard.module.css";
 import Product from "../../public/images/Rectangle 75.png";
 import User from "../../public/images/userpro.png";
 import Location from "../../public/images/Locatinone.png";
@@ -26,60 +26,60 @@ function DeshiProductCard() {
       <div>
         <Card
           hoverable
-          className={Styles.cardsize}
+          className={Styles1.cardsize}
           cover={
             <Image
               src={Product}
               alt="abc"
               style={{ backgroundColor: "#F8F8F8" }}
-              className={Styles.sizeim}
+              className={Styles1.sizeim}
             />
           }
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className={Styles.heartdiv}>
+          <div className={Styles1.heartdiv}>
             <HeartOutlined />
           </div>
-          <div className={Styles.divbtn}>Construction</div>
-          <div className={Styles.stardiv}>
-            <div className={Styles.flexfive}>
-              <Rate value={1} count={1} className={Styles.strtext} />
-              <p className={Styles.fivtext}> 5.0</p>
-              <p className={Styles.ratetext}>(30+)</p>
+          <div className={Styles1.divbtn}>Construction</div>
+          <div className={Styles1.stardiv}>
+            <div className={Styles1.flexfive}>
+              <Rate value={1} count={1} className={Styles1.strtext} />
+              <p className={Styles1.fivtext}> 5.0</p>
+              <p className={Styles1.ratetext}>(30+)</p>
             </div>
-            <p className={Styles.doltext}>$963</p>
+            <p className={Styles1.doltext}>$963</p>
           </div>
-          <p className={Styles.mittext}>2min ago</p>
-          <p className={Styles.saimtext}>
+          <p className={Styles1.mittext}>2min ago</p>
+          <p className={Styles1.saimtext}>
             Siam Accounting LLC, Jackson Trading....
           </p>
-          <div className={Styles.userdiv}>
+          <div className={Styles1.userdiv}>
             <Image src={User} alt="" />
-            <p className={Styles.usertext}>Username</p>
+            <p className={Styles1.usertext}>Username</p>
           </div>
-          <div className={Styles.userdiv}>
+          <div className={Styles1.userdiv}>
             <Image src={Location} alt="" />
-            <p className={Styles.usertext}>4517 Washington Ave.</p>
+            <p className={Styles1.usertext}>4517 Washington Ave.</p>
           </div>
-          <div className={Styles.centerbtn}>
-            <button className={Styles.calldiv}>
+          <div className={Styles1.centerbtn}>
+            <button className={Styles1.calldiv}>
               <Image src={Phone} alt="" />
               <p style={{ marginLeft: ".5rem" }}>Call</p>
             </button>
           </div>
-          <div className={Styles.threediv}>
-            <div className={Styles.nodiv}>
+          <div className={Styles1.threediv}>
+            <div className={Styles1.nodiv}>
               <Image src={Like} alt="" />
-              <p className={Styles.thumtext}>25</p>
+              <p className={Styles1.thumtext}>25</p>
             </div>
-            <div className={Styles.nodiv}>
+            <div className={Styles1.nodiv}>
               <Image src={Eye} alt="" />
-              <p className={Styles.thumtext}>50</p>
+              <p className={Styles1.thumtext}>50</p>
             </div>
-            <div className={Styles.nodiv}>
+            <div className={Styles1.nodiv}>
               <Image src={Share} alt="" />
-              <p className={Styles.thumtext}>30</p>
+              <p className={Styles1.thumtext}>30</p>
             </div>
           </div>
         </Card>

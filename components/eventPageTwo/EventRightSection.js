@@ -11,10 +11,7 @@ import { Input, Select } from "antd";
 import BlogTwoPost from "../BlogTwo/BlogTwoPost";
 import EventTwoPost from "./EventTwoPost";
 const { Option } = Select;
-function EventRightSection() {
-  function handleChange(value) {
-    console.log(`selected ${value}`);
-  }
+function EventRightSection({ data }) {
   return (
     <div>
       <div className={Styles.boxflex}>
@@ -27,7 +24,7 @@ function EventRightSection() {
           How to write a title with an optimal width for SEO
         </p>
       </div>
-      <div className={Styles.mainimgelldiv}>
+      <div className={Styles.mainimgelldiv1}>
         <div className={Styles.elldiv}>
           <Image src={Ellipse} alt="abc" />
           <div className={Styles.textdiv}>
@@ -45,9 +42,23 @@ function EventRightSection() {
           <Image className={Styles.smllbox} src={Comments} alt="abc" />
           <p>50k</p>
         </div>
+        <div>
+          <button
+            style={{
+              background: "white",
+              color: "#42b00f",
+              padding: ".5rem",
+              borderRadius: ".2rem",
+              border: "solid 1px #42B00F",
+              fontSize: ".6rem",
+            }}
+          >
+            Add to Calendar
+          </button>
+        </div>
       </div>
       <div>
-        <EventTwoPost />
+        <EventTwoPost data={data} />
       </div>
     </div>
   );
