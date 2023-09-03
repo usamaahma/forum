@@ -541,70 +541,100 @@ function DeshiServiceForm({ initialValues }) {
               </div>
               <div className={Styles1.displdeshiservice}>
                 <div>
-                  <p className={Styles1.txtgap}>Name</p>
-                  <Input className={Styles1.wdthinpu} placeholder="Name" />
+                  <Form.Item name="name">
+                    <div>
+                      Name
+                      <Input className={Styles1.wdthinpu} placeholder="Name" />
+                    </div>
+                  </Form.Item>
                 </div>
                 <div>
-                  <p className={Styles1.txtgap}>Contact Number</p>
-                  <Input
-                    className={Styles1.wdthinpu}
-                    placeholder="+1 (929) 303 0303
-                  "
-                  />
+                  <Form.Item name="contactNumber">
+                    <div>
+                      <p className={Styles1.txtgap}>Contact Number</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="+1 (929) 303 0303"
+                      />
+                    </div>
+                  </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservice}>
                 <div>
-                  <p className={Styles1.txtgap}>Email</p>
-                  <Input
-                    className={Styles1.wdthinpu}
-                    placeholder="efat@gmail.com"
-                  />
+                  <Form.Item name="email">
+                    <div>
+                      <p className={Styles1.txtgap}>Email</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="efat@gmail.com"
+                      />
+                    </div>
+                  </Form.Item>
                 </div>
                 <div>
-                  <p className={Styles1.txtgap}>Website</p>
-                  <Input
-                    className={Styles1.wdthinpu}
-                    placeholder="www.website.com"
-                  />
+                  <Form.Item name="website">
+                    <div>
+                      <p className={Styles1.txtgap}>Website</p>
+                      <Input
+                        className={Styles1.wdthinpu}
+                        placeholder="www.website.com"
+                      />
+                    </div>
+                  </Form.Item>
                 </div>
               </div>
               <div className={Styles1.displdeshiservic}>
-                <p className={Styles1.txtgap}>Address</p>
-                <TextArea
-                  className={Styles1.wdthinp}
-                  placeholder="1329 Saint Lawrence Ave, Bronx, NY"
-                  autoSize={{
-                    minRows: 1.5,
-                    maxRows: 5,
-                  }}
-                />
+                <Form.Item name="address">
+                  <div>
+                    <p className={Styles1.txtgap}>Address</p>
+                    <TextArea
+                      className={Styles1.wdthinp}
+                      placeholder="1329 Saint Lawrence Ave, Bronx, NY"
+                      autoSize={{
+                        minRows: 1.5,
+                        maxRows: 5,
+                      }}
+                    />
+                  </div>
+                </Form.Item>
               </div>
               <div className={Styles1.fourdivs}>
                 <div>
-                  <p className={Styles1.txtgap}>City</p>
-                  <Input placeholder="city" className={Styles1.wdthinp}></Input>
+                  <Form.Item name="city">
+                    <div>
+                      <p className={Styles1.txtgap}>City</p>
+                      <Input placeholder="city" className={Styles1.wdthinp} />
+                    </div>
+                  </Form.Item>
                 </div>
                 <div>
-                  <p className={Styles1.txtgap}>State</p>
-                  <Input
-                    placeholder="State"
-                    className={Styles1.wdthinp}
-                  ></Input>
+                  <Form.Item name="state">
+                    <div>
+                      <p className={Styles1.txtgap}>State</p>
+                      <Input placeholder="State" className={Styles1.wdthinp} />
+                    </div>
+                  </Form.Item>
                 </div>{" "}
                 <div>
-                  <p className={Styles1.txtgap}>Postal</p>
-                  <Input
-                    placeholder="Postal"
-                    className={Styles1.wdthinp}
-                  ></Input>
+                  <Form.Item name="postal">
+                    <div>
+                      <p className={Styles1.txtgap}>Postal</p>
+                      <Input placeholder="Postal" className={Styles1.wdthinp} />
+                    </div>
+                  </Form.Item>
                 </div>{" "}
                 <div>
-                  <p className={Styles1.txtgap}>Country</p>
-                  <Input
-                    placeholder="Country"
-                    className={Styles1.wdthinp}
-                  ></Input>
+                  {" "}
+                  <Form.Item name="country">
+                    <div>
+                      <p className={Styles1.txtgap}>Country</p>
+                      <Input
+                        placeholder="Country"
+                        className={Styles1.wdthinp}
+                      />
+                    </div>
+                  </Form.Item>
                 </div>
               </div>
               <div className={Styles1.scnddivservice}>
