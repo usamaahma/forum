@@ -5,22 +5,22 @@ import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
 import {
   Button,
-  Dropdown,
   Space,
   message,
-  Upload,
   Form,
   Row,
   Col,
   Input,
-  DatePicker,
   Select,
-  TimePicker,
-  Tag,
   Radio,
   Modal,
 } from "antd";
-import { DownOutlined, InboxOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  InboxOutlined,
+  PlusOutlined,
+  MinusCircleOutlined,
+} from "@ant-design/icons";
 
 import { rentalForm } from "../helper/axios";
 // import { useDispatch } from "react-redux";
@@ -34,7 +34,7 @@ import {
 } from "firebase/storage";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
-
+import { WithContext as ReactTags } from "react-tag-input";
 const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 const { TextArea } = Input;
 
@@ -48,18 +48,33 @@ function RentalForm({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
-  const [size, setSize] = useState("");
-  const [bedroom, setBedroom] = useState("");
-  const [bathroom, setBathroom] = useState("");
-  const [furniture, setFurniture] = useState("");
   const [text, setText] = useState("");
   const [featureDetails, setFeatureDetails] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [featureInput, setFeatureInput] = useState([]);
+  const [secondInputValue, setSecondInputValue] = useState([]);
+  const [selectedCurrency, setSelectedCurrency] = useState("$");
+  const [combinedPrice, setCombinedPrice] = useState("");
+
   // State for rich text editor content
   const showModal = () => {
     setIsModalOpen(true);
   };
   const handleOk = () => {
     setIsModalOpen(false);
+
+    const trimmedFeatureInput = featureInput.trim();
+    const trimmedSecondInputValue = secondInputValue.trim();
+
+    if (trimmedFeatureInput !== "" || trimmedSecondInputValue !== "") {
+      setFeatureDetails([
+        ...featureDetails,
+        `${trimmedFeatureInput} ${trimmedSecondInputValue}`,
+      ]);
+    }
+
+    setFeatureInput(""); // Clear the first input field
+    setSecondInputValue(""); // Clear the second input field
   };
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -118,6 +133,11 @@ function RentalForm({ initialValues }) {
   };
   const handlePriceChange = (value) => {
     form.setFieldsValue({ price: value });
+    setCombinedPrice(selectedCurrency + value); // Combine currency and price
+  };
+  const handleCurrencyChange = (value) => {
+    setSelectedCurrency(value);
+    setCombinedPrice(value + form.getFieldValue("price")); // Combine currency and price
   };
   const handleTimeChange = (value) => {
     form.setFieldsValue({ time: value });
@@ -129,7 +149,41 @@ function RentalForm({ initialValues }) {
     console.log("radio checked", e.target.value);
     setValue(e.target.value);
   };
-  ///////////////////////////
+  const handleFeatureInputChange = (e) => {
+    setFeatureInput(e.target.value); // Add the input value to the array
+  };
+
+  const handleSecondInputChange = (e) => {
+    setSecondInputValue(e.target.value);
+    // ...
+  };
+  ////////////tags'
+  const handleDelete = (i) => {
+    setTags(tags.filter((tag, index) => index !== i));
+  };
+
+  const handleAddition = (tag) => {
+    setTags([...tags, tag]);
+  };
+
+  const handleDrag = (tag, currPos, newPos) => {
+    const newTags = tags.slice();
+
+    newTags.splice(currPos, 1);
+    newTags.splice(newPos, 0, tag);
+
+    // re-render
+    setTags(newTags);
+  };
+  const KeyCodes = {
+    comma: 188,
+    enter: 13,
+  };
+  const delimiters = [KeyCodes.comma, KeyCodes.enter];
+
+  const handleTagClick = (index) => {
+    console.log("The tag at index " + index + " was clicked");
+  };
 
   /////////////////////////api
   const onFinish = async (values) => {
@@ -137,17 +191,19 @@ function RentalForm({ initialValues }) {
     console.log(values, "doneee");
 
     localStorage.setItem("eventFormData", JSON.stringify(values));
+    const tagsArray = tags.map((tag) => tag.name);
+
     const dataForApi = {
       title: values.title,
       category: values.category,
       subCategory: values.subCategory,
-      tags: values.tags,
+      tags: tagsArray,
       priceType: values.priceType,
-      price: values.price,
+      price: combinedPrice,
       time: values.time,
       metaDescription: values.metaDescription,
       serviceDescription: values.serviceDescription,
-      feature: values.feature,
+      feature: featureDetails,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
@@ -168,6 +224,8 @@ function RentalForm({ initialValues }) {
         message.success("API call successful!");
         localStorage.removeItem("eventFormData");
         setUrl("");
+        setTags([]);
+        setFeatureDetails([]);
       })
       .catch((error) => {
         setLoading(false);
@@ -180,14 +238,7 @@ function RentalForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
-  const updateFeatureValues = () => {
-    const featureDetails = `Size: ${size}, Bedroom: ${bedroom}, Bathroom: ${bathroom}, Furniture: ${furniture}`;
-    form.setFieldsValue({ feature: featureDetails });
-  };
 
-  useEffect(() => {
-    updateFeatureValues(); // Call the function to update feature values
-  }, [size, bedroom, bathroom, furniture]);
   return (
     <div>
       <MainHeader />
@@ -199,95 +250,76 @@ function RentalForm({ initialValues }) {
       </div>{" "}
       <div>
         <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <Row justify={"center"}>
-            <Col>
-              {" "}
-              <div className={Styles1.pmodal}>
-                Feature Heading{" "}
-                <img
-                  className={Styles1.imgt}
-                  style={{ marginLeft: ".5rem" }}
-                  alt="abc"
-                  src="../images/question.png"
-                />
-              </div>{" "}
-              <div className={Styles1.modaldicwdth}>
-                <p className={Styles1.pmodal}>Size:</p>
-              </div>
-              <div className={Styles1.modaldicwdth}>
-                <p className={Styles1.pmodal}>Bedroom:</p>
-              </div>
-              <div className={Styles1.modaldicwdth}>
-                <p className={Styles1.pmodal}>Bathroom:</p>
-              </div>
-              <div className={Styles1.modaldicwdth}>
-                <p className={Styles1.pmodal}>Furniture:</p>
-              </div>
-            </Col>
-            <Col style={{ marginLeft: "1rem" }}>
-              <div className={Styles1.pmodal}>
-                Feature{" "}
-                <img
-                  className={Styles1.imgt}
-                  style={{ marginLeft: ".5rem" }}
-                  alt="abc"
-                  src="../images/question.png"
-                />{" "}
-              </div>{" "}
-              <div className={Styles1.plustxt}>
-                <Form.Item name="size">
-                  <Input
-                    className={Styles1.modaldicwdth}
-                    placeholder="1500 sf"
-                    onChange={(e) => setSize(e.target.value)}
-                  />
-                </Form.Item>
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-              <div className={Styles1.plustxt}>
-                <Form.Item name="bedroom">
-                  <Input
-                    className={Styles1.modaldicwdth}
-                    placeholder="3 Bed"
-                    onChange={(e) => setBedroom(e.target.value)}
-                  />
-                </Form.Item>
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-              <div className={Styles1.plustxt}>
-                <Form.Item name="bathroom">
-                  <Input
-                    className={Styles1.modaldicwdth}
-                    placeholder="1 Bath"
-                    onChange={(e) => setBathroom(e.target.value)}
-                  />
-                </Form.Item>
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-              <div className={Styles1.plustxt}>
-                <Form.Item name="furniture">
-                  <Input
-                    className={Styles1.modaldicwdth}
-                    placeholder="Not Furnished"
-                    onChange={(e) => setFurniture(e.target.value)}
-                  />
-                </Form.Item>
-                <div className={Styles1.plustxttt}>
-                  <img alt="abc" src="../images/Delete.png" />
-                  <img alt="abc" src="../images/circle-plus-24.png" />
-                </div>
-              </div>
-            </Col>
-          </Row>
+          <Form
+            name="dynamic_form_nest_item"
+            onFinish={onFinish}
+            style={{
+              maxWidth: 600,
+            }}
+            autoComplete="off"
+          >
+            <Form.List name="users">
+              {(fields, { add, remove }) => (
+                <>
+                  {fields.map(({ key, name, ...restField }) => (
+                    <Space
+                      key={key}
+                      style={{
+                        display: "flex",
+                        marginBottom: 8,
+                      }}
+                      align="baseline"
+                    >
+                      <Form.Item
+                        {...restField}
+                        name={[name, "feature"]}
+                        rules={[
+                          {
+                            required: true,
+                            message: "Missing first name",
+                          },
+                        ]}
+                      >
+                        <Input
+                          placeholder="First feature"
+                          value={featureInput[name]}
+                          onChange={(e) => handleFeatureInputChange(e, name)}
+                        />
+                      </Form.Item>
+                      <Form.Item
+                        {...restField}
+                        name={[name, "Value"]}
+                        rules={[
+                          {
+                            required: true,
+                            message: "Missing last name",
+                          },
+                        ]}
+                      >
+                        <Input
+                          placeholder="Value"
+                          value={secondInputValue[name]}
+                          onChange={(e) => handleSecondInputChange(e, name)}
+                        />
+                      </Form.Item>
+                      <MinusCircleOutlined onClick={() => remove(name)} />
+                    </Space>
+                  ))}
+                  <Form.Item>
+                    <Button
+                      type="dashed"
+                      onClick={() => add()}
+                      block
+                      icon={<PlusOutlined />}
+                    >
+                      Add feature
+                    </Button>
+                  </Form.Item>
+                </>
+              )}
+            </Form.List>
+            {/* <button onClick={addFeature}>Add</button> */}
+          </Form>
         </Modal>
         <Row justify="center">
           <Form
@@ -364,12 +396,37 @@ function RentalForm({ initialValues }) {
                     />
                   </div>
                 </Form.Item>
-
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="tags">
                     <div>
                       Tags
-                      <Input className={Styles1.wdthinpu} placeholder="Tags" />
+                      <div className={Styles1.wdthinputag}>
+                        <ReactTags
+                          tags={tags}
+                          inline="true"
+                          name="inputName"
+                          // suggestions={suggestions}
+                          delimiters={delimiters}
+                          handleDelete={handleDelete}
+                          handleAddition={handleAddition}
+                          handleDrag={handleDrag}
+                          handleTagClick={handleTagClick}
+                          inputFieldPosition="inline"
+                          labelField={"name"}
+                          autocomplete
+                          editable
+                          style={{ padding: ".5rem", color: "red" }}
+                          placeholder="tags"
+                          classNames={{
+                            tags: Styles1.tagsClass,
+                            tagInput: Styles1.tagInputClass,
+                            tagInputField: Styles1.tagInputFieldClass,
+                            selected: Styles1.selectedClass,
+                            tag: Styles1.tagClass,
+                            remove: Styles1.removeClass,
+                          }}
+                        />
+                      </div>
                     </div>
                   </Form.Item>
                 </div>
@@ -415,33 +472,39 @@ function RentalForm({ initialValues }) {
               <div className={Styles1.displdeshiservice}>
                 <div className={Styles1.gapscnd}>
                   <div className={Styles1.gapfourth}>
-                    <Form.Item name="priceType">
-                      <div className={Styles.divssss}>
-                        <Select
-                          defaultValue=" $"
-                          style={{
-                            width: "4rem",
-                            marginTop: "1.7rem",
-                          }}
-                          onChange={handlePriceTypeChange}
-                          options={[
-                            {
-                              value: "pkr",
-                              label: "pkr",
-                            },
-                            {
-                              value: "dihram",
-                              label: "dihram",
-                            },
-                          ]}
-                        />
-                      </div>
-                    </Form.Item>
+                    <div className={Styles1.posdiv}>
+                      <Form.Item name="currency">
+                        <div className={Styles.divssss}>
+                          <Select
+                            defaultValue="currency"
+                            style={{
+                              width: "4rem",
+                              marginTop: "1.7rem",
+                            }}
+                            onChange={handleCurrencyChange}
+                            options={[
+                              {
+                                value: "$",
+                                label: "$",
+                              },
+                              {
+                                value: "ban",
+                                label: "ban",
+                              },
+                              {
+                                value: "pkr",
+                                label: "pkr",
+                              },
+                            ]}
+                          />
+                        </div>
+                      </Form.Item>
+                    </div>
                     <Form.Item name="price">
                       <div className={Styles.divssss}>
                         <p style={{ marginTop: "-.1rem" }}>Price</p>
                         <Select
-                          defaultValue="Yearly"
+                          defaultValue="price"
                           style={{
                             width: "20rem",
                             marginTop: ".5rem",
@@ -449,12 +512,12 @@ function RentalForm({ initialValues }) {
                           onChange={handlePriceChange}
                           options={[
                             {
-                              value: "Yearly",
-                              label: "Yearly",
+                              value: "50",
+                              label: "50",
                             },
                             {
-                              value: "monthly",
-                              label: "monthly",
+                              value: "100",
+                              label: "100",
                             },
                           ]}
                         />
@@ -529,17 +592,12 @@ function RentalForm({ initialValues }) {
                     </div>
                     <div className={Styles1.divnew}>
                       <div className={Styles1.divnew5}>
-                        {/* <div>
-                          Size: {size}
-                          <br />
-                          Bedroom: {bedroom}
-                          <br />
-                          Bathroom: {bathroom}
-                          <br />
-                          Furniture: {furniture}
-                          <br />
-                        </div> */}
-                        Feature: {form.getFieldValue("feature")}
+                        <div>
+                          Feature:{" "}
+                          {featureDetails.map((feature, index) => (
+                            <div key={index}>{feature}</div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

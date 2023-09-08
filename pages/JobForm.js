@@ -20,7 +20,12 @@ import {
   Radio,
   Modal,
 } from "antd";
-import { DownOutlined, InboxOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  InboxOutlined,
+  PlusOutlined,
+  MinusCircleOutlined,
+} from "@ant-design/icons";
 import dayjs from "dayjs";
 import RichTextEditor from "@/components/texteditor";
 import { jobForm } from "../helper/axios";
@@ -33,6 +38,7 @@ import {
   getDownloadURL,
   uploadBytesResumable,
 } from "firebase/storage";
+import { WithContext as ReactTags } from "react-tag-input";
 const { TextArea } = Input;
 
 const dateFormat = "YYYY/MM/DD";
@@ -51,6 +57,8 @@ function JobForm({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+  const [tags, setTags] = useState([]);
+  const [tagsJob, setTagsJob] = useState([]);
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -129,17 +137,59 @@ function JobForm({ initialValues }) {
   const handleDeadlineChange = (value) => {
     form.setFieldsValue({ deadline: value });
   };
+  ////////////tags'
+  const handleDelete = (i, type) => {
+    // Delete a tag from the appropriate state based on the "type" parameter
+    if (type === "tags") {
+      setTags(tags.filter((tag, index) => index !== i));
+    } else if (type === "tagsJob") {
+      setTagsJob(tagsJob.filter((tag, index) => index !== i));
+    }
+  };
+  const handleAddition = (tag, type) => {
+    // Add a tag to the appropriate state based on the "type" parameter
+    if (type === "tags") {
+      setTags([...tags, tag]);
+    } else if (type === "tagsJob") {
+      setTagsJob([...tagsJob, tag]);
+    }
+  };
+  const handleDrag = (tag, currPos, newPos, type) => {
+    // Handle drag for the appropriate state based on the "type" parameter
+    if (type === "tags") {
+      const newTags = tags.slice();
+      newTags.splice(currPos, 1);
+      newTags.splice(newPos, 0, tag);
+      setTags(newTags);
+    } else if (type === "tagsJob") {
+      const newTagsJob = tagsJob.slice();
+      newTagsJob.splice(currPos, 1);
+      newTagsJob.splice(newPos, 0, tag);
+      setTagsJob(newTagsJob);
+    }
+  };
+  const KeyCodes = {
+    comma: 188,
+    enter: 13,
+  };
+  const delimiters = [KeyCodes.comma, KeyCodes.enter];
 
+  const handleTagClick = (index) => {
+    console.log("The tag at index " + index + " was clicked");
+  };
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("jobFormData", JSON.stringify(values));
+    const tagsArray = tags.map((tag) => tag.name);
+    const tagsJobArray = tagsJob.map((tag) => tag.name);
+
     const dataForApi = {
       title: values.title,
       category: values.category,
       subCategory: values.subCategory,
-      tags: values.tags,
+      tags: tagsArray,
       salaryType: values.salaryType,
       salary: values.salary,
       metaDescription: values.metaDescription,
@@ -148,7 +198,7 @@ function JobForm({ initialValues }) {
       experience: values.experience,
       jobType: values.jobType,
       jobPosition: values.jobPosition,
-      tagsJob: values.tagsJob,
+      tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
       jobDescription: values.jobDescription,
@@ -172,6 +222,8 @@ function JobForm({ initialValues }) {
         message.success("API call successful!");
         localStorage.removeItem("jobFormData");
         setUrl("");
+        setTags([]);
+        setTagsJob([]);
       })
       .catch((error) => {
         setLoading(false);
@@ -273,7 +325,34 @@ function JobForm({ initialValues }) {
                   <Form.Item name="tags">
                     <div>
                       Tags
-                      <Input className={Styles1.wdthinpu} placeholder="tags" />
+                      <div className={Styles1.wdthinputag}>
+                        <ReactTags
+                          tags={tags}
+                          inline="true"
+                          name="inputName"
+                          // suggestions={suggestions}
+                          delimiters={delimiters}
+                          handleDelete={(i) => handleDelete(i, "tags")}
+                          handleAddition={(tag) => handleAddition(tag, "tags")}
+                          handleDrag={(tag, currPos, newPos) =>
+                            handleDrag(tag, currPos, newPos, "tags")
+                          }
+                          inputFieldPosition="inline"
+                          labelField={"name"}
+                          autocomplete
+                          editable
+                          style={{ padding: ".5rem", color: "red" }}
+                          placeholder="tags"
+                          classNames={{
+                            tags: Styles1.tagsClass,
+                            tagInput: Styles1.tagInputClass,
+                            tagInputField: Styles1.tagInputFieldClass,
+                            selected: Styles1.selectedClass,
+                            tag: Styles1.tagClass,
+                            remove: Styles1.removeClass,
+                          }}
+                        />
+                      </div>
                     </div>
                   </Form.Item>
                 </div>
@@ -465,15 +544,40 @@ function JobForm({ initialValues }) {
                     />
                   </div>
                 </Form.Item>
-
                 <div className={Styles1.gapscnd}>
                   <Form.Item name="tagsJob">
                     <div>
-                      Tags
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="tagsJob"
-                      />
+                      Skill & Experience
+                      <div className={Styles1.wdthinputag}>
+                        <ReactTags
+                          tags={tagsJob}
+                          inline="true"
+                          name="inputName"
+                          // suggestions={suggestions}
+                          delimiters={delimiters}
+                          handleDelete={(i) => handleDelete(i, "tagsJob")}
+                          handleAddition={(tag) =>
+                            handleAddition(tag, "tagsJob")
+                          }
+                          handleDrag={(tag, currPos, newPos) =>
+                            handleDrag(tag, currPos, newPos, "tagsJob")
+                          }
+                          inputFieldPosition="inline"
+                          labelField={"name"}
+                          autocomplete
+                          editable
+                          style={{ padding: ".5rem", color: "red" }}
+                          placeholder="tagsJob"
+                          classNames={{
+                            tags: Styles1.tagsClass,
+                            tagInput: Styles1.tagInputClass,
+                            tagInputField: Styles1.tagInputFieldClass,
+                            selected: Styles1.selectedClass,
+                            tag: Styles1.tagClass,
+                            remove: Styles1.removeClass,
+                          }}
+                        />
+                      </div>
                     </div>
                   </Form.Item>
                 </div>

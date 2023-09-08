@@ -193,6 +193,7 @@ function DeshiServiceForm({ initialValues }) {
 
     localStorage.setItem("deshiFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
+
     const dataForApi = {
       title: values.title,
       category: values.category,
