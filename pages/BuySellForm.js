@@ -21,7 +21,7 @@ import {
   PlusOutlined,
   MinusCircleOutlined,
 } from "@ant-design/icons";
-import { buySellForm } from "../helper/axios";
+import { buyCategory, buySellForm, buySubCategory } from "../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
 import { Storage } from "../firebase";
@@ -56,7 +56,8 @@ function BuySellForm({ initialValues }) {
   const [secondInputValue, setSecondInputValue] = useState([]);
   const [selectedCurrency, setSelectedCurrency] = useState("$");
   const [combinedPrice, setCombinedPrice] = useState("");
-
+  const [cdata, csetdata] = useState([]);
+  const [scdata, scsetdata] = useState([]);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -185,6 +186,54 @@ function BuySellForm({ initialValues }) {
   const handleTagClick = (index) => {
     console.log("The tag at index " + index + " was clicked");
   };
+  ///////////////////////////getcategory
+  const getBuyCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    buyCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        csetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
+  ////////////////////getsubCategory
+  const getBuySubCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    buySubCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        scsetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
   /////////////////
   const onFinish = async (values) => {
     // Continue with the API call
@@ -238,7 +287,10 @@ function BuySellForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
-
+  useEffect(() => {
+    getBuyCategory();
+    getBuySubCategory();
+  }, []);
   return (
     <div>
       <MainHeader />
@@ -343,26 +395,17 @@ function BuySellForm({ initialValues }) {
                     <div className={Styles.divssss}>
                       <p style={{ marginTop: "-.1rem" }}> Category</p>
                       <Select
-                        defaultValue="Category1"
+                        defaultValue="Category"
                         style={{
                           width: "20rem",
                           marginTop: ".5rem",
                         }}
                         onChange={handleCategoryChange}
-                        options={[
-                          {
-                            value: "Category2",
-                            label: "Category2",
-                          },
-                          {
-                            value: "Category3",
-                            label: "Category3",
-                          },
-                          {
-                            value: "Category4",
-                            label: "Category4",
-                          },
-                        ]}
+                        options={cdata?.map((a, index) => ({
+                          key: index,
+                          value: a.name,
+                          label: a.name,
+                        }))}
                       />
                     </div>
                   </Form.Item>
@@ -373,26 +416,17 @@ function BuySellForm({ initialValues }) {
                   <div className={Styles.divssss}>
                     <p style={{ marginTop: "-.1rem" }}>Sub Category</p>
                     <Select
-                      defaultValue="subCategory1"
+                      defaultValue="subCategory"
                       style={{
                         width: "20rem",
                         marginTop: ".5rem",
                       }}
                       onChange={handleSubCategoryChange}
-                      options={[
-                        {
-                          value: "subCategory12",
-                          label: "subCategory12",
-                        },
-                        {
-                          value: "subCategory13",
-                          label: "subCategory13",
-                        },
-                        {
-                          value: "subCategory14",
-                          label: "subCategory14",
-                        },
-                      ]}
+                      options={scdata?.map((a, index) => ({
+                        key: index,
+                        value: a.name,
+                        label: a.name,
+                      }))}
                     />
                   </div>
                 </Form.Item>
