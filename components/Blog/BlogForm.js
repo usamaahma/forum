@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Styles from "../../styles/eventform.module.css";
+import Styles1 from "../../styles/DeshiServiceForm.module.css";
 import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
 import {
   Button,
@@ -25,6 +26,7 @@ import {
   getDownloadURL,
   uploadBytesResumable,
 } from "firebase/storage";
+import { WithContext as ReactTags } from "react-tag-input";
 
 const { TextArea } = Input;
 const { Dragger } = Upload;
@@ -36,6 +38,7 @@ function BlogForm({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+  const [tags, setTags] = useState([]);
   // const dispatch = useDispatch();
 
   /////////////////////////////
@@ -110,22 +113,48 @@ function BlogForm({ initialValues }) {
   const handledateChange = (value) => {
     form.setFieldsValue({ date: value });
   };
-  const handleimageChange = (value) => {
-    form.setFieldsValue({ image: value });
+
+  ////////////tags'
+  const handleDelete = (i) => {
+    setTags(tags.filter((tag, index) => index !== i));
   };
-  const onChange = (date, dateString) => {
-    console.log(date, dateString);
+
+  const handleAddition = (tag) => {
+    setTags([...tags, tag]);
   };
+
+  const handleDrag = (tag, currPos, newPos) => {
+    const newTags = tags.slice();
+
+    newTags.splice(currPos, 1);
+    newTags.splice(newPos, 0, tag);
+
+    // re-render
+    setTags(newTags);
+  };
+  const KeyCodes = {
+    comma: 188,
+    enter: 13,
+  };
+  const delimiters = [KeyCodes.comma, KeyCodes.enter];
+
+  const handleTagClick = (index) => {
+    console.log("The tag at index " + index + " was clicked");
+  };
+
+  ////////////////
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("blogFormData", JSON.stringify(values));
+    const tagsArray = tags.map((tag) => tag.name);
+
     const dataForApi = {
       yourName: values.yourName,
       postTitle: values.postTitle,
       category: values.category,
       subCategory: values.subCategory,
-      tag: values.tag,
+      tag: tagsArray,
       date: values.date,
       description: values.description,
       image: [url],
@@ -139,6 +168,7 @@ function BlogForm({ initialValues }) {
         message.success("API call successful!");
         localStorage.removeItem("blogFormData");
         setUrl("");
+        setTags([]);
       })
       .catch((error) => {
         setLoading(false);
@@ -257,9 +287,35 @@ function BlogForm({ initialValues }) {
         <Row justify="center" className={Styles.colgap}>
           <Col>
             <Form.Item name="tag">
-              <div className={Styles.divssss}>
-                Tag
-                <Input className={Styles.inputgap} placeholder="Tag" />
+              <div>
+                Tags
+                <div className={Styles.wdthinputag}>
+                  <ReactTags
+                    tags={tags}
+                    inline="true"
+                    name="inputName"
+                    // suggestions={suggestions}
+                    delimiters={delimiters}
+                    handleDelete={handleDelete}
+                    handleAddition={handleAddition}
+                    handleDrag={handleDrag}
+                    handleTagClick={handleTagClick}
+                    inputFieldPosition="inline"
+                    labelField={"name"}
+                    autocomplete
+                    editable
+                    style={{ padding: ".5rem", color: "red" }}
+                    placeholder="tags"
+                    classNames={{
+                      tags: Styles1.tagsClass,
+                      tagInput: Styles1.tagInputClass,
+                      tagInputField: Styles1.tagInputFieldClass,
+                      selected: Styles1.selectedClass,
+                      tag: Styles1.tagClass,
+                      remove: Styles1.removeClass,
+                    }}
+                  />
+                </div>
               </div>
             </Form.Item>
           </Col>

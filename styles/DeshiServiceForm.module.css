@@ -17,6 +17,42 @@
   gap: 3rem;
   margin-top: 1.5rem;
 }
+.tagsClass {
+  padding: 0.5rem;
+  display: inline-block;
+}
+.tagInputFieldClass {
+  border: none;
+  padding: 0.3rem;
+  width: 8rem;
+}
+.tagInputFieldClass:focus {
+  border: none !important;
+}
+.tagClass {
+  border: 1px solid #ddd;
+  background: #63bcfd;
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 0.3rem;
+}
+.removeClass {
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+.selectedClass {
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px;
+  border-radius: 2px;
+}
 .displdeshiservic {
   display: block;
   gap: 3rem;
@@ -28,6 +64,13 @@
 .txtgaps {
   margin-bottom: 0.5rem;
   margin-left: -2rem;
+}
+.wdthinputag {
+  width: 22rem;
+  height: auto;
+  overflow-y: scroll;
+  border: #dad8d8 solid 1px;
+  border-radius: 0.2rem;
 }
 .wdthinpu {
   width: 22rem !important;
@@ -172,7 +215,11 @@
   border-radius: 0.3rem;
   margin-top: 1rem;
 }
-
+.posdiv {
+  position: absolute;
+  margin-top: -4.5rem;
+  margin-left: 2rem;
+}
 @media only screen and (max-width: 768px) {
   .radiose {
     margin-right: 0rem;
