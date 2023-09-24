@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "../styles/HeroSection.module.css";
 import Styles1 from "../styles/DeshiServiceForm.module.css";
 import MainHeader from "@/components/common/mainHeader";
@@ -28,7 +28,7 @@ import {
 } from "@ant-design/icons";
 import dayjs from "dayjs";
 import RichTextEditor from "@/components/texteditor";
-import { jobForm } from "../helper/axios";
+import { jobCategory, jobForm, jobSubCategory } from "../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
 import { Storage } from "../firebase";
@@ -59,7 +59,8 @@ function JobForm({ initialValues }) {
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [tags, setTags] = useState([]);
   const [tagsJob, setTagsJob] = useState([]);
-
+  const [cdata, csetdata] = useState([]);
+  const [scdata, scsetdata] = useState([]);
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -177,6 +178,54 @@ function JobForm({ initialValues }) {
   const handleTagClick = (index) => {
     console.log("The tag at index " + index + " was clicked");
   };
+  /////////////////category
+  const getJobCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    jobCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        csetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
+  ////////////////////getsubCategory
+  const getJobSubCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    jobSubCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        scsetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
@@ -236,6 +285,10 @@ function JobForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
+  useEffect(() => {
+    getJobCategory();
+    getJobSubCategory();
+  }, []);
   return (
     <div>
       <MainHeader />
@@ -268,26 +321,17 @@ function JobForm({ initialValues }) {
                     <div className={Styles.divssss}>
                       <p style={{ marginTop: "-.1rem" }}> Category</p>
                       <Select
-                        defaultValue="Category1"
+                        defaultValue="Category"
                         style={{
-                          width: "22rem",
+                          width: "20rem",
                           marginTop: ".5rem",
                         }}
                         onChange={handleCategoryChange}
-                        options={[
-                          {
-                            value: "Category2",
-                            label: "Category2",
-                          },
-                          {
-                            value: "Category3",
-                            label: "Category3",
-                          },
-                          {
-                            value: "Category4",
-                            label: "Category4",
-                          },
-                        ]}
+                        options={cdata?.map((a, index) => ({
+                          key: index,
+                          value: a.name,
+                          label: a.name,
+                        }))}
                       />
                     </div>
                   </Form.Item>
@@ -300,24 +344,15 @@ function JobForm({ initialValues }) {
                     <Select
                       defaultValue="subCategory1"
                       style={{
-                        width: "22rem",
+                        width: "20rem",
                         marginTop: ".5rem",
                       }}
                       onChange={handleSubCategoryChange}
-                      options={[
-                        {
-                          value: "subCategory12",
-                          label: "subCategory12",
-                        },
-                        {
-                          value: "subCategory13",
-                          label: "subCategory13",
-                        },
-                        {
-                          value: "subCategory14",
-                          label: "subCategory14",
-                        },
-                      ]}
+                      options={scdata?.map((a, index) => ({
+                        key: index,
+                        value: a.name,
+                        label: a.name,
+                      }))}
                     />
                   </div>
                 </Form.Item>

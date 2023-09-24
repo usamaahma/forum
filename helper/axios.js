@@ -147,6 +147,116 @@ users.interceptors.request.use(
     return Promise.reject(err);
   }
 );
+const jobCategory = axios.create({
+  baseURL: `${url}/jobCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const jobSubCategory = axios.create({
+  baseURL: `${url}/JobSubCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const eventCategory = axios.create({
+  baseURL: `${url}/eventCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const eventSubCategory = axios.create({
+  baseURL: `${url}/eventSubCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const deshiCategory = axios.create({
+  baseURL: `${url}/deshiCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const deshiSubCategory = axios.create({
+  baseURL: `${url}/deshiSubCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const buyCategory = axios.create({
+  baseURL: `${url}/buyCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const buySubCategory = axios.create({
+  baseURL: `${url}/buySubCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const rentalCategory = axios.create({
+  baseURL: `${url}/rentalCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const rentalSubCategory = axios.create({
+  baseURL: `${url}/rentalSubCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
 export {
   login,
   users,
@@ -160,4 +270,14 @@ export {
   rentalForm,
   buySellForm,
   deshiOneForm,
+  jobCategory,
+  jobSubCategory,
+  eventCategory,
+  eventSubCategory,
+  deshiCategory,
+  deshiSubCategory,
+  buyCategory,
+  buySubCategory,
+  rentalCategory,
+  rentalSubCategory,
 };

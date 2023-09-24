@@ -21,7 +21,13 @@ import {
   MinusCircleOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
-import { deshiOneForm } from "@/helper/axios";
+import {
+  categories,
+  deshiCategory,
+  deshiOneForm,
+  deshiSubCategory,
+  subCategories,
+} from "@/helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
 import { Storage } from "../firebase";
@@ -54,6 +60,8 @@ function DeshiServiceForm({ initialValues }) {
   const [secondInputValue, setSecondInputValue] = useState([]);
   const [selectedCurrency, setSelectedCurrency] = useState("$");
   const [combinedPrice, setCombinedPrice] = useState("");
+  const [cdata, csetdata] = useState([]);
+  const [scdata, scsetdata] = useState([]);
   // State for rich text editor content
   const showModal = () => {
     setIsModalOpen(true);
@@ -185,7 +193,54 @@ function DeshiServiceForm({ initialValues }) {
   };
   ///////////////////////////
 
-  ///////////////////////////
+  ///////////////////////////getcategory
+  const getDeshiCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    deshiCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        csetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
+  ////////////////////getsubCategory
+  const getDeshiSubCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    deshiSubCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        scsetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
@@ -239,6 +294,10 @@ function DeshiServiceForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
+  useEffect(() => {
+    getDeshiCategory();
+    getDeshiSubCategory();
+  }, []);
 
   return (
     <div>
@@ -344,26 +403,17 @@ function DeshiServiceForm({ initialValues }) {
                     <div className={Styles.divssss}>
                       <p style={{ marginTop: "-.1rem" }}> Category</p>
                       <Select
-                        defaultValue="Category1"
+                        defaultValue="Category"
                         style={{
                           width: "20rem",
                           marginTop: ".5rem",
                         }}
                         onChange={handleCategoryChange}
-                        options={[
-                          {
-                            value: "Category2",
-                            label: "Category2",
-                          },
-                          {
-                            value: "Category3",
-                            label: "Category3",
-                          },
-                          {
-                            value: "Category4",
-                            label: "Category4",
-                          },
-                        ]}
+                        options={cdata?.map((a, index) => ({
+                          key: index,
+                          value: a.name,
+                          label: a.name,
+                        }))}
                       />
                     </div>
                   </Form.Item>
@@ -380,20 +430,11 @@ function DeshiServiceForm({ initialValues }) {
                         marginTop: ".5rem",
                       }}
                       onChange={handleSubCategoryChange}
-                      options={[
-                        {
-                          value: "subCategory12",
-                          label: "subCategory12",
-                        },
-                        {
-                          value: "subCategory13",
-                          label: "subCategory13",
-                        },
-                        {
-                          value: "subCategory14",
-                          label: "subCategory14",
-                        },
-                      ]}
+                      options={scdata?.map((a, index) => ({
+                        key: index,
+                        value: a.name,
+                        label: a.name,
+                      }))}
                     />
                   </div>
                 </Form.Item>
