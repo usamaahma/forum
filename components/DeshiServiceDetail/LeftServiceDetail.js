@@ -76,7 +76,7 @@ function LeftServiceDetail({ data }) {
           <TabOfServiceDetails data={data} />
         </div>
         <div className={Styles.btnsdiv}>
-          {data.tags.map((tag, index) => (
+          {data?.tags?.map((tag, index) => (
             <button key={index} className={Styles.btns}>
               {tag}
             </button>
