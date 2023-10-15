@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import Styles from "../../styles/eventform.module.css";
 import Styles1 from "../../styles/DeshiServiceForm.module.css";
-import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  UserOutlined,
+  InboxOutlined,
+  CloudDownloadOutlined,
+} from "@ant-design/icons";
 import {
   Button,
   Dropdown,
@@ -27,6 +32,9 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { WithContext as ReactTags } from "react-tag-input";
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
+const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const { TextArea } = Input;
 const { Dragger } = Upload;
@@ -36,6 +44,7 @@ function BlogForm({ initialValues }) {
   const [loading, setLoading] = useState();
   const [Pdf, setPdf] = useState(null);
   const [url, setUrl] = useState("");
+  const [text, setText] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [tags, setTags] = useState([]);
@@ -113,7 +122,9 @@ function BlogForm({ initialValues }) {
   const handledateChange = (value) => {
     form.setFieldsValue({ date: value });
   };
-
+  const handleServiceDescriptionChange = (value) => {
+    form.setFieldsValue({ description: value });
+  };
   ////////////tags'
   const handleDelete = (i) => {
     setTags(tags.filter((tag, index) => index !== i));
@@ -183,192 +194,216 @@ function BlogForm({ initialValues }) {
   };
 
   return (
-    <div>
-      <Form
-        name="basic"
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        form={form}
-        initialValues={initialValues}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          background: "white",
+          boxShadow: "0px 6px 40px 0px #0000000D",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "1rem",
+          marginTop: "1rem",
+        }}
       >
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <Form.Item
-              name="yourName"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your yourName!",
-                },
-              ]}
-            >
-              <div className={Styles.divssss}>
-                Your Name
-                <Input className={Styles.inputgap} placeholder="Your Name" />
-              </div>
-            </Form.Item>
-          </Col>
-          <Col>
-            <Form.Item
-              name="postTitle"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your postTitle!",
-                },
-              ]}
-            >
-              <div className={Styles.divssss}>
-                Post Title
-                <Input className={Styles.inputgap} placeholder="Post Title" />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <Form.Item name="category">
-              <div className={Styles.divssss}>
-                Category{" "}
-                <Select
-                  defaultValue="lucy"
-                  style={{
-                    width: "20rem",
-                  }}
-                  onChange={handleCategoryChange}
-                  options={[
-                    {
-                      value: "jack",
-                      label: "Jack",
-                    },
-                    {
-                      value: "lucy",
-                      label: "Lucy",
-                    },
-                    {
-                      value: "Yiminghe",
-                      label: "yiminghe",
-                    },
-                  ]}
-                />
-              </div>
-            </Form.Item>
-          </Col>
-          <Col>
-            <Form.Item name="subCategory">
-              <div className={Styles.divssss}>
-                Sub Category
-                <Select
-                  defaultValue="lucy"
-                  style={{
-                    width: "20rem",
-                  }}
-                  onChange={handleSubCategoryChange}
-                  options={[
-                    {
-                      value: "jack",
-                      label: "Jack",
-                    },
-                    {
-                      value: "lucy",
-                      label: "Lucy",
-                    },
-                    {
-                      value: "Yiminghe",
-                      label: "yiminghe",
-                    },
-                  ]}
-                />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <Form.Item name="tag">
-              <div>
-                Tags
-                <div className={Styles.wdthinputag}>
-                  <ReactTags
-                    tags={tags}
-                    inline="true"
-                    name="inputName"
-                    // suggestions={suggestions}
-                    delimiters={delimiters}
-                    handleDelete={handleDelete}
-                    handleAddition={handleAddition}
-                    handleDrag={handleDrag}
-                    handleTagClick={handleTagClick}
-                    inputFieldPosition="inline"
-                    labelField={"name"}
-                    autocomplete
-                    editable
-                    style={{ padding: ".5rem", color: "red" }}
-                    placeholder="tags"
-                    classNames={{
-                      tags: Styles1.tagsClass,
-                      tagInput: Styles1.tagInputClass,
-                      tagInputField: Styles1.tagInputFieldClass,
-                      selected: Styles1.selectedClass,
-                      tag: Styles1.tagClass,
-                      remove: Styles1.removeClass,
+        <Form
+          name="basic"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+          form={form}
+          initialValues={initialValues}
+        >
+          <Row justify="center" className={Styles.colgap}>
+            <Col>
+              <Form.Item
+                name="yourName"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your yourName!",
+                  },
+                ]}
+              >
+                <div className={Styles.divssss}>
+                  Your Name
+                  <Input className={Styles.inputgap} placeholder="Your Name" />
+                </div>
+              </Form.Item>
+            </Col>
+            <Col>
+              <Form.Item
+                name="postTitle"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your postTitle!",
+                  },
+                ]}
+              >
+                <div className={Styles.divssss}>
+                  Post Title
+                  <Input className={Styles.inputgap} placeholder="Post Title" />
+                </div>
+              </Form.Item>
+            </Col>
+          </Row>
+          <Row justify="center" className={Styles.colgap}>
+            <Col>
+              <Form.Item name="category">
+                <div className={Styles.divssss}>
+                  Category{" "}
+                  <Select
+                    defaultValue="lucy"
+                    style={{
+                      width: "22rem",
                     }}
+                    onChange={handleCategoryChange}
+                    options={[
+                      {
+                        value: "jack",
+                        label: "Jack",
+                      },
+                      {
+                        value: "lucy",
+                        label: "Lucy",
+                      },
+                      {
+                        value: "Yiminghe",
+                        label: "yiminghe",
+                      },
+                    ]}
                   />
                 </div>
+              </Form.Item>
+            </Col>
+            <Col>
+              <Form.Item name="subCategory">
+                <div className={Styles.divssss}>
+                  Sub Category
+                  <Select
+                    defaultValue="lucy"
+                    style={{
+                      width: "22rem",
+                    }}
+                    onChange={handleSubCategoryChange}
+                    options={[
+                      {
+                        value: "jack",
+                        label: "Jack",
+                      },
+                      {
+                        value: "lucy",
+                        label: "Lucy",
+                      },
+                      {
+                        value: "Yiminghe",
+                        label: "yiminghe",
+                      },
+                    ]}
+                  />
+                </div>
+              </Form.Item>
+            </Col>
+          </Row>
+          <Row justify="center" className={Styles.colgap}>
+            <Col>
+              <Form.Item name="tag">
+                <div>
+                  Tags
+                  <div className={Styles.wdthinputag}>
+                    <ReactTags
+                      tags={tags}
+                      inline="true"
+                      name="inputName"
+                      // suggestions={suggestions}
+                      delimiters={delimiters}
+                      handleDelete={handleDelete}
+                      handleAddition={handleAddition}
+                      handleDrag={handleDrag}
+                      handleTagClick={handleTagClick}
+                      inputFieldPosition="inline"
+                      labelField={"name"}
+                      autocomplete
+                      editable
+                      style={{ padding: ".5rem", color: "red" }}
+                      placeholder="tags"
+                      classNames={{
+                        tags: Styles1.tagsClass,
+                        tagInput: Styles1.tagInputClass,
+                        tagInputField: Styles1.tagInputFieldClass,
+                        selected: Styles1.selectedClass,
+                        tag: Styles1.tagClass,
+                        remove: Styles1.removeClass,
+                      }}
+                    />
+                  </div>
+                </div>
+              </Form.Item>
+            </Col>
+            <Col>
+              <Form.Item name="date">
+                <div className={Styles.divssss}>
+                  Date
+                  <DatePicker
+                    className={Styles.inputgap}
+                    placeholder="Date"
+                    onChange={handledateChange}
+                    format="YYYY-MM-DD"
+                  />
+                </div>
+              </Form.Item>
+            </Col>
+          </Row>
+          <Row justify="center" className={Styles.colgap}>
+            <Col className={Styles.colgapppssss}>
+              <Form.Item name="description">
+                <div className={Styles.divssss}>
+                  Description
+                  <DynamicReactQuill
+                    value={text}
+                    onChange={handleServiceDescriptionChange}
+                  />
+                </div>
+              </Form.Item>
+            </Col>
+          </Row>
+          <div className={Styles1.draggercenter}>
+            <Form.Item name="image">
+              <div className={Styles1.dotimg}>
+                <p className="ant-upload-drag-icon">
+                  <CloudDownloadOutlined style={{ fontSize: "2rem" }} />
+                </p>
+                <p className={Styles1.seltext}>
+                  Select a file or drag and drop here
+                </p>
+                <p className={Styles1.seltext1}>
+                  JPG, PNG or PDF, file size no more than 3 MB
+                  <br />
+                  270 x 158 recommended
+                </p>
+                <input type="file" onChange={handlesubmit} />
               </div>
             </Form.Item>
-          </Col>
-          <Col>
-            <Form.Item name="date">
-              <div className={Styles.divssss}>
-                Date
-                <DatePicker
-                  className={Styles.inputgap}
-                  placeholder="Date"
-                  onChange={handledateChange}
-                  format="YYYY-MM-DD"
-                />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <Row justify="center" className={Styles.colgap}>
-          <Col className={Styles.colgapppssss}>
-            <Form.Item name="description">
-              <div className={Styles.divssss}>
-                Description
-                <TextArea className={Styles.inputgaptext} rows={4} />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <div className={Styles.draggercenter} style={{ marginTop: "1rem" }}>
-          <Form.Item name="image">
-            <p className="ant-upload-drag-icon">
-              <InboxOutlined />
-            </p>
-            <p className="ant-upload-text">
-              Select a file or drag and drop here
-            </p>
-            <p className="ant-upload-hint">
-              JPG, PNG or PDF, file size no more than 3 MB
-              <br />
-              270 x 158 recommended
-            </p>
-            <input type="file" onChange={handlesubmit} />
-          </Form.Item>
-        </div>
-        <Row justify="center" className={Styles.colgap}>
-          <Col className={Styles.colgapppssss}>
-            <Form.Item>
-              <Button className={Styles.buttonsantd} htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
-          </Col>
-        </Row>
-      </Form>
+          </div>
+          <Row justify="center" className={Styles.colgap}>
+            <Col className={Styles.colgapppssss}>
+              <Form.Item>
+                <Button className={Styles.buttonsantd} htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Col>
+          </Row>
+        </Form>
+      </div>
     </div>
   );
 }

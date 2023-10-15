@@ -11,6 +11,7 @@ import Calendar from "../../public/images/Calendar 2.png";
 import Locatin from "../../public/images/Locatin (1).png";
 import { eventForm } from "../../helper/axios";
 import { useRouter } from "next/router"; // Import the useRouter hook
+import { LoadingOutlined } from "@ant-design/icons";
 const { Option } = Select;
 
 function RightSectionOfEvents() {
@@ -43,7 +44,11 @@ function RightSectionOfEvents() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <LoadingOutlined style={{ fontSize: "5rem", color: "black" }} />
+      </div>
+    );
   }
   function handleChange(value) {
     console.log(`selected ${value}`);

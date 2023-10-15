@@ -14,7 +14,7 @@
 }
 .displdeshiservice {
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
   margin-top: 1.5rem;
 }
 .tagsClass {
@@ -97,6 +97,7 @@
   color: #737373 !important;
   margin-left: -2rem;
 }
+
 .radios {
   margin-top: 2rem;
   margin-left: 0.5rem;
@@ -122,6 +123,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: auto;
 }
 .plustxttt {
   display: flex;
@@ -166,6 +168,7 @@
 .draggercenter {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .buttondrag {
   background-color: none !important;
@@ -219,6 +222,27 @@
   position: absolute;
   margin-top: -4.5rem;
   margin-left: 2rem;
+}
+.dotimg {
+  border: 1px dashed #d0d0d0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+.seltext {
+  color: #444444;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.seltext1 {
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
 }
 @media only screen and (max-width: 768px) {
   .radiose {
