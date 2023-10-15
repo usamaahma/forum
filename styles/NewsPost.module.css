@@ -137,7 +137,8 @@
 }
 .mblview {
   display: flex;
-  justify-content: space-between;
+
+  flex-direction: column;
 }
 .share11 {
   color: #42b00f;

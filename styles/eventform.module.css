@@ -5,7 +5,11 @@
 }
 .inputgap {
   margin-top: 0.5rem;
-  width: 20rem;
+  width: 22rem;
+}
+.inputgap12 {
+  margin-top: 0.5rem;
+  width: 22rem;
 }
 .inputgaptext {
   margin-top: 0.5rem;
@@ -15,9 +19,13 @@
   margin-top: 0.5rem;
   width: 41rem;
 }
+.inputgapp12 {
+  margin-top: 0.5rem;
+  width: 45rem;
+}
 .inputgapss {
   margin-top: 0.5rem;
-  width: 9.5rem;
+  width: 10.5rem;
 }
 .colgapppssss {
   width: 41rem;
@@ -92,6 +100,27 @@
   overflow-y: scroll;
   border: #dad8d8 solid 1px;
   border-radius: 0.2rem;
+}
+.dotimg {
+  border: 1px dashed #d0d0d0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+.seltext {
+  color: #444444;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.seltext1 {
+  color: #737373;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
 }
 @media only screen and (max-width: 425px) {
   .colgap {

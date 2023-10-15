@@ -20,6 +20,7 @@ import {
   InboxOutlined,
   PlusOutlined,
   MinusCircleOutlined,
+  CloudDownloadOutlined,
 } from "@ant-design/icons";
 
 import { rentalCategory, rentalForm, rentalSubCategory } from "../helper/axios";
@@ -291,116 +292,153 @@ function RentalForm({ initialValues }) {
     getRentalSubCategory();
   }, []);
   return (
-    <div>
+    <>
       <MainHeader />
-      <div className={Styles.mainhero}>
-        <div>
-          <h1 className={Styles.centerhero}>Add Rental</h1>
-          <p className={Styles.colrgreen}>Home / Add Rental</p>
-        </div>
-      </div>{" "}
-      <div>
-        <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <Form
-            name="dynamic_form_nest_item"
-            onFinish={onFinish}
-            style={{
-              maxWidth: 600,
-            }}
-            autoComplete="off"
-          >
-            <Form.List name="users">
-              {(fields, { add, remove }) => (
-                <>
-                  {fields.map(({ key, name, ...restField }) => (
-                    <Space
-                      key={key}
-                      style={{
-                        display: "flex",
-                        marginBottom: 8,
-                      }}
-                      align="baseline"
-                    >
-                      <Form.Item
-                        {...restField}
-                        name={[name, "feature"]}
-                        rules={[
-                          {
-                            required: true,
-                            message: "Missing first name",
-                          },
-                        ]}
-                      >
-                        <Input
-                          placeholder="First feature"
-                          value={featureInput[name]}
-                          onChange={(e) => handleFeatureInputChange(e, name)}
-                        />
-                      </Form.Item>
-                      <Form.Item
-                        {...restField}
-                        name={[name, "Value"]}
-                        rules={[
-                          {
-                            required: true,
-                            message: "Missing last name",
-                          },
-                        ]}
-                      >
-                        <Input
-                          placeholder="Value"
-                          value={secondInputValue[name]}
-                          onChange={(e) => handleSecondInputChange(e, name)}
-                        />
-                      </Form.Item>
-                      <MinusCircleOutlined onClick={() => remove(name)} />
-                    </Space>
-                  ))}
-                  <Form.Item>
-                    <Button
-                      type="dashed"
-                      onClick={() => add()}
-                      block
-                      icon={<PlusOutlined />}
-                    >
-                      Add feature
-                    </Button>
-                  </Form.Item>
-                </>
-              )}
-            </Form.List>
-            {/* <button onClick={addFeature}>Add</button> */}
-          </Form>
-        </Modal>
-        <Row justify="center">
-          <Form
-            name="basic"
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-            autoComplete="off"
-            form={form}
-            initialValues={initialValues}
-          >
-            <Col>
-              <div className={Styles1.displdeshiservice}>
-                <Form.Item name="title">
-                  <div>
-                    Title
-                    <Input className={Styles1.wdthinpu} placeholder="Title" />
-                  </div>
-                </Form.Item>
-                <div className={Styles1.gapscnd}>
-                  <Form.Item name="category">
-                    <div className={Styles.divssss}>
-                      <p style={{ marginTop: "-.1rem" }}> Category</p>
-                      <Select
-                        defaultValue="Category"
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
+      >
+        <div className={Styles.mainhero}>
+          <div>
+            <h1 className={Styles.centerhero}>Add Rental</h1>
+            <p className={Styles.colrgreen}>Home / Add Rental</p>
+          </div>
+        </div>{" "}
+        <div
+          style={{
+            background: "white",
+            boxShadow: "0px 6px 40px 0px #0000000D",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "1rem",
+            marginTop: "1rem",
+          }}
+        >
+          <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Form
+              name="dynamic_form_nest_item"
+              onFinish={onFinish}
+              style={{
+                maxWidth: 600,
+              }}
+              autoComplete="off"
+            >
+              <Form.List name="users">
+                {(fields, { add, remove }) => (
+                  <>
+                    {fields.map(({ key, name, ...restField }) => (
+                      <Space
+                        key={key}
                         style={{
-                          width: "20rem",
-                          marginTop: ".5rem",
+                          display: "flex",
+                          marginBottom: 8,
                         }}
-                        onChange={handleCategoryChange}
-                        options={cdata?.map((a, index) => ({
+                        align="baseline"
+                      >
+                        <Form.Item
+                          {...restField}
+                          name={[name, "feature"]}
+                          rules={[
+                            {
+                              required: true,
+                              message: "Missing first name",
+                            },
+                          ]}
+                        >
+                          <Input
+                            placeholder="First feature"
+                            value={featureInput[name]}
+                            onChange={(e) => handleFeatureInputChange(e, name)}
+                          />
+                        </Form.Item>
+                        <Form.Item
+                          {...restField}
+                          name={[name, "Value"]}
+                          rules={[
+                            {
+                              required: true,
+                              message: "Missing last name",
+                            },
+                          ]}
+                        >
+                          <Input
+                            placeholder="Value"
+                            value={secondInputValue[name]}
+                            onChange={(e) => handleSecondInputChange(e, name)}
+                          />
+                        </Form.Item>
+                        <MinusCircleOutlined onClick={() => remove(name)} />
+                      </Space>
+                    ))}
+                    <Form.Item>
+                      <Button
+                        type="dashed"
+                        onClick={() => add()}
+                        block
+                        icon={<PlusOutlined />}
+                      >
+                        Add feature
+                      </Button>
+                    </Form.Item>
+                  </>
+                )}
+              </Form.List>
+              {/* <button onClick={addFeature}>Add</button> */}
+            </Form>
+          </Modal>
+          <Row justify="center">
+            <Form
+              name="basic"
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              autoComplete="off"
+              form={form}
+              initialValues={initialValues}
+            >
+              <Col>
+                <div className={Styles1.displdeshiservice}>
+                  <Form.Item name="title">
+                    <div>
+                      Title
+                      <Input className={Styles1.wdthinpu} placeholder="Title" />
+                    </div>
+                  </Form.Item>
+                  <div className={Styles1.gapscnd}>
+                    <Form.Item name="category">
+                      <div className={Styles.divssss}>
+                        <p style={{ marginBottom: ".2rem" }}> Category</p>
+                        <Select
+                          defaultValue="Category"
+                          style={{
+                            width: "22rem",
+                          }}
+                          onChange={handleCategoryChange}
+                          options={cdata?.map((a, index) => ({
+                            key: index,
+                            value: a.name,
+                            label: a.name,
+                          }))}
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                </div>
+                <div className={Styles1.displdeshiservice}>
+                  <Form.Item name="subCategory">
+                    <div className={Styles.divssss}>
+                      <p style={{ marginBottom: ".2rem" }}>Sub Category</p>
+                      <Select
+                        defaultValue="subCategory1"
+                        style={{
+                          width: "22rem",
+                        }}
+                        onChange={handleSubCategoryChange}
+                        options={scdata?.map((a, index) => ({
                           key: index,
                           value: a.name,
                           label: a.name,
@@ -408,149 +446,72 @@ function RentalForm({ initialValues }) {
                       />
                     </div>
                   </Form.Item>
-                </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <Form.Item name="subCategory">
-                  <div className={Styles.divssss}>
-                    <p style={{ marginTop: "-.1rem" }}>Sub Category</p>
-                    <Select
-                      defaultValue="subCategory1"
-                      style={{
-                        width: "20rem",
-                        marginTop: ".5rem",
-                      }}
-                      onChange={handleSubCategoryChange}
-                      options={scdata?.map((a, index) => ({
-                        key: index,
-                        value: a.name,
-                        label: a.name,
-                      }))}
-                    />
-                  </div>
-                </Form.Item>
-                <div className={Styles1.gapscnd}>
-                  <Form.Item name="tags">
-                    <div>
-                      Tags
-                      <div className={Styles1.wdthinputag}>
-                        <ReactTags
-                          tags={tags}
-                          inline="true"
-                          name="inputName"
-                          // suggestions={suggestions}
-                          delimiters={delimiters}
-                          handleDelete={handleDelete}
-                          handleAddition={handleAddition}
-                          handleDrag={handleDrag}
-                          handleTagClick={handleTagClick}
-                          inputFieldPosition="inline"
-                          labelField={"name"}
-                          autocomplete
-                          editable
-                          style={{ padding: ".5rem", color: "red" }}
-                          placeholder="tags"
-                          classNames={{
-                            tags: Styles1.tagsClass,
-                            tagInput: Styles1.tagInputClass,
-                            tagInputField: Styles1.tagInputFieldClass,
-                            selected: Styles1.selectedClass,
-                            tag: Styles1.tagClass,
-                            remove: Styles1.removeClass,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </Form.Item>
-                </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item>
-                    <div>
-                      <Radio.Group onChange={onChange} value={value}>
-                        <Radio value={1}>Pricing</Radio>
-                        <Radio value={2}>Price Range</Radio>
-                        <Radio value={3}>Deasabled</Radio>
-                      </Radio.Group>
-                    </div>
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="priceType">
-                    <div className={Styles.divssss}>
-                      <p style={{ marginTop: "-.1rem" }}>Price Type</p>
-                      <Select
-                        defaultValue="Yearly"
-                        style={{
-                          width: "20rem",
-                          marginTop: ".5rem",
-                        }}
-                        onChange={handlePriceTypeChange}
-                        options={[
-                          {
-                            value: "Yearly",
-                            label: "Yearly",
-                          },
-                          {
-                            value: "monthly",
-                            label: "monthly",
-                          },
-                        ]}
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div className={Styles1.gapscnd}>
-                  <div className={Styles1.gapfourth}>
-                    <div className={Styles1.posdiv}>
-                      <Form.Item name="currency">
-                        <div className={Styles.divssss}>
-                          <Select
-                            defaultValue="currency"
-                            style={{
-                              width: "4rem",
-                              marginTop: "1.7rem",
+                  <div className={Styles1.gapscnd}>
+                    <Form.Item name="tags">
+                      <div>
+                        Tags
+                        <div className={Styles1.wdthinputag}>
+                          <ReactTags
+                            tags={tags}
+                            inline="true"
+                            name="inputName"
+                            // suggestions={suggestions}
+                            delimiters={delimiters}
+                            handleDelete={handleDelete}
+                            handleAddition={handleAddition}
+                            handleDrag={handleDrag}
+                            handleTagClick={handleTagClick}
+                            inputFieldPosition="inline"
+                            labelField={"name"}
+                            autocomplete
+                            editable
+                            style={{ padding: ".5rem", color: "red" }}
+                            placeholder="tags"
+                            classNames={{
+                              tags: Styles1.tagsClass,
+                              tagInput: Styles1.tagInputClass,
+                              tagInputField: Styles1.tagInputFieldClass,
+                              selected: Styles1.selectedClass,
+                              tag: Styles1.tagClass,
+                              remove: Styles1.removeClass,
                             }}
-                            onChange={handleCurrencyChange}
-                            options={[
-                              {
-                                value: "$",
-                                label: "$",
-                              },
-                              {
-                                value: "ban",
-                                label: "ban",
-                              },
-                              {
-                                value: "pkr",
-                                label: "pkr",
-                              },
-                            ]}
                           />
                         </div>
-                      </Form.Item>
-                    </div>
-                    <Form.Item name="price">
+                      </div>
+                    </Form.Item>
+                  </div>
+                </div>
+                <div className={Styles1.displdeshiservice}>
+                  <div>
+                    <Form.Item>
+                      <div>
+                        <Radio.Group onChange={onChange} value={value}>
+                          <Radio value={1}>Pricing</Radio>
+                          <Radio value={2}>Price Range</Radio>
+                          <Radio value={3}>Deasabled</Radio>
+                        </Radio.Group>
+                      </div>
+                    </Form.Item>
+                  </div>
+                  <div>
+                    <Form.Item name="priceType">
                       <div className={Styles.divssss}>
-                        <p style={{ marginTop: "-.1rem" }}>Price</p>
+                        <p style={{ marginTop: "-.1rem" }}>Price Type</p>
                         <Select
-                          defaultValue="price"
+                          defaultValue="Yearly"
                           style={{
-                            width: "20rem",
+                            width: "22rem",
                             marginTop: ".5rem",
                           }}
-                          onChange={handlePriceChange}
+                          onChange={handlePriceTypeChange}
                           options={[
                             {
-                              value: "50",
-                              label: "50",
+                              value: "Yearly",
+                              label: "Yearly",
                             },
                             {
-                              value: "100",
-                              label: "100",
+                              value: "monthly",
+                              label: "monthly",
                             },
                           ]}
                         />
@@ -558,282 +519,348 @@ function RentalForm({ initialValues }) {
                     </Form.Item>
                   </div>
                 </div>
-                <div>
-                  <Form.Item name="time">
-                    <div className={Styles.divssss}>
-                      <p style={{ marginTop: "-.1rem" }}>Time</p>
-                      <Select
-                        defaultValue="Yearly"
-                        style={{
-                          width: "20rem",
-                          marginTop: ".5rem",
+                <div className={Styles1.displdeshiservice}>
+                  <div className={Styles1.gapscnd}>
+                    <div className={Styles1.gapfourth}>
+                      <div className={Styles1.posdiv}>
+                        <Form.Item name="currency">
+                          <div className={Styles.divssss}>
+                            <Select
+                              defaultValue="currency"
+                              style={{
+                                width: "6rem",
+                                marginTop: "1.7rem",
+                              }}
+                              onChange={handleCurrencyChange}
+                              options={[
+                                {
+                                  value: "$",
+                                  label: "$",
+                                },
+                                {
+                                  value: "ban",
+                                  label: "ban",
+                                },
+                                {
+                                  value: "pkr",
+                                  label: "pkr",
+                                },
+                              ]}
+                            />
+                          </div>
+                        </Form.Item>
+                      </div>
+                      <Form.Item name="price">
+                        <div className={Styles.divssss}>
+                          <p style={{ marginTop: "-.1rem" }}>Price</p>
+                          <Select
+                            defaultValue="price"
+                            style={{
+                              width: "22rem",
+                              marginTop: ".5rem",
+                            }}
+                            onChange={handlePriceChange}
+                            options={[
+                              {
+                                value: "50",
+                                label: "50",
+                              },
+                              {
+                                value: "100",
+                                label: "100",
+                              },
+                            ]}
+                          />
+                        </div>
+                      </Form.Item>
+                    </div>
+                  </div>
+                  <div>
+                    <Form.Item name="time">
+                      <div className={Styles.divssss}>
+                        <p style={{ marginTop: "-.1rem" }}>Time</p>
+                        <Select
+                          defaultValue="Yearly"
+                          style={{
+                            width: "22rem",
+                            marginTop: ".5rem",
+                          }}
+                          onChange={handleTimeChange}
+                          options={[
+                            {
+                              value: "Yearly",
+                              label: "Yearly",
+                            },
+                            {
+                              value: "monthly",
+                              label: "monthly",
+                            },
+                          ]}
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                </div>
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="metaDescription">
+                    <div>
+                      Meta Description
+                      <TextArea
+                        className={Styles1.wdthinp}
+                        autoSize={{
+                          minRows: 2,
+                          maxRows: 8,
                         }}
-                        onChange={handleTimeChange}
-                        options={[
-                          {
-                            value: "Yearly",
-                            label: "Yearly",
-                          },
-                          {
-                            value: "monthly",
-                            label: "monthly",
-                          },
-                        ]}
                       />
                     </div>
                   </Form.Item>
                 </div>
-              </div>
-              <div className={Styles1.displdeshiservic}>
-                <Form.Item name="metaDescription">
-                  <div>
-                    Meta Description
-                    <TextArea
-                      className={Styles1.wdthinp}
-                      autoSize={{
-                        minRows: 2,
-                        maxRows: 8,
-                      }}
-                    />
-                  </div>
-                </Form.Item>
-              </div>
-              <div className={Styles1.displdeshiservic}>
-                <Form.Item name="serviceDescription">
-                  <div>
-                    Service Description
-                    <DynamicReactQuill
-                      value={text}
-                      onChange={handleServiceDescriptionChange}
-                    />
-                  </div>
-                </Form.Item>
-              </div>
-
-              <div className={Styles1.displdeshiservic}>
-                <Form.Item name="feature">
-                  <div>
-                    <div className={Styles1.plustxt}>
-                      Feature
-                      <Button
-                        className={Styles1.plusbutton}
-                        onClick={showModal}
-                      >
-                        <img alt="abc" src="../images/Plus1.png" />{" "}
-                        <p className={Styles1.txtaddfeature}>Add Feature</p>
-                      </Button>
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="serviceDescription">
+                    <div>
+                      Service Description
+                      <DynamicReactQuill
+                        value={text}
+                        onChange={handleServiceDescriptionChange}
+                      />
                     </div>
-                    <div className={Styles1.divnew}>
-                      <div className={Styles1.divnew5}>
-                        <div>
-                          Feature:{" "}
-                          {featureDetails.map((feature, index) => (
-                            <div key={index}>{feature}</div>
-                          ))}
+                  </Form.Item>
+                </div>
+
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="feature">
+                    <div>
+                      <div className={Styles1.plustxt}>
+                        Feature
+                        <Button
+                          className={Styles1.plusbutton}
+                          onClick={showModal}
+                        >
+                          <img alt="abc" src="../images/Plus1.png" />{" "}
+                          <p className={Styles1.txtaddfeature}>Add Feature</p>
+                        </Button>
+                      </div>
+                      <div className={Styles1.divnew}>
+                        <div className={Styles1.divnew5}>
+                          <div>
+                            Feature:{" "}
+                            {featureDetails.map((feature, index) => (
+                              <div key={index}>{feature}</div>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Form.Item>
-              </div>
-              <div
-                className={Styles.draggercenter}
-                style={{ marginTop: "1rem" }}
-              >
-                <Form.Item name="image">
+                  </Form.Item>
+                </div>
+                <div
+                  className={Styles1.draggercenter}
+                  style={{ marginTop: "1rem" }}
+                >
+                  <Form.Item name="image">
+                    <div className={Styles1.dotimg}>
+                      <p className="ant-upload-drag-icon">
+                        <CloudDownloadOutlined style={{ fontSize: "2rem" }} />
+                      </p>
+                      <p className={Styles1.seltext}>
+                        Select a file or drag and drop here
+                      </p>
+                      <p className={Styles1.seltext1}>
+                        JPG, PNG or PDF, file size no more than 3 MB
+                        <br />
+                        270 x 158 recommended
+                      </p>
+                      <input type="file" onChange={handlesubmit} />
+                    </div>
+                  </Form.Item>
+                </div>
+                <div className={Styles1.scnddivservice}>
+                  <p className={Styles1.largetct}>Contact Details</p>
+                </div>
+                <div className={Styles1.displdeshiservice}>
                   <div>
-                    <p className="ant-upload-drag-icon">
-                      <InboxOutlined />
-                    </p>
-                    <p className="ant-upload-text">
-                      Select a file or drag and drop here
-                    </p>
-                    <p className="ant-upload-hint">
-                      JPG, PNG or PDF, file size no more than 3 MB
-                      <br />
-                      270 x 158 recommended
-                    </p>
-                    <input type="file" onChange={handlesubmit} />
+                    <Form.Item name="name">
+                      <div>
+                        Name
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Name"
+                        />
+                      </div>
+                    </Form.Item>
                   </div>
-                </Form.Item>
-              </div>
-              <div className={Styles1.scnddivservice}>
-                <p className={Styles1.largetct}>Contact Details</p>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="name">
-                    <div>
-                      Name
-                      <Input className={Styles1.wdthinpu} placeholder="Name" />
-                    </div>
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="contactNumber">
-                    <div>
-                      <p className={Styles1.txtgap}>Contact Number</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="+1 (929) 303 0303"
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="email">
-                    <div>
-                      <p className={Styles1.txtgap}>Email</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="efat@gmail.com"
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
-                <div>
-                  <Form.Item name="website">
-                    <div>
-                      <p className={Styles1.txtgap}>Website</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="www.website.com"
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
-              </div>
-              <div className={Styles1.displdeshiservic}>
-                <Form.Item name="address">
                   <div>
-                    <p className={Styles1.txtgap}>Address</p>
-                    <TextArea
-                      className={Styles1.wdthinp}
-                      placeholder="1329 Saint Lawrence Ave, Bronx, NY"
-                      autoSize={{
-                        minRows: 1.5,
-                        maxRows: 5,
-                      }}
-                    />
+                    <Form.Item name="contactNumber">
+                      <div>
+                        <p className={Styles1.txtgap}>Contact Number</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="+1 (929) 303 0303"
+                        />
+                      </div>
+                    </Form.Item>
                   </div>
-                </Form.Item>
-              </div>
-              <div className={Styles1.fourdivs}>
-                <div>
-                  <Form.Item name="city">
-                    <div>
-                      <p className={Styles1.txtgap}>City</p>
-                      <Input placeholder="city" className={Styles1.wdthinp} />
-                    </div>
-                  </Form.Item>
                 </div>
-                <div>
-                  <Form.Item name="state">
+                <div className={Styles1.displdeshiservice}>
+                  <div>
+                    <Form.Item name="email">
+                      <div>
+                        <p className={Styles1.txtgap}>Email</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="efat@gmail.com"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                  <div>
+                    <Form.Item name="website">
+                      <div>
+                        <p className={Styles1.txtgap}>Website</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="www.website.com"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                </div>
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="address">
                     <div>
-                      <p className={Styles1.txtgap}>State</p>
-                      <Input placeholder="State" className={Styles1.wdthinp} />
-                    </div>
-                  </Form.Item>
-                </div>{" "}
-                <div>
-                  <Form.Item name="postal">
-                    <div>
-                      <p className={Styles1.txtgap}>Postal</p>
-                      <Input placeholder="Postal" className={Styles1.wdthinp} />
-                    </div>
-                  </Form.Item>
-                </div>{" "}
-                <div>
-                  {" "}
-                  <Form.Item name="country">
-                    <div>
-                      <p className={Styles1.txtgap}>Country</p>
-                      <Input
-                        placeholder="Country"
+                      <p className={Styles1.txtgap}>Address</p>
+                      <TextArea
                         className={Styles1.wdthinp}
+                        placeholder="1329 Saint Lawrence Ave, Bronx, NY"
+                        autoSize={{
+                          minRows: 1.5,
+                          maxRows: 5,
+                        }}
                       />
                     </div>
                   </Form.Item>
                 </div>
-              </div>
+                <div className={Styles1.fourdivs}>
+                  <div>
+                    <Form.Item name="city">
+                      <div>
+                        <p className={Styles1.txtgap}>City</p>
+                        <Input placeholder="city" className={Styles1.wdthinp} />
+                      </div>
+                    </Form.Item>
+                  </div>
+                  <div>
+                    <Form.Item name="state">
+                      <div>
+                        <p className={Styles1.txtgap}>State</p>
+                        <Input
+                          placeholder="State"
+                          className={Styles1.wdthinp}
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>{" "}
+                  <div>
+                    <Form.Item name="postal">
+                      <div>
+                        <p className={Styles1.txtgap}>Postal</p>
+                        <Input
+                          placeholder="Postal"
+                          className={Styles1.wdthinp}
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>{" "}
+                  <div>
+                    {" "}
+                    <Form.Item name="country">
+                      <div>
+                        <p className={Styles1.txtgap}>Country</p>
+                        <Input
+                          placeholder="Country"
+                          className={Styles1.wdthinp}
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                </div>
 
-              <div className={Styles1.scnddivservice}>
-                <p className={Styles1.largetct}>Social Links</p>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="facebook">
-                    <div>
-                      <p className={Styles1.txtgap}>Facebook</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="Tchnovee"
-                      />
-                    </div>
-                  </Form.Item>
+                <div className={Styles1.scnddivservice}>
+                  <p className={Styles1.largetct}>Social Links</p>
                 </div>
-                <div>
-                  <Form.Item name="instagram">
-                    <div>
-                      <p className={Styles1.txtgap}>Instagram</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="Istiaq_firoz"
-                      />
-                    </div>
-                  </Form.Item>
+                <div className={Styles1.displdeshiservice}>
+                  <div>
+                    <Form.Item name="facebook">
+                      <div>
+                        <p className={Styles1.txtgap}>Facebook</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Tchnovee"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                  <div>
+                    <Form.Item name="instagram">
+                      <div>
+                        <p className={Styles1.txtgap}>Instagram</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Istiaq_firoz"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
                 </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="twitter">
-                    <div>
-                      <p className={Styles1.txtgap}>Twitter</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="Istiaq_firoz"
-                      />
-                    </div>
-                  </Form.Item>
+                <div className={Styles1.displdeshiservice}>
+                  <div>
+                    <Form.Item name="twitter">
+                      <div>
+                        <p className={Styles1.txtgap}>Twitter</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Istiaq_firoz"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
+                  <div>
+                    <Form.Item name="youtube">
+                      <div>
+                        <p className={Styles1.txtgap}>Youtube</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Istiaq_firoz"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
                 </div>
-                <div>
-                  <Form.Item name="youtube">
-                    <div>
-                      <p className={Styles1.txtgap}>Youtube</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="Istiaq_firoz"
-                      />
-                    </div>
-                  </Form.Item>
+                <div className={Styles1.displdeshiservice}>
+                  <div>
+                    <Form.Item name="linkdin">
+                      <div>
+                        <p className={Styles1.txtgap}>Linkdin</p>
+                        <Input
+                          className={Styles1.wdthinpu}
+                          placeholder="Istiaq_firoz"
+                        />
+                      </div>
+                    </Form.Item>
+                  </div>
                 </div>
-              </div>
-              <div className={Styles1.displdeshiservice}>
-                <div>
-                  <Form.Item name="linkdin">
-                    <div>
-                      <p className={Styles1.txtgap}>Linkdin</p>
-                      <Input
-                        className={Styles1.wdthinpu}
-                        placeholder="Istiaq_firoz"
-                      />
-                    </div>
-                  </Form.Item>
-                </div>
-              </div>
-              <Form.Item>
-                <Button className={Styles1.submitbutt} htmlType="submit">
-                  Submit
-                </Button>
-              </Form.Item>
-            </Col>
-          </Form>
-        </Row>
+                <Form.Item>
+                  <Button className={Styles1.submitbutt} htmlType="submit">
+                    Submit
+                  </Button>
+                </Form.Item>
+              </Col>
+            </Form>
+          </Row>
+        </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -67,10 +67,11 @@ function LeftJobDetail({ data }) {
         </div>
         <div>{/* <TabOfJobDetail /> */}</div>
         <div className={Styles.btnsdiv}>
-          <button className={Styles.btns}>Federal</button>
-          <button className={Styles.btns}>Designer</button>
-          <button className={Styles.btns}>Developer</button>
-          <button className={Styles.btns}>SEO</button>
+          {data?.tags?.map((tag, index) => (
+            <button key={index} className={Styles.btns}>
+              {tag}
+            </button>
+          ))}
         </div>
         <div className={Styles.borderjob}>
           <h4 className={Styles.jotext}>Job Overview</h4>
@@ -143,12 +144,13 @@ function LeftJobDetail({ data }) {
         </div>
         <div>
           <h3>Skill & Experience</h3>
+
           <div className={Styles.btnsdiv1}>
-            <button className={Styles.btns1}>Photoshop</button>
-            <button className={Styles.btns1}>Figma</button>
-            <button className={Styles.btns1}>Illustrator</button>
-            <button className={Styles.btns1}>UI/UX </button>
-            <button className={Styles.btns1}>Graphic Design </button>
+            {data?.tagsJob?.map((tag, index) => (
+              <button key={index} className={Styles.btns1}>
+                {tag}
+              </button>
+            ))}
           </div>
         </div>
       </div>

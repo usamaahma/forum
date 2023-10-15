@@ -113,6 +113,13 @@
   padding-right: 1rem;
   margin-left: -0.5rem;
 }
+@media (max-width: 1024px) {
+  .cardsize {
+    width: 12rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rems;
+  }
+}
 @media (max-width: 425px) {
   .cardsize {
     width: 12rem;

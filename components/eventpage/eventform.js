@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/eventform.module.css";
-import { DownOutlined, UserOutlined, InboxOutlined } from "@ant-design/icons";
+import {
+  DownOutlined,
+  UserOutlined,
+  InboxOutlined,
+  CloudDownloadOutlined,
+} from "@ant-design/icons";
 import {
   Button,
   Dropdown,
@@ -142,210 +147,135 @@ function Eventform({ initialValues }) {
     form.resetFields();
   };
   return (
-    <div>
-      <Form
-        name="basic"
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed}
-        autoComplete="off"
-        form={form}
-        initialValues={initialValues}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+      }}
+    >
+      <div
+        style={{
+          background: "white",
+          boxShadow: "0px 6px 40px 0px #0000000D",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "1rem",
+          marginTop: "1rem",
+        }}
       >
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <Form.Item name="eventName">
-              <div className={Styles.divssss}>
-                Event Name
-                <Input className={Styles.inputgap} placeholder="Event Name" />
-              </div>
-            </Form.Item>
-          </Col>
-          <Col>
-            <Form.Item name="category">
-              <div className={Styles.divssss}>
-                <p style={{ marginTop: "-.1rem" }}> Category</p>
-                <Select
-                  defaultValue="Category1"
-                  style={{
-                    width: "20rem",
-                    marginTop: ".5rem",
-                  }}
-                  onChange={handleCategoryChange}
-                  options={[
-                    {
-                      value: "Category2",
-                      label: "Category2",
-                    },
-                    {
-                      value: "Category3",
-                      label: "Category3",
-                    },
-                    {
-                      value: "Category4",
-                      label: "Category4",
-                    },
-                  ]}
-                />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <div className={Styles.divsssss}>
-              <Form.Item name="startDate">
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  Start Date
-                  <DatePicker
-                    className={Styles.inputgapss}
-                    onChange={handleStartDateChange}
-                    format="YYYY-MM-DD"
-                    placeholder="Start Date"
-                  />
-                </div>
-              </Form.Item>
-              <Form.Item name="endDate">
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  End Date
-                  <DatePicker
-                    className={Styles.inputgapss}
-                    onChange={handleEndDateChange}
-                    format="YYYY-MM-DD"
-                    placeholder="End Date"
-                  />
-                </div>
-              </Form.Item>
-            </div>
-          </Col>
-          <Col>
-            <div className={Styles.divsssss}>
-              <Form.Item name="startTime">
-                <div style={{ display: "grid" }}>
-                  Start Time
-                  <TimePicker
-                    className={Styles.inputgapss}
-                    placeholder="Start Time"
-                    onChange={handleStartTimeChange}
-                  />
-                </div>
-              </Form.Item>
-              <Form.Item name="endTime">
-                <div style={{ display: "grid" }}>
-                  End Time
-                  <TimePicker
-                    className={Styles.inputgapss}
-                    placeholder="End Time"
-                    onChange={handleEndTimeChange}
-                  />
-                </div>
-              </Form.Item>
-            </div>
-          </Col>
-        </Row>
-        <Row justify="center" className={Styles.colgap}>
-          <Col>
-            <Form.Item name="location">
-              <div className={Styles.divssss}>
-                Location
-                <Input className={Styles.inputgap} placeholder="Location" />
-              </div>
-            </Form.Item>
-          </Col>
-          <Col>
-            <Form.Item name="contactNumber">
-              <div className={Styles.divssss}>
-                Contact Number
-                <Input
-                  className={Styles.inputgap}
-                  placeholder="Contact Number"
-                />
-              </div>
-            </Form.Item>
-          </Col>
-        </Row>
-        <div>
-          <div className={Styles.ticketss}>
-            <p className={Styles.ticket}>Ticket Setting</p>
-          </div>
+        <Form
+          name="basic"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+          form={form}
+          initialValues={initialValues}
+        >
           <Row justify="center" className={Styles.colgap}>
             <Col>
-              <Form.Item name="sellTicket">
+              <Form.Item name="eventName">
                 <div className={Styles.divssss}>
-                  <p style={{ marginTop: "-.4rem" }}>Sell Ticket</p>
+                  Event Name
+                  <Input className={Styles.inputgap} placeholder="Event Name" />
+                </div>
+              </Form.Item>
+            </Col>
+            <Col>
+              <Form.Item name="category">
+                <div className={Styles.divssss}>
+                  <p style={{ marginTop: "-.1rem" }}> Category</p>
                   <Select
-                    defaultValue="Ticket"
+                    defaultValue="Category1"
                     style={{
-                      width: "20rem",
-                      marginTop: ".4rem",
+                      width: "22rem",
+                      marginTop: ".5rem",
                     }}
-                    onChange={handleSellTicketChange}
+                    onChange={handleCategoryChange}
                     options={[
                       {
-                        value: "Ticket1",
-                        label: "Ticket1",
+                        value: "Category2",
+                        label: "Category2",
                       },
                       {
-                        value: "Ticket2",
-                        label: "Ticket2",
+                        value: "Category3",
+                        label: "Category3",
                       },
                       {
-                        value: "Ticket3",
-                        label: "Ticket3",
+                        value: "Category4",
+                        label: "Category4",
                       },
                     ]}
                   />
                 </div>
               </Form.Item>
             </Col>
-            <Col style={{ marginTop: "-.5rem" }}>
-              <Form.Item name="ticketPrice">
-                <div className={Styles.divssss}>
-                  Ticket Price
-                  <Input
-                    className={Styles.inputgap}
-                    placeholder="Ticket Price"
-                  />
-                </div>
-              </Form.Item>
-            </Col>
           </Row>
-          {/* <Row justify={"center"} className={Styles.ticketspot}>
-            
-              <Button>
-                <img src="../images/Labelled.png" alt="abc" />
-              </Button>
-            </Row> */}
-          <Row justify="center">
+          <Row justify="center" className={Styles.colgap}>
             <Col>
-              <Form.Item name="ticketSpot">
-                <div className={Styles.divssss}>
-                  <p>Ticket Spot</p>
-                  <Input className={Styles.inputgapp} />
-                </div>
-              </Form.Item>
+              <div className={Styles.divsssss}>
+                <Form.Item name="startDate">
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    Start Date
+                    <DatePicker
+                      className={Styles.inputgapss}
+                      onChange={handleStartDateChange}
+                      format="YYYY-MM-DD"
+                      placeholder="Start Date"
+                    />
+                  </div>
+                </Form.Item>
+                <Form.Item name="endDate">
+                  <div style={{ display: "flex", flexDirection: "column" }}>
+                    End Date
+                    <DatePicker
+                      className={Styles.inputgapss}
+                      onChange={handleEndDateChange}
+                      format="YYYY-MM-DD"
+                      placeholder="End Date"
+                    />
+                  </div>
+                </Form.Item>
+              </div>
+            </Col>
+            <Col>
+              <div className={Styles.divsssss}>
+                <Form.Item name="startTime">
+                  <div style={{ display: "grid" }}>
+                    Start Time
+                    <TimePicker
+                      className={Styles.inputgapss}
+                      placeholder="Start Time"
+                      onChange={handleStartTimeChange}
+                    />
+                  </div>
+                </Form.Item>
+                <Form.Item name="endTime">
+                  <div style={{ display: "grid" }}>
+                    End Time
+                    <TimePicker
+                      className={Styles.inputgapss}
+                      placeholder="End Time"
+                      onChange={handleEndTimeChange}
+                    />
+                  </div>
+                </Form.Item>
+              </div>
             </Col>
           </Row>
           <Row justify="center" className={Styles.colgap}>
             <Col>
-              <Form.Item name="name">
+              <Form.Item name="location">
                 <div className={Styles.divssss}>
-                  Name
-                  <Input className={Styles.inputgap} placeholder=" Name" />
+                  Location
+                  <Input className={Styles.inputgap} placeholder="Location" />
                 </div>
               </Form.Item>
             </Col>
             <Col>
-              <Form.Item name="address">
-                <div className={Styles.divssss}>
-                  Address
-                  <Input className={Styles.inputgap} placeholder="Address" />
-                </div>
-              </Form.Item>
-            </Col>
-          </Row>{" "}
-          <Row justify="center" className={Styles.colgap}>
-            <Col className={Styles.colgapppssss}>
-              <Form.Item name="contactNumberti">
+              <Form.Item name="contactNumber">
                 <div className={Styles.divssss}>
                   Contact Number
                   <Input
@@ -356,33 +286,134 @@ function Eventform({ initialValues }) {
               </Form.Item>
             </Col>
           </Row>
-        </div>
-        <div className={Styles.draggercenter} style={{ marginTop: "1rem" }}>
-          <Form.Item name="image">
-            <p className="ant-upload-drag-icon">
-              <InboxOutlined />
-            </p>
-            <p className="ant-upload-text">
-              Select a file or drag and drop here
-            </p>
-            <p className="ant-upload-hint">
-              JPG, PNG or PDF, file size no more than 3 MB
-              <br />
-              270 x 158 recommended
-            </p>
-            <input type="file" onChange={handlesubmit} />
-          </Form.Item>
-        </div>
-        <Row justify="center" className={Styles.colgap}>
-          <Col className={Styles.colgapppssss}>
-            <Form.Item>
-              <Button className={Styles.buttonsantd} htmlType="submit">
-                Submit
+          <div>
+            <div className={Styles.ticketss}>
+              <p className={Styles.ticket}>Ticket Setting</p>
+            </div>
+            <Row justify="center" className={Styles.colgap}>
+              <Col>
+                <Form.Item name="sellTicket">
+                  <div className={Styles.divssss}>
+                    <p style={{ marginTop: "-.4rem" }}>Sell Ticket</p>
+                    <Select
+                      defaultValue="Ticket"
+                      style={{
+                        width: "22rem",
+                        marginTop: ".4rem",
+                      }}
+                      onChange={handleSellTicketChange}
+                      options={[
+                        {
+                          value: "Ticket1",
+                          label: "Ticket1",
+                        },
+                        {
+                          value: "Ticket2",
+                          label: "Ticket2",
+                        },
+                        {
+                          value: "Ticket3",
+                          label: "Ticket3",
+                        },
+                      ]}
+                    />
+                  </div>
+                </Form.Item>
+              </Col>
+              <Col style={{ marginTop: "-.5rem" }}>
+                <Form.Item name="ticketPrice">
+                  <div className={Styles.divssss}>
+                    Ticket Price
+                    <Input
+                      className={Styles.inputgap}
+                      placeholder="Ticket Price"
+                    />
+                  </div>
+                </Form.Item>
+              </Col>
+            </Row>
+            {/* <Row justify={"center"} className={Styles.ticketspot}>
+            
+              <Button>
+                <img src="../images/Labelled.png" alt="abc" />
               </Button>
+            </Row> */}
+            <Row justify="center">
+              <Col>
+                <Form.Item name="ticketSpot">
+                  <div className={Styles.divssss}>
+                    <p>Ticket Spot</p>
+                    <Input className={Styles.inputgapp12} />
+                  </div>
+                </Form.Item>
+              </Col>
+            </Row>
+            <Row justify="center" className={Styles.colgap}>
+              <Col>
+                <Form.Item name="name">
+                  <div className={Styles.divssss}>
+                    Name
+                    <Input className={Styles.inputgap} placeholder=" Name" />
+                  </div>
+                </Form.Item>
+              </Col>
+              <Col>
+                <Form.Item name="address">
+                  <div className={Styles.divssss}>
+                    Address
+                    <Input className={Styles.inputgap} placeholder="Address" />
+                  </div>
+                </Form.Item>
+              </Col>
+            </Row>{" "}
+            <Row justify="center">
+              <Col>
+                <Form.Item name="contactNumberti">
+                  <div className={Styles.divssss}>
+                    Contact Number
+                    <Input
+                      className={Styles.inputgap}
+                      placeholder="Contact Number"
+                    />
+                  </div>
+                </Form.Item>
+              </Col>
+            </Row>
+          </div>
+          <div
+            className={Styles.draggercenter}
+            style={{
+              marginTop: "1rem",
+            }}
+          >
+            <Form.Item name="image">
+              <div className={Styles.dotimg}>
+                <p className="ant-upload-drag-icon">
+                  <CloudDownloadOutlined style={{ fontSize: "2rem" }} />
+                </p>
+                <p className={Styles.seltext}>
+                  Select a file or drag and drop here
+                </p>
+                <p className={Styles.seltext1}>
+                  JPG, PNG or PDF, file size no more than 3 MB
+                  <br />
+                  270 x 158 recommended
+                </p>
+                <input type="file" onChange={handlesubmit} />
+              </div>
             </Form.Item>
-          </Col>
-        </Row>
-      </Form>
+          </div>
+          <Row justify="center" className={Styles.colgap}>
+            <Col className={Styles.colgapppssss}>
+              <Form.Item>
+                <Button className={Styles.buttonsantd} htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Col>
+          </Row>
+        </Form>
+      </div>
     </div>
   );
 }

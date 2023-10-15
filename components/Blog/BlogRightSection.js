@@ -10,7 +10,7 @@ import Share from "../../public/images/Share1.png";
 import Comment from "../../public/images/Comment1.png";
 import { blogForm } from "../../helper/axios";
 import { useRouter } from "next/router"; // Import the useRouter hook
-
+import { LoadingOutlined } from "@ant-design/icons";
 const { Meta } = Card;
 ////////////////
 
@@ -44,7 +44,11 @@ function BlogRightSection() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div>
+        <LoadingOutlined />
+      </div>
+    );
   }
   return (
     <div>
