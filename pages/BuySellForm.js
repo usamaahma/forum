@@ -14,6 +14,7 @@ import {
   Select,
   Radio,
   Modal,
+  InputNumber,
 } from "antd";
 import {
   DownOutlined,
@@ -59,27 +60,37 @@ function BuySellForm({ initialValues }) {
   const [combinedPrice, setCombinedPrice] = useState("");
   const [cdata, csetdata] = useState([]);
   const [scdata, scsetdata] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [featureData, setFeatureData] = useState([]); // To store feature data
+  const [featureName, setFeatureName] = useState(""); // To store feature name
+  const [featureValue, setFeatureValue] = useState(0); // To st
   const showModal = () => {
-    setIsModalOpen(true);
+    setIsModalVisible(true);
   };
-  const handleOk = () => {
-    setIsModalOpen(false);
 
-    const trimmedFeatureInput = featureInput.trim();
-    const trimmedSecondInputValue = secondInputValue.trim();
-
-    if (trimmedFeatureInput !== "" || trimmedSecondInputValue !== "") {
-      setFeatureDetails([
-        ...featureDetails,
-        `${trimmedFeatureInput} ${trimmedSecondInputValue}`,
-      ]);
+  const handleAddFeature = () => {
+    // Add feature data to the featureData array
+    if (featureName && featureValue) {
+      setFeatureData([...featureData, `${featureName}: ${featureValue}`]);
+      setFeatureName(""); // Clear feature name
+      setFeatureValue(0); // Clear feature value
     }
-
-    setFeatureInput(""); // Clear the first input field
-    setSecondInputValue(""); // Clear the second input field
   };
+  const handleRemoveFeature = (index) => {
+    // Remove a feature from the featureData array
+    const newFeatureData = [...featureData];
+    newFeatureData.splice(index, 1);
+    setFeatureData(newFeatureData);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false); // Close the modal
+  };
+
   const handleCancel = () => {
-    setIsModalOpen(false);
+    setFeatureName(""); // Clear feature name
+    setFeatureValue(0); // Clear feature value
+    setIsModalVisible(false); // Close the modal
   };
 
   //////////////////////////////////////image firebase
@@ -253,7 +264,7 @@ function BuySellForm({ initialValues }) {
       deliveryType: values.deliveryType,
       metaDescription: values.metaDescription,
       buySellDescription: values.buySellDescription,
-      feature: featureDetails,
+      feature: featureData,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
@@ -320,78 +331,63 @@ function BuySellForm({ initialValues }) {
             marginTop: "1rem",
           }}
         >
-          <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-            <Form
-              name="dynamic_form_nest_item"
-              onFinish={onFinish}
-              style={{
-                maxWidth: 600,
-              }}
-              autoComplete="off"
+          <div>
+            <Modal
+              title="Add Feature"
+              visible={isModalVisible}
+              onOk={handleOk}
+              onCancel={handleCancel}
             >
-              <Form.List name="users">
-                {(fields, { add, remove }) => (
-                  <>
-                    {fields.map(({ key, name, ...restField }) => (
-                      <Space
-                        key={key}
-                        style={{
-                          display: "flex",
-                          marginBottom: 8,
-                        }}
-                        align="baseline"
-                      >
-                        <Form.Item
-                          {...restField}
-                          name={[name, "feature"]}
-                          rules={[
-                            {
-                              required: true,
-                              message: "Missing first name",
-                            },
-                          ]}
-                        >
-                          <Input
-                            placeholder="First feature"
-                            value={featureInput[name]}
-                            onChange={(e) => handleFeatureInputChange(e, name)}
-                          />
-                        </Form.Item>
-                        <Form.Item
-                          {...restField}
-                          name={[name, "Value"]}
-                          rules={[
-                            {
-                              required: true,
-                              message: "Missing last name",
-                            },
-                          ]}
-                        >
-                          <Input
-                            placeholder="Value"
-                            value={secondInputValue[name]}
-                            onChange={(e) => handleSecondInputChange(e, name)}
-                          />
-                        </Form.Item>
-                        <MinusCircleOutlined onClick={() => remove(name)} />
-                      </Space>
-                    ))}
-                    <Form.Item>
-                      <Button
-                        type="dashed"
-                        onClick={() => add()}
-                        block
-                        icon={<PlusOutlined />}
-                      >
-                        Add feature
-                      </Button>
-                    </Form.Item>
-                  </>
-                )}
-              </Form.List>
-              {/* <button onClick={addFeature}>Add</button> */}
-            </Form>
-          </Modal>
+              {/* Input field for feature name in the modal */}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <Input
+                  value={featureName}
+                  onChange={(e) => setFeatureName(e.target.value)}
+                  placeholder="Feature Name"
+                  style={{ width: "12rem" }}
+                />
+                {/* Input field for feature value (number) in the modal */}
+                <InputNumber
+                  value={featureValue}
+                  onChange={(value) => setFeatureValue(value)}
+                  placeholder="Feature Value"
+                  style={{ width: "12rem" }}
+                />
+              </div>
+              <br />
+              <Button type="primary" onClick={handleAddFeature}>
+                Add Feature
+              </Button>
+
+              {/* Display feature data inside the modal */}
+              {featureData.map((feature, index) => (
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginTop: ".5rem",
+                    marginBottom: ".5rem",
+                  }}
+                >
+                  {feature}{" "}
+                  <Button
+                    type="link"
+                    onClick={() => handleRemoveFeature(index)}
+                  >
+                    Remove
+                  </Button>
+                </div>
+              ))}
+            </Modal>
+          </div>
           <Row justify={"center"}>
             <Form
               name="basic"
@@ -670,9 +666,10 @@ function BuySellForm({ initialValues }) {
                       </div>
                       <div className={Styles1.divnew}>
                         <div className={Styles1.divnew5}>
+                          {/* Display the feature details */}
+                          Feature:{" "}
                           <div>
-                            Feature:{" "}
-                            {featureDetails.map((feature, index) => (
+                            {featureData.map((feature, index) => (
                               <div key={index}>{feature}</div>
                             ))}
                           </div>

@@ -72,22 +72,6 @@ function DeshiServiceForm({ initialValues }) {
   const showModal = () => {
     setIsModalVisible(true);
   };
-  // const handleOk = () => {
-  //   setIsModalOpen(false);
-
-  //   const trimmedFeatureInput = featureInput.trim();
-  //   const trimmedSecondInputValue = secondInputValue.trim();
-
-  //   if (trimmedFeatureInput !== "" || trimmedSecondInputValue !== "") {
-  //     setFeatureDetails([
-  //       ...featureDetails,
-  //       `${trimmedFeatureInput} ${trimmedSecondInputValue}`,
-  //     ]);
-  //   }
-
-  //   setFeatureInput(""); // Clear the first input field
-  //   setSecondInputValue(""); // Clear the second input field
-  // };
 
   const handleAddFeature = () => {
     // Add feature data to the featureData array
