@@ -114,10 +114,11 @@ function Eventform({ initialValues }) {
     form.setFieldsValue({ image: value });
   };
 
-  const onFinish = async (values) => {
+  const onFinish = async (values,formData) => {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("eventFormData", JSON.stringify(values));
+    localStorage.setItem("eventTicketData", JSON.stringify(formData));
     const dataForApi = {
       eventName: values.eventName,
       startDate: values.startDate,
@@ -130,9 +131,9 @@ function Eventform({ initialValues }) {
       sellTicket: values.sellTicket,
       ticketPrice: values.ticketPrice,
       ticketSpot: values.ticketSpot,
-      name: values.name,
-      address: values.address,
-      contactNumberti: values.contactNumberti,
+      name: formData.name,
+      address: formData.address,
+      contactNumberti: formData.contactNumber,
       image: [url],
     };
     eventForm({
