@@ -70,10 +70,11 @@ function LeftRentalDetail({ data }) {
           <TabOfRentalDetail data={data} />
         </div>
         <div className={Styles.btnsdiv}>
-          <button className={Styles.btns}>Hotel</button>
-          <button className={Styles.btns}>Luxury</button>
-          <button className={Styles.btns}>Rooms</button>
-          <button className={Styles.btns}>Family</button>
+          {data?.tags?.map((tag, index) => (
+            <button key={index} className={Styles.btns}>
+              {tag}
+            </button>
+          ))}
         </div>
       </div>
     </div>

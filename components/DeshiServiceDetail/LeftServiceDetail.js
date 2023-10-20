@@ -18,6 +18,7 @@ import TabOfServiceDetails from "./TabOfServiceDetail";
 import { Rate } from "antd";
 
 function LeftServiceDetail({ data }) {
+  console.log(data, "deee");
   return (
     <div>
       <div className={Styles.padding}>
@@ -75,10 +76,11 @@ function LeftServiceDetail({ data }) {
           <TabOfServiceDetails data={data} />
         </div>
         <div className={Styles.btnsdiv}>
-          <button className={Styles.btns}>Hotel</button>
-          <button className={Styles.btns}>Luxury</button>
-          <button className={Styles.btns}>Rooms</button>
-          <button className={Styles.btns}>Family</button>
+          {data?.tags?.map((tag, index) => (
+            <button key={index} className={Styles.btns}>
+              {tag}
+            </button>
+          ))}
         </div>
       </div>
     </div>
