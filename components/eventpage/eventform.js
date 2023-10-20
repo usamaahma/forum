@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/eventform.module.css";
 import {
-  DownOutlined,
-  UserOutlined,
-  InboxOutlined,
   CloudDownloadOutlined,
 } from "@ant-design/icons";
 import {
   Button,
-  Dropdown,
-  Space,
+  Modal,
   message,
-  Upload,
   Form,
   Row,
   Col,
@@ -38,6 +33,21 @@ function Eventform({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({ name: '', address: '', contactNumber: '' });
+
+
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    console.log('Form values submitted:', formData);
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   /////////////////////////////fire base image
   const date = new Date();
@@ -155,6 +165,38 @@ function Eventform({ initialValues }) {
         flexDirection: "column",
       }}
     >
+       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={() => setIsModalOpen(false)}>
+          <div className={Styles.divssss}>
+            Name
+            <Input
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className={Styles.inputgap}
+              placeholder="Name"
+            />
+          </div>
+
+          <div className={Styles.divssss}>
+            Address
+            <Input
+              value={formData.address}
+              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+              className={Styles.inputgap}
+              placeholder="Address"
+            />
+          </div>
+
+          <div className={Styles.divssss}>
+            Contact Number
+            <Input
+              value={formData.contactNumber}
+              onChange={(e) => setFormData({ ...formData, contactNumber: e.target.value })}
+              className={Styles.inputgap}
+              placeholder="Contact Number"
+            />
+          </div>
+        </Modal>
+
       <div
         style={{
           background: "white",
@@ -342,43 +384,21 @@ function Eventform({ initialValues }) {
               <Col>
                 <Form.Item name="ticketSpot">
                   <div className={Styles.divssss}>
-                    <p>Ticket Spot</p>
-                    <Input className={Styles.inputgapp12} />
+                    <div className={Styles.ticadd}><p>Ticket Spot</p>
+                      <Button onClick={showModal} >Add</Button></div>
+
+                    <div className={Styles.inputgapp12} style={{ border: "solid 0.5px" ,padding:"10px"}}>
+                      <p>Name : {formData.name}</p>
+                      <p>Address : {formData.address}</p>
+                      <p>Contact : {formData.contactNumber}</p>
+
+
+                    </div>
                   </div>
                 </Form.Item>
               </Col>
             </Row>
-            <Row justify="center" className={Styles.colgap}>
-              <Col>
-                <Form.Item name="name">
-                  <div className={Styles.divssss}>
-                    Name
-                    <Input className={Styles.inputgap} placeholder=" Name" />
-                  </div>
-                </Form.Item>
-              </Col>
-              <Col>
-                <Form.Item name="address">
-                  <div className={Styles.divssss}>
-                    Address
-                    <Input className={Styles.inputgap} placeholder="Address" />
-                  </div>
-                </Form.Item>
-              </Col>
-            </Row>{" "}
-            <Row justify="center">
-              <Col>
-                <Form.Item name="contactNumberti">
-                  <div className={Styles.divssss}>
-                    Contact Number
-                    <Input
-                      className={Styles.inputgap}
-                      placeholder="Contact Number"
-                    />
-                  </div>
-                </Form.Item>
-              </Col>
-            </Row>
+
           </div>
           <div
             className={Styles.draggercenter}
