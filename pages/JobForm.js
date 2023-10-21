@@ -471,32 +471,7 @@ function JobForm({ initialValues }) {
                           />
                         </div>
                       </Form.Item>
-                      {/* <p className={Styles1.txtgap}>Salary</p>
-                    <Dropdown
-                      menu={{
-                        items,
-                      }}
-                      placement="bottom"
-                      arrow
-                    >
-                      <Button className={Styles1.dropwidhei}>
-                        $
-                        <DownOutlined />
-                      </Button>
-                    </Dropdown> */}
                     </div>
-                    {/* <Dropdown
-                    menu={{
-                      items,
-                    }}
-                    placement="bottom"
-                    arrow
-                  >
-                    <Button className={Styles1.wdthinpu}>
-                      55
-                      <DownOutlined />
-                    </Button>
-                  </Dropdown> */}
                   </div>
                 </div>
                 <div className={Styles1.displdeshiservic}>
