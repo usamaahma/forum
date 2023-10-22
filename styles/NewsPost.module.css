@@ -8,6 +8,11 @@
   color: #42b00f;
   border: #def5d3 solid 1px;
 }
+.bothtic{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .flexbtndiv {
   display: flex;

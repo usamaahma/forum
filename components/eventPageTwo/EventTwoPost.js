@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from 'react';
 import Styles from "../../styles/NewsPost.module.css";
 import Business from "../../public/images/karahi.png";
-import { Col, Row, Input, Form } from "antd";
+import { Col, Row, Input, Modal, Button, Checkbox, Form } from "antd";
 import Image from "next/image";
 import FeaturedPost from "../News/FeaturedPost";
 import dataOne from "../../dataOne.json";
@@ -13,7 +13,31 @@ import BlogCard from "../Blog/BlogCard";
 import Carousel from "../eventpage/carousel";
 import Link from "next/link";
 const { TextArea } = Input;
+
+
+const onFinish = (values) => {
+  console.log('Success:', values);
+  localStorage.setItem('Ticketvalues', JSON.stringify(values));
+};
+const onFinishFailed = (errorInfo) => {
+  console.log('Failed:', errorInfo);
+};
+
+
+
 function EventTwoPost({ data }) {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className={Styles.css}>
@@ -45,10 +69,54 @@ function EventTwoPost({ data }) {
               <Image src={Lin} alt="abc" />
             </div>
           </div>
-          <div>
+          <div className={Styles.bothtic}>
             <p className={Styles.share}>Ticket Price: ${data.ticketPrice}</p>
-            <p className={Styles.share11}>Ticket Spot</p>
+            <Button className={Styles.share11} onClick={showModal} >Ticket Spot</Button>
           </div>
+          <Modal open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Form
+              name="basic"
+              labelCol={{
+                span: 8,
+              }}
+              wrapperCol={{
+                span: 16,
+              }}
+              style={{
+                marginTop:50,
+                maxWidth: 600,
+              }}
+              initialValues={{
+                remember: true,
+              }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              autoComplete="off"
+            >
+              <Form.Item
+                label="Name"
+                name="Name"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Please input your Name!',
+                  },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+              <Form.Item
+                wrapperCol={{
+                  offset: 8,
+                  span: 16,
+                }}
+              >
+                <Button type="primary" htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </Modal>
         </div>
         <div>
           <p className={Styles.share}>Leave a Comment </p>
