@@ -67,7 +67,7 @@ function DeshiServiceForm({ initialValues }) {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [featureData, setFeatureData] = useState([]); // To store feature data
   const [featureName, setFeatureName] = useState(""); // To store feature name
-  const [featureValue, setFeatureValue] = useState(0); // To st
+  const [featureValue, setFeatureValue] = useState(""); // To st
   // State for rich text editor content
   const showModal = () => {
     setIsModalVisible(true);
@@ -78,7 +78,7 @@ function DeshiServiceForm({ initialValues }) {
     if (featureName && featureValue) {
       setFeatureData([...featureData, `${featureName}: ${featureValue}`]);
       setFeatureName(""); // Clear feature name
-      setFeatureValue(0); // Clear feature value
+      setFeatureValue(""); // Clear feature value
     }
   };
   const handleRemoveFeature = (index) => {
@@ -360,9 +360,9 @@ function DeshiServiceForm({ initialValues }) {
                   style={{ width: "12rem" }}
                 />
                 {/* Input field for feature value (number) in the modal */}
-                <InputNumber
+                <Input
                   value={featureValue}
-                  onChange={(value) => setFeatureValue(value)}
+                  onChange={(e) => setFeatureValue(e.target.value)}
                   placeholder="Feature Value"
                   style={{ width: "12rem" }}
                 />

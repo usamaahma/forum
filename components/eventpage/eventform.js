@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/eventform.module.css";
-import {
-  CloudDownloadOutlined,
-} from "@ant-design/icons";
+import { CloudDownloadOutlined } from "@ant-design/icons";
 import {
   Button,
   Modal,
@@ -34,19 +32,26 @@ function Eventform({ initialValues }) {
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({ name: '', address: '', contactNumber: '' });
-
-
+  const [ticketSpotData, setTicketSpotData] = useState([]); // New state for ticket spot data
+  const [modalData, setModalData] = useState({
+    name: "",
+    address: "",
+    contactNumber: "",
+  });
 
   const showModal = () => {
     setIsModalOpen(true);
   };
+
   const handleOk = () => {
-    console.log('Form values submitted:', formData);
+    const newModalData = { ...modalData };
+    setTicketSpotData([...ticketSpotData, newModalData]);
     setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
+    setModalData({
+      name: "",
+      address: "",
+      contactNumber: "",
+    });
   };
 
   /////////////////////////////fire base image
@@ -114,11 +119,11 @@ function Eventform({ initialValues }) {
     form.setFieldsValue({ image: value });
   };
 
-  const onFinish = async (values,formData) => {
+  const onFinish = async (values, formData) => {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("eventFormData", JSON.stringify(values));
-    localStorage.setItem("eventTicketData", JSON.stringify(formData));
+    localStorage.setItem("eventTicketData", JSON.stringify(ticketSpotData));
     const dataForApi = {
       eventName: values.eventName,
       startDate: values.startDate,
@@ -130,10 +135,10 @@ function Eventform({ initialValues }) {
       contactNumber: values.contactNumber,
       sellTicket: values.sellTicket,
       ticketPrice: values.ticketPrice,
-      ticketSpot: values.ticketSpot,
-      name: formData.name,
-      address: formData.address,
-      contactNumberti: formData.contactNumber,
+      ticketSpot: ticketSpotData,
+      // name: formData.name,
+      // address: formData.address,
+      // contactNumberti: formData.contactNumber,
       image: [url],
     };
     eventForm({
@@ -152,6 +157,7 @@ function Eventform({ initialValues }) {
       })
       .finally(() => {
         onReset();
+        setTicketSpotData([]);
       });
   };
   const onReset = () => {
@@ -166,37 +172,43 @@ function Eventform({ initialValues }) {
         flexDirection: "column",
       }}
     >
-       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={() => setIsModalOpen(false)}>
-          <div className={Styles.divssss}>
-            Name
-            <Input
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className={Styles.inputgap}
-              placeholder="Name"
-            />
-          </div>
-
-          <div className={Styles.divssss}>
-            Address
-            <Input
-              value={formData.address}
-              onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-              className={Styles.inputgap}
-              placeholder="Address"
-            />
-          </div>
-
-          <div className={Styles.divssss}>
-            Contact Number
-            <Input
-              value={formData.contactNumber}
-              onChange={(e) => setFormData({ ...formData, contactNumber: e.target.value })}
-              className={Styles.inputgap}
-              placeholder="Contact Number"
-            />
-          </div>
-        </Modal>
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={() => setIsModalOpen(false)}
+      >
+        <div className={Styles.divssss}>
+          Name
+          <Input
+            value={modalData.name}
+            onChange={(e) =>
+              setModalData({ ...modalData, name: e.target.value })
+            }
+            placeholder="Name"
+          />
+        </div>
+        <div className={Styles.divssss}>
+          Address
+          <Input
+            value={modalData.address}
+            onChange={(e) =>
+              setModalData({ ...modalData, address: e.target.value })
+            }
+            placeholder="Address"
+          />
+        </div>
+        <div className={Styles.divssss}>
+          Contact Number
+          <Input
+            value={modalData.contactNumber}
+            onChange={(e) =>
+              setModalData({ ...modalData, contactNumber: e.target.value })
+            }
+            placeholder="Contact Number"
+          />
+        </div>
+      </Modal>
 
       <div
         style={{
@@ -383,23 +395,23 @@ function Eventform({ initialValues }) {
             </Row> */}
             <Row justify="center">
               <Col>
-                <Form.Item name="ticketSpot">
-                  <div className={Styles.divssss}>
-                    <div className={Styles.ticadd}><p>Ticket Spot</p>
-                      <Button onClick={showModal} >Add</Button></div>
-
-                    <div className={Styles.inputgapp12} style={{ border: "solid 0.5px" ,padding:"10px"}}>
-                      <p>Name : {formData.name}</p>
-                      <p>Address : {formData.address}</p>
-                      <p>Contact : {formData.contactNumber}</p>
-
-
-                    </div>
+                <div className={Styles.divssss}>
+                  <div className={Styles.ticadd}>
+                    <p>Ticket Spot</p>
+                    <Button onClick={showModal}>Add</Button>
                   </div>
-                </Form.Item>
+                  <div style={{ border: "solid 0.5px", padding: "10px" }}>
+                    {ticketSpotData.map((data, index) => (
+                      <div key={index} className={Styles.inputgapp12}>
+                        <p>Name: {data.name}</p>
+                        <p>Address: {data.address}</p>
+                        <p>Contact: {data.contactNumber}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </Col>
             </Row>
-
           </div>
           <div
             className={Styles.draggercenter}
