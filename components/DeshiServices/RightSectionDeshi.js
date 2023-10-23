@@ -191,86 +191,90 @@ function RightSectionDeshi() {
         <div>
           <br />
           {loading ? (
-          <div className={Styles.centercard}>
-            {" "}
-            <LoadingOutlined
-              style={{ fontSize: "5rem", textAlign: "center", color: "back" }}
-            />
-          </div>
-        ) : (
-          <Row justify="center" className={Styles.colsize}>
-            {data?.map((item, index) => (
-              <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
-                <div className={Styles.centercard}>
-                  {/* <Link href="./DeshiServiceDetailPage"> */}{" "}
-                  <Card
-                    hoverable
-                    className={Styles1.cardsize}
-                    cover={
-                      <img
-                        src={item?.image?.[0]}
-                        alt="abc"
-                        width={200}
-                        height={200}
-                      />
-                    }
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    onClick={() =>
-                      router.push(
-                        `/DeshiServiceDetailPage?deshiServicelId=${item.id}`
-                      )
-                    }
-                  >
-                    <div className={Styles1.heartdiv}>
-                      <HeartOutlined />
-                    </div>
-                    <div className={Styles1.divbtn}>Construction</div>
-                    <div className={Styles1.stardiv}>
-                      <div className={Styles1.flexfive}>
-                        <Rate value={1} count={1} className={Styles1.strtext} />
-                        <p className={Styles1.fivtext}> 5.0</p>
-                        <p className={Styles1.ratetext}>(30+)</p>
+            <div className={Styles.centercard}>
+              {" "}
+              <LoadingOutlined
+                style={{ fontSize: "5rem", textAlign: "center", color: "back" }}
+              />
+            </div>
+          ) : (
+            <Row justify="center" className={Styles.colsize}>
+              {data?.map((item, index) => (
+                <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
+                  <div className={Styles.centercard}>
+                    {/* <Link href="./DeshiServiceDetailPage"> */}{" "}
+                    <Card
+                      hoverable
+                      className={Styles1.cardsize}
+                      cover={
+                        <img
+                          src={item?.image?.[0]}
+                          alt="abc"
+                          width={200}
+                          height={200}
+                        />
+                      }
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      onClick={() =>
+                        router.push(
+                          `/DeshiServiceDetailPage?deshiServicelId=${item.id}`
+                        )
+                      }
+                    >
+                      <div className={Styles1.heartdiv}>
+                        <HeartOutlined />
                       </div>
-                      <p className={Styles1.doltext}>{item.price}</p>
-                    </div>
-                    <p className={Styles1.mittext}>2min ago</p>
-                    <p className={Styles1.saimtext}>{item.title}</p>
-                    <div className={Styles1.userdiv}>
-                      <Image src={User} alt="" />
-                      <p className={Styles1.usertext}>Username</p>
-                    </div>
-                    <div className={Styles1.userdiv}>
-                      <Image src={Location} alt="" />
-                      <p className={Styles1.usertext}>4517 Washington Ave.</p>
-                    </div>
-                    <div className={Styles1.centerbtn}>
-                      <button className={Styles1.calldiv}>
-                        <Image src={Phone} alt="" />
-                        <p style={{ marginLeft: ".5rem" }}>Call</p>
-                      </button>
-                    </div>
-                    <div className={Styles1.threediv}>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Like} alt="" />
-                        <p className={Styles1.thumtext}>25</p>
+                      <div className={Styles1.divbtn}>Construction</div>
+                      <div className={Styles1.stardiv}>
+                        <div className={Styles1.flexfive}>
+                          <Rate
+                            value={1}
+                            count={1}
+                            className={Styles1.strtext}
+                          />
+                          <p className={Styles1.fivtext}> 5.0</p>
+                          <p className={Styles1.ratetext}>(30+)</p>
+                        </div>
+                        <p className={Styles1.doltext}>{item.price}</p>
                       </div>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Eye} alt="" />
-                        <p className={Styles1.thumtext}>50</p>
+                      <p className={Styles1.mittext}>2min ago</p>
+                      <p className={Styles1.saimtext}>{item.title}</p>
+                      <div className={Styles1.userdiv}>
+                        <Image src={User} alt="" />
+                        <p className={Styles1.usertext}>Username</p>
                       </div>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Share} alt="" />
-                        <p className={Styles1.thumtext}>30</p>
+                      <div className={Styles1.userdiv}>
+                        <Image src={Location} alt="" />
+                        <p className={Styles1.usertext}>4517 Washington Ave.</p>
                       </div>
-                    </div>
-                  </Card>
-                  {/* </Link> */}
-                </div>
-              </Col>
-            ))}
-          </Row>
-            )}
+                      <div className={Styles1.centerbtn}>
+                        <button className={Styles1.calldiv}>
+                          <Image src={Phone} alt="" />
+                          <p style={{ marginLeft: ".5rem" }}>Call</p>
+                        </button>
+                      </div>
+                      <div className={Styles1.threediv}>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Like} alt="" />
+                          <p className={Styles1.thumtext}>25</p>
+                        </div>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Eye} alt="" />
+                          <p className={Styles1.thumtext}>50</p>
+                        </div>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Share} alt="" />
+                          <p className={Styles1.thumtext}>30</p>
+                        </div>
+                      </div>
+                    </Card>
+                    {/* </Link> */}
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          )}
         </div>
       </div>
       <br />

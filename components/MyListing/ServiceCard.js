@@ -6,7 +6,13 @@ import Switch from "./Switch";
 const data = [
   {
     key: "1",
-    image: <img className={Styles.imgmaincard} alt="abc" src="../images/servicecard.png" />,
+    image: (
+      <img
+        className={Styles.imgmaincard}
+        alt="abc"
+        src="../images/servicecard.png"
+      />
+    ),
     company: "Construction",
     price: "600$",
     name: "Siam Accounting LLC,Jackson Trading ....",
@@ -18,7 +24,13 @@ const data = [
   },
   {
     key: "2",
-    image: <img className={Styles.imgmaincard}  alt="abc" src="../images/servicecard.png" />,
+    image: (
+      <img
+        className={Styles.imgmaincard}
+        alt="abc"
+        src="../images/servicecard.png"
+      />
+    ),
     company: "Construction",
     price: "600$",
     name: "Siam Accounting LLC,Jackson Trading ....",
@@ -30,7 +42,13 @@ const data = [
   },
   {
     key: "3",
-    image: <img className={Styles.imgmaincard}  alt="abc" src="../images/servicecard.png" />,
+    image: (
+      <img
+        className={Styles.imgmaincard}
+        alt="abc"
+        src="../images/servicecard.png"
+      />
+    ),
     company: "Construction",
     price: "600$",
     name: "Siam Accounting LLC,Jackson Trading ....",
