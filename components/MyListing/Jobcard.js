@@ -1,84 +1,67 @@
-import React from "react";
-import { Card, Col, Row } from "antd";
+import React, { useEffect, useState } from "react";
+import { Card, Col, Row, message } from "antd";
 import Styles from "../../styles/servicecard.module.css";
 import Switch from "./Switch";
-
-const data = [
-  {
-    key: "1",
-    image: (
-      <img
-        className={Styles.imgmaincard}
-        alt="abc"
-        src="../images/jobcard.png"
-      />
-    ),
-    company: "Federal",
-    price: "27$",
-    name: "Software Development Engineer..",
-    detail: "Design Communication Studio",
-    status: "pending",
-    status1: "Hourly",
-    timing: "Full Time",
-
-    time: "1 Hour",
-    place: "New York",
-    views: "3",
-  },
-  {
-    key: "2",
-    image: (
-      <img
-        className={Styles.imgmaincard}
-        alt="abc"
-        src="../images/jobcard.png"
-      />
-    ),
-    company: "Federal",
-    price: "27$",
-    name: "Software Development Engineer..",
-    detail: "Design Communication Studio",
-    status: "pending",
-    status1: "Hourly",
-    timing: "Full Time",
-    time: "1 Hour",
-    place: "New York",
-    views: "3",
-  },
-  {
-    key: "3",
-    image: (
-      <img
-        className={Styles.imgmaincard}
-        alt="abc"
-        src="../images/jobcard.png"
-      />
-    ),
-    company: "Federal",
-    price: "27$",
-    name: "Software Development Engineer..",
-    detail: "Design Communication Studio",
-    status: "pending",
-    status1: "Hourly",
-    timing: "Full Time",
-    time: "1 Hour",
-    place: "New York",
-    views: "3",
-  },
-];
+import { jobForm } from "@/helper/axios";
 
 function JobCard() {
+  const [hovered, setHovered] = useState(false);
+  // const router = useRouter();
+  const [data, setData] = useState();
+  const [loading, setloading] = useState();
+
+  //////
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+  ///////////////////////////api
+  const getJobForm = () => {
+    setloading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+
+    jobForm({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        setData(res.data.results);
+        setloading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setloading(false);
+      });
+  };
+  useEffect(() => {
+    getJobForm();
+  }, []);
   return (
     <div>
       <div>
-        {data.map((data, index) => (
+        {data?.map((item, index) => (
           <div key={index}>
             <Card bordered={false}>
               <Row className={Styles.gapro}>
-                <Col>{data.image}</Col>
+                <Col>
+                  {" "}
+                  <img
+                    src={item.image?.[0]}
+                    alt="abc"
+                    width={150}
+                    height={150}
+                  />
+                </Col>
                 <Col>
                   <div className={Styles.butico}>
-                    <button className={Styles.btnconst}>{data.company}</button>
+                    <button className={Styles.btnconst}>federal</button>
                     <div className={Styles.gapro}>
                       <img
                         className={Styles.imgs}
@@ -93,18 +76,20 @@ function JobCard() {
                     </div>
                   </div>
                   <div className={Styles.seconddiv}>
-                    <p className={Styles.nam}>{data.name}</p>
-                    <p className={Styles.pric}>{data.price}</p>
+                    <p className={Styles.nam}>{item.title}</p>
+                    <p className={Styles.pric}>{item.price}</p>
                   </div>
-                  <p className={Styles.det}>{data.detail}</p>
+                  <p className={Styles.det}>{item.jobDescription}</p>
                   <div className={Styles.stat}>
                     <img alt="abc" src="../images/jobb.png" />
-                    <p>{data.timing}</p>
+                    <p>{item.jobType}</p>
                   </div>
                   <div className={Styles.stat}>
                     <p>Status:</p>
-                    <button className={Styles.btncomp}>{data.status}</button>
-                    <button className={Styles.btncompp}>{data.status1}</button>
+                    <button className={Styles.btncomp}>pending</button>
+                    <button className={Styles.btncompp}>
+                      {item.jobPosition}
+                    </button>
                   </div>
                   <Row className={Styles.rowlastt}>
                     <Col className={Styles.collstw}>
@@ -123,7 +108,7 @@ function JobCard() {
                           alt="abc"
                           src="../images/locationone.png"
                         />{" "}
-                        <p>{data.place}</p>{" "}
+                        <p>{item.address}</p>{" "}
                       </div>
                       <div className={Styles.collstww}>
                         <img

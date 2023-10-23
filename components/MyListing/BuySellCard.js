@@ -85,7 +85,7 @@ function BuySellCard() {
                   <p className={Styles.det}>{item.serviceDescription}</p>
                   <div className={Styles.stat}>
                     <img alt="abc" src="../images/homedelivery.png" />
-                    <p>Pickup from door</p>
+                    <p>{item.deliveryType}</p>
                   </div>
                   <div className={Styles.stat}>
                     <p>Status:</p>
