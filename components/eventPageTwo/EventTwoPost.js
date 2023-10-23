@@ -12,6 +12,9 @@ import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
 import Carousel from "../eventpage/carousel";
 import Link from "next/link";
+
+
+
 const { TextArea } = Input;
 
 
@@ -26,6 +29,7 @@ const onFinishFailed = (errorInfo) => {
 
 
 function EventTwoPost({ data }) {
+
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
@@ -83,7 +87,7 @@ function EventTwoPost({ data }) {
                 span: 16,
               }}
               style={{
-                marginTop:50,
+                marginTop: 50,
                 maxWidth: 600,
               }}
               initialValues={{
