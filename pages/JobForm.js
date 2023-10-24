@@ -39,7 +39,6 @@ import {
 import { WithContext as ReactTags } from "react-tag-input";
 import "froala-editor/css/froala_style.min.css";
 import "froala-editor/css/froala_editor.pkgd.min.css";
-
 import FroalaEditorComponent from "react-froala-wysiwyg";
 const { TextArea } = Input;
 const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -66,6 +65,9 @@ function JobForm({ initialValues }) {
   const [scdata, scsetdata] = useState([]);
   const [text, setText] = useState("");
   const [modalText, setModalText] = useState("");
+  const apiResponseData =
+    '&lt;p>&lt;span id="isPasted" style="color: ... &lt;/p>';
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -234,6 +236,9 @@ function JobForm({ initialValues }) {
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
+    const sanitizedJobDescription = DOMPurify.sanitize(modalText, {
+      USE_PROFILES: { html: true },
+    });
     console.log(values, "doneee");
     localStorage.setItem("jobFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
@@ -255,7 +260,7 @@ function JobForm({ initialValues }) {
       tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
-      jobDescription: modalText,
+      jobDescription: sanitizedJobDescription,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
