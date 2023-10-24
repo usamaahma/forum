@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/eventform.module.css";
 import { CloudDownloadOutlined } from "@ant-design/icons";
+import Styles1 from "../../styles/DeshiServiceForm.module.css";
+
 import {
   Button,
   Modal,
@@ -32,26 +34,34 @@ function Eventform({ initialValues }) {
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [ticketSpotData, setTicketSpotData] = useState([]); // New state for ticket spot data
-  const [modalData, setModalData] = useState({
-    name: "",
-    address: "",
-    contactNumber: "",
-  });
+  const [featureData, setFeatureData] = useState([]); // To store feature data
+  const [featureName, setFeatureName] = useState(""); // To store feature name
+  const [featureValue, setFeatureValue] = useState(""); // To st
 
   const showModal = () => {
     setIsModalOpen(true);
   };
-
+  const handleAddFeature = () => {
+    // Add feature data to the featureData array
+    if (featureName && featureValue) {
+      setFeatureData([...featureData, `${featureName}: ${featureValue}`]);
+      setFeatureName(""); // Clear feature name
+      setFeatureValue(""); // Clear feature value
+    }
+  };
+  const handleRemoveFeature = (index) => {
+    // Remove a feature from the featureData array
+    const newFeatureData = [...featureData];
+    newFeatureData.splice(index, 1);
+    setFeatureData(newFeatureData);
+  };
   const handleOk = () => {
-    const newModalData = { ...modalData };
-    setTicketSpotData([...ticketSpotData, newModalData]);
     setIsModalOpen(false);
-    setModalData({
-      name: "",
-      address: "",
-      contactNumber: "",
-    });
+  };
+  const handleCancel = () => {
+    setFeatureName(""); // Clear feature name
+    setFeatureValue(0); // Clear feature value
+    setIsModalOpen(false); // Close the modal
   };
 
   /////////////////////////////fire base image
@@ -123,7 +133,7 @@ function Eventform({ initialValues }) {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("eventFormData", JSON.stringify(values));
-    localStorage.setItem("eventTicketData", JSON.stringify(ticketSpotData));
+    // localStorage.setItem("eventTicketData", JSON.stringify(ticketSpotData));
     const dataForApi = {
       eventName: values.eventName,
       startDate: values.startDate,
@@ -135,7 +145,7 @@ function Eventform({ initialValues }) {
       contactNumber: values.contactNumber,
       sellTicket: values.sellTicket,
       ticketPrice: values.ticketPrice,
-      ticketSpot: ticketSpotData,
+      ticketSpot: featureData,
       // name: formData.name,
       // address: formData.address,
       // contactNumberti: formData.contactNumber,
@@ -157,7 +167,6 @@ function Eventform({ initialValues }) {
       })
       .finally(() => {
         onReset();
-        setTicketSpotData([]);
       });
   };
   const onReset = () => {
@@ -172,43 +181,60 @@ function Eventform({ initialValues }) {
         flexDirection: "column",
       }}
     >
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={() => setIsModalOpen(false)}
-      >
-        <div className={Styles.divssss}>
-          Name
-          <Input
-            value={modalData.name}
-            onChange={(e) =>
-              setModalData({ ...modalData, name: e.target.value })
-            }
-            placeholder="Name"
-          />
-        </div>
-        <div className={Styles.divssss}>
-          Address
-          <Input
-            value={modalData.address}
-            onChange={(e) =>
-              setModalData({ ...modalData, address: e.target.value })
-            }
-            placeholder="Address"
-          />
-        </div>
-        <div className={Styles.divssss}>
-          Contact Number
-          <Input
-            value={modalData.contactNumber}
-            onChange={(e) =>
-              setModalData({ ...modalData, contactNumber: e.target.value })
-            }
-            placeholder="Contact Number"
-          />
-        </div>
-      </Modal>
+      <div>
+        <Modal
+          title="Add Feature"
+          visible={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          {/* Input field for feature name in the modal */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <Input
+              value={featureName}
+              onChange={(e) => setFeatureName(e.target.value)}
+              placeholder="Ticket"
+              style={{ width: "12rem" }}
+            />
+            {/* Input field for feature value (number) in the modal */}
+            <Input
+              value={featureValue}
+              onChange={(e) => setFeatureValue(e.target.value)}
+              placeholder="Ticket"
+              style={{ width: "12rem" }}
+            />
+          </div>
+          <br />
+          <Button type="primary" onClick={handleAddFeature}>
+            Add Feature
+          </Button>
+
+          {/* Display feature data inside the modal */}
+          {featureData.map((feature, index) => (
+            <div
+              key={index}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: ".5rem",
+                marginBottom: ".5rem",
+              }}
+            >
+              {feature}{" "}
+              <Button type="link" onClick={() => handleRemoveFeature(index)}>
+                Remove
+              </Button>
+            </div>
+          ))}
+        </Modal>
+      </div>
 
       <div
         style={{
@@ -387,28 +413,35 @@ function Eventform({ initialValues }) {
                 </Form.Item>
               </Col>
             </Row>
-            {/* <Row justify={"center"} className={Styles.ticketspot}>
-            
-              <Button>
-                <img src="../images/Labelled.png" alt="abc" />
-              </Button>
-            </Row> */}
+
             <Row justify="center">
-              <Col>
-                <div className={Styles.divssss}>
-                  <div className={Styles.ticadd}>
-                    <p>Ticket Spot</p>
-                    <Button onClick={showModal}>Add</Button>
-                  </div>
-                  <div style={{ border: "solid 0.5px", padding: "10px" }}>
-                    {ticketSpotData.map((data, index) => (
-                      <div key={index} className={Styles.inputgapp12}>
-                        <p>Name: {data.name}</p>
-                        <p>Address: {data.address}</p>
-                        <p>Contact: {data.contactNumber}</p>
+              <Col lg={21} md={21} xs={24}>
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="ticketSpot">
+                    <div>
+                      <div className={Styles1.plustxt}>
+                        Ticket Spot
+                        <Button
+                          className={Styles1.plusbutton}
+                          onClick={showModal}
+                        >
+                          <img alt="abc" src="../images/Plus1.png" />
+                          <p className={Styles1.txtaddfeature}>Add Ticket</p>
+                        </Button>
                       </div>
-                    ))}
-                  </div>
+                      <div className={Styles1.divnew}>
+                        <div className={Styles1.divnew5}>
+                          {/* Display the feature details */}
+                          Feature:{" "}
+                          <div>
+                            {featureData.map((feature, index) => (
+                              <div key={index}>{feature}</div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Form.Item>
                 </div>
               </Col>
             </Row>
