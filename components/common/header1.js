@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+import Styles1 from "../../styles/FirstHeader.module.css";
+
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
 import {
@@ -441,14 +443,14 @@ function Header2() {
               <br />
               <div className={Styles.sameforall}>
                 <p>Language</p>
-                <div className={Styles.gapbuttons}>     
+                <div >     
                  <div
                   onClick={handleClick}
                   style={{
                     overflow: "hidden",
                     backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
                   }}
-                  className={Styles.langbutton}
+                  className={Styles1.langbutton}
                 >
                   <div
                     style={{

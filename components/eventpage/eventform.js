@@ -146,9 +146,7 @@ function Eventform({ initialValues }) {
       sellTicket: values.sellTicket,
       ticketPrice: values.ticketPrice,
       ticketSpot: featureData,
-      // name: formData.name,
-      // address: formData.address,
-      // contactNumberti: formData.contactNumber,
+
       image: [url],
     };
     eventForm({

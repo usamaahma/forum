@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Styles from "../../styles/NewsPost.module.css";
 import Business from "../../public/images/karahi.png";
-import { Col, Row, Input, Form } from "antd";
+import { Col, Row, Input, Modal, Button, Checkbox, Form } from "antd";
 import Image from "next/image";
 import FeaturedPost from "../News/FeaturedPost";
 import dataOne from "../../dataOne.json";
@@ -12,8 +12,29 @@ import Lin from "../../public/images/Group 131.png";
 import BlogCard from "../Blog/BlogCard";
 import Carousel from "../eventpage/carousel";
 import Link from "next/link";
+
 const { TextArea } = Input;
+
+const onFinish = (values) => {
+  console.log("Success:", values);
+  localStorage.setItem("Ticketvalues", JSON.stringify(values));
+};
+const onFinishFailed = (errorInfo) => {
+  console.log("Failed:", errorInfo);
+};
+
 function EventTwoPost({ data }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className={Styles.css}>
@@ -45,10 +66,19 @@ function EventTwoPost({ data }) {
               <Image src={Lin} alt="abc" />
             </div>
           </div>
-          <div>
+          <div className={Styles.bothtic}>
             <p className={Styles.share}>Ticket Price: ${data.ticketPrice}</p>
-            <p className={Styles.share11}>Ticket Spot</p>
+            <Button className={Styles.share11} onClick={showModal}>
+              Ticket Spot
+            </Button>
           </div>
+          <Modal visible={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            {data?.ticketSpot?.map((item, index) => (
+              <div key={index} className={Styles.share}>
+                {item}
+              </div>
+            ))}
+          </Modal>
         </div>
         <div>
           <p className={Styles.share}>Leave a Comment </p>
