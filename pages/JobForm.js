@@ -3,6 +3,8 @@ import Styles from "../styles/HeroSection.module.css";
 import Styles1 from "../styles/DeshiServiceForm.module.css";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
+import DOMPurify from "dompurify";
+
 import {
   Button,
   Dropdown,
@@ -20,15 +22,10 @@ import {
   Radio,
   Modal,
 } from "antd";
-import {
-  DownOutlined,
-  InboxOutlined,
-  PlusOutlined,
-  MinusCircleOutlined,
-  CloudDownloadOutlined,
-} from "@ant-design/icons";
+import { CloudDownloadOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
-import RichTextEditor from "@/components/texteditor";
+import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
 import { jobCategory, jobForm, jobSubCategory } from "../helper/axios";
 // import { useDispatch } from "react-redux";
 // import { setLoginState } from "../../redux/user";
@@ -40,7 +37,12 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { WithContext as ReactTags } from "react-tag-input";
+import "froala-editor/css/froala_style.min.css";
+import "froala-editor/css/froala_editor.pkgd.min.css";
+
+import FroalaEditorComponent from "react-froala-wysiwyg";
 const { TextArea } = Input;
+const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const dateFormat = "YYYY/MM/DD";
 
@@ -62,6 +64,8 @@ function JobForm({ initialValues }) {
   const [tagsJob, setTagsJob] = useState([]);
   const [cdata, csetdata] = useState([]);
   const [scdata, scsetdata] = useState([]);
+  const [text, setText] = useState("");
+  const [modalText, setModalText] = useState("");
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -251,7 +255,7 @@ function JobForm({ initialValues }) {
       tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
-      jobDescription: values.jobDescription,
+      jobDescription: modalText,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
@@ -647,13 +651,16 @@ function JobForm({ initialValues }) {
                           </p>
                         </Button>
                       </div>
-                      <TextArea
-                        className={Styles1.wdthinp}
-                        autoSize={{
-                          minRows: 2,
-                          maxRows: 8,
-                        }}
-                      />
+                      <div className={Styles1.divnew}>
+                        <div
+                          className={Styles1.divnew5}
+                          dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(modalText, {
+                              USE_PROFILES: { html: true },
+                            }),
+                          }}
+                        />
+                      </div>
                     </div>
                   </Form.Item>
                 </div>
@@ -857,18 +864,6 @@ function JobForm({ initialValues }) {
                   />
                 </div>{" "}
                 <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
-                  {/* <Dropdown
-                  menu={{
-                    items,
-                  }}
-                  placement="bottom"
-                  arrow
-                >
-                  <Button className={Styles1.wdthinpu}>
-                    Description
-                    <DownOutlined />
-                  </Button>
-                </Dropdown>{" "} */}
                   <div className={Styles1.plustxttt}>
                     <img alt="abc" src="../images/Delete.png" />
                     <img alt="abc" src="../images/circle-plus-24.png" />
@@ -876,30 +871,16 @@ function JobForm({ initialValues }) {
                 </div>
                 <div style={{ marginTop: "1rem" }}>
                   {" "}
-                  <RichTextEditor />
+                  {/* <DynamicReactQuill
+                    value={modalText}
+                    onChange={(value) => setModalText(value)} // Update modalText with the text in the modal
+                  /> */}
                 </div>{" "}
-                <div className={Styles1.plustxt} style={{ marginTop: "1rem" }}>
-                  {/* <Dropdown
-                  menu={{
-                    items,
-                  }}
-                  placement="bottom"
-                  arrow
-                >
-                  <Button className={Styles1.wdthinpu}>
-                    Key Responsibilities
-                    <DownOutlined />
-                  </Button>
-                </Dropdown>{" "} */}
-                  <div className={Styles1.plustxttt}>
-                    <img alt="abc" src="../images/Delete.png" />
-                    <img alt="abc" src="../images/circle-plus-24.png" />
-                  </div>
-                </div>
-                <div style={{ marginTop: "1rem" }}>
-                  {" "}
-                  <RichTextEditor />
-                </div>
+                <FroalaEditorComponent
+                  tag="textarea"
+                  model={modalText}
+                  onModelChange={(value) => setModalText(value)}
+                />
               </Col>
             </Row>
           </Modal>

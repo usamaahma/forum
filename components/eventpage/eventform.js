@@ -35,18 +35,24 @@ function Eventform({ initialValues }) {
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [featureData, setFeatureData] = useState([]); // To store feature data
-  const [featureName, setFeatureName] = useState(""); // To store feature name
-  const [featureValue, setFeatureValue] = useState(""); // To st
+  const [name, setName] = useState(""); // State for Name field
+  const [address, setAddress] = useState(""); // State for Address field
+  const [number, setNumber] = useState(""); // State for Number field
+  // To st
 
   const showModal = () => {
     setIsModalOpen(true);
   };
   const handleAddFeature = () => {
     // Add feature data to the featureData array
-    if (featureName && featureValue) {
-      setFeatureData([...featureData, `${featureName}: ${featureValue}`]);
-      setFeatureName(""); // Clear feature name
-      setFeatureValue(""); // Clear feature value
+    if (name && address && number) {
+      setFeatureData([
+        ...featureData,
+        `Name: ${name}, Address: ${address}, Number: ${number}`,
+      ]);
+      setName(""); // Clear Name field
+      setAddress(""); // Clear Address field
+      setNumber(""); // Clear Number field
     }
   };
   const handleRemoveFeature = (index) => {
@@ -59,9 +65,10 @@ function Eventform({ initialValues }) {
     setIsModalOpen(false);
   };
   const handleCancel = () => {
-    setFeatureName(""); // Clear feature name
-    setFeatureValue(0); // Clear feature value
-    setIsModalOpen(false); // Close the modal
+    setName(""); // Clear Name field
+    setAddress(""); // Clear Address field
+    setNumber(""); // Clear Number field
+    setIsModalOpen(false);
   };
 
   /////////////////////////////fire base image
@@ -157,7 +164,10 @@ function Eventform({ initialValues }) {
         console.log(res.data, "api");
         message.success("API call successful!");
         localStorage.removeItem("eventFormData");
-        setUrl("");
+        setFeatureData([]); // Clear feature data
+        setName(""); // Clear Name field
+        setAddress(""); // Clear Address field
+        setNumber(""); // Clear Number field
       })
       .catch((error) => {
         setLoading(false);
@@ -181,56 +191,86 @@ function Eventform({ initialValues }) {
     >
       <div>
         <Modal
-          title="Add Feature"
+          title="Add ticket"
           visible={isModalOpen}
           onOk={handleOk}
           onCancel={handleCancel}
         >
-          {/* Input field for feature name in the modal */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <Input
-              value={featureName}
-              onChange={(e) => setFeatureName(e.target.value)}
-              placeholder="Ticket"
-              style={{ width: "12rem" }}
-            />
-            {/* Input field for feature value (number) in the modal */}
-            <Input
-              value={featureValue}
-              onChange={(e) => setFeatureValue(e.target.value)}
-              placeholder="Ticket"
-              style={{ width: "12rem" }}
-            />
-          </div>
-          <br />
-          <Button type="primary" onClick={handleAddFeature}>
-            Add Feature
-          </Button>
-
-          {/* Display feature data inside the modal */}
-          {featureData.map((feature, index) => (
+          {/* Input fields for Name, Address, and Number in the modal */}
+          <div>
             <div
-              key={index}
               style={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-between",
                 alignItems: "center",
-                marginTop: ".5rem",
-                marginBottom: ".5rem",
               }}
             >
-              {feature}{" "}
-              <Button type="link" onClick={() => handleRemoveFeature(index)}>
-                Remove
-              </Button>
+              <label>Name:</label>
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Name"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
             </div>
-          ))}
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <label>Address:</label>
+              <Input
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                placeholder="Address"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
+            </div>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <label>Number:</label>
+              <Input
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                placeholder="Number"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
+            </div>
+            <br />
+            <Button type="primary" onClick={handleAddFeature}>
+              Add ticket
+            </Button>
+          </div>
+
+          {/* Display feature data inside the modal */}
+          <div>
+            {featureData.map((feature, index) => (
+              <div key={index}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    flexDirection: "column",
+                    marginTop: "1rem",
+                  }}
+                >
+                  <p style={{ fontSize: "1rem" }}>{feature}</p>
+                </div>
+                <Button type="link" onClick={() => handleRemoveFeature(index)}>
+                  Remove
+                </Button>
+              </div>
+            ))}
+          </div>
         </Modal>
       </div>
 
@@ -433,7 +473,12 @@ function Eventform({ initialValues }) {
                           Feature:{" "}
                           <div>
                             {featureData.map((feature, index) => (
-                              <div key={index}>{feature}</div>
+                              <div
+                                key={index}
+                                style={{ fontSize: "1.2rem", padding: ".5rem" }}
+                              >
+                                {feature}
+                              </div>
                             ))}
                           </div>
                         </div>
