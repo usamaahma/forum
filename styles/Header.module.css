@@ -149,6 +149,22 @@
   display: flex;
   justify-content: center;
 }
+.drawerimg{
+  width: 20rem;
+}
+.sameforall{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;  
+}
+.newsignout{
+  display: flex;
+  justify-content: center;
+}
+.gapbuttons {
+  display: flex;
+  gap: 3rem;
+}
 @media only screen and (min-width: 1440px) {
   .gapheaderthreenav {
     display: flex;

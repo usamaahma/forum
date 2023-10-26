@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
+import Styles1 from "../../styles/FirstHeader.module.css";
+
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
-
 import {
+  Switch,
+  Button,
+  Drawer,
   Layout,
   Menu,
   Input,
-  Button,
   Select,
   Modal,
   Row,
@@ -25,6 +28,10 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
+
+const onChangee = (checked) => {
+  console.log(`switch to ${checked}`);
+};
 
 const handleMenuClick = (e) => {
   message.info("Click on menu item.");
@@ -66,6 +73,20 @@ const menuProps = {
   onClick: handleMenuClick,
 };
 function Header2() {
+
+  const [isBangla, setIsBangla] = useState(false);
+  const handleClick = () => {
+    setIsBangla(!isBangla);
+  };
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpen1, setIsModalOpen1] = useState(false);
   const { totalCartItems } = useSelector((state) => state.cart);
@@ -377,6 +398,107 @@ function Header2() {
             <div className={Styles.imgpp}>
               <img alt="abc" src="../images/Notification.png" />
             </div>
+            <div> <Button type="primary" onClick={showDrawer}>
+              Open
+            </Button>
+            </div>
+            <Drawer placement="right" onClose={onClose} open={open}>
+              <img className={Styles.drawerimg} alt="abc" src="../images/drawerupper.png"></img>
+              <div className={Styles.sameforall}>
+                <p>My Account</p>
+                <img alt="abc" src="../images/drawerfirst.png"></img>
+              </div>
+              <div className={Styles.sameforall}>
+                <p>Home</p>
+                <img alt="abc" src="../images/drawerhome.png"></img>
+              </div> <div className={Styles.sameforall}>
+                <p>Deshi Shop</p>
+                <img alt="abc" src="../images/drawershop.png"></img>
+              </div> <div className={Styles.sameforall}>
+                <p>Cart</p>
+                <img alt="abc" src="../images/drawercart.png"></img>
+              </div>
+              <hr style={{ border: "1px solid #E8E8E8" }} />
+              <br />
+              <div className={Styles.sameforall}>
+                <p>Community Member</p>
+                <img alt="abc" src="../images/drawerpeople.png"></img>
+              </div> <div className={Styles.sameforall}>
+                <p>Community Chat</p>
+                <img alt="abc" src="../images/drawerchat.png"></img>
+              </div> <div className={Styles.sameforall}>
+                <p>Follower</p>
+                <img alt="abc" src="../images/drawerplus.png"></img>
+              </div> <div className={Styles.sameforall}>
+                <p>Show me on Community Profile</p>
+                <Switch defaultChecked onChange={onChangee} />
+              </div>
+              <hr style={{ border: "1px solid #E8E8E8" }} />
+              <br />
+              <div className={Styles.sameforall}>
+                <p>Become a Deshi Shop Vendor</p>
+                <img alt="abc" src="../images/drawervendor.png"></img>
+              </div>
+              <hr style={{ border: "1px solid #E8E8E8" }} />
+              <br />
+              <div className={Styles.sameforall}>
+                <p>Language</p>
+                <div >     
+                 <div
+                  onClick={handleClick}
+                  style={{
+                    overflow: "hidden",
+                    backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                  }}
+                  className={Styles1.langbutton}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minWidth:"2rem",
+                      width: "50%",
+                      height: "100%",
+                      fontSize: ".8rem",
+                      borderRadius: "3px",
+                      backgroundColor: isBangla ? "#FFFFFF" : "#42B00F",
+                      color: isBangla ? "black" : "white",
+                      transition: "background-color 0.3s ease, color 0.3s ease",
+                    }}
+                  >
+                    Eng
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      minWidth:"2rem",
+                      width: "50%",
+                      height: "100%",
+                      fontSize: ".8rem",
+                      borderRadius: "3px",
+                      backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                      color: isBangla ? "white" : "black",
+                      transition: "background-color 0.3s ease, color 0.3s ease",
+                    }}
+                  >
+                    বাংলা
+                  </div>
+                </div>{" "} </div>
+
+              </div>
+              <hr style={{ border: "1px solid #E8E8E8" }} />
+              <br />
+              <div className={Styles.newsignout}>
+                <button className={Styles.btnaccount1}>
+                  <LoginOutlined />
+                  <p style={{ marginLeft: ".3rem" }}>Sign Out</p>
+                </button>
+              </div>
+
+            </Drawer>
           </div>
         </Menu>
       </Header>

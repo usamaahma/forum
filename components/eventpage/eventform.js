@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/eventform.module.css";
-import {
-  DownOutlined,
-  UserOutlined,
-  InboxOutlined,
-  CloudDownloadOutlined,
-} from "@ant-design/icons";
+import { CloudDownloadOutlined } from "@ant-design/icons";
+import Styles1 from "../../styles/DeshiServiceForm.module.css";
+
 import {
   Button,
-  Dropdown,
-  Space,
+  Modal,
   message,
-  Upload,
   Form,
   Row,
   Col,
@@ -38,6 +33,43 @@ function Eventform({ initialValues }) {
   const [url, setUrl] = useState("");
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [featureData, setFeatureData] = useState([]); // To store feature data
+  const [name, setName] = useState(""); // State for Name field
+  const [address, setAddress] = useState(""); // State for Address field
+  const [number, setNumber] = useState(""); // State for Number field
+  // To st
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleAddFeature = () => {
+    // Add feature data to the featureData array
+    if (name && address && number) {
+      setFeatureData([
+        ...featureData,
+        `Name: ${name}, Address: ${address}, Number: ${number}`,
+      ]);
+      setName(""); // Clear Name field
+      setAddress(""); // Clear Address field
+      setNumber(""); // Clear Number field
+    }
+  };
+  const handleRemoveFeature = (index) => {
+    // Remove a feature from the featureData array
+    const newFeatureData = [...featureData];
+    newFeatureData.splice(index, 1);
+    setFeatureData(newFeatureData);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setName(""); // Clear Name field
+    setAddress(""); // Clear Address field
+    setNumber(""); // Clear Number field
+    setIsModalOpen(false);
+  };
 
   /////////////////////////////fire base image
   const date = new Date();
@@ -104,10 +136,11 @@ function Eventform({ initialValues }) {
     form.setFieldsValue({ image: value });
   };
 
-  const onFinish = async (values) => {
+  const onFinish = async (values, formData) => {
     // Continue with the API call
     console.log(values, "doneee");
     localStorage.setItem("eventFormData", JSON.stringify(values));
+    // localStorage.setItem("eventTicketData", JSON.stringify(ticketSpotData));
     const dataForApi = {
       eventName: values.eventName,
       startDate: values.startDate,
@@ -119,10 +152,8 @@ function Eventform({ initialValues }) {
       contactNumber: values.contactNumber,
       sellTicket: values.sellTicket,
       ticketPrice: values.ticketPrice,
-      ticketSpot: values.ticketSpot,
-      name: values.name,
-      address: values.address,
-      contactNumberti: values.contactNumberti,
+      ticketSpot: featureData,
+
       image: [url],
     };
     eventForm({
@@ -133,7 +164,10 @@ function Eventform({ initialValues }) {
         console.log(res.data, "api");
         message.success("API call successful!");
         localStorage.removeItem("eventFormData");
-        setUrl("");
+        setFeatureData([]); // Clear feature data
+        setName(""); // Clear Name field
+        setAddress(""); // Clear Address field
+        setNumber(""); // Clear Number field
       })
       .catch((error) => {
         setLoading(false);
@@ -155,6 +189,91 @@ function Eventform({ initialValues }) {
         flexDirection: "column",
       }}
     >
+      <div>
+        <Modal
+          title="Add ticket"
+          visible={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+        >
+          {/* Input fields for Name, Address, and Number in the modal */}
+          <div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <label>Name:</label>
+              <Input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Name"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
+            </div>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <label>Address:</label>
+              <Input
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                placeholder="Address"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
+            </div>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <label>Number:</label>
+              <Input
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                placeholder="Number"
+                style={{ width: "12rem", marginLeft: ".5rem" }}
+              />
+            </div>
+            <br />
+            <Button type="primary" onClick={handleAddFeature}>
+              Add ticket
+            </Button>
+          </div>
+
+          {/* Display feature data inside the modal */}
+          <div>
+            {featureData.map((feature, index) => (
+              <div key={index}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    flexDirection: "column",
+                    marginTop: "1rem",
+                  }}
+                >
+                  <p style={{ fontSize: "1rem" }}>{feature}</p>
+                </div>
+                <Button type="link" onClick={() => handleRemoveFeature(index)}>
+                  Remove
+                </Button>
+              </div>
+            ))}
+          </div>
+        </Modal>
+      </div>
+
       <div
         style={{
           background: "white",
@@ -332,51 +451,41 @@ function Eventform({ initialValues }) {
                 </Form.Item>
               </Col>
             </Row>
-            {/* <Row justify={"center"} className={Styles.ticketspot}>
-            
-              <Button>
-                <img src="../images/Labelled.png" alt="abc" />
-              </Button>
-            </Row> */}
+
             <Row justify="center">
-              <Col>
-                <Form.Item name="ticketSpot">
-                  <div className={Styles.divssss}>
-                    <p>Ticket Spot</p>
-                    <Input className={Styles.inputgapp12} />
-                  </div>
-                </Form.Item>
-              </Col>
-            </Row>
-            <Row justify="center" className={Styles.colgap}>
-              <Col>
-                <Form.Item name="name">
-                  <div className={Styles.divssss}>
-                    Name
-                    <Input className={Styles.inputgap} placeholder=" Name" />
-                  </div>
-                </Form.Item>
-              </Col>
-              <Col>
-                <Form.Item name="address">
-                  <div className={Styles.divssss}>
-                    Address
-                    <Input className={Styles.inputgap} placeholder="Address" />
-                  </div>
-                </Form.Item>
-              </Col>
-            </Row>{" "}
-            <Row justify="center">
-              <Col>
-                <Form.Item name="contactNumberti">
-                  <div className={Styles.divssss}>
-                    Contact Number
-                    <Input
-                      className={Styles.inputgap}
-                      placeholder="Contact Number"
-                    />
-                  </div>
-                </Form.Item>
+              <Col lg={21} md={21} xs={24}>
+                <div className={Styles1.displdeshiservic}>
+                  <Form.Item name="ticketSpot">
+                    <div>
+                      <div className={Styles1.plustxt}>
+                        Ticket Spot
+                        <Button
+                          className={Styles1.plusbutton}
+                          onClick={showModal}
+                        >
+                          <img alt="abc" src="../images/Plus1.png" />
+                          <p className={Styles1.txtaddfeature}>Add Ticket</p>
+                        </Button>
+                      </div>
+                      <div className={Styles1.divnew}>
+                        <div className={Styles1.divnew5}>
+                          {/* Display the feature details */}
+                          Feature:{" "}
+                          <div>
+                            {featureData.map((feature, index) => (
+                              <div
+                                key={index}
+                                style={{ fontSize: "1.2rem", padding: ".5rem" }}
+                              >
+                                {feature}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Form.Item>
+                </div>
               </Col>
             </Row>
           </div>

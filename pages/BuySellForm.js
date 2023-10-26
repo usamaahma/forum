@@ -353,9 +353,9 @@ function BuySellForm({ initialValues }) {
                   style={{ width: "12rem" }}
                 />
                 {/* Input field for feature value (number) in the modal */}
-                <InputNumber
+                <Input
                   value={featureValue}
-                  onChange={(value) => setFeatureValue(value)}
+                  onChange={(e) => setFeatureValue(e.target.value)}
                   placeholder="Feature Value"
                   style={{ width: "12rem" }}
                 />
