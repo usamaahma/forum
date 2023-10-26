@@ -858,16 +858,16 @@ function JobForm({ initialValues }) {
                 </div>
                 <div style={{ marginTop: "1rem" }}>
                   {" "}
-                  {/* <DynamicReactQuill
+                  <DynamicReactQuill
                     value={modalText}
                     onChange={(value) => setModalText(value)} // Update modalText with the text in the modal
-                  /> */}
+                  />
                 </div>{" "}
-                <FroalaEditorComponent
+                {/* <FroalaEditorComponent
                   tag="textarea"
                   model={modalText}
                   onModelChange={(value) => setModalText(value)}
-                />
+                /> */}
               </Col>
             </Row>
           </Modal>
