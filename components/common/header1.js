@@ -19,6 +19,7 @@ import {
   Space,
   Dropdown,
   Badge,
+  Avatar,
 } from "antd";
 import {
   SearchOutlined,
@@ -73,7 +74,6 @@ const menuProps = {
   onClick: handleMenuClick,
 };
 function Header2() {
-
   const [isBangla, setIsBangla] = useState(false);
   const handleClick = () => {
     setIsBangla(!isBangla);
@@ -157,6 +157,13 @@ function Header2() {
         >
           <Select
             dropdownRender={dropdownRender}
+            style={{
+              borderTop: "2px solid #42B00F", // Add this line to set the top border color
+              borderBottom: "1px solid #42B00F", // Add this line to set the bottom border color
+              borderLeft: "1px solid #42B00F", // Add this line to set the bottom border color
+              borderRadius: ".5rem",
+              borderRight: "none",
+            }}
             defaultValue="Filter"
             onClick={showModal}
           />
@@ -340,7 +347,10 @@ function Header2() {
             style={{
               width: 280,
               borderRadius: "4px 0 0 4px",
+              borderTop: "2px solid #42B00F", // Add this line to set the top border color
+              borderBottom: "1px solid #42B00F", // Add this line to set the bottom border color
               borderLeft: "none",
+              borderRight: "none",
             }}
             placeholder="Search........."
             onSearch={onSearch}
@@ -364,46 +374,38 @@ function Header2() {
         >
           <div className={Styles.menudiv4}>
             <div className={Styles.imgpp}>
+              <img alt="abc" src="../images/drawerchat.png" />
+            </div>
+            <div className={Styles.imgpp}>
+              <Badge showZero count={6} style={{ backgroundColor: "#42B00F" }}>
+                <img alt="abc" src="../images/notification.png" />
+              </Badge>
+            </div>
+            <div className={Styles.imgpp}>
               <Badge
                 showZero
                 count={totalCartItems}
                 // count={1}
-                style={{ marginTop: "-.3rem", backgroundColor: "#42B00F" }}
+                style={{ backgroundColor: "#42B00F" }}
               >
                 <ShoppingCartOutlined
                   style={{ fontSize: "1.5rem" }}
                   onClick={showModal1}
                 />
               </Badge>
-
-              <p className={Styles.txttttst}>Cart</p>
             </div>
-            <div className={Styles.imgpp}>
-              <img
-                className={Styles.ico}
-                alt="abc"
-                src="../images/Group (1).png"
-              />
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                trigger={["click"]}
-              >
-                <a onClick={(e) => e.preventDefault()}>
-                  <p className={Styles.txttttst}>My Account</p>
-                </a>
-              </Dropdown>
-            </div>{" "}
-            <div className={Styles.imgpp}>
-              <img alt="abc" src="../images/Notification.png" />
-            </div>
-            <div> <Button type="primary" onClick={showDrawer}>
-              Open
+            <Button className={Styles.buttonuser} onClick={showDrawer}>
+              {" "}
+              <p>Istiaq</p>
+              <Avatar src={<img src="../images/pic.png" alt="avatar" />} />
             </Button>
-            </div>
+
             <Drawer placement="right" onClose={onClose} open={open}>
-              <img className={Styles.drawerimg} alt="abc" src="../images/drawerupper.png"></img>
+              <img
+                className={Styles.drawerimg}
+                alt="abc"
+                src="../images/drawerupper.png"
+              ></img>
               <div className={Styles.sameforall}>
                 <p>My Account</p>
                 <img alt="abc" src="../images/drawerfirst.png"></img>
@@ -411,10 +413,12 @@ function Header2() {
               <div className={Styles.sameforall}>
                 <p>Home</p>
                 <img alt="abc" src="../images/drawerhome.png"></img>
-              </div> <div className={Styles.sameforall}>
+              </div>{" "}
+              <div className={Styles.sameforall}>
                 <p>Deshi Shop</p>
                 <img alt="abc" src="../images/drawershop.png"></img>
-              </div> <div className={Styles.sameforall}>
+              </div>{" "}
+              <div className={Styles.sameforall}>
                 <p>Cart</p>
                 <img alt="abc" src="../images/drawercart.png"></img>
               </div>
@@ -423,13 +427,16 @@ function Header2() {
               <div className={Styles.sameforall}>
                 <p>Community Member</p>
                 <img alt="abc" src="../images/drawerpeople.png"></img>
-              </div> <div className={Styles.sameforall}>
+              </div>{" "}
+              <div className={Styles.sameforall}>
                 <p>Community Chat</p>
                 <img alt="abc" src="../images/drawerchat.png"></img>
-              </div> <div className={Styles.sameforall}>
+              </div>{" "}
+              <div className={Styles.sameforall}>
                 <p>Follower</p>
                 <img alt="abc" src="../images/drawerplus.png"></img>
-              </div> <div className={Styles.sameforall}>
+              </div>{" "}
+              <div className={Styles.sameforall}>
                 <p>Show me on Community Profile</p>
                 <Switch defaultChecked onChange={onChangee} />
               </div>
@@ -443,51 +450,53 @@ function Header2() {
               <br />
               <div className={Styles.sameforall}>
                 <p>Language</p>
-                <div >     
-                 <div
-                  onClick={handleClick}
-                  style={{
-                    overflow: "hidden",
-                    backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
-                  }}
-                  className={Styles1.langbutton}
-                >
+                <div>
                   <div
+                    onClick={handleClick}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      minWidth:"2rem",
-                      width: "50%",
-                      height: "100%",
-                      fontSize: ".8rem",
-                      borderRadius: "3px",
-                      backgroundColor: isBangla ? "#FFFFFF" : "#42B00F",
-                      color: isBangla ? "black" : "white",
-                      transition: "background-color 0.3s ease, color 0.3s ease",
-                    }}
-                  >
-                    Eng
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      minWidth:"2rem",
-                      width: "50%",
-                      height: "100%",
-                      fontSize: ".8rem",
-                      borderRadius: "3px",
+                      overflow: "hidden",
                       backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
-                      color: isBangla ? "white" : "black",
-                      transition: "background-color 0.3s ease, color 0.3s ease",
                     }}
+                    className={Styles1.langbutton}
                   >
-                    বাংলা
-                  </div>
-                </div>{" "} </div>
-
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "2rem",
+                        width: "50%",
+                        height: "100%",
+                        fontSize: ".8rem",
+                        borderRadius: "3px",
+                        backgroundColor: isBangla ? "#FFFFFF" : "#42B00F",
+                        color: isBangla ? "black" : "white",
+                        transition:
+                          "background-color 0.3s ease, color 0.3s ease",
+                      }}
+                    >
+                      Eng
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        minWidth: "2rem",
+                        width: "50%",
+                        height: "100%",
+                        fontSize: ".8rem",
+                        borderRadius: "3px",
+                        backgroundColor: isBangla ? "#42B00F" : "#FFFFFF",
+                        color: isBangla ? "white" : "black",
+                        transition:
+                          "background-color 0.3s ease, color 0.3s ease",
+                      }}
+                    >
+                      বাংলা
+                    </div>
+                  </div>{" "}
+                </div>
               </div>
               <hr style={{ border: "1px solid #E8E8E8" }} />
               <br />
@@ -497,7 +506,6 @@ function Header2() {
                   <p style={{ marginLeft: ".3rem" }}>Sign Out</p>
                 </button>
               </div>
-
             </Drawer>
           </div>
         </Menu>
