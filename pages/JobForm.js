@@ -236,9 +236,9 @@ function JobForm({ initialValues }) {
   /////////////////////////api
   const onFinish = async (values) => {
     // Continue with the API call
-    const sanitizedJobDescription = DOMPurify.sanitize(modalText, {
-      USE_PROFILES: { html: true },
-    });
+    // const sanitizedJobDescription = DOMPurify.sanitize(modalText, {
+    //   USE_PROFILES: { html: true },
+    // });
     console.log(values, "doneee");
     localStorage.setItem("jobFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
@@ -260,7 +260,7 @@ function JobForm({ initialValues }) {
       tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
-      jobDescription: sanitizedJobDescription,
+      // jobDescription: sanitizedJobDescription,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
@@ -657,14 +657,14 @@ function JobForm({ initialValues }) {
                         </Button>
                       </div>
                       <div className={Styles1.divnew}>
-                        <div
+                        {/* <div
                           className={Styles1.divnew5}
                           dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(modalText, {
                               USE_PROFILES: { html: true },
                             }),
                           }}
-                        />
+                        /> */}
                       </div>
                     </div>
                   </Form.Item>

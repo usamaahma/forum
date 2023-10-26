@@ -92,71 +92,75 @@ function RightSectionRental() {
           />
         ) : (
           <Row justify="center" className={Styles.colsize}>
-            {data?.map((item, index) => (
-              <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
-                <div className={Styles.centercard}>
-                  <Card
-                    hoverable
-                    className={Styles1.cardsize}
-                    cover={
-                      <img
-                        src={item.image?.[0]}
-                        alt="abc"
-                        width={200}
-                        height={200}
-                      />
-                    }
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                    onClick={() =>
-                      router.push(`/RentalDetailPage?rentalId=${item.id}`)
-                    }
-                  >
-                    <Image src={Group} alt="" className={Styles1.tag} />
-                    <div className={Styles1.heartdiv}>
-                      <HeartOutlined />
-                    </div>
-                    <div className={Styles1.divbtn}>House</div>
-                    <div className={Styles1.stardiv}>
-                      <div className={Styles1.flexfive}>
-                        <button className={Styles1.usedbtn}>{item.time}</button>
+            {data
+              ?.filter((item) => item.status === true)
+              .map((item, index) => (
+                <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
+                  <div className={Styles.centercard}>
+                    <Card
+                      hoverable
+                      className={Styles1.cardsize}
+                      cover={
+                        <img
+                          src={item.image?.[0]}
+                          alt="abc"
+                          width={200}
+                          height={200}
+                        />
+                      }
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      onClick={() =>
+                        router.push(`/RentalDetailPage?rentalId=${item.id}`)
+                      }
+                    >
+                      <Image src={Group} alt="" className={Styles1.tag} />
+                      <div className={Styles1.heartdiv}>
+                        <HeartOutlined />
                       </div>
-                      <p className={Styles1.doltext}>{item.price}</p>
-                    </div>
-                    <p className={Styles1.mittext}>2min ago</p>
-                    <p className={Styles1.saimtext}>{item.title}</p>
-                    <div className={Styles1.userdiv}>
-                      <Image src={User} alt="" />
-                      <p className={Styles1.usertext}>Username</p>
-                    </div>
-                    <div className={Styles1.userdiv}>
-                      <Image src={Location} alt="" />
-                      <p className={Styles1.usertext}>{item.address}</p>
-                    </div>
-                    <div className={Styles1.centerbtn}>
-                      <button className={Styles1.calldiv}>
-                        <Image src={Phone} alt="" />
-                        <p style={{ marginLeft: ".5rem" }}>Call</p>
-                      </button>
-                    </div>
-                    <div className={Styles1.threediv}>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Like} alt="" />
-                        <p className={Styles1.thumtext}>25</p>
+                      <div className={Styles1.divbtn}>House</div>
+                      <div className={Styles1.stardiv}>
+                        <div className={Styles1.flexfive}>
+                          <button className={Styles1.usedbtn}>
+                            {item.time}
+                          </button>
+                        </div>
+                        <p className={Styles1.doltext}>{item.price}</p>
                       </div>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Eye} alt="" />
-                        <p className={Styles1.thumtext}>50</p>
+                      <p className={Styles1.mittext}>2min ago</p>
+                      <p className={Styles1.saimtext}>{item.title}</p>
+                      <div className={Styles1.userdiv}>
+                        <Image src={User} alt="" />
+                        <p className={Styles1.usertext}>Username</p>
                       </div>
-                      <div className={Styles1.nodiv}>
-                        <Image src={Share} alt="" />
-                        <p className={Styles1.thumtext}>30</p>
+                      <div className={Styles1.userdiv}>
+                        <Image src={Location} alt="" />
+                        <p className={Styles1.usertext}>{item.address}</p>
                       </div>
-                    </div>
-                  </Card>
-                </div>
-              </Col>
-            ))}
+                      <div className={Styles1.centerbtn}>
+                        <button className={Styles1.calldiv}>
+                          <Image src={Phone} alt="" />
+                          <p style={{ marginLeft: ".5rem" }}>Call</p>
+                        </button>
+                      </div>
+                      <div className={Styles1.threediv}>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Like} alt="" />
+                          <p className={Styles1.thumtext}>25</p>
+                        </div>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Eye} alt="" />
+                          <p className={Styles1.thumtext}>50</p>
+                        </div>
+                        <div className={Styles1.nodiv}>
+                          <Image src={Share} alt="" />
+                          <p className={Styles1.thumtext}>30</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                </Col>
+              ))}
           </Row>
         )}
       </div>
@@ -186,73 +190,77 @@ function RightSectionRental() {
             />
           ) : (
             <Row justify="center" className={Styles.colsize}>
-              {data?.map((item, index) => (
-                <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
-                  <div className={Styles.centercard}>
-                    <Card
-                      hoverable
-                      className={Styles1.cardsize}
-                      cover={
-                        <img
-                          src={item.image?.[0]}
-                          alt="abc"
-                          width={200}
-                          height={200}
-                        />
-                      }
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                      onClick={() =>
-                        router.push(`/RentalDetailPage?rentalId=${item.id}`)
-                      }
-                    >
-                      <Image src={Group} alt="" className={Styles1.tag} />
-                      <div className={Styles1.heartdiv}>
-                        <HeartOutlined />
-                      </div>
-                      <div className={Styles1.divbtn}>House</div>
-                      <div className={Styles1.stardiv}>
-                        <div className={Styles1.flexfive}>
-                          <button className={Styles1.usedbtn}>
-                            {data.priceType}
+              {data
+                ?.filter((item) => item.status === true)
+                .map((item, index) => (
+                  <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
+                    <div className={Styles.centercard}>
+                      <Card
+                        hoverable
+                        className={Styles1.cardsize}
+                        cover={
+                          <img
+                            src={item.image?.[0]}
+                            alt="abc"
+                            width={200}
+                            height={200}
+                          />
+                        }
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={() =>
+                          router.push(`/RentalDetailPage?rentalId=${item.id}`)
+                        }
+                      >
+                        <Image src={Group} alt="" className={Styles1.tag} />
+                        <div className={Styles1.heartdiv}>
+                          <HeartOutlined />
+                        </div>
+                        <div className={Styles1.divbtn}>House</div>
+                        <div className={Styles1.stardiv}>
+                          <div className={Styles1.flexfive}>
+                            <button className={Styles1.usedbtn}>
+                              {data.priceType}
+                            </button>
+                          </div>
+                          <p className={Styles1.doltext}>{item.price}</p>
+                        </div>
+                        <p className={Styles1.mittext}>2min ago</p>
+                        <p className={Styles1.saimtext}>{item.title}</p>
+                        <div className={Styles1.userdiv}>
+                          <Image src={User} alt="" />
+                          <p className={Styles1.usertext}>Username</p>
+                        </div>
+                        <div className={Styles1.userdiv}>
+                          <Image src={Location} alt="" />
+                          <p className={Styles1.usertext}>
+                            4517 Washington Ave.
+                          </p>
+                        </div>
+                        <div className={Styles1.centerbtn}>
+                          <button className={Styles1.calldiv}>
+                            <Image src={Phone} alt="" />
+                            <p style={{ marginLeft: ".5rem" }}>Call</p>
                           </button>
                         </div>
-                        <p className={Styles1.doltext}>{item.price}</p>
-                      </div>
-                      <p className={Styles1.mittext}>2min ago</p>
-                      <p className={Styles1.saimtext}>{item.title}</p>
-                      <div className={Styles1.userdiv}>
-                        <Image src={User} alt="" />
-                        <p className={Styles1.usertext}>Username</p>
-                      </div>
-                      <div className={Styles1.userdiv}>
-                        <Image src={Location} alt="" />
-                        <p className={Styles1.usertext}>4517 Washington Ave.</p>
-                      </div>
-                      <div className={Styles1.centerbtn}>
-                        <button className={Styles1.calldiv}>
-                          <Image src={Phone} alt="" />
-                          <p style={{ marginLeft: ".5rem" }}>Call</p>
-                        </button>
-                      </div>
-                      <div className={Styles1.threediv}>
-                        <div className={Styles1.nodiv}>
-                          <Image src={Like} alt="" />
-                          <p className={Styles1.thumtext}>25</p>
+                        <div className={Styles1.threediv}>
+                          <div className={Styles1.nodiv}>
+                            <Image src={Like} alt="" />
+                            <p className={Styles1.thumtext}>25</p>
+                          </div>
+                          <div className={Styles1.nodiv}>
+                            <Image src={Eye} alt="" />
+                            <p className={Styles1.thumtext}>50</p>
+                          </div>
+                          <div className={Styles1.nodiv}>
+                            <Image src={Share} alt="" />
+                            <p className={Styles1.thumtext}>30</p>
+                          </div>
                         </div>
-                        <div className={Styles1.nodiv}>
-                          <Image src={Eye} alt="" />
-                          <p className={Styles1.thumtext}>50</p>
-                        </div>
-                        <div className={Styles1.nodiv}>
-                          <Image src={Share} alt="" />
-                          <p className={Styles1.thumtext}>30</p>
-                        </div>
-                      </div>
-                    </Card>
-                  </div>
-                </Col>
-              ))}
+                      </Card>
+                    </div>
+                  </Col>
+                ))}
             </Row>
           )}
         </div>

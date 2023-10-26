@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Col, Row } from "antd";
+import { Card, Col, Row, Tag } from "antd";
 import Styles from "../../styles/servicecard.module.css";
 import Switch from "./Switch";
 import { buySellForm } from "@/helper/axios";
@@ -89,7 +89,14 @@ function BuySellCard() {
                   </div>
                   <div className={Styles.stat}>
                     <p>Status:</p>
-                    <button className={Styles.btncomp}>pending</button>
+                    <Tag
+                      style={{
+                        backgroundColor: item.status ? "#DEF5D3" : "#FFF7D8",
+                        color: item.status ? "#42B00F" : "#ffab00",
+                      }}
+                    >
+                      {item.status ? "Approved" : "Deny"}
+                    </Tag>{" "}
                     <button className={Styles.btncompp}>{data.status1}</button>
                   </div>
                   <Row className={Styles.rowlast}>
