@@ -3,7 +3,6 @@ import Styles from "../styles/HeroSection.module.css";
 import Styles1 from "../styles/DeshiServiceForm.module.css";
 import MainHeader from "@/components/common/mainHeader";
 import Footer from "@/components/common/footer";
-import DOMPurify from "dompurify";
 
 import {
   Button,
@@ -37,9 +36,7 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { WithContext as ReactTags } from "react-tag-input";
-// import "froala-editor/css/froala_style.min.css";
-// import "froala-editor/css/froala_editor.pkgd.min.css";
-// import FroalaEditorComponent from "react-froala-wysiwyg";
+
 const { TextArea } = Input;
 const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -65,8 +62,6 @@ function JobForm({ initialValues }) {
   const [scdata, scsetdata] = useState([]);
   const [text, setText] = useState("");
   const [modalText, setModalText] = useState("");
-  // const apiResponseData =
-  //   '&lt;p>&lt;span id="isPasted" style="color: ... &lt;/p>';
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -235,10 +230,6 @@ function JobForm({ initialValues }) {
   };
   /////////////////////////api
   const onFinish = async (values) => {
-    // Continue with the API call
-    // const sanitizedJobDescription = DOMPurify.sanitize(modalText, {
-    //   USE_PROFILES: { html: true },
-    // });
     console.log(values, "doneee");
     localStorage.setItem("jobFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
@@ -656,16 +647,7 @@ function JobForm({ initialValues }) {
                           </p>
                         </Button>
                       </div>
-                      <div className={Styles1.divnew}>
-                        {/* <div
-                          className={Styles1.divnew5}
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(modalText, {
-                              USE_PROFILES: { html: true },
-                            }),
-                          }}
-                        /> */}
-                      </div>
+                      <div className={Styles1.divnew}></div>
                     </div>
                   </Form.Item>
                 </div>
