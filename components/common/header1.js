@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Styles from "../../styles/Header.module.css";
 import Styles1 from "../../styles/FirstHeader.module.css";
+import Link from "next/link";
 
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import { useSelector } from "react-redux";
@@ -27,7 +28,6 @@ import {
   DownOutlined,
   LoginOutlined,
 } from "@ant-design/icons";
-import Link from "next/link";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
 
 const onChangee = (checked) => {
@@ -157,13 +157,6 @@ function Header2() {
         >
           <Select
             dropdownRender={dropdownRender}
-            style={{
-              borderTop: "2px solid #42B00F", // Add this line to set the top border color
-              borderBottom: "1px solid #42B00F", // Add this line to set the bottom border color
-              borderLeft: "1px solid #42B00F", // Add this line to set the bottom border color
-              borderRadius: ".5rem",
-              borderRight: "none",
-            }}
             defaultValue="Filter"
             onClick={showModal}
           />
@@ -346,11 +339,7 @@ function Header2() {
           <Search
             style={{
               width: 280,
-              borderRadius: "4px 0 0 4px",
-              borderTop: "2px solid #42B00F", // Add this line to set the top border color
-              borderBottom: "1px solid #42B00F", // Add this line to set the bottom border color
-              borderLeft: "none",
-              borderRight: "none",
+         
             }}
             placeholder="Search........."
             onSearch={onSearch}
@@ -406,19 +395,25 @@ function Header2() {
                 alt="abc"
                 src="../images/drawerupper.png"
               ></img>
-              <div className={Styles.sameforall}>
-                <p>My Account</p>
-                <img alt="abc" src="../images/drawerfirst.png"></img>
-              </div>
-              <div className={Styles.sameforall}>
-                <p>Home</p>
-                <img alt="abc" src="../images/drawerhome.png"></img>
-              </div>{" "}
-              <div className={Styles.sameforall}>
-                <p>Deshi Shop</p>
-                <img alt="abc" src="../images/drawershop.png"></img>
-              </div>{" "}
-              <div className={Styles.sameforall}>
+              <Link href="/MyAccountPage">
+                <div className={Styles.sameforall}>
+                  <p>My Account</p>
+                  <img alt="abc" src="../images/drawerfirst.png"></img>
+                </div>
+              </Link>
+              <Link href="/HomePage">
+                <div className={Styles.sameforall}>
+                  <p>Home</p>
+                  <img alt="abc" src="../images/drawerhome.png"></img>
+                </div>{" "}
+              </Link>
+              <Link href="/DeshiShopPage">
+                <div className={Styles.sameforall}>
+                  <p>Deshi Shop</p>
+                  <img alt="abc" src="../images/drawershop.png"></img>
+                </div>{" "}
+              </Link>
+              <div className={Styles.sameforall} onClick={showModal1}>
                 <p>Cart</p>
                 <img alt="abc" src="../images/drawercart.png"></img>
               </div>

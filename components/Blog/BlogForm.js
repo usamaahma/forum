@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Styles from "../../styles/eventform.module.css";
 import Styles1 from "../../styles/DeshiServiceForm.module.css";
 import {
@@ -10,8 +9,6 @@ import {
 } from "@ant-design/icons";
 import {
   Button,
-  Dropdown,
-  Space,
   message,
   Upload,
   Form,
@@ -154,9 +151,12 @@ function BlogForm({ initialValues }) {
   };
 
   ////////////////
+
   const onFinish = async (values) => {
     // Continue with the API call
+
     console.log(values, "doneee");
+    console.log(text, "text");
     localStorage.setItem("blogFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
