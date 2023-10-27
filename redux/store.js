@@ -2,11 +2,12 @@ import { configureStore } from "@reduxjs/toolkit";
 // import { Provider, useDispatch } from "react-redux";
 // import { useMemo } from "react";
 import cartReducer from "./cart";
+import categoriesReducer from "./categoryUpdate";
 // import userReducer from "./user";
 export default configureStore({
   reducer: {
     cart: cartReducer,
-    // user: userReducer,
+    categories: categoriesReducer,
   },
 });
 // export const useAppDispatch = () => useDispatch();

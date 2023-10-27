@@ -11,71 +11,9 @@ import Search from "../../public/images/Search.png";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { deshiCategory } from "@/helper/axios";
-
+import { useSelector, useDispatch } from "react-redux";
 const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Development} alt="abc" />
-      <p className={Styles.lifetext}>USA Life</p>
-    </div>
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Design} alt="abc" />
-      <p className={Styles.lifetext}>Jobs</p>
-    </div>
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Marketing} alt="abc" />
-      <p className={Styles.lifetext}>Business</p>
-    </div>
-  </div>,
-  <div
-    key={4}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={MaskGroup} alt="abc" />
-      <p className={Styles.lifetext}>Life Style</p>
-    </div>
-  </div>,
-  <div
-    key={5}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Marketing} alt="abc" />
-      <p className={Styles.lifetext}>Govt Facilities</p>
-    </div>
-  </div>,
-  <div
-    key={6}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Search} alt="abc" />
-      <p className={Styles.lifetext}>Immigration</p>
-    </div>
-  </div>,
-];
 const responsive = {
   0: {
     items: 3,
@@ -97,6 +35,9 @@ const responsive = {
 function ImageSectionOfDeshi() {
   const [cdata, csetdata] = useState([]);
   const [loading, setLoading] = useState();
+  // const [selectedCategory, setSelectedCategory] = useState("");
+  const selectedCategory = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
 
   const getDeshiCategory = () => {
     setLoading(true);
@@ -120,6 +61,14 @@ function ImageSectionOfDeshi() {
         message.error("an error occured please try later");
         setLoading(false);
       });
+  };
+  const filteredCategories = cdata.filter((item) =>
+    selectedCategory ? item.name === selectedCategory : true
+  );
+
+  const handleCategoryClick = (categoryName) => {
+    // Dispatch an action to update the selected category in Redux
+    dispatch({ type: "SET_SELECTED_CATEGORY", payload: categoryName });
   };
   useEffect(() => {
     getDeshiCategory();
@@ -149,7 +98,7 @@ function ImageSectionOfDeshi() {
             items={cdata?.map((item, index) => (
               <div className={Styles.centercaro} key={index}>
                 <div
-                  key={1}
+                  onClick={() => handleCategoryClick(item.name)}
                   onDragStart={handleDragStart}
                   style={{ display: "flex", justifyContent: "space-evenly" }}
                 >
