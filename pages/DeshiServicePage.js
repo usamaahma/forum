@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "../styles/DeshiServicePage.module.css";
 import { Row, Col, Drawer } from "antd";
 import MainHeader from "@/components/common/mainHeader";
@@ -8,14 +8,17 @@ import ImageSectionOfDeshi from "@/components/DeshiServices/ImageSectionOfDeshi"
 import LeftSectionDeshi from "@/components/DeshiServices/LeftSectionDeshi";
 import RightSectionDeshi from "@/components/DeshiServices/RightSectionDeshi";
 import Drawerservice from "./Drawerservice";
+import { deshiCategory } from "@/helper/axios";
 function DeshiServicePage() {
   const [open, setOpen] = useState(false);
+
   const showDrawer = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
   };
+
   return (
     <div>
       <MainHeader />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Bottle from "../../public/images/jeans.png";
 import Shoes from "../../public/images/airphone.png";
@@ -10,6 +10,7 @@ import MaskGroup from "../../public/images/Mask group.png";
 import Search from "../../public/images/Search.png";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { deshiCategory } from "@/helper/axios";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -94,6 +95,35 @@ const responsive = {
 };
 
 function ImageSectionOfDeshi() {
+  const [cdata, csetdata] = useState([]);
+  const [loading, setLoading] = useState();
+
+  const getDeshiCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    deshiCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "deshi");
+        csetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    getDeshiCategory();
+  }, []);
   return (
     <div>
       <div className={Styles.mainboxdivv22}>
@@ -116,7 +146,25 @@ function ImageSectionOfDeshi() {
         <div className={Styles.alicdiv}>
           <AliceCarousel
             mouseTracking
-            items={items}
+            items={cdata?.map((item, index) => (
+              <div className={Styles.centercaro} key={index}>
+                <div
+                  key={1}
+                  onDragStart={handleDragStart}
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  <div className={Styles.boxserv}>
+                    <img
+                      className={Styles.imgicon}
+                      src={item.image}
+                      alt="abc"
+                    />
+                    <p className={Styles.lifetext}>{item.name}</p>
+                  </div>
+                </div>
+                ,
+              </div>
+            ))}
             responsive={responsive}
             disableDotsControls
             disableButtonsControls
