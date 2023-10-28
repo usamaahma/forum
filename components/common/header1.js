@@ -367,7 +367,7 @@ function Header2() {
             </div>
             <div className={Styles.imgpp}>
               <Badge showZero count={6} style={{ backgroundColor: "#42B00F" }}>
-                <img alt="abc" src="../images/notification.png" />
+                <img alt="abc" src="../images/Notification.png" />
               </Badge>
             </div>
             <div className={Styles.imgpp}>
