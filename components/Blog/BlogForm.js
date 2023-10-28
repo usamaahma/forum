@@ -157,6 +157,9 @@ function BlogForm({ initialValues }) {
 
     console.log(values, "doneee");
     console.log(text, "text");
+    const cleanedDescription = values.serviceDescription
+      .replace(/<p>/g, "")
+      .replace(/<\/p>/g, "");
     localStorage.setItem("blogFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
@@ -167,7 +170,7 @@ function BlogForm({ initialValues }) {
       subCategory: values.subCategory,
       tag: tagsArray,
       date: values.date,
-      description: values.description,
+      description: cleanedDescription,
       image: [url],
     };
     blogForm({

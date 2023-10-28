@@ -249,7 +249,9 @@ function RentalForm({ initialValues }) {
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
-
+    const cleanedDescription = values.serviceDescription
+      .replace(/<p>/g, "")
+      .replace(/<\/p>/g, "");
     localStorage.setItem("eventFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
@@ -262,7 +264,7 @@ function RentalForm({ initialValues }) {
       price: combinedPrice,
       time: values.time,
       metaDescription: values.metaDescription,
-      serviceDescription: values.serviceDescription,
+      serviceDescription: cleanedDescription,
       feature: featureData,
       name: values.name,
       contactNumber: values.contactNumber,
