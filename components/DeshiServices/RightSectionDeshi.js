@@ -125,7 +125,7 @@ function RightSectionDeshi() {
                       <div className={Styles1.heartdiv}>
                         <HeartOutlined />
                       </div>
-                      <div className={Styles1.divbtn}>Construction</div>
+                      <div className={Styles1.divbtn}>{item.category}</div>
                       <div className={Styles1.stardiv}>
                         <div className={Styles1.flexfive}>
                           <Rate

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Bottle from "../../public/images/jeans.png";
 import Shoes from "../../public/images/airphone.png";
@@ -10,71 +10,10 @@ import MaskGroup from "../../public/images/Mask group.png";
 import Search from "../../public/images/Search.png";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-
+import { deshiCategory } from "@/helper/axios";
+import { useSelector, useDispatch } from "react-redux";
 const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Development} alt="abc" />
-      <p className={Styles.lifetext}>USA Life</p>
-    </div>
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Design} alt="abc" />
-      <p className={Styles.lifetext}>Jobs</p>
-    </div>
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Marketing} alt="abc" />
-      <p className={Styles.lifetext}>Business</p>
-    </div>
-  </div>,
-  <div
-    key={4}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={MaskGroup} alt="abc" />
-      <p className={Styles.lifetext}>Life Style</p>
-    </div>
-  </div>,
-  <div
-    key={5}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Marketing} alt="abc" />
-      <p className={Styles.lifetext}>Govt Facilities</p>
-    </div>
-  </div>,
-  <div
-    key={6}
-    onDragStart={handleDragStart}
-    style={{ display: "flex", justifyContent: "space-evenly" }}
-  >
-    <div className={Styles.boxserv}>
-      <Image className={Styles.imgicon} src={Search} alt="abc" />
-      <p className={Styles.lifetext}>Immigration</p>
-    </div>
-  </div>,
-];
 const responsive = {
   0: {
     items: 3,
@@ -94,6 +33,45 @@ const responsive = {
 };
 
 function ImageSectionOfDeshi() {
+  const [cdata, csetdata] = useState([]);
+  const [loading, setLoading] = useState();
+  const selectedCategory = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+
+  const getDeshiCategory = () => {
+    setLoading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+    deshiCategory({
+      method: "get",
+      headers: {
+        // Authorization: `Bearer ${token}`,
+      },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "deshi");
+        csetdata(res.data.results);
+        setLoading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setLoading(false);
+      });
+  };
+  const filteredCategories = cdata.filter((item) =>
+    selectedCategory ? item.name === selectedCategory : true
+  );
+
+  const handleCategoryClick = (categoryName) => {
+    // Dispatch an action to update the selected category in Redux
+    dispatch({ type: "SET_SELECTED_CATEGORY", payload: categoryName });
+  };
+  useEffect(() => {
+    getDeshiCategory();
+  }, []);
   return (
     <div>
       <div className={Styles.mainboxdivv22}>
@@ -116,7 +94,24 @@ function ImageSectionOfDeshi() {
         <div className={Styles.alicdiv}>
           <AliceCarousel
             mouseTracking
-            items={items}
+            items={cdata?.map((item, index) => (
+              <div className={Styles.centercaro} key={index}>
+                <div
+                  onClick={() => handleCategoryClick(item.name)}
+                  onDragStart={handleDragStart}
+                  style={{ display: "flex", justifyContent: "space-evenly" }}
+                >
+                  <div className={Styles.boxserv}>
+                    <img
+                      className={Styles.imgicon}
+                      src={item.image}
+                      alt="abc"
+                    />
+                    <p className={Styles.lifetext}>{item.name}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
             responsive={responsive}
             disableDotsControls
             disableButtonsControls
