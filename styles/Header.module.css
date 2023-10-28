@@ -50,7 +50,14 @@
 }
 .imgpp {
   background-color: transparent !important;
-  height: 5rem;
+  margin-top: 1rem;
+}
+.buttonuser {
+  border: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .googlepic {
@@ -149,15 +156,17 @@
   display: flex;
   justify-content: center;
 }
-.drawerimg{
+.drawerimg {
   width: 20rem;
 }
-.sameforall{
+.sameforall {
   display: flex;
   justify-content: space-between;
-  padding: 10px;  
+  padding: 10px;
+  font-weight: 650;
+  color: black;
 }
-.newsignout{
+.newsignout {
   display: flex;
   justify-content: center;
 }

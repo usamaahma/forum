@@ -65,8 +65,22 @@ export default function Newfile() {
       mode="horizontal"
       className={`${Styles.buttons} ${Styles.remove2}`}
     >
+      <button
+        onClick={showDrawer}
+        style={{
+          backgroundColor: "transparent",
+          borderColor: "transparent",
+          overflow: "hidden",
+        }}
+      >
+        <img
+          style={{ marginLeft: "1rem" }}
+          src="../images/Fitler.png"
+          alt="abc"
+        ></img>
+      </button>
       <Search
-      className={Styles.widthsearc}
+        className={Styles.widthsearc}
         style={{
           borderRadius: "4px 0 0 4px",
           borderLeft: "none",
@@ -83,6 +97,7 @@ export default function Newfile() {
             <SearchOutlined style={{ color: "white" }} />
           </Button>
         }
+        
       ></Search>
       <Drawer placement="right" onClose={onClose} open={open}>
         <Row className={Styles.rowssscolmnsss}>
@@ -246,20 +261,6 @@ export default function Newfile() {
           </Col>
         </Row>
       </Drawer>
-      <button
-        onClick={showDrawer}
-        style={{
-          backgroundColor: "transparent",
-          borderColor: "transparent",
-          overflow: "hidden",
-        }}
-      >
-        <img
-          style={{ marginLeft: "1rem" }}
-          src="../images/Fitler.png"
-          alt="abc"
-        ></img>
-      </button>
     </div>
   );
 }

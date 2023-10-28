@@ -256,7 +256,7 @@ function DeshiServiceForm({ initialValues }) {
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
-
+    const cleanedDescription = values.serviceDescription.replace(/<p>/g, "").replace(/<\/p>/g, "");
     localStorage.setItem("deshiFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
@@ -268,7 +268,7 @@ function DeshiServiceForm({ initialValues }) {
       priceType: values.priceType,
       price: combinedPrice,
       metaDescription: values.metaDescription,
-      serviceDescription: values.serviceDescription,
+      serviceDescription: cleanedDescription,
       feature: featureData,
       name: values.name,
       contactNumber: values.contactNumber,
@@ -601,15 +601,15 @@ function DeshiServiceForm({ initialValues }) {
                   </Form.Item>
                 </div>
                 <div className={Styles1.displdeshiservic}>
-                  <Form.Item name="serviceDescription">
-                    <div>
-                      Service Description
+                  <div>
+                    Service Description
+                    <Form.Item name="serviceDescription">
                       <DynamicReactQuill
                         value={text}
                         onChange={handleServiceDescriptionChange}
                       />
-                    </div>
-                  </Form.Item>
+                    </Form.Item>
+                  </div>
                 </div>
 
                 <div className={Styles1.displdeshiservic}>

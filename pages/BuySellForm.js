@@ -250,7 +250,10 @@ function BuySellForm({ initialValues }) {
   const onFinish = async (values) => {
     // Continue with the API call
     console.log(values, "doneee");
-
+    const cleanedDescription = values.buySellDescription
+      .replace(/<p>/g, "")
+      .replace(/<\/p>/g, "");
+    console.log(cleanedDescription);
     localStorage.setItem("buysellFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
@@ -263,7 +266,7 @@ function BuySellForm({ initialValues }) {
       price: combinedPrice,
       deliveryType: values.deliveryType,
       metaDescription: values.metaDescription,
-      buySellDescription: values.buySellDescription,
+      buySellDescription: cleanedDescription,
       feature: featureData,
       name: values.name,
       contactNumber: values.contactNumber,
