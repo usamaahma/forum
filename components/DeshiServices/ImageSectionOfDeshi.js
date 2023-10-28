@@ -35,7 +35,6 @@ const responsive = {
 function ImageSectionOfDeshi() {
   const [cdata, csetdata] = useState([]);
   const [loading, setLoading] = useState();
-  // const [selectedCategory, setSelectedCategory] = useState("");
   const selectedCategory = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
@@ -111,7 +110,6 @@ function ImageSectionOfDeshi() {
                     <p className={Styles.lifetext}>{item.name}</p>
                   </div>
                 </div>
-                ,
               </div>
             ))}
             responsive={responsive}
