@@ -331,7 +331,7 @@ function JobCard() {
                       </div>
                     </Col>
                     <Col className={Styles.availbleswitch}>
-                      <p>Time left Mark On/Off</p>
+                      <p> {item.available ? "Available" : "Unavailable"}</p>
                       {/* <Switch /> */}
                       <label>
                         <input
