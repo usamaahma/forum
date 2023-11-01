@@ -1,23 +1,55 @@
+import { deshiOneForm } from "@/helper/axios";
+import { message } from "antd";
 import React, { useState } from "react";
 
-const Switch = ({ defaultChecked }) => {
-  const [isChecked, setIsChecked] = useState(defaultChecked);
+const Switch = ({ defaultChecked, data, id }) => {
+  const [loading, setloading] = useState(defaultChecked);
 
   const onChange = (checked) => {
     console.log(`switch to ${checked}`);
   };
-  const handleChange = () => {
-    const newCheckedState = !isChecked;
-    setIsChecked(newCheckedState);
-    onChange(newCheckedState);
-  };
+  const onChanges = (id, available) => {
+    console.log(available, "jani");
 
+    handleUpdate(id, available);
+  };
+  const handleUpdate = (id, available) => {
+    setloading(true);
+
+    // let token = localStorage.getItem("talbeilm-token");
+
+    let data = {
+      available: available,
+    };
+
+    deshiOneForm(`/${id}`, {
+      method: "patch",
+      data: data,
+      // headers: {
+      //   Authorization: `Bearer ${token}`,
+      // },
+    })
+      .then(() => {
+        setloading(false);
+        message.success("Updated!");
+        // deleteImage();
+      })
+
+      .catch(() => {
+        setloading(false);
+        message.error("something went wrong, please try again!");
+      })
+      .finally(() => {
+        setloading(false);
+      });
+  };
+  console.log(data, "av");
   return (
     <label>
       <input
         type="checkbox"
-        checked={isChecked}
-        onChange={handleChange}
+        checked={data}
+        onChange={() => onChanges(id, !data)}
         style={{ display: "none" }}
       />
       <span
@@ -26,7 +58,7 @@ const Switch = ({ defaultChecked }) => {
           width: "50px",
           height: "30px",
           borderRadius: "15px",
-          backgroundColor: isChecked ? "green" : "red",
+          backgroundColor: data ? "green" : "red",
           transition: "background-color 0.3s ease",
         }}
       >
@@ -39,7 +71,7 @@ const Switch = ({ defaultChecked }) => {
             backgroundColor: "white",
             margin: "2px",
             transition: "transform 0.3s ease",
-            transform: isChecked ? "translateX(20px)" : "translateX(0)",
+            transform: data ? "translateX(20px)" : "translateX(0)",
           }}
         />
       </span>
