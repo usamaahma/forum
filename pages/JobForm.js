@@ -231,6 +231,7 @@ function JobForm({ initialValues }) {
   /////////////////////////api
   const onFinish = async (values) => {
     console.log(values, "doneee");
+    const cleanedDescription = sanitizedJobDescription.replace(/<p>/g, "").replace(/<\/p>/g, "");
     localStorage.setItem("jobFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
     const tagsJobArray = tagsJob.map((tag) => tag.name);
@@ -251,7 +252,7 @@ function JobForm({ initialValues }) {
       tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
-      // jobDescription: sanitizedJobDescription,
+      jobDescription: cleanedDescription,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,

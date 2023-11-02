@@ -98,7 +98,9 @@ function RightSectionDeshi() {
         ) : (
           <Row justify="center" className={Styles.colsize}>
             {data
-              ?.filter((item) => item.status === true)
+              ?.filter(
+                (item) => item.status === true && item.available === true
+              )
               .map((item, index) => (
                 <Col key={index} xxl={8} xl={8} lg={8} md={8} xs={12}>
                   <div className={Styles.centercard}>
