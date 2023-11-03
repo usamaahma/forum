@@ -117,6 +117,7 @@ function JobForm({ initialValues }) {
   //////////////////////////////////////////// handle function
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
+
   };
 
   const handleCategoryChange = (value) => {
@@ -229,10 +230,11 @@ function JobForm({ initialValues }) {
       });
   };
   /////////////////////////api
-  const onFinish = async (values) => {
+  const onFinish = async (values, modalText) => {
     console.log(values, "doneee");
-    const cleanedDescription = sanitizedJobDescription.replace(/<p>/g, "").replace(/<\/p>/g, "");
     localStorage.setItem("jobFormData", JSON.stringify(values));
+    const storedModalText = localStorage.getItem("withoutptag");
+    console.log(storedModalText);
     const tagsArray = tags.map((tag) => tag.name);
     const tagsJobArray = tagsJob.map((tag) => tag.name);
 
@@ -252,7 +254,7 @@ function JobForm({ initialValues }) {
       tagsJob: tagsJobArray,
       deadline: values.deadline,
       addressJob: values.addressJob,
-      jobDescription: cleanedDescription,
+      jobDescription: storedModalText,
       name: values.name,
       contactNumber: values.contactNumber,
       email: values.email,
@@ -272,6 +274,7 @@ function JobForm({ initialValues }) {
         console.log(res.data, "api");
         message.success("API call successful!");
         localStorage.removeItem("jobFormData");
+        setModalText("");
         setUrl("");
         setTags([]);
         setTagsJob([]);
@@ -279,6 +282,7 @@ function JobForm({ initialValues }) {
       .catch((error) => {
         setLoading(false);
         message.error("API call failed.");
+        setModalText("");
       })
       .finally(() => {
         onReset();
@@ -287,6 +291,25 @@ function JobForm({ initialValues }) {
   const onReset = () => {
     form.resetFields();
   };
+
+  useEffect(() => {
+    // Load the value from local storage when the component mounts
+    const storedModalText = localStorage.getItem("withoutptag");
+    if (storedModalText) {
+      setModalText(storedModalText);
+    }
+  }, []);
+
+  const handleTextChange = (value) => {
+    setModalText(value);
+  };
+
+  // Save the modified modalText in local storage whenever it changes
+  useEffect(() => {
+    const modifiedText = modalText.replace(/<p>/g, "").replace(/<\/p>/g, "");
+    localStorage.setItem("withoutptag", modifiedText);
+  }, [modalText]);
+
   useEffect(() => {
     getJobCategory();
     getJobSubCategory();
@@ -651,7 +674,13 @@ function JobForm({ initialValues }) {
                       <div className={Styles1.divnew}></div>
                     </div>
                   </Form.Item>
-                </div>
+                    <textarea
+                    className={Styles.newadddes}
+                      value={modalText
+                        .replace(/<p>/g, "")
+                        .replace(/<\/p>/g, "")}
+                    />
+ٖ                </div>
                 <div
                   className={Styles1.draggercenter}
                   style={{ marginTop: "1rem" }}

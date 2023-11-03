@@ -10,6 +10,12 @@
   align-items: center;
   margin-top: -2rem;
 }
+.newadddes {
+  border: solid 0.1px black;
+  padding: 10px;
+  width: 50rem !important;
+  height: 7rem !important;
+}
 
 .sizesteps {
   width: 50%;
@@ -31,6 +37,11 @@
 } */
 
 @media (max-width: 768px) {
+  .newadddes{
+    display: flex;
+    justify-content: center;
+    width: 40rem !important;
+  }
   .mainhero {
     background-image: url("../public//images/Istiaq\ vai-02-02\ 1.png");
     background-position: center;
@@ -45,6 +56,10 @@
   }
 }
 @media (max-width: 425px) {
+  .newadddes{
+  
+    width: 18rem !important;
+  }
   .sizesteps {
     width: 40%;
     margin-top: 1rem;
