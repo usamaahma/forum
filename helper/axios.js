@@ -268,6 +268,17 @@ users.interceptors.request.use(
     return Promise.reject(err);
   }
 );
+const newsCategory = axios.create({
+  baseURL: `${url}/newsCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
 export {
   login,
   users,
@@ -292,4 +303,5 @@ export {
   rentalCategory,
   rentalSubCategory,
   newsFrom,
+  newsCategory,
 };

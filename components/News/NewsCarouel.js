@@ -2,6 +2,7 @@ import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import FeaturedPost from "./FeaturedPost";
+import Styles from "../../styles/FeaturedPost.module.css";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -68,13 +69,28 @@ const responsive = {
     items: 3,
   },
 };
-function NewsCarousel() {
+function NewsCarousel({ data }) {
   return (
     <div>
       {" "}
       <AliceCarousel
         mouseTracking
-        items={items}
+        items={data?.map((item, index) => (
+          <div
+            key={index}
+            onDragStart={handleDragStart}
+            className={Styles.boxsmall}
+          >
+            <img className={Styles.img} src={item?.image?.[0]} alt="abc" />
+            <div className={Styles.padding}>
+              <div className={Styles.boxflex}>
+                <button className={Styles.btn}>{item.newsCategoryId} </button>
+                <p className={Styles.smalltext}>22 Jan, 2023</p>
+              </div>
+              <p className={Styles.textin}>{item.heading} </p>
+            </div>
+          </div>
+        ))}
         responsive={responsive}
         disableDotsControls
         disableButtonsControls
