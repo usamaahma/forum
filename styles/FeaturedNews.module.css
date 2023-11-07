@@ -21,6 +21,7 @@
   color: #151515;
   font-size: 1rem;
   font-weight: 600;
+  width: 50%;
 }
 
 .jantext {
@@ -35,6 +36,15 @@
   font-weight: 450;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  width: 20rem !important;
+}
+.lookingtext12 {
+  color: #a1a1a1;
+  font-size: 0.8rem;
+  font-weight: 450;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 5rem !important;
 }
 
 .blueclr {

@@ -244,6 +244,10 @@
   font-weight: 600;
   text-align: center;
 }
+.pdfViewer {
+  margin-top: 20px;
+  max-width: 100%;
+}
 @media only screen and (max-width: 768px) {
   .radiose {
     margin-right: 0rem;

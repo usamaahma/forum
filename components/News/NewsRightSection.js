@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Styles from "../../styles/NewsRightSection.module.css";
 import Image from "next/image";
 import Bottle from "../../public/images/Rectangle 45.png";
@@ -7,11 +7,41 @@ import Group from "../../public/images/Group 48095692.png";
 import { Input, Select } from "antd";
 import FeaturedNews from "./FeaturedNews";
 import Green from "../../public/images/Rectangle 4636.png";
+import { newsFrom } from "@/helper/axios";
 const { Option } = Select;
+
 function NewsRightSection() {
-  function handleChange(value) {
-    console.log(`selected ${value}`);
-  }
+  const [loading, setloading] = useState(false);
+  const [data, setdata] = useState([]);
+
+  const getNewsForm = () => {
+    setloading(true);
+    // let token = localStorage.getItem("talbeilm-token");
+
+    newsFrom({
+      method: "get",
+      // headers: {
+      //   Authorization: `Bearer ${token}`,
+      // },
+      // params: {
+      //   page: currentPage,
+      //   limit: perPage,
+      // },
+    })
+      .then((res) => {
+        console.log(res.data.results, "user");
+        setdata(res.data.results);
+        // setTotalRows(res.data.totalResults);
+        setloading(false);
+      })
+      .catch(() => {
+        message.error("an error occured please try later");
+        setloading(false);
+      });
+  };
+  useEffect(() => {
+    getNewsForm();
+  }, []);
   return (
     <div>
       <div className={Styles.boxflex}>
@@ -48,7 +78,7 @@ function NewsRightSection() {
               border: "solid 1px #D9D9D9",
             }}
           />
-          <FeaturedNews />
+          <FeaturedNews data={data} />
         </div>
       </div>
     </div>

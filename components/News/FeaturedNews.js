@@ -75,40 +75,40 @@ const responsive = {
     items: 5,
   },
 };
-function FeaturedNews() {
+function FeaturedNews({ data }) {
   return (
     <div>
       <div>
         <Row justify="center" className={Styles.widthroww}>
-          <Col xxl={15} xl={15} lg={14} md={14} xs={24}>
-            <div className={Styles.centercol}>
-              <div>
-                <Image className={Styles.imgstyle22} src={Business} alt="abc" />
-                <div className={Styles.boxpadding}>
-                  <div className={Styles.flexbtndiv}>
-                    <div>
-                      <button className={Styles.btnbus}>Business </button>
-                    </div>
-                    <div>
-                      <p className={Styles.jantext}>22 Jan, 2023</p>
-                    </div>
-                  </div>
+          {data
+            ?.filter((item) => item.featured === true)
+            .map((item, index) => (
+              <Col xxl={15} xl={15} lg={14} md={14} xs={24}>
+                <div className={Styles.centercol}>
                   <div>
-                    <p className={Styles.intertext}>
-                      Interview Question: Why Dont You Have Food?
-                    </p>
+                    <img
+                      className={Styles.imgstyle22}
+                      src={item.image?.[0]}
+                      alt="abc"
+                    />
+                    <div className={Styles.boxpadding}>
+                      <div className={Styles.flexbtndiv}>
+                        <div>
+                          <button className={Styles.btnbus}>Business </button>
+                        </div>
+                        <div>
+                          <p className={Styles.jantext}>22 Jan, 2023</p>
+                        </div>
+                      </div>
+                      <div className={Styles.intertext}>{item.heading}</div>
+                      <div className={Styles.lookingtext}>
+                        <text>{item.metaDescription}</text>
+                      </div>
+                    </div>
                   </div>
-                  <p className={Styles.lookingtext}>
-                    I am Looking for a plumber for my house anybody
-                    <br /> can.am Looking for a plumber for my house anybody
-                    <br /> can. am Looking for a plumber for my house anybody
-                    <br /> can.am Looking for a plumber house.
-                    <a className={Styles.blueclr}>Read More</a>
-                  </p>
                 </div>
-              </div>
-            </div>
-          </Col>
+              </Col>
+            ))}
           <Col xxl={9} xl={9} lg={10} md={8} xs={24}>
             {dataOne.map((index) => (
               <div key={index} className={Styles.centercol1}>
