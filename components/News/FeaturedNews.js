@@ -80,7 +80,7 @@ const responsive = {
 function FeaturedNews({ data }) {
   const [loading, setloading] = useState(false);
   const [catdata, setCatdata] = useState([]);
-
+  const [selectedCategory, setSelectedCategory] = useState(null);
   const getNewsCategory = () => {
     setloading(true);
     // let token = localStorage.getItem("talbeilm-token");
@@ -106,6 +106,9 @@ function FeaturedNews({ data }) {
         setloading(false);
       });
   };
+  const handleCategoryClick = (categoryName) => {
+    setSelectedCategory(categoryName);
+  };
   useEffect(() => {
     getNewsCategory();
   }, []);
@@ -113,42 +116,41 @@ function FeaturedNews({ data }) {
     <div>
       <div>
         <Row justify="center" className={Styles.widthroww}>
-          {data?.map((item, index) => (
-            <Col xxl={15} xl={15} lg={14} md={14} xs={24} key={index}>
-              <div className={Styles.centercol}>
-                <div>
-                  <img
-                    className={Styles.imgstyle22}
-                    src={item.image?.[0]}
-                    alt="abc"
-                  />
-                  <div className={Styles.boxpadding}>
-                    <div className={Styles.flexbtndiv}>
-                      <div>
-                        <button className={Styles.btnbus}>
-                          {item.newsCategoryId}{" "}
-                        </button>
+          {data
+            ?.filter((item) => item.featured === true)
+            .map((item, index) => (
+              <Col xxl={15} xl={15} lg={14} md={14} xs={24} key={index}>
+                <div className={Styles.centercol}>
+                  <div>
+                    <img
+                      className={Styles.imgstyle22}
+                      src={item.image?.[0]}
+                      alt="abc"
+                    />
+                    <div className={Styles.boxpadding}>
+                      <div className={Styles.flexbtndiv}>
+                        <div>
+                          <button className={Styles.btnbus}>
+                            {item.newsCategoryId}{" "}
+                          </button>
+                        </div>
+                        <div>
+                          <p className={Styles.jantext}>22 Jan, 2023</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className={Styles.jantext}>22 Jan, 2023</p>
+                      <div className={Styles.intertext}>{item.heading}</div>
+                      <div className={Styles.lookingtext}>
+                        <text>{item.description}</text>
                       </div>
-                    </div>
-                    <div className={Styles.intertext}>{item.heading}</div>
-                    <div className={Styles.lookingtext}>
-                      <text>{item.description}</text>
-                    </div>
-                    <div className={Styles.lookingtext}>
-                      <text>{item.newsPosition}</text>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Col>
-          ))}
+              </Col>
+            ))}
           <Col xxl={9} xl={9} lg={10} md={8} xs={24}>
             {data
               ?.filter(
-                (item) => item.newsPosition === 2 || item.newsPosition === 3
+                (item) => item.newsPosition === "2" || item.newsPosition === "3"
               )
               .map((item, index) => (
                 <div key={index} className={Styles.centercol1}>
@@ -192,9 +194,32 @@ function FeaturedNews({ data }) {
             border: "solid 1px #D9D9D9",
           }}
         />
-        {dataOne.map((index) => (
-          <CommunityNews key={index} />
-        ))}
+        {data
+          ?.filter((item) => item.newsCategoryId === "Community News")
+          .map((item, index) => (
+            <div key={index}>
+              <div className={Styles.mainboxcom}>
+                <div>
+                  <img
+                    className={Styles.imgstyle}
+                    src={item?.image?.[0]}
+                    alt=""
+                  />
+                </div>
+                <div className={Styles.marleft}>
+                  <div className={Styles.mainboxcom1}>
+                    <button className={Styles.btncom}>
+                      {" "}
+                      {item?.newsCategoryId}{" "}
+                    </button>
+                    <p className={Styles.jantext}>22 Jan, 2023</p>
+                  </div>
+                  <p className={Styles.int}>{item?.heading} </p>
+                  <p className={Styles.int1}>{item?.heading}</p>
+                </div>
+              </div>
+            </div>
+          ))}
       </div>
       <div>
         <p style={{ color: "#151515", fontWeight: "600" }}>Other News</p>
@@ -230,7 +255,12 @@ function FeaturedNews({ data }) {
                   onDragStart={handleDragStart}
                   style={{ display: "flex", justifyContent: "space-evenly" }}
                 >
-                  <button className={Styles.btn}>{category.name}</button>
+                  <button
+                    className={Styles.btn}
+                    onClick={() => handleCategoryClick(category.name)} // Handle category button click
+                  >
+                    {category.name}
+                  </button>
                 </div>
               ))}
               responsive={responsive}
@@ -255,7 +285,7 @@ function FeaturedNews({ data }) {
       >
         <div className={Styles.cardivvv}>
           {/* <Link href="/NewsPageTwo"> */}
-          <NewsCarousel data={data} />
+          <NewsCarousel data={data} selectedCategory={selectedCategory} />
           {/* </Link> */}
         </div>
       </div>

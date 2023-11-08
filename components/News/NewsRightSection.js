@@ -39,6 +39,7 @@ function NewsRightSection() {
         setloading(false);
       });
   };
+  console.log(data, "headddd");
   useEffect(() => {
     getNewsForm();
   }, []);
@@ -55,12 +56,13 @@ function NewsRightSection() {
             src={Group}
             alt=""
           />
-          <div>
-            <p className={Styles.parh}>
-              Lorem Ipsum is simply dummy text of the printing and types Lorem
-              Ipsum is simply dummy text of the printing
-            </p>
-          </div>
+          {data
+            ?.filter((item) => item.featured === true)
+            .map((item, index) => (
+              <div key={index}>
+                <p className={Styles.parh}>{item.heading}</p>
+              </div>
+            ))}
         </div>
         <div>
           <p style={{ color: "#151515", fontWeight: "600" }}>Featured News</p>

@@ -69,28 +69,32 @@ const responsive = {
     items: 3,
   },
 };
-function NewsCarousel({ data }) {
+function NewsCarousel({ data, selectedCategory }) {
   return (
     <div>
       {" "}
       <AliceCarousel
         mouseTracking
-        items={data?.map((item, index) => (
-          <div
-            key={index}
-            onDragStart={handleDragStart}
-            className={Styles.boxsmall}
-          >
-            <img className={Styles.img} src={item?.image?.[0]} alt="abc" />
-            <div className={Styles.padding}>
-              <div className={Styles.boxflex}>
-                <button className={Styles.btn}>{item.newsCategoryId} </button>
-                <p className={Styles.smalltext}>22 Jan, 2023</p>
+        items={data
+          ?.filter((item) =>
+            selectedCategory ? item.newsCategoryId === selectedCategory : true
+          )
+          .map((item, index) => (
+            <div
+              key={index}
+              onDragStart={handleDragStart}
+              className={Styles.boxsmall}
+            >
+              <img className={Styles.img} src={item?.image?.[0]} alt="abc" />
+              <div className={Styles.padding}>
+                <div className={Styles.boxflex}>
+                  <button className={Styles.btn}>{item.newsCategoryId} </button>
+                  <p className={Styles.smalltext}>22 Jan, 2023</p>
+                </div>
+                <p className={Styles.textin}>{item.heading} </p>
               </div>
-              <p className={Styles.textin}>{item.heading} </p>
             </div>
-          </div>
-        ))}
+          ))}
         responsive={responsive}
         disableDotsControls
         disableButtonsControls
