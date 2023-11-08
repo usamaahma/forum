@@ -257,6 +257,28 @@ users.interceptors.request.use(
     return Promise.reject(err);
   }
 );
+const newsFrom = axios.create({
+  baseURL: `${url}/news`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
+const newsCategory = axios.create({
+  baseURL: `${url}/newsCategory`,
+});
+users.interceptors.request.use(
+  (req) => {
+    return req;
+  },
+  (err) => {
+    return Promise.reject(err);
+  }
+);
 export {
   login,
   users,
@@ -280,4 +302,6 @@ export {
   buySubCategory,
   rentalCategory,
   rentalSubCategory,
+  newsFrom,
+  newsCategory,
 };

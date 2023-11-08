@@ -31,10 +31,12 @@ import {
 import { WithContext as ReactTags } from "react-tag-input";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
+import { Document, Page } from "react-pdf";
+import PDFViewer from "./blogpdf";
+
 const DynamicReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const { TextArea } = Input;
-const { Dragger } = Upload;
 
 function BlogForm({ initialValues }) {
   const [form] = Form.useForm();
@@ -45,6 +47,8 @@ function BlogForm({ initialValues }) {
   const [percent, setPercent] = useState("");
   const [uploadedImageUrl, setUploadedImageUrl] = useState("");
   const [tags, setTags] = useState([]);
+  const [numPages, setNumPages] = useState(null);
+
   // const dispatch = useDispatch();
 
   /////////////////////////////
@@ -86,25 +90,7 @@ function BlogForm({ initialValues }) {
   };
 
   //////////////////
-  const props = {
-    name: "file",
-    multiple: true,
-    action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
-    onChange(info) {
-      const { status } = info.file;
-      if (status !== "uploading") {
-        console.log(info.file, info.fileList);
-      }
-      if (status === "done") {
-        message.success(`${info.file.name} file uploaded successfully.`);
-      } else if (status === "error") {
-        message.error(`${info.file.name} file upload failed.`);
-      }
-    },
-    onDrop(e) {
-      console.log("Dropped files", e.dataTransfer.files);
-    },
-  };
+
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
@@ -157,9 +143,9 @@ function BlogForm({ initialValues }) {
 
     console.log(values, "doneee");
     console.log(text, "text");
-    const cleanedDescription = values.serviceDescription
-      .replace(/<p>/g, "")
-      .replace(/<\/p>/g, "");
+    const cleanedDescription = values.serviceDescription;
+    // .replace(/<p>/g, "")
+    // .replace(/<\/p>/g, "");
     localStorage.setItem("blogFormData", JSON.stringify(values));
     const tagsArray = tags.map((tag) => tag.name);
 
@@ -378,6 +364,9 @@ function BlogForm({ initialValues }) {
               </Form.Item>
             </Col>
           </Row>
+          {/* <div>
+            <PDFViewer pdfUrl={url} />
+          </div>{" "} */}
           <div className={Styles1.draggercenter}>
             <Form.Item name="image">
               <div className={Styles1.dotimg}>
