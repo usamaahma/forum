@@ -13,6 +13,7 @@ import Link from "next/link";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { newsCategory } from "@/helper/axios";
+import { useRouter } from "next/router";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -81,6 +82,7 @@ function FeaturedNews({ data }) {
   const [loading, setloading] = useState(false);
   const [catdata, setCatdata] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const router = useRouter();
   const getNewsCategory = () => {
     setloading(true);
     // let token = localStorage.getItem("talbeilm-token");
@@ -120,7 +122,11 @@ function FeaturedNews({ data }) {
             ?.filter((item) => item.featured === true)
             .map((item, index) => (
               <Col xxl={15} xl={15} lg={14} md={14} xs={24} key={index}>
-                <div className={Styles.centercol}>
+                <div
+                  className={Styles.centercol}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
+                >
                   <div>
                     <img
                       className={Styles.imgstyle22}
@@ -153,8 +159,12 @@ function FeaturedNews({ data }) {
                 (item) => item.newsPosition === "2" || item.newsPosition === "3"
               )
               .map((item, index) => (
-                <div key={index} className={Styles.centercol1}>
-                  {/* <Link href="/NewsPageTwo"> */}{" "}
+                <div
+                  key={index}
+                  className={Styles.centercol1}
+                  style={{ cursor: "pointer" }}
+                  onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
+                >
                   <div className={Styles1.boxsmall}>
                     <img
                       className={Styles1.img}
@@ -172,7 +182,6 @@ function FeaturedNews({ data }) {
                       <p className={Styles1.textin}>{item?.heading}</p>
                     </div>
                   </div>
-                  {/* </Link> */}
                 </div>
               ))}
           </Col>
@@ -197,7 +206,11 @@ function FeaturedNews({ data }) {
         {data
           ?.filter((item) => item.newsCategoryId === "Community News")
           .map((item, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              style={{ cursor: "pointer" }}
+              onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
+            >
               <div className={Styles.mainboxcom}>
                 <div>
                   <img

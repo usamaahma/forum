@@ -3,6 +3,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import FeaturedPost from "./FeaturedPost";
 import Styles from "../../styles/FeaturedPost.module.css";
+import { useRouter } from "next/router";
 
 const handleDragStart = (e) => e.preventDefault();
 
@@ -70,6 +71,7 @@ const responsive = {
   },
 };
 function NewsCarousel({ data, selectedCategory }) {
+  const router = useRouter();
   return (
     <div>
       {" "}
@@ -84,6 +86,8 @@ function NewsCarousel({ data, selectedCategory }) {
               key={index}
               onDragStart={handleDragStart}
               className={Styles.boxsmall}
+              style={{ cursor: "pointer" }}
+              onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
             >
               <img className={Styles.img} src={item?.image?.[0]} alt="abc" />
               <div className={Styles.padding}>
