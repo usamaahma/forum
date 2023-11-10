@@ -14,7 +14,7 @@ import NewsPost from "./NewsPost";
 import Group from "../../public/images/Group 48095692.png";
 
 const { Option } = Select;
-function NewsTwoRightSection() {
+function NewsTwoRightSection({ data }) {
   function handleChange(value) {
     console.log(`selected ${value}`);
   }
@@ -34,16 +34,16 @@ function NewsTwoRightSection() {
         </div>
       </div>
       <div className={Styles.paddiv}>
-        <button className={Styles.btnnew}>News</button>
-        <p className={Styles.howtext}>
-          How to write a title with an optimal width for SEO
-        </p>
+        <button className={Styles.btnnew}>{data.newsCategoryId}</button>
+        <p className={Styles.howtext}>{data.heading}</p>
       </div>
       <div className={Styles.mainimgelldiv}>
         <div className={Styles.elldiv}>
           <Image src={Ellipse} alt="abc" />
           <div className={Styles.textdiv}>
-            <p style={{ color: "#444444", fontWeight: "500" }}>Author Name</p>
+            <p style={{ color: "#444444", fontWeight: "500" }}>
+              {data.authorName}
+            </p>
             <p
               style={{ color: "#A1A1A1", fontWeight: "500", fontSize: ".7rem" }}
             >
@@ -59,7 +59,7 @@ function NewsTwoRightSection() {
         </div>
       </div>
       <div style={{ padding: ".5rem" }}>
-        <NewsPost />
+        <NewsPost data={data} />
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ function NewsRightSection() {
         setloading(false);
       });
   };
-  console.log(data, "headddd");
+
   useEffect(() => {
     getNewsForm();
   }, []);
