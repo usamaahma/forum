@@ -86,6 +86,7 @@ function NewsCarousel({ data, selectedCategory }) {
               key={index}
               onDragStart={handleDragStart}
               className={Styles.boxsmall}
+              style={{ cursor: "pointer" }}
               onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
             >
               <img className={Styles.img} src={item?.image?.[0]} alt="abc" />

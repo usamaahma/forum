@@ -124,6 +124,7 @@ function FeaturedNews({ data }) {
               <Col xxl={15} xl={15} lg={14} md={14} xs={24} key={index}>
                 <div
                   className={Styles.centercol}
+                  style={{ cursor: "pointer" }}
                   onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
                 >
                   <div>
@@ -161,6 +162,7 @@ function FeaturedNews({ data }) {
                 <div
                   key={index}
                   className={Styles.centercol1}
+                  style={{ cursor: "pointer" }}
                   onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
                 >
                   <div className={Styles1.boxsmall}>
@@ -206,6 +208,7 @@ function FeaturedNews({ data }) {
           .map((item, index) => (
             <div
               key={index}
+              style={{ cursor: "pointer" }}
               onClick={() => router.push(`/NewsPageTwo?NewslId=${item.id}`)}
             >
               <div className={Styles.mainboxcom}>
