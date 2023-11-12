@@ -43,6 +43,7 @@ function NewsRightSection() {
   useEffect(() => {
     getNewsForm();
   }, []);
+
   return (
     <div>
       <div className={Styles.boxflex}>
@@ -50,7 +51,7 @@ function NewsRightSection() {
         <Image className={Styles.imgsize} src={Shoes} alt="abc" />
       </div>
       <div className={Styles.feadiv}>
-        <div className={Styles.boxgreen}>
+        <div className={Styles.boxgreen12}>
           <Image
             style={{ width: "10rem", height: "5rem" }}
             src={Group}
@@ -59,9 +60,11 @@ function NewsRightSection() {
           {data
             ?.filter((item) => item.featured === true)
             .map((item, index) => (
-              <div key={index}>
-                <p className={Styles.parh}>{item.heading}</p>
-              </div>
+              // <div key={index}>
+              <marquee key={index} className={Styles.parh}>
+                {item.heading}
+              </marquee>
+              // </div>
             ))}
         </div>
         <div>

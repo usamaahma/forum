@@ -8,9 +8,10 @@ import Fb from "../../public/images/Group 133.png";
 import Ins from "../../public/images/Group 132.png";
 import Lin from "../../public/images/Group 131.png";
 import Link from "next/link";
-import NewsCarousel from "../News/NewsCarouel";
+import NewsTwoCarousel from "./NewsTwoCarouel";
 const { TextArea } = Input;
 function NewsPost({ data }) {
+  console.log(data, "datatapost");
   return (
     <div>
       <div>
@@ -76,7 +77,7 @@ function NewsPost({ data }) {
         >
           <div className={Styles.Carousel1}>
             {/* <Link href="/NewsPageTwo"> */}
-            <NewsCarousel />
+            <NewsTwoCarousel newsCategoryId={data.newsCategoryId} />
             {/* </Link> */}
           </div>
         </div>
