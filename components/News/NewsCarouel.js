@@ -1,58 +1,58 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import FeaturedPost from "./FeaturedPost";
+// import FeaturedPost from "./FeaturedPost";
 import Styles from "../../styles/FeaturedPost.module.css";
 import { useRouter } from "next/router";
 
 const handleDragStart = (e) => e.preventDefault();
 
-const items = [
-  <div
-    key={0}
-    onDragStart={handleDragStart}
-    style={{
-      display: "flex",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    }}
-  >
-    <FeaturedPost />
-  </div>,
-  <div
-    key={1}
-    onDragStart={handleDragStart}
-    style={{
-      display: "flex",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    }}
-  >
-    <FeaturedPost />
-  </div>,
-  <div
-    key={2}
-    onDragStart={handleDragStart}
-    style={{
-      display: "flex",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    }}
-  >
-    <FeaturedPost />
-  </div>,
-  <div
-    key={3}
-    onDragStart={handleDragStart}
-    style={{
-      display: "flex",
-      justifyContent: "space-evenly",
-      alignItems: "center",
-    }}
-  >
-    <FeaturedPost />
-  </div>,
-];
+// const items = [
+//   <div
+//     key={0}
+//     onDragStart={handleDragStart}
+//     style={{
+//       display: "flex",
+//       justifyContent: "space-evenly",
+//       alignItems: "center",
+//     }}
+//   >
+//     <FeaturedPost />
+//   </div>,
+//   <div
+//     key={1}
+//     onDragStart={handleDragStart}
+//     style={{
+//       display: "flex",
+//       justifyContent: "space-evenly",
+//       alignItems: "center",
+//     }}
+//   >
+//     <FeaturedPost />
+//   </div>,
+//   <div
+//     key={2}
+//     onDragStart={handleDragStart}
+//     style={{
+//       display: "flex",
+//       justifyContent: "space-evenly",
+//       alignItems: "center",
+//     }}
+//   >
+//     <FeaturedPost />
+//   </div>,
+//   <div
+//     key={3}
+//     onDragStart={handleDragStart}
+//     style={{
+//       display: "flex",
+//       justifyContent: "space-evenly",
+//       alignItems: "center",
+//     }}
+//   >
+//     <FeaturedPost />
+//   </div>,
+// ];
 const responsive = {
   0: {
     items: 1,

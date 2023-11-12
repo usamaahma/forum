@@ -231,7 +231,7 @@
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    width: 100%;
+    width: 22rem;
   }
   .imgstyle22 {
     /* width: 100%; */
@@ -326,6 +326,12 @@
     width: 40rem;
     margin-top: 1rem;
   }
+  .mainboxcom1 {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 28rem;
+  }
 }
 
 @media (max-width: 425px) {
@@ -358,13 +364,19 @@
     width: 20rem;
     margin-top: 1rem;
   }
+  .mainboxcom1 {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 16rem;
+  }
 }
 @media (max-width: 375px) {
   .mainboxcom1 {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    width: 100%;
+    width: 15rem;
   }
   .imgstyle {
     width: 6rem;

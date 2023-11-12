@@ -26,12 +26,7 @@ function NewsTwoRightSection({ data }) {
       </div>
       <div className={Styles.boxgreen}>
         <Image style={{ width: "10rem", height: "5rem" }} src={Group} alt="" />
-        <div>
-          <p className={Styles.parh}>
-            Lorem Ipsum is simply dummy text of the printing and types Lorem
-            Ipsum is simply dummy text of the printing
-          </p>
-        </div>
+        <marquee className={Styles.parh}>{data.heading}</marquee>
       </div>
       <div className={Styles.paddiv}>
         <button className={Styles.btnnew}>{data.newsCategoryId}</button>
