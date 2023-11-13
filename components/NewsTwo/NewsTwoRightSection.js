@@ -26,11 +26,11 @@ function NewsTwoRightSection({ data }) {
       </div>
       <div className={Styles.boxgreen}>
         <Image style={{ width: "10rem", height: "5rem" }} src={Group} alt="" />
-        <marquee className={Styles.parh}>{data.heading}</marquee>
+        <marquee className={Styles.parh}>{data?.heading}</marquee>
       </div>
       <div className={Styles.paddiv}>
         <button className={Styles.btnnew}>{data.newsCategoryId}</button>
-        <p className={Styles.howtext}>{data.heading}</p>
+        <p className={Styles.howtext}>{data?.heading}</p>
       </div>
       <div className={Styles.mainimgelldiv}>
         <div className={Styles.elldiv}>

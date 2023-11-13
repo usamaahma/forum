@@ -15,9 +15,9 @@ function NewsPost({ data }) {
   return (
     <div>
       <div>
-        <img className={Styles.imgstyle} src={data.image?.[0]} alt="abc" />
+        <img className={Styles.imgstyle} src={data?.image?.[0]} alt="abc" />
         <div className={Styles.boxpadding}>
-          <p className={Styles.lookingtext}>{data.metaDescription}</p>
+          <p className={Styles.lookingtext}>{data?.metaDescription}</p>
         </div>
       </div>
       <div className={Styles.mblview}>
@@ -77,7 +77,7 @@ function NewsPost({ data }) {
         >
           <div className={Styles.Carousel1}>
             {/* <Link href="/NewsPageTwo"> */}
-            <NewsTwoCarousel newsCategoryId={data.newsCategoryId} />
+            <NewsTwoCarousel newsCategoryId={data?.newsCategoryId} />
             {/* </Link> */}
           </div>
         </div>

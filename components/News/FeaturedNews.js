@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Styles from "../../styles/FeaturedNews.module.css";
 import Styles1 from "../../styles/FeaturedPost.module.css";
-import Business from "../../public/images/Rectangle 4640.png";
 import { Col, Collapse, Row, message } from "antd";
-import Image from "next/image";
-import FeaturedPost from "./FeaturedPost";
-import dataOne from "../../dataOne.json";
-import dataTwo from "../../dataTwo.json";
-import CommunityNews from "./CommunityNews";
 import NewsCarousel from "./NewsCarouel";
 import Link from "next/link";
 import AliceCarousel from "react-alice-carousel";
